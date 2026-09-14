@@ -6,4 +6,4 @@
 - [x] Write the final README, architecture, metrics, limitations, and portfolio narrative.
 - [x] Add packaging metadata, license, release verifier, and offline tests.
 - [x] Validate OpenSpec, links, tests, file sizes, and secret scan.
-- [ ] Commit on `main`, create the GitHub repository, push, and verify the remote state.
+- [x] Commit on `main`, create the GitHub repository, push, and verify the remote state.

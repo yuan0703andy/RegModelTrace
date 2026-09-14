@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 from pathlib import Path
 
@@ -24,6 +25,7 @@ def main() -> None:
         "artifacts/review-1/closure_receipt.json",
         "artifacts/test-e/project_closure_receipt.json",
         "artifacts/scale-1/systems_lane_closure.json",
+        "artifacts/release_manifest.json",
         "regmodeltrace/service.py",
         "regmodeltrace/tests/test_system_v1.py",
     ]
@@ -80,6 +82,14 @@ def main() -> None:
             if pattern.search(text):
                 secret_hits.append({"path": str(path.relative_to(ROOT)), "pattern": name})
 
+    release_manifest = json.loads((ROOT / "artifacts/release_manifest.json").read_text()) if not missing else {"files": {}}
+    manifest_mismatches = []
+    for relative, expected in release_manifest.get("files", {}).items():
+        path = ROOT / relative
+        actual = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+        if actual != expected:
+            manifest_mismatches.append(relative)
+
     checks = {
         "required_files": not missing,
         "forbidden_paths_absent": not present_forbidden,
@@ -87,6 +97,7 @@ def main() -> None:
         "no_file_over_25_mib": not oversized,
         "claim_boundaries_present": not missing_boundaries,
         "readme_local_links_resolve": not missing_links,
+        "release_manifest_hashes": not manifest_mismatches,
         "basic_secret_scan": not secret_hits,
     }
     detail = {
@@ -96,6 +107,7 @@ def main() -> None:
         "oversized": oversized,
         "missing_boundaries": missing_boundaries,
         "missing_links": missing_links,
+        "manifest_mismatches": manifest_mismatches,
         "secret_hits": secret_hits,
     }
     status = "PASS" if all(checks.values()) else "FAIL"
