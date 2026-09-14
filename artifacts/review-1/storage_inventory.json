@@ -1,0 +1,2302 @@
+{
+  "counted_root": "/Users/andyhou/Documents/ChatGPT/CIRCAD-LLM/regmodeltrace/data",
+  "database_inventory": [
+    {
+      "bytes": 47767552,
+      "engine": "SQLite",
+      "fts_shadow_tables_excluded_from_evidence_counts": [
+        "search_text_config",
+        "search_text_content",
+        "search_text_data",
+        "search_text_docsize",
+        "search_text_idx"
+      ],
+      "journal_mode_observed": "delete",
+      "logical_tables": [
+        "blocks",
+        "classifications",
+        "documents",
+        "membership",
+        "metadata",
+        "records",
+        "search_text",
+        "units"
+      ],
+      "objects": [
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "block_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_blocks_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "blocks",
+          "row_count": 8390,
+          "sql": "CREATE TABLE blocks(block_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "blocks",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "assertion_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_classifications_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "classifications",
+          "row_count": 16,
+          "sql": "CREATE TABLE classifications(assertion_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "classifications",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "document_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_documents_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "documents",
+          "row_count": 3,
+          "sql": "CREATE TABLE documents(document_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "documents",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "candidate_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "assertion_id",
+              "notnull": false,
+              "pk_position": 2,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_membership_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "membership",
+          "row_count": 17,
+          "sql": "CREATE TABLE membership(candidate_id TEXT, assertion_id TEXT,\n                                    PRIMARY KEY(candidate_id, assertion_id))",
+          "table_name": "membership",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "key",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_metadata_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "metadata",
+          "row_count": 3,
+          "sql": "CREATE TABLE metadata(key TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "metadata",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "record_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "unit_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 2,
+              "default": null,
+              "name": "document_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 3,
+              "default": null,
+              "name": "standard_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 4,
+              "default": null,
+              "name": "kind",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 5,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_records_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "records",
+          "row_count": 9946,
+          "sql": "CREATE TABLE records(record_id TEXT PRIMARY KEY, unit_id TEXT, document_id TEXT,\n                                 standard_id TEXT, kind TEXT, payload TEXT NOT NULL)",
+          "table_name": "records",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "text",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "structure",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": false,
+          "is_virtual": true,
+          "name": "search_text",
+          "row_count": 9946,
+          "sql": "CREATE VIRTUAL TABLE search_text USING fts5(text, structure)",
+          "table_name": "search_text",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_config",
+          "row_count": 1,
+          "sql": "CREATE TABLE 'search_text_config'(k PRIMARY KEY, v) WITHOUT ROWID",
+          "table_name": "search_text_config",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_content",
+          "row_count": 9946,
+          "sql": "CREATE TABLE 'search_text_content'(id INTEGER PRIMARY KEY, c0, c1)",
+          "table_name": "search_text_content",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_data",
+          "row_count": 424,
+          "sql": "CREATE TABLE 'search_text_data'(id INTEGER PRIMARY KEY, block BLOB)",
+          "table_name": "search_text_data",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_docsize",
+          "row_count": 9946,
+          "sql": "CREATE TABLE 'search_text_docsize'(id INTEGER PRIMARY KEY, sz BLOB)",
+          "table_name": "search_text_docsize",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_idx",
+          "row_count": 276,
+          "sql": "CREATE TABLE 'search_text_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID",
+          "table_name": "search_text_idx",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "unit_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_units_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "units",
+          "row_count": 1443,
+          "sql": "CREATE TABLE units(unit_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "units",
+          "type": "table"
+        }
+      ],
+      "path": "regmodeltrace/data/retrieval/m4-foundation-v1.sqlite",
+      "snapshot_method": "URI mode=ro&immutable=1; no write statements",
+      "sqlite_version_runtime": "3.46.0"
+    },
+    {
+      "bytes": 46792704,
+      "engine": "SQLite",
+      "fts_shadow_tables_excluded_from_evidence_counts": [
+        "search_text_config",
+        "search_text_content",
+        "search_text_data",
+        "search_text_docsize",
+        "search_text_idx"
+      ],
+      "journal_mode_observed": "delete",
+      "logical_tables": [
+        "blocks",
+        "classifications",
+        "documents",
+        "membership",
+        "metadata",
+        "records",
+        "search_text",
+        "units"
+      ],
+      "objects": [
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "block_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_blocks_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "blocks",
+          "row_count": 8390,
+          "sql": "CREATE TABLE blocks(block_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "blocks",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "assertion_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_classifications_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "classifications",
+          "row_count": 0,
+          "sql": "CREATE TABLE classifications(assertion_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "classifications",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "document_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_documents_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "documents",
+          "row_count": 3,
+          "sql": "CREATE TABLE documents(document_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "documents",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "candidate_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "assertion_id",
+              "notnull": false,
+              "pk_position": 2,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_membership_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "membership",
+          "row_count": 0,
+          "sql": "CREATE TABLE membership(candidate_id TEXT, assertion_id TEXT,\n                                    PRIMARY KEY(candidate_id, assertion_id))",
+          "table_name": "membership",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "key",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_metadata_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "metadata",
+          "row_count": 0,
+          "sql": "CREATE TABLE metadata(key TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "metadata",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "record_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "unit_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 2,
+              "default": null,
+              "name": "document_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 3,
+              "default": null,
+              "name": "standard_id",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 4,
+              "default": null,
+              "name": "kind",
+              "notnull": false,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 5,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_records_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "records",
+          "row_count": 9750,
+          "sql": "CREATE TABLE records(record_id TEXT PRIMARY KEY, unit_id TEXT, document_id TEXT,\n                                 standard_id TEXT, kind TEXT, payload TEXT NOT NULL)",
+          "table_name": "records",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "text",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "structure",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": false,
+          "is_virtual": true,
+          "name": "search_text",
+          "row_count": 9750,
+          "sql": "CREATE VIRTUAL TABLE search_text USING fts5(text, structure)",
+          "table_name": "search_text",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_config",
+          "row_count": 1,
+          "sql": "CREATE TABLE 'search_text_config'(k PRIMARY KEY, v) WITHOUT ROWID",
+          "table_name": "search_text_config",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_content",
+          "row_count": 9750,
+          "sql": "CREATE TABLE 'search_text_content'(id INTEGER PRIMARY KEY, c0, c1)",
+          "table_name": "search_text_content",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_data",
+          "row_count": 428,
+          "sql": "CREATE TABLE 'search_text_data'(id INTEGER PRIMARY KEY, block BLOB)",
+          "table_name": "search_text_data",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_docsize",
+          "row_count": 9750,
+          "sql": "CREATE TABLE 'search_text_docsize'(id INTEGER PRIMARY KEY, sz BLOB)",
+          "table_name": "search_text_docsize",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_idx",
+          "row_count": 280,
+          "sql": "CREATE TABLE 'search_text_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID",
+          "table_name": "search_text_idx",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "unit_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_units_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "units",
+          "row_count": 1443,
+          "sql": "CREATE TABLE units(unit_id TEXT PRIMARY KEY, payload TEXT NOT NULL)",
+          "table_name": "units",
+          "type": "table"
+        }
+      ],
+      "path": "regmodeltrace/data/retrieval/m4a-v1/narrative.sqlite",
+      "snapshot_method": "URI mode=ro&immutable=1; no write statements",
+      "sqlite_version_runtime": "3.46.0"
+    },
+    {
+      "bytes": 17178624,
+      "engine": "SQLite",
+      "fts_shadow_tables_excluded_from_evidence_counts": [
+        "search_text_config",
+        "search_text_content",
+        "search_text_data",
+        "search_text_docsize",
+        "search_text_idx"
+      ],
+      "journal_mode_observed": "delete",
+      "logical_tables": [
+        "passages",
+        "search_text"
+      ],
+      "objects": [
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "passage_id",
+              "notnull": false,
+              "pk_position": 1,
+              "type": "TEXT"
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "document_role",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            },
+            {
+              "cid": 2,
+              "default": null,
+              "name": "payload",
+              "notnull": true,
+              "pk_position": 0,
+              "type": "TEXT"
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_passages_1",
+              "origin": "pk",
+              "partial": false,
+              "seq": 0,
+              "unique": true
+            }
+          ],
+          "is_fts_shadow": false,
+          "is_virtual": false,
+          "name": "passages",
+          "row_count": 6009,
+          "sql": "CREATE TABLE passages(passage_id TEXT PRIMARY KEY, document_role TEXT NOT NULL, payload TEXT NOT NULL)",
+          "table_name": "passages",
+          "type": "table"
+        },
+        {
+          "columns": [
+            {
+              "cid": 0,
+              "default": null,
+              "name": "text",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            },
+            {
+              "cid": 1,
+              "default": null,
+              "name": "structure",
+              "notnull": false,
+              "pk_position": 0,
+              "type": ""
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": false,
+          "is_virtual": true,
+          "name": "search_text",
+          "row_count": 6009,
+          "sql": "CREATE VIRTUAL TABLE search_text USING fts5(text, structure)",
+          "table_name": "search_text",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_config",
+          "row_count": 1,
+          "sql": "CREATE TABLE 'search_text_config'(k PRIMARY KEY, v) WITHOUT ROWID",
+          "table_name": "search_text_config",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_content",
+          "row_count": 6009,
+          "sql": "CREATE TABLE 'search_text_content'(id INTEGER PRIMARY KEY, c0, c1)",
+          "table_name": "search_text_content",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_data",
+          "row_count": 326,
+          "sql": "CREATE TABLE 'search_text_data'(id INTEGER PRIMARY KEY, block BLOB)",
+          "table_name": "search_text_data",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_docsize",
+          "row_count": 6009,
+          "sql": "CREATE TABLE 'search_text_docsize'(id INTEGER PRIMARY KEY, sz BLOB)",
+          "table_name": "search_text_docsize",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "foreign_keys": [],
+          "indexes": [],
+          "is_fts_shadow": true,
+          "is_virtual": false,
+          "name": "search_text_idx",
+          "row_count": 219,
+          "sql": "CREATE TABLE 'search_text_idx'(segid, term, pgno, PRIMARY KEY(segid, term)) WITHOUT ROWID",
+          "table_name": "search_text_idx",
+          "type": "table"
+        }
+      ],
+      "path": "regmodeltrace/data/retrieval/m4c-v1/passages.sqlite",
+      "snapshot_method": "URI mode=ro&immutable=1; no write statements",
+      "sqlite_version_runtime": "3.46.0"
+    }
+  ],
+  "jsonl_inventory": [
+    {
+      "bytes": 11989,
+      "path": "regmodeltrace/data/alignment/corelogic-2023-v2-2/runs/run-55311614/journal.jsonl",
+      "rows": 12
+    },
+    {
+      "bytes": 97328,
+      "path": "regmodeltrace/data/alignment/corelogic-2023-v2-2/runs/run-55311614/requests.jsonl",
+      "rows": 12
+    },
+    {
+      "bytes": 16830,
+      "path": "regmodeltrace/data/alignment/impact-2023-v2-2/runs/run-55304728/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 80508,
+      "path": "regmodeltrace/data/alignment/impact-2023-v2-2/runs/run-55304728/requests.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 24221,
+      "path": "regmodeltrace/data/alignment/kcc-2023-test-e-v2-2/runs/run-55434235/journal.jsonl",
+      "rows": 24
+    },
+    {
+      "bytes": 124662,
+      "path": "regmodeltrace/data/alignment/kcc-2023-test-e-v2-2/runs/run-55434235/requests.jsonl",
+      "rows": 24
+    },
+    {
+      "bytes": 48226,
+      "path": "regmodeltrace/data/alignment/v2-1-pilot/runs/run-55271723/journal.jsonl",
+      "rows": 14
+    },
+    {
+      "bytes": 66641,
+      "path": "regmodeltrace/data/alignment/v2-1-pilot/runs/run-55271723/requests.jsonl",
+      "rows": 14
+    },
+    {
+      "bytes": 28124,
+      "path": "regmodeltrace/data/alignment/v2-2-pilot/runs/run-55276289/journal.jsonl",
+      "rows": 28
+    },
+    {
+      "bytes": 99846,
+      "path": "regmodeltrace/data/alignment/v2-2-pilot/runs/run-55276289/requests.jsonl",
+      "rows": 28
+    },
+    {
+      "bytes": 62071,
+      "path": "regmodeltrace/data/alignment/v2-pilot/runs/run-55268801/requests.jsonl",
+      "rows": 12
+    },
+    {
+      "bytes": 52898,
+      "path": "regmodeltrace/data/alignment/v2-pilot/runs/run-55268933/journal.jsonl",
+      "rows": 12
+    },
+    {
+      "bytes": 64411,
+      "path": "regmodeltrace/data/alignment/v2-pilot/runs/run-55268933/requests.jsonl",
+      "rows": 12
+    },
+    {
+      "bytes": 24296,
+      "path": "regmodeltrace/data/alignment/verisk-2023-v2-2/runs/run-55372902/journal.jsonl",
+      "rows": 24
+    },
+    {
+      "bytes": 151872,
+      "path": "regmodeltrace/data/alignment/verisk-2023-v2-2/runs/run-55372902/requests.jsonl",
+      "rows": 24
+    },
+    {
+      "bytes": 5437513,
+      "path": "regmodeltrace/data/batch/scale-1/runs/cp3-large-direct-55345695/canonical_journal.jsonl",
+      "rows": 4096
+    },
+    {
+      "bytes": 5400649,
+      "path": "regmodeltrace/data/batch/scale-1/runs/cp3-large-ray1-55345696/canonical_journal.jsonl",
+      "rows": 4096
+    },
+    {
+      "bytes": 5400647,
+      "path": "regmodeltrace/data/batch/scale-1/runs/cp3-large-ray2-55348370/canonical_journal.jsonl",
+      "rows": 4096
+    },
+    {
+      "bytes": 170117,
+      "path": "regmodeltrace/data/batch/scale-1/runs/direct-1g-final-55325689/canonical_journal.jsonl",
+      "rows": 128
+    },
+    {
+      "bytes": 168581,
+      "path": "regmodeltrace/data/batch/scale-1/runs/ray-1g-bound-55326219/canonical_journal.jsonl",
+      "rows": 128
+    },
+    {
+      "bytes": 168581,
+      "path": "regmodeltrace/data/batch/scale-1/runs/ray-1g-final-55325690/canonical_journal.jsonl",
+      "rows": 128
+    },
+    {
+      "bytes": 167813,
+      "path": "regmodeltrace/data/batch/scale-1/runs/ray-2g-55325998/canonical_journal.jsonl",
+      "rows": 128
+    },
+    {
+      "bytes": 110532,
+      "path": "regmodeltrace/data/batch/scale-1/w2/requests/w2_requests.jsonl",
+      "rows": 28
+    },
+    {
+      "bytes": 41487,
+      "path": "regmodeltrace/data/batch/scale-1/w2/runs/w2-direct-55345542/canonical_journal.jsonl",
+      "rows": 28
+    },
+    {
+      "bytes": 41179,
+      "path": "regmodeltrace/data/batch/scale-1/w2/runs/w2-ray-55345543/canonical_journal.jsonl",
+      "rows": 28
+    },
+    {
+      "bytes": 9227362,
+      "path": "regmodeltrace/data/corpus/scale-1/requests/large_requests.jsonl",
+      "rows": 4096
+    },
+    {
+      "bytes": 478266,
+      "path": "regmodeltrace/data/corpus/scale-1/requests/small_requests.jsonl",
+      "rows": 128
+    },
+    {
+      "bytes": 76974644,
+      "path": "regmodeltrace/data/corpus/scale-1/requests/source_assertions.jsonl",
+      "rows": 47458
+    },
+    {
+      "bytes": 2181910,
+      "path": "regmodeltrace/data/corpus/scale-1/requests/source_dispositions.jsonl",
+      "rows": 18350
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/evaluation/frozen/m3.3-label-evaluator-1.0/data/semantic/m3_3_benchmark/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/evaluation/frozen/m3.4-type-tag-evaluator-1.0/data/semantic/m3_3_benchmark/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/evaluation/frozen/m3.5-primary-evaluator-1.0/data/semantic/m3_3_benchmark/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/evaluation/frozen/m3.6-host-identity-evaluator-1.0/data/semantic/m3_3_benchmark/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 9682,
+      "path": "regmodeltrace/data/extraction/batch-55054235/smoke/unit_results.jsonl",
+      "rows": 4
+    },
+    {
+      "bytes": 9474,
+      "path": "regmodeltrace/data/extraction/batch-55063746/smoke/unit_results.jsonl",
+      "rows": 4
+    },
+    {
+      "bytes": 14333,
+      "path": "regmodeltrace/data/extraction/batch-55065051/smoke/unit_results.jsonl",
+      "rows": 4
+    },
+    {
+      "bytes": 168185,
+      "path": "regmodeltrace/data/extraction/batch-55065228/first/unit_results.jsonl",
+      "rows": 33
+    },
+    {
+      "bytes": 11089,
+      "path": "regmodeltrace/data/extraction/batch-55065228/smoke/unit_results.jsonl",
+      "rows": 4
+    },
+    {
+      "bytes": 7039686,
+      "path": "regmodeltrace/data/extraction/batch-55066466/first/unit_results.jsonl",
+      "rows": 1443
+    },
+    {
+      "bytes": 2112,
+      "path": "regmodeltrace/data/extraction/batch-55066466/smoke/unit_results.jsonl",
+      "rows": 4
+    },
+    {
+      "bytes": 210609,
+      "path": "regmodeltrace/data/extraction/core-55076128/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 214641,
+      "path": "regmodeltrace/data/extraction/core-55077086/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 193075,
+      "path": "regmodeltrace/data/extraction/core-55085358/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 269921,
+      "path": "regmodeltrace/data/extraction/core-55090141/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 195772,
+      "path": "regmodeltrace/data/extraction/core-55092173/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 674089,
+      "path": "regmodeltrace/data/extraction/core-55098165/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 692217,
+      "path": "regmodeltrace/data/extraction/core-55111758/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 114094,
+      "path": "regmodeltrace/data/extraction/core-55116166/first/assertion_candidates.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 581848,
+      "path": "regmodeltrace/data/extraction/core-55116166/first/unit_results.jsonl",
+      "rows": 23
+    },
+    {
+      "bytes": 15869,
+      "path": "regmodeltrace/data/extraction/m3-3-gateway-20260911-v1/attempts.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-3-gateway-20260911-v1/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 16157,
+      "path": "regmodeltrace/data/extraction/m3-3-gateway-20260911-v1/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-3-local-55120432/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 14536,
+      "path": "regmodeltrace/data/extraction/m3-3-local-55120432/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 952,
+      "path": "regmodeltrace/data/extraction/m3-3-smoke-20260911-v1/attempts.jsonl",
+      "rows": 1
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-3-smoke-20260911-v1/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 970,
+      "path": "regmodeltrace/data/extraction/m3-3-smoke-20260911-v1/journal.jsonl",
+      "rows": 1
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-4-local-55121591/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 15225,
+      "path": "regmodeltrace/data/extraction/m3-4-local-55121591/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-5-local-55143712/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 14537,
+      "path": "regmodeltrace/data/extraction/m3-5-local-55143712/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55144926/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 14857,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55144926/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 64174,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55144926/requests.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55145000/inputs.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 14857,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55145000/journal.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 64174,
+      "path": "regmodeltrace/data/extraction/m3-6-local-55145000/requests.jsonl",
+      "rows": 16
+    },
+    {
+      "bytes": 30427,
+      "path": "regmodeltrace/data/generation/m4d-v1/run-55196047/journal.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 47483,
+      "path": "regmodeltrace/data/generation/m4d-v1/run-55196047/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 29506,
+      "path": "regmodeltrace/data/generation/m4e-v1/attempt-v1.0-job-55198429/run/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 25615,
+      "path": "regmodeltrace/data/generation/m4e-v1/run-55198673/journal.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 29506,
+      "path": "regmodeltrace/data/generation/m4e-v1/run-55198673/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 12209,
+      "path": "regmodeltrace/data/planning/m4-planner-v1/run-55207072/journal.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 13779,
+      "path": "regmodeltrace/data/planning/m4-planner-v1/run-55207072/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 55310,
+      "path": "regmodeltrace/data/rag/v0/generation-run-55224116/journal.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 93743,
+      "path": "regmodeltrace/data/rag/v0/generation-run-55224116/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 49254,
+      "path": "regmodeltrace/data/rag/v0/generation-run-55224188/journal.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 97063,
+      "path": "regmodeltrace/data/rag/v0/generation-run-55224188/requests.jsonl",
+      "rows": 8
+    },
+    {
+      "bytes": 12809421,
+      "path": "regmodeltrace/data/retrieval/m4b-v1/contexts.jsonl",
+      "rows": 9750
+    },
+    {
+      "bytes": 9494695,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/passages.jsonl",
+      "rows": 6009
+    },
+    {
+      "bytes": 19880,
+      "path": "regmodeltrace/data/semantic/m3_3_benchmark/inputs.jsonl",
+      "rows": 16
+    }
+  ],
+  "kcc_table_limitation": {
+    "affected_panels": 4,
+    "affected_submission_pdf_pages": [
+      184,
+      185
+    ],
+    "duplicate_cell_identities": 140,
+    "truth_use": "EXCLUDED",
+    "whole_document_portability": "FAIL_TABLE_IDENTITY"
+  },
+  "model_and_runtime_storage_dcc": {
+    "captured_utc": "2026-09-14T20:05:00+00:00",
+    "gpu_environment_bytes": 8231243434,
+    "hf_cache_bytes": 41099264788,
+    "host": "dcc-schmidler-ferc-u-ab25-2-1",
+    "method": "du -sb on a DCC CPU compute node",
+    "other_cached_models_bytes": 21764929071,
+    "project_path": "/hpc/home/yh421/CIRCAD-LLM",
+    "qwen_32b_awq_cache_bytes": 19340650363,
+    "runtime_root": "/hpc/group/borsuklab/yh421/regmodeltrace-runtime",
+    "vllm_cache_bytes": 970
+  },
+  "parquet_inventory": [
+    {
+      "bytes": 3762772,
+      "columns": 33,
+      "path": "regmodeltrace/data/corpora/ara-2019-v1/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 7164
+    },
+    {
+      "bytes": 368107,
+      "columns": 8,
+      "path": "regmodeltrace/data/corpora/ara-2019-v1/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 640
+    },
+    {
+      "bytes": 26600447,
+      "columns": 33,
+      "path": "regmodeltrace/data/corpus/scale-1/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 57030
+    },
+    {
+      "bytes": 2564378,
+      "columns": 8,
+      "path": "regmodeltrace/data/corpus/scale-1/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 5129
+    },
+    {
+      "bytes": 34958320,
+      "columns": 5,
+      "path": "regmodeltrace/data/corpus/scale-1/processed/source_words.parquet",
+      "row_groups": 2,
+      "rows": 1331408
+    },
+    {
+      "bytes": 6024922,
+      "columns": 42,
+      "path": "regmodeltrace/data/corpus/scale-1/semantic/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 9010
+    },
+    {
+      "bytes": 4574112,
+      "columns": 33,
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 11236
+    },
+    {
+      "bytes": 420106,
+      "columns": 8,
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 960
+    },
+    {
+      "bytes": 5987697,
+      "columns": 5,
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/processed/source_words.parquet",
+      "row_groups": 1,
+      "rows": 212458
+    },
+    {
+      "bytes": 1176621,
+      "columns": 42,
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/semantic/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 1518
+    },
+    {
+      "bytes": 3775487,
+      "columns": 33,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/determinism/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 7931
+    },
+    {
+      "bytes": 343887,
+      "columns": 8,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/determinism/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 754
+    },
+    {
+      "bytes": 4996911,
+      "columns": 5,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/determinism/source_words.parquet",
+      "row_groups": 1,
+      "rows": 181731
+    },
+    {
+      "bytes": 3775487,
+      "columns": 33,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 7931
+    },
+    {
+      "bytes": 343887,
+      "columns": 8,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 754
+    },
+    {
+      "bytes": 4996911,
+      "columns": 5,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/processed/source_words.parquet",
+      "row_groups": 1,
+      "rows": 181731
+    },
+    {
+      "bytes": 2091593,
+      "columns": 33,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/regulator-only/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 3890
+    },
+    {
+      "bytes": 188437,
+      "columns": 8,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/regulator-only/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 364
+    },
+    {
+      "bytes": 2583265,
+      "columns": 5,
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/regulator-only/source_words.parquet",
+      "row_groups": 1,
+      "rows": 98265
+    },
+    {
+      "bytes": 8440,
+      "columns": 18,
+      "path": "regmodeltrace/data/document_manifest.parquet",
+      "row_groups": 1,
+      "rows": 3
+    },
+    {
+      "bytes": 41431,
+      "columns": 59,
+      "path": "regmodeltrace/data/evaluation/m3_promoted_m1_cells.parquet",
+      "row_groups": 1,
+      "rows": 160
+    },
+    {
+      "bytes": 8032,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/batch-55054235/smoke/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 7
+    },
+    {
+      "bytes": 8010,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/batch-55063746/smoke/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 7
+    },
+    {
+      "bytes": 8395,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/batch-55065051/smoke/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 11
+    },
+    {
+      "bytes": 8363,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/batch-55065228/smoke/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 10
+    },
+    {
+      "bytes": 490888,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/batch-55066466/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 3277
+    },
+    {
+      "bytes": 1061561,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/batch-55066466/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 1443
+    },
+    {
+      "bytes": 176,
+      "columns": 0,
+      "path": "regmodeltrace/data/extraction/batch-55066466/smoke/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 0
+    },
+    {
+      "bytes": 28020,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/core-55076128/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 100
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55076128/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 29347,
+      "columns": 19,
+      "path": "regmodeltrace/data/extraction/core-55077086/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 121
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55077086/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55081949/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 29944,
+      "columns": 26,
+      "path": "regmodeltrace/data/extraction/core-55085358/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 71
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55085358/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 31006,
+      "columns": 26,
+      "path": "regmodeltrace/data/extraction/core-55090141/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 155
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55090141/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 31185,
+      "columns": 27,
+      "path": "regmodeltrace/data/extraction/core-55092173/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 101
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55092173/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55093556/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 62332,
+      "columns": 60,
+      "path": "regmodeltrace/data/extraction/core-55098165/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 243
+    },
+    {
+      "bytes": 4266791,
+      "columns": 33,
+      "path": "regmodeltrace/data/extraction/core-55098165/frozen_inputs/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 8390
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55098165/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 66311,
+      "columns": 65,
+      "path": "regmodeltrace/data/extraction/core-55111758/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 254
+    },
+    {
+      "bytes": 4266791,
+      "columns": 33,
+      "path": "regmodeltrace/data/extraction/core-55111758/frozen_inputs/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 8390
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55111758/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 64513,
+      "columns": 65,
+      "path": "regmodeltrace/data/extraction/core-55116166/first/evidence_records.parquet",
+      "row_groups": 1,
+      "rows": 196
+    },
+    {
+      "bytes": 4266791,
+      "columns": 33,
+      "path": "regmodeltrace/data/extraction/core-55116166/frozen_inputs/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 8390
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/extraction/core-55116166/frozen_inputs/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 8440,
+      "columns": 18,
+      "path": "regmodeltrace/data/gold/frozen/gold-case-001-v0.3.0/document_manifest.parquet",
+      "row_groups": 1,
+      "rows": 3
+    },
+    {
+      "bytes": 4266791,
+      "columns": 33,
+      "path": "regmodeltrace/data/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 8390
+    },
+    {
+      "bytes": 407533,
+      "columns": 8,
+      "path": "regmodeltrace/data/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 710
+    },
+    {
+      "bytes": 5756667,
+      "columns": 5,
+      "path": "regmodeltrace/data/processed/source_words.parquet",
+      "row_groups": 1,
+      "rows": 208490
+    },
+    {
+      "bytes": 63096,
+      "columns": 42,
+      "path": "regmodeltrace/data/semantic/core-regression-v1/all_core.parquet",
+      "row_groups": 1,
+      "rows": 23
+    },
+    {
+      "bytes": 62727,
+      "columns": 42,
+      "path": "regmodeltrace/data/semantic/core-regression-v1/failed_core.parquet",
+      "row_groups": 1,
+      "rows": 22
+    },
+    {
+      "bytes": 1061561,
+      "columns": 42,
+      "path": "regmodeltrace/data/semantic/semantic_units.parquet",
+      "row_groups": 1,
+      "rows": 1443
+    },
+    {
+      "bytes": 4246857,
+      "columns": 33,
+      "path": "regmodeltrace/data/test-e/kcc-2023/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 8909
+    },
+    {
+      "bytes": 407746,
+      "columns": 8,
+      "path": "regmodeltrace/data/test-e/kcc-2023/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 748
+    },
+    {
+      "bytes": 5876229,
+      "columns": 5,
+      "path": "regmodeltrace/data/test-e/kcc-2023/processed/source_words.parquet",
+      "row_groups": 1,
+      "rows": 206357
+    },
+    {
+      "bytes": 5194614,
+      "columns": 33,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/processed/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 10354
+    },
+    {
+      "bytes": 501272,
+      "columns": 8,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/processed/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 899
+    },
+    {
+      "bytes": 6864933,
+      "columns": 5,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/processed/source_words.parquet",
+      "row_groups": 1,
+      "rows": 245327
+    },
+    {
+      "bytes": 2091816,
+      "columns": 33,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/regulator-only/parsed_blocks.parquet",
+      "row_groups": 1,
+      "rows": 3890
+    },
+    {
+      "bytes": 188718,
+      "columns": 8,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/regulator-only/source_pages.parquet",
+      "row_groups": 1,
+      "rows": 364
+    },
+    {
+      "bytes": 2582162,
+      "columns": 5,
+      "path": "regmodeltrace/data/validation-d/verisk-2023/regulator-only/source_words.parquet",
+      "row_groups": 1,
+      "rows": 98265
+    }
+  ],
+  "pdf_inventory": {
+    "duplicate_content_groups": {
+      "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be": [
+        "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_submission.pdf",
+        "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_submission_20250516.pdf"
+      ],
+      "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa": [
+        "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_submission.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf"
+      ],
+      "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed": [
+        "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_submission.pdf",
+        "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+      ],
+      "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e": [
+        "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_review.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_professional_team_20250410.pdf"
+      ],
+      "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff": [
+        "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_review.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf"
+      ],
+      "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e": [
+        "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_review.pdf",
+        "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+      ],
+      "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af": [
+        "regmodeltrace/data/corpus/scale-1/raw/shared_standards_2023_standards.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-4/raw/fchlpm_2023_hurricane_standards.pdf",
+        "regmodeltrace/data/test-e/kcc-2023/raw/fchlpm_2023_hurricane_standards.pdf",
+        "regmodeltrace/data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+      ],
+      "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656": [
+        "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_submission.pdf",
+        "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_submission_20250506.pdf"
+      ],
+      "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db": [
+        "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_review.pdf",
+        "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_professional_team_20250206.pdf"
+      ]
+    },
+    "files": [
+      {
+        "bytes": 900201,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/ara_2021_ara_review.pdf",
+        "sha256": "386790a984ee0b72a156cf0014040a7512551e257e277ff27333ce891fc513e7"
+      },
+      {
+        "bytes": 15457025,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/ara_2021_ara_submission.pdf",
+        "sha256": "4d8db3bd1232747ec2ec7a83b1672bf41fc46322416ffbe153a28afd45700a80"
+      },
+      {
+        "bytes": 866152,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2021_corelogic_review.pdf",
+        "sha256": "32504afad696eef3da5eebf4f6ec7f2525dd16e7f28438591524a79f0cc146b8"
+      },
+      {
+        "bytes": 8360226,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2021_corelogic_submission.pdf",
+        "sha256": "0a45b8b8ca4a22d62ea7cf12f8115ca0aa55a87a8ce5c64dc8cdf91f7a505471"
+      },
+      {
+        "bytes": 978927,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_review.pdf",
+        "sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e"
+      },
+      {
+        "bytes": 9583982,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_submission.pdf",
+        "sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656"
+      },
+      {
+        "bytes": 953999,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2021_fphlm_review.pdf",
+        "sha256": "5a16e26d4e112541dc572b2eb2d63a494f01c701bbe98da6427fcb2baee7475a"
+      },
+      {
+        "bytes": 27954518,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2021_fphlm_submission.pdf",
+        "sha256": "285adee0007ed93fc05fdb93324ddcf4fb52db61b80918e3e4c36559b9ed5bdc"
+      },
+      {
+        "bytes": 1013083,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2023_fphlm_review.pdf",
+        "sha256": "6bb9fdcc0e363fc9259e8145d1d9f57770a8298e5151debd0b1c16ca21753575"
+      },
+      {
+        "bytes": 19531722,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2023_fphlm_submission.pdf",
+        "sha256": "32a7aa4e661fe130b5681e8348fe7efcebcd2882e272d02675fc6e43cbec3647"
+      },
+      {
+        "bytes": 885145,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2021_impact_review.pdf",
+        "sha256": "132ff2e89e8aec13f0cc94446c807808d74c7bbb7f790de6484fb2537662dc4e"
+      },
+      {
+        "bytes": 11272412,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2021_impact_submission.pdf",
+        "sha256": "4d189ba81b825b74c3e9e9c1fbedf08c237e5e031b42abe2ae75e668bcb7ce43"
+      },
+      {
+        "bytes": 990788,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_review.pdf",
+        "sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+      },
+      {
+        "bytes": 12100621,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_submission.pdf",
+        "sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+      },
+      {
+        "bytes": 911297,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2021_rms_review.pdf",
+        "sha256": "de1dac1b542e356db3c4e64190bc6baa84a76135ae3bdc309f56d203df916155"
+      },
+      {
+        "bytes": 15320229,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2021_rms_submission.pdf",
+        "sha256": "b27b11f238b8df7851234163dff30a637a37ffc812f3b82d84388a3d6c8c8632"
+      },
+      {
+        "bytes": 974355,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2023_moodys_review.pdf",
+        "sha256": "8459e35aa132eb2ebab7dc708cca247c0534b0a3b4515e0f8eeabfe06bdc0fc0"
+      },
+      {
+        "bytes": 19853622,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2023_moodys_submission.pdf",
+        "sha256": "b4f749dbe5de6c6b650377af9330de233c277f0b5c7579f5b40eaacb0ccc3431"
+      },
+      {
+        "bytes": 2836439,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/shared_standards_2021_standards.pdf",
+        "sha256": "bf70dd6f2e8fb0d8ff74c49c2bb541d94ab851de9ac2043ec32bd4ba35115264"
+      },
+      {
+        "bytes": 3019832,
+        "path": "regmodeltrace/data/corpus/scale-1/raw/shared_standards_2023_standards.pdf",
+        "sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+      },
+      {
+        "bytes": 991804,
+        "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2021_kcc_review.pdf",
+        "sha256": "a5eb39ac15afcd3dc2695a5a0183b56dcf25997b46056fe2026f9cc63bc0f6df"
+      },
+      {
+        "bytes": 8331732,
+        "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2021_kcc_submission.pdf",
+        "sha256": "c6848ead6e297d704f75b8a3b3f7cf4f6302c0ee0a4c873e50fdfdb8a3f9ee5a"
+      },
+      {
+        "bytes": 1023622,
+        "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_review.pdf",
+        "sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+      },
+      {
+        "bytes": 10613547,
+        "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_submission.pdf",
+        "sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+      },
+      {
+        "bytes": 999827,
+        "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2021_verisk_review.pdf",
+        "sha256": "5dca3a60eca22b0f1206e3cedf2b7678485b0e842c8ac625efa4a6a05fa00e65"
+      },
+      {
+        "bytes": 47084434,
+        "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2021_verisk_submission.pdf",
+        "sha256": "d8e33750e0f6f9420f850a3c278029e6a472b998b97cf9da7cdf24256e84820c"
+      },
+      {
+        "bytes": 1073897,
+        "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_review.pdf",
+        "sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+      },
+      {
+        "bytes": 66378041,
+        "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_submission.pdf",
+        "sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+      },
+      {
+        "bytes": 3019832,
+        "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+        "sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+      },
+      {
+        "bytes": 990788,
+        "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf",
+        "sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+      },
+      {
+        "bytes": 12100621,
+        "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf",
+        "sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+      },
+      {
+        "bytes": 978927,
+        "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_professional_team_20250410.pdf",
+        "sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e"
+      },
+      {
+        "bytes": 9583982,
+        "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_submission_20250506.pdf",
+        "sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656"
+      },
+      {
+        "bytes": 3019832,
+        "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/fchlpm_2023_hurricane_standards.pdf",
+        "sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+      },
+      {
+        "bytes": 1568611,
+        "path": "regmodeltrace/data/raw/reviews/ara_2019_professional_team_20210311.pdf",
+        "sha256": "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504"
+      },
+      {
+        "bytes": 1586183,
+        "path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+        "sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0"
+      },
+      {
+        "bytes": 2691176,
+        "path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+        "sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+      },
+      {
+        "bytes": 12954834,
+        "path": "regmodeltrace/data/raw/submissions/ara_2019_submission_20210310.pdf",
+        "sha256": "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673"
+      },
+      {
+        "bytes": 11985253,
+        "path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+        "sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610"
+      },
+      {
+        "bytes": 3019832,
+        "path": "regmodeltrace/data/test-e/kcc-2023/raw/fchlpm_2023_hurricane_standards.pdf",
+        "sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+      },
+      {
+        "bytes": 1023622,
+        "path": "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_professional_team_20250206.pdf",
+        "sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+      },
+      {
+        "bytes": 10613547,
+        "path": "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_submission_20250516.pdf",
+        "sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+      },
+      {
+        "bytes": 3019832,
+        "path": "regmodeltrace/data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf",
+        "sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+      },
+      {
+        "bytes": 1073897,
+        "path": "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf",
+        "sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+      },
+      {
+        "bytes": 66378041,
+        "path": "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf",
+        "sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+      }
+    ],
+    "physical_bytes": 435870289,
+    "physical_file_count": 45,
+    "unique_content_bytes": 321047536,
+    "unique_content_count": 33
+  },
+  "repository_data_storage": {
+    "MiB": 1668.3145179748535,
+    "by_extension": {
+      ".csv": {
+        "MiB": 0.23627662658691406,
+        "bytes": 247754,
+        "files": 3
+      },
+      ".headers": {
+        "MiB": 0.0014963150024414062,
+        "bytes": 1569,
+        "files": 2
+      },
+      ".hsriehfnpq": {
+        "MiB": 2.2415027618408203,
+        "bytes": 2350386,
+        "files": 1
+      },
+      ".html": {
+        "MiB": 0.23443031311035156,
+        "bytes": 245818,
+        "files": 5
+      },
+      ".json": {
+        "MiB": 774.7311153411865,
+        "bytes": 812364454,
+        "files": 14817
+      },
+      ".jsonl": {
+        "MiB": 134.074125289917,
+        "bytes": 140586910,
+        "files": 81
+      },
+      ".log": {
+        "MiB": 1.3365764617919922,
+        "bytes": 1401502,
+        "files": 78
+      },
+      ".marker": {
+        "MiB": 1.9073486328125e-05,
+        "bytes": 20,
+        "files": 1
+      },
+      ".md": {
+        "MiB": 11.61444091796875,
+        "bytes": 12178624,
+        "files": 124
+      },
+      ".npy": {
+        "MiB": 40.8115234375,
+        "bytes": 42793984,
+        "files": 8
+      },
+      ".parquet": {
+        "MiB": 156.90211868286133,
+        "bytes": 164523796,
+        "files": 65
+      },
+      ".pdf": {
+        "MiB": 415.67829990386963,
+        "bytes": 435870289,
+        "files": 45
+      },
+      ".pre-ray-data-lock-798e261bdae565ae879580d96c91e10256ca4f1dd3d3e944536196cd5c12596c": {
+        "MiB": 4.258984565734863,
+        "bytes": 4465869,
+        "files": 1
+      },
+      ".py": {
+        "MiB": 1.073287010192871,
+        "bytes": 1125423,
+        "files": 142
+      },
+      ".pyc": {
+        "MiB": 1.7435379028320312,
+        "bytes": 1828232,
+        "files": 142
+      },
+      ".sbatch": {
+        "MiB": 0.003945350646972656,
+        "bytes": 4137,
+        "files": 9
+      },
+      ".sh": {
+        "MiB": 0.007968902587890625,
+        "bytes": 8356,
+        "files": 9
+      },
+      ".sqlite": {
+        "MiB": 106.5625,
+        "bytes": 111738880,
+        "files": 3
+      },
+      ".txt": {
+        "MiB": 0.1168680191040039,
+        "bytes": 122545,
+        "files": 56
+      },
+      ".vgopsevvhd": {
+        "MiB": 5.091732978820801,
+        "bytes": 5339069,
+        "files": 1
+      },
+      ".zip": {
+        "MiB": 11.58204174041748,
+        "bytes": 12144651,
+        "files": 3
+      },
+      "[no-extension]": {
+        "MiB": 0.01172637939453125,
+        "bytes": 12296,
+        "files": 5
+      }
+    },
+    "bytes": 1749354564,
+    "files": 15601
+  },
+  "retrieval_store_summary": {
+    "deterministic_passages": 6009,
+    "foundation_classifications": 16,
+    "foundation_records": 9946,
+    "interpretation": "Historical M4 stores cover the original three-document RMS corpus. They are not a unified cross-corpus production database.",
+    "narrative_candidates": 9750
+  },
+  "scale_1_snapshot": {
+    "bulk_eligible_documents": 20,
+    "bulk_numeric_cells": 1112,
+    "bulk_pages": 5129,
+    "bulk_semantic_units": 9010,
+    "bulk_source_blocks": 57030,
+    "eligible_source_assertions": 47458,
+    "large_runs": [
+      {
+        "backend": "direct",
+        "invalid_outputs": 18,
+        "replicas": 1,
+        "requests": 4096,
+        "valid_outputs": 4078,
+        "version": "scale-1-batch-run-1.0"
+      },
+      {
+        "backend": "ray",
+        "invalid_outputs": 18,
+        "replicas": 1,
+        "requests": 4096,
+        "valid_outputs": 4078,
+        "version": "scale-1-batch-run-1.0"
+      },
+      {
+        "backend": "ray",
+        "invalid_outputs": 18,
+        "replicas": 2,
+        "requests": 4096,
+        "valid_outputs": 4078,
+        "version": "scale-1-batch-run-1.0"
+      }
+    ],
+    "large_unique_requests": 4096,
+    "logical_documents": 28,
+    "protected_documents_excluded_from_bulk": 8
+  },
+  "snapshot_limitations": [
+    "SQLite files were opened immutable/read-only. A concurrent-writer snapshot was not needed because these historical stores have no WAL/SHM companions and are closed artifacts.",
+    "JSON and JSONL stores are numerous historical artifacts rather than one normalized database.",
+    "DCC cache sizes are physical du values and include cached models other than the final 32B model; hard-linked or shared blob accounting follows du semantics."
+  ],
+  "snapshot_utc": "2026-09-14T20:07:00+00:00",
+  "version": "review-1-storage-inventory-1.0"
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://regmodeltrace.local/schemas/comparison-truth-1.0.json",
+  "title": "Human-adjudicated RegModelTrace comparison truth",
+  "type": "object",
+  "properties": {
+    "comparison_id": {"type": "string", "minLength": 1},
+    "constraint_status": {
+      "type": "string",
+      "enum": ["PRESCRIBED", "NOT_PRESCRIBED", "UNRESOLVED"]
+    },
+    "evidence_sufficiency": {
+      "type": "string",
+      "enum": ["SUFFICIENT", "INSUFFICIENT", "UNRESOLVED", "NOT_APPLICABLE"]
+    },
+    "relation": {
+      "type": "string",
+      "enum": ["ALIGNED", "PARTIALLY_ALIGNED", "CONFLICT", "UNRESOLVED", "NOT_APPLICABLE"]
+    },
+    "review_activities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["REVIEWED", "VERIFIED", "QUESTIONED", "CHALLENGED", "REQUIRED_CHANGE", "DISPOSITION_RECORDED"]
+      },
+      "uniqueItems": true
+    },
+    "review_coverage": {
+      "type": "string",
+      "enum": ["DIRECT", "PARTIAL", "NONE", "UNRESOLVED", "NOT_ASSESSED"]
+    },
+    "causal_attribution": {
+      "type": "string",
+      "enum": ["SUPPORTED", "NOT_SUPPORTED", "UNRESOLVED", "NOT_ASSESSED"]
+    }
+  },
+  "required": [
+    "comparison_id",
+    "constraint_status",
+    "evidence_sufficiency",
+    "relation",
+    "review_activities",
+    "review_coverage",
+    "causal_attribution"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties": {"constraint_status": {"const": "NOT_PRESCRIBED"}}, "required": ["constraint_status"]},
+      "then": {
+        "properties": {
+          "evidence_sufficiency": {"const": "NOT_APPLICABLE"},
+          "relation": {"const": "NOT_APPLICABLE"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"evidence_sufficiency": {"const": "SUFFICIENT"}}, "required": ["evidence_sufficiency"]},
+      "then": {"properties": {"relation": {"enum": ["ALIGNED", "PARTIALLY_ALIGNED", "CONFLICT"]}}}
+    },
+    {
+      "if": {"properties": {"evidence_sufficiency": {"const": "NOT_APPLICABLE"}}, "required": ["evidence_sufficiency"]},
+      "then": {
+        "properties": {
+          "constraint_status": {"const": "NOT_PRESCRIBED"},
+          "relation": {"const": "NOT_APPLICABLE"}
+        }
+      }
+    }
+  ]
+}

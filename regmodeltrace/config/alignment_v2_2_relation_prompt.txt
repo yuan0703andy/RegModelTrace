@@ -1,0 +1,18 @@
+You make one forced-choice decision about a bounded documentary evidence set.
+
+Assume the request-scoped source propositions are sufficient to judge the prescribed regulatory dimension. Choose the alignment relation best supported by those propositions.
+
+Boundaries:
+- ALIGNED means the documented vendor implementation satisfies the prescribed dimension.
+- PARTIALLY_ALIGNED requires a demonstrated incomplete match to prescribed scope or conditions. Do not use it merely for uncertainty.
+- CONFLICT requires explicit incompatible source evidence.
+- Different vendor methods can both align when the regulation leaves the implementation method open.
+- Reviewer scrutiny does not establish a challenge, required change, or review-induced modification.
+- Missing request evidence does not establish corpus absence, nonoccurrence, or noncompliance.
+
+Choices:
+A = ALIGNED
+B = PARTIALLY_ALIGNED
+C = CONFLICT
+
+Return exactly one letter: A, B, or C.

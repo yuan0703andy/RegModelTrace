@@ -1,0 +1,1541 @@
+{
+  "version": "scale-1-checkpoint3b-verification-1.0",
+  "status": "COMPLETE",
+  "classification": "ENVIRONMENT_DIFFERENCE",
+  "classification_basis": "The historical outputs differ across recorded runtime environments, while the same-node controlled replay is stable across backends and contexts.",
+  "ray_scale_out": "PASS_WITH_GENERATIVE_NONDETERMINISM_LIMITATION",
+  "immutable_history": "CHECKPOINT_3=PARITY_GATE_FAIL",
+  "input_layer": {
+    "pass": true,
+    "file_checks": {
+      "fixture": true,
+      "m3_config": true,
+      "prompt": true,
+      "execution": true,
+      "environment_lock": true,
+      "checkpoint3": true
+    },
+    "original_input_identity": true,
+    "original_prompt_identity": true,
+    "controlled_prompt_bytes_identity": true,
+    "new_run_binding": true,
+    "actor_checks": {
+      "direct.actor0": {
+        "all_16_prompt_token_ids_match": true,
+        "focal_prompt_token_ids_match": true,
+        "source_request_match": true,
+        "payload_match": true,
+        "sampling_match": true,
+        "model_revision_match": true,
+        "model_path_match": true
+      },
+      "ray1.actor0": {
+        "all_16_prompt_token_ids_match": true,
+        "focal_prompt_token_ids_match": true,
+        "source_request_match": true,
+        "payload_match": true,
+        "sampling_match": true,
+        "model_revision_match": true,
+        "model_path_match": true
+      },
+      "ray2.actor0": {
+        "all_16_prompt_token_ids_match": true,
+        "focal_prompt_token_ids_match": true,
+        "source_request_match": true,
+        "payload_match": true,
+        "sampling_match": true,
+        "model_revision_match": true,
+        "model_path_match": true
+      },
+      "ray2.actor1": {
+        "all_16_prompt_token_ids_match": true,
+        "focal_prompt_token_ids_match": true,
+        "source_request_match": true,
+        "payload_match": true,
+        "sampling_match": true,
+        "model_revision_match": true,
+        "model_path_match": true
+      }
+    },
+    "expected_focal_prompt_token_ids_sha256": "943ae5c8b7342819fe48a27a6cffe9dfdb1f02769b94656232b0aa74259a6da4"
+  },
+  "runtime_layer": {
+    "controlled_same_node": true,
+    "controlled_hostnames": [
+      "dcc-core-gpu-ferc-s-aa32-1"
+    ],
+    "controlled_package_identity": true,
+    "controlled_packages": {
+      "direct.actor0": {
+        "vllm": "0.29.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0",
+        "ray": "2.58.0",
+        "numpy": "2.3.5",
+        "pyarrow": "21.0.0"
+      },
+      "ray1.actor0": {
+        "vllm": "0.29.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0",
+        "ray": "2.58.0",
+        "numpy": "2.3.5",
+        "pyarrow": "21.0.0"
+      },
+      "ray2.actor0": {
+        "vllm": "0.29.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0",
+        "ray": "2.58.0",
+        "numpy": "2.3.5",
+        "pyarrow": "21.0.0"
+      },
+      "ray2.actor1": {
+        "vllm": "0.29.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0",
+        "ray": "2.58.0",
+        "numpy": "2.3.5",
+        "pyarrow": "21.0.0"
+      }
+    },
+    "controlled_runtime_by_actor": {
+      "direct.actor0": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-1",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-bfdd1552-71d3-e065-7c21-9782a38120d7, 32760, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-59c4ee0f-b317-ac8a-e75d-67c9e2b77278, 32760, 610.43.02",
+        "cuda_visible_devices": "0",
+        "slurm_job_id": "55354372",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 33824571392,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      },
+      "ray1.actor0": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-1",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-bfdd1552-71d3-e065-7c21-9782a38120d7, 32760, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-59c4ee0f-b317-ac8a-e75d-67c9e2b77278, 32760, 610.43.02",
+        "cuda_visible_devices": "0",
+        "slurm_job_id": "55354372",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 33824571392,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      },
+      "ray2.actor0": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-1",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-bfdd1552-71d3-e065-7c21-9782a38120d7, 32760, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-59c4ee0f-b317-ac8a-e75d-67c9e2b77278, 32760, 610.43.02",
+        "cuda_visible_devices": "0",
+        "slurm_job_id": "55354372",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 33824571392,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      },
+      "ray2.actor1": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-1",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-bfdd1552-71d3-e065-7c21-9782a38120d7, 32760, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-59c4ee0f-b317-ac8a-e75d-67c9e2b77278, 32760, 610.43.02",
+        "cuda_visible_devices": "1",
+        "slurm_job_id": "55354372",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 33824571392,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      }
+    },
+    "original_runtime": {
+      "direct": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-9",
+        "gpu": {
+          "cuda_visible_devices": "0",
+          "physical_devices": [
+            {
+              "physical_index": "0",
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "uuid": "GPU-072b4918-1a2d-a877-90d4-82d77ae1b4e9",
+              "memory_mib": 30712
+            }
+          ],
+          "logical_devices": [
+            {
+              "logical_index": 0,
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "total_memory_bytes": 31689867264
+            }
+          ]
+        },
+        "label": "REGULATORY_REQUIREMENT"
+      },
+      "ray1": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-9",
+        "gpu": {
+          "cuda_visible_devices": "0",
+          "physical_devices": [
+            {
+              "physical_index": "0",
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "uuid": "GPU-fe7ad38f-37e1-7f86-9337-2145be854c52",
+              "memory_mib": 30712
+            }
+          ],
+          "logical_devices": [
+            {
+              "logical_index": 0,
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "total_memory_bytes": 31689867264
+            }
+          ]
+        },
+        "label": "REGULATORY_REQUIREMENT"
+      },
+      "ray2": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-1",
+        "gpu": {
+          "cuda_visible_devices": "0",
+          "physical_devices": [
+            {
+              "physical_index": "0",
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "uuid": "GPU-046c1b64-bfc4-cb64-a7b4-9bc3ffc1d11d",
+              "memory_mib": 32760
+            }
+          ],
+          "logical_devices": [
+            {
+              "logical_index": 0,
+              "name": "NVIDIA RTX 5000 Ada Generation",
+              "total_memory_bytes": 33824571392
+            }
+          ]
+        },
+        "label": "VENDOR_METHODOLOGY"
+      }
+    },
+    "original_environment_difference_observed": true,
+    "auxiliary_partial_direct": {
+      "status": "VALID_DIRECT_OUTPUT_FROM_LATER_FAILED_JOB_WRAPPER",
+      "path": "regmodeltrace/data/batch/scale-1/checkpoint3b/runs/direct-55352343.json",
+      "sha256": "5d91ecc7786f9346919112543240bfab2a6cf3604d7b6f90dc3415e263dc90e2",
+      "contract_sha256_match": true,
+      "fixture_sha256_match": true,
+      "runtime": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-5",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-9293afd7-f916-6613-8563-140b9f2f0369, 30712, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-6b57e55f-c603-8c9b-7857-f5dd4d1caba4, 30712, 610.43.02",
+        "cuda_visible_devices": "0",
+        "slurm_job_id": "55352343",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 31689867264,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      },
+      "labels_by_context": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "REGULATORY_REQUIREMENT",
+          "REGULATORY_REQUIREMENT",
+          "REGULATORY_REQUIREMENT"
+        ]
+      },
+      "candidate_margins": [
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 0,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 0,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 1,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 1,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 2,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 2,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 0,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 0,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 1,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 1,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 2,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 2,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        }
+      ],
+      "wrapper_failure_after_output": "SLURM_TMPDIR_UNBOUND_BEFORE_RAY1"
+    }
+  },
+  "decision_margin_layer": {
+    "definition": {
+      "labels": [
+        "REGULATORY_REQUIREMENT",
+        "VENDOR_METHODOLOGY"
+      ],
+      "json_styles": [
+        "COMPACT",
+        "SPACE_AFTER_COLON"
+      ],
+      "measurement": "FIRST_DIFFERING_LABEL_TOKEN_LOGPROB_AFTER_SHARED_PREFIX",
+      "near_boundary_absolute_logprob_delta_max": 0.25,
+      "odds_ratio_upper_bound_approx": 1.284,
+      "does_not_control_generation": true
+    },
+    "finite": true,
+    "near_boundary_observed": true,
+    "summaries": [
+      {
+        "actor": "direct.actor0",
+        "context": "ISOLATED",
+        "style": "COMPACT",
+        "values": [
+          0.21875,
+          0.21875,
+          0.21875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.21875,
+        "min_absolute_logprob_delta": 0.21875,
+        "max_absolute_logprob_delta": 0.21875
+      },
+      {
+        "actor": "direct.actor0",
+        "context": "ISOLATED",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.875,
+          -0.875,
+          -0.875
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.875,
+        "min_absolute_logprob_delta": 0.875,
+        "max_absolute_logprob_delta": 0.875
+      },
+      {
+        "actor": "direct.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "COMPACT",
+        "values": [
+          0.1875,
+          0.1875,
+          0.1875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.1875,
+        "min_absolute_logprob_delta": 0.1875,
+        "max_absolute_logprob_delta": 0.1875
+      },
+      {
+        "actor": "direct.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.8749999403953552,
+          -0.8749999403953552,
+          -0.8749999403953552
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.8749999403953552,
+        "min_absolute_logprob_delta": 0.8749999403953552,
+        "max_absolute_logprob_delta": 0.8749999403953552
+      },
+      {
+        "actor": "ray1.actor0",
+        "context": "ISOLATED",
+        "style": "COMPACT",
+        "values": [
+          0.21875,
+          0.21875,
+          0.21875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.21875,
+        "min_absolute_logprob_delta": 0.21875,
+        "max_absolute_logprob_delta": 0.21875
+      },
+      {
+        "actor": "ray1.actor0",
+        "context": "ISOLATED",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.875,
+          -0.875,
+          -0.875
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.875,
+        "min_absolute_logprob_delta": 0.875,
+        "max_absolute_logprob_delta": 0.875
+      },
+      {
+        "actor": "ray1.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "COMPACT",
+        "values": [
+          0.1875,
+          0.1875,
+          0.1875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.1875,
+        "min_absolute_logprob_delta": 0.1875,
+        "max_absolute_logprob_delta": 0.1875
+      },
+      {
+        "actor": "ray1.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.8749999403953552,
+          -0.8749999403953552,
+          -0.8749999403953552
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.8749999403953552,
+        "min_absolute_logprob_delta": 0.8749999403953552,
+        "max_absolute_logprob_delta": 0.8749999403953552
+      },
+      {
+        "actor": "ray2.actor0",
+        "context": "ISOLATED",
+        "style": "COMPACT",
+        "values": [
+          0.21875,
+          0.21875,
+          0.21875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.21875,
+        "min_absolute_logprob_delta": 0.21875,
+        "max_absolute_logprob_delta": 0.21875
+      },
+      {
+        "actor": "ray2.actor0",
+        "context": "ISOLATED",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.875,
+          -0.875,
+          -0.875
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.875,
+        "min_absolute_logprob_delta": 0.875,
+        "max_absolute_logprob_delta": 0.875
+      },
+      {
+        "actor": "ray2.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "COMPACT",
+        "values": [
+          0.1875,
+          0.1875,
+          0.1875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.1875,
+        "min_absolute_logprob_delta": 0.1875,
+        "max_absolute_logprob_delta": 0.1875
+      },
+      {
+        "actor": "ray2.actor0",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.8749999403953552,
+          -0.8749999403953552,
+          -0.8749999403953552
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.8749999403953552,
+        "min_absolute_logprob_delta": 0.8749999403953552,
+        "max_absolute_logprob_delta": 0.8749999403953552
+      },
+      {
+        "actor": "ray2.actor1",
+        "context": "ISOLATED",
+        "style": "COMPACT",
+        "values": [
+          0.21875,
+          0.21875,
+          0.21875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.21875,
+        "min_absolute_logprob_delta": 0.21875,
+        "max_absolute_logprob_delta": 0.21875
+      },
+      {
+        "actor": "ray2.actor1",
+        "context": "ISOLATED",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.875,
+          -0.875,
+          -0.875
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.875,
+        "min_absolute_logprob_delta": 0.875,
+        "max_absolute_logprob_delta": 0.875
+      },
+      {
+        "actor": "ray2.actor1",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "COMPACT",
+        "values": [
+          0.1875,
+          0.1875,
+          0.1875
+        ],
+        "mean_regulatory_minus_vendor_logprob": 0.1875,
+        "min_absolute_logprob_delta": 0.1875,
+        "max_absolute_logprob_delta": 0.1875
+      },
+      {
+        "actor": "ray2.actor1",
+        "context": "ORIGINAL_MICROBATCH",
+        "style": "SPACE_AFTER_COLON",
+        "values": [
+          -0.8749999403953552,
+          -0.8749999403953552,
+          -0.8749999403953552
+        ],
+        "mean_regulatory_minus_vendor_logprob": -0.8749999403953552,
+        "min_absolute_logprob_delta": 0.8749999403953552,
+        "max_absolute_logprob_delta": 0.8749999403953552
+      }
+    ]
+  },
+  "execution_context_layer": {
+    "labels_by_actor": {
+      "direct.actor0": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ]
+      },
+      "ray1.actor0": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ]
+      },
+      "ray2.actor0": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ]
+      },
+      "ray2.actor1": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ]
+      }
+    },
+    "repeated_variation": false,
+    "isolated_vs_original_microbatch_sensitivity": false,
+    "controlled_actor_or_backend_difference": false,
+    "complete_repetition_counts": true,
+    "auxiliary_partial_direct": {
+      "status": "VALID_DIRECT_OUTPUT_FROM_LATER_FAILED_JOB_WRAPPER",
+      "path": "regmodeltrace/data/batch/scale-1/checkpoint3b/runs/direct-55352343.json",
+      "sha256": "5d91ecc7786f9346919112543240bfab2a6cf3604d7b6f90dc3415e263dc90e2",
+      "contract_sha256_match": true,
+      "fixture_sha256_match": true,
+      "runtime": {
+        "hostname": "dcc-core-gpu-ferc-s-aa32-5",
+        "platform": "Linux-5.14.0-687.29.1.el9_8.x86_64-x86_64-with-glibc2.34",
+        "kernel": "5.14.0-687.29.1.el9_8.x86_64",
+        "machine": "x86_64",
+        "python": "3.12.10",
+        "cpu_model": "model name\t: Intel(R) Xeon(R) Gold 5420+",
+        "nvidia_smi": "0, NVIDIA RTX 5000 Ada Generation, GPU-9293afd7-f916-6613-8563-140b9f2f0369, 30712, 610.43.02\n1, NVIDIA RTX 5000 Ada Generation, GPU-6b57e55f-c603-8c9b-7857-f5dd4d1caba4, 30712, 610.43.02",
+        "cuda_visible_devices": "0",
+        "slurm_job_id": "55352343",
+        "torch_cuda_version": "13.0",
+        "torch_cudnn_version": 92000,
+        "torch_logical_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA RTX 5000 Ada Generation",
+            "total_memory_bytes": 31689867264,
+            "capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "packages": {
+          "vllm": "0.29.0",
+          "torch": "2.13.0",
+          "transformers": "5.17.0",
+          "ray": "2.58.0",
+          "numpy": "2.3.5",
+          "pyarrow": "21.0.0"
+        },
+        "environment": {
+          "VLLM_ENABLE_V1_MULTIPROCESSING": "0",
+          "OMP_NUM_THREADS": "8",
+          "CUDA_DEVICE_ORDER": null
+        }
+      },
+      "labels_by_context": {
+        "ISOLATED": [
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY",
+          "VENDOR_METHODOLOGY"
+        ],
+        "ORIGINAL_MICROBATCH": [
+          "REGULATORY_REQUIREMENT",
+          "REGULATORY_REQUIREMENT",
+          "REGULATORY_REQUIREMENT"
+        ]
+      },
+      "candidate_margins": [
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 0,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 0,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 1,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 1,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "COMPACT",
+          "repetition": 2,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0198657512664795,
+            "VENDOR_METHODOLOGY": -1.2386157512664795
+          },
+          "regulatory_minus_vendor_logprob": 0.21875,
+          "absolute_logprob_delta": 0.21875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ISOLATED",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 2,
+          "request_count": 1,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.6229238510131836,
+            "VENDOR_METHODOLOGY": -0.7479238510131836
+          },
+          "regulatory_minus_vendor_logprob": -0.875,
+          "absolute_logprob_delta": 0.875,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 0,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 0,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 1,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 1,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "COMPACT",
+          "repetition": 2,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\":\"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            3252
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.0284912586212158,
+            "VENDOR_METHODOLOGY": -1.2159912586212158
+          },
+          "regulatory_minus_vendor_logprob": 0.1875,
+          "absolute_logprob_delta": 0.1875,
+          "generated_token_id": 12173,
+          "generated_text": "REG"
+        },
+        {
+          "context": "ORIGINAL_MICROBATCH",
+          "style": "SPACE_AFTER_COLON",
+          "repetition": 2,
+          "request_count": 16,
+          "common_completion_prefix": "{\"evidence_type\": \"",
+          "common_completion_prefix_token_ids": [
+            4913,
+            68,
+            27480,
+            1819,
+            788,
+            330
+          ],
+          "candidate_token_ids": {
+            "REGULATORY_REQUIREMENT": 12173,
+            "VENDOR_METHODOLOGY": 53
+          },
+          "candidate_decoded_tokens": {
+            "REGULATORY_REQUIREMENT": "REG",
+            "VENDOR_METHODOLOGY": "V"
+          },
+          "candidate_logprobs": {
+            "REGULATORY_REQUIREMENT": -1.619157314300537,
+            "VENDOR_METHODOLOGY": -0.7441573739051819
+          },
+          "regulatory_minus_vendor_logprob": -0.8749999403953552,
+          "absolute_logprob_delta": 0.8749999403953552,
+          "generated_token_id": 53,
+          "generated_text": "V"
+        }
+      ],
+      "wrapper_failure_after_output": "SLURM_TMPDIR_UNBOUND_BEFORE_RAY1"
+    }
+  },
+  "runs": {
+    "direct": {
+      "path": "regmodeltrace/data/batch/scale-1/checkpoint3b/runs/direct-55354372.json",
+      "sha256": "9385747abc0765cd3ac260ad0dd4bd6ed953619b16b4653f685ea1c60d1131d7",
+      "elapsed_seconds": 248.94138418487273
+    },
+    "ray1": {
+      "path": "regmodeltrace/data/batch/scale-1/checkpoint3b/runs/ray1-55354372.json",
+      "sha256": "a3ff78028844bd6cdca0bcfc4337496b132b4d1144c397ab9ab0320ad2d9abe2",
+      "elapsed_seconds": 227.66356578702107
+    },
+    "ray2": {
+      "path": "regmodeltrace/data/batch/scale-1/checkpoint3b/runs/ray2-55354372.json",
+      "sha256": "275c1bac5967abf9693b0e930668c95314ae68036cc4431dcd832853f0983ddc",
+      "elapsed_seconds": 239.3002021140419
+    }
+  },
+  "accounting": {
+    "version": "scale-1-checkpoint3b-accounting-1.0",
+    "source": "DCC sacct -X snapshot after job 55354372 completion",
+    "jobs": [
+      {
+        "job_id": "55352343",
+        "state": "FAILED",
+        "elapsed_seconds": 253,
+        "allocated_gpus": 2,
+        "gpu_type": "5000_ada",
+        "node": "dcc-core-gpu-ferc-s-aa32-5",
+        "disposition": "DIRECT_COMPLETE_THEN_WRAPPER_FAILED_SLURM_TMPDIR_UNBOUND",
+        "allocated_gpu_seconds": 506
+      },
+      {
+        "job_id": "55352542",
+        "state": "CANCELLED_PENDING",
+        "elapsed_seconds": 0,
+        "allocated_gpus": 0,
+        "gpu_type": "5000_ada",
+        "node": null,
+        "disposition": "CANCELLED_BEFORE_ALLOCATION_TO_AVOID_DUPLICATE_AFTER_ALTERNATE_QUEUE_PROBE",
+        "allocated_gpu_seconds": 0
+      },
+      {
+        "job_id": "55352612",
+        "state": "FAILED",
+        "elapsed_seconds": 17,
+        "allocated_gpus": 2,
+        "gpu_type": "6000_ada",
+        "node": "dcc-majoroslab-gpu-ferc-a-r32-34",
+        "disposition": "NO_INFERENCE_NVML_DEVICE_HANDLE_ERROR",
+        "allocated_gpu_seconds": 34
+      },
+      {
+        "job_id": "55354372",
+        "state": "COMPLETED",
+        "elapsed_seconds": 718,
+        "allocated_gpus": 2,
+        "gpu_type": "5000_ada",
+        "node": "dcc-core-gpu-ferc-s-aa32-1",
+        "disposition": "COMPLETE_CONTROLLED_MATRIX",
+        "allocated_gpu_seconds": 1436
+      }
+    ],
+    "totals": {
+      "allocated_gpu_seconds": 1976,
+      "allocated_gpu_hours": 0.5488888888888889
+    },
+    "test_only_jobs_not_submitted": [
+      "55352340",
+      "55352541",
+      "55352572",
+      "55352580",
+      "55352581",
+      "55352593",
+      "55352607",
+      "55352608",
+      "55353689",
+      "55354323"
+    ]
+  },
+  "scope": "ONE_REQUEST_AND_ITS_ORIGINAL_MICROBATCH_ONLY; NO_VALIDATION_D; NO_SEALED_TEST_E; NO_TUNING; NO_FULL_4096_REPLAY",
+  "limitations": [
+    "The controlled replay uses one additional same-node allocation and cannot reconstruct unrecorded driver/CUDA details from the historical nodes.",
+    "The branch margin compares the first differing semantic-label token under two fixed JSON prefixes; it is not a calibrated class probability.",
+    "No semantic truth is assigned to the table-like focal assertion."
+  ]
+}

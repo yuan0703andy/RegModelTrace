@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://regmodeltrace.local/schemas/alignment-forecast-1.0.json",
+  "title": "RegModelTrace probabilistic alignment forecast",
+  "description": "The host attaches comparison identity and resolves request-scoped evidence references after validation.",
+  "type": "object",
+  "properties": {
+    "evidence_sufficient_probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "conditional_relation_probabilities": {
+      "type": "object",
+      "properties": {
+        "ALIGNED": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "PARTIALLY_ALIGNED": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "CONFLICT": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "ALIGNED",
+        "PARTIALLY_ALIGNED",
+        "CONFLICT"
+      ],
+      "additionalProperties": false
+    },
+    "support_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "limitation_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "evidence_sufficient_probability",
+    "conditional_relation_probabilities",
+    "support_evidence_refs",
+    "limitation_evidence_refs"
+  ],
+  "additionalProperties": false
+}

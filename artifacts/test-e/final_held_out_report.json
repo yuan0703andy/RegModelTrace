@@ -1,0 +1,242 @@
+{
+  "version": "sealed-test-e-kcc-v2.2-final-held-out-report-1.0",
+  "status": "COMPLETE_WITH_MODEL_ERRORS",
+  "test_e": "CLOSED",
+  "project_technical_development": "CLOSED",
+  "dcc_job_id": "55434235",
+  "execution_integrity": {
+    "status": "PASS",
+    "checks": {
+      "job_complete": true,
+      "truth_frozen_before_inference": true,
+      "single_semantic_run": true,
+      "zero_semantic_retries": true,
+      "zero_evaluator_reads_during_inference": true,
+      "fixture_bound": true,
+      "truth_bound": true,
+      "truth_artifacts_immutable": true,
+      "fixture_inputs_immutable": true,
+      "interface_byte_identical": true,
+      "results_hash_valid": true,
+      "journal_hash_valid": true,
+      "requests_hash_valid": true,
+      "raw_response_hashes_valid": true,
+      "request_response_token_binding": true,
+      "all_cases_valid": true,
+      "all_decisions_valid": true,
+      "candidate_token_completeness": true,
+      "host_normalization_validity": true,
+      "generated_choice_argmax_agreement": true,
+      "provenance_integrity": true,
+      "parser_limitation_preserved": true
+    },
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "model_revision": "5c7cb76a268fc6cfbb9c4777eb24ba6e27f9ee6c",
+    "vllm_version": "0.29.0",
+    "gpu": "NVIDIA RTX 5000 Ada Generation, GPU-699b7369-feee-ab2b-0c41-cadcabffd75c, 32760 MiB",
+    "fixture_sha256": "4f4fd61b1b7ea9b60ec1bc32dd3e8c0446ad695e49dac2702dde98a071e27609",
+    "human_truth_freeze_sha256": "f5a8f5c1e61d595a3be95ca796873ebfd929b57fe487c778ff9902845f42d538",
+    "results_sha256": "f2a0cce27ac7ba79811dd30622c5443e4e699b25aaa28e3aa05170d476fcbffc",
+    "journal_sha256": "a1df3e9561776a4cfe72ea5122aef10a408ab5e4a4f07c67c4f36bc46f701486",
+    "raw_persisted_utc": "2026-09-14T19:37:10.784485+00:00"
+  },
+  "truth_distribution": {
+    "ALIGNED": 4,
+    "PARTIALLY_ALIGNED": 2,
+    "CONFLICT": 0,
+    "INSUFFICIENT_PRIMARY": 0,
+    "INSUFFICIENT_ADVERSE": 6
+  },
+  "performance": {
+    "evidence_sufficiency_all": {
+      "correct": 11,
+      "total": 12
+    },
+    "evidence_sufficiency_primary": {
+      "correct": 5,
+      "total": 6
+    },
+    "evidence_sufficiency_adverse": {
+      "correct": 6,
+      "total": 6
+    },
+    "conditional_relation_all": {
+      "correct": 4,
+      "total": 6
+    },
+    "conditional_relation_by_class": {
+      "ALIGNED": {
+        "correct": 4,
+        "total": 4
+      },
+      "PARTIALLY_ALIGNED": {
+        "correct": 0,
+        "total": 2
+      },
+      "CONFLICT": {
+        "correct": 0,
+        "total": 0
+      }
+    },
+    "proper_scores": {
+      "valid_binary_score_denominator": 12,
+      "valid_conditional_relation_score_denominator": 6,
+      "binary_brier_evidence_sufficiency": 0.06862664357058956,
+      "binary_log_evidence_sufficiency": 0.1996899799191357,
+      "binary_log_has_infinite_loss": false,
+      "multiclass_brier_conditional_relation": 0.6666716833485092,
+      "multiclass_log_conditional_relation": 8.735031717150793,
+      "multiclass_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient."
+    }
+  },
+  "case_attribution": {
+    "FC-TE23-G2": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "FC-TE23-M3": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "FC-TE23-S2": {
+      "outcome": "MODEL_ERROR",
+      "error_families": [
+        "EVIDENCE_SUFFICIENCY_UNDERCALL",
+        "SCOPE_APPLICABILITY_UNDERCALL"
+      ],
+      "interpretation": "The frozen evidence bundle is sufficient, but the model chose INSUFFICIENT. The frozen adjudication treats hourly loss-cost sensitivity as inapplicable because KCC has no hourly loss-cost output and relies on temporal windspeed plus spatial windspeed/loss analyses.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "FC-TE23-V2": {
+      "outcome": "MODEL_ERROR",
+      "error_families": [
+        "MULTI_FACET_OVERALIGNMENT"
+      ],
+      "interpretation": "The model predicted full alignment although one prescribed vendor-demonstration facet remained incomplete. Direct reviewer evidence accompanies the incomplete vendor facet, but the output alone cannot identify whether reviewer/vendor evidence collapse caused the decision.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "FC-TE23-A2": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "FC-TE23-CI6": {
+      "outcome": "MODEL_ERROR",
+      "error_families": [
+        "MULTI_FACET_OVERALIGNMENT"
+      ],
+      "interpretation": "The model predicted full alignment although one prescribed vendor-demonstration facet remained incomplete. Direct reviewer evidence accompanies the incomplete vendor facet, but the output alone cannot identify whether reviewer/vendor evidence collapse caused the decision.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-G2-COPIED-REQUIREMENT": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-M3-FUTURE-REVIEW": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-S2-REVIEWER-ONLY": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-V2-COPIED-REQUIREMENT": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-A2-REVISION-HISTORY-ONLY": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    },
+    "ADV-TE23-CI6-FUTURE-REVIEW": {
+      "outcome": "PASS",
+      "error_families": [],
+      "interpretation": "The forced-choice decisions match frozen truth.",
+      "mechanism_identified": false,
+      "interface_clean": true,
+      "evidence_input_frozen": true
+    }
+  },
+  "error_index": {
+    "FC-TE23-S2": [
+      "EVIDENCE_SUFFICIENCY_UNDERCALL",
+      "SCOPE_APPLICABILITY_UNDERCALL"
+    ],
+    "FC-TE23-V2": [
+      "MULTI_FACET_OVERALIGNMENT"
+    ],
+    "FC-TE23-CI6": [
+      "MULTI_FACET_OVERALIGNMENT"
+    ]
+  },
+  "forbidden_inference_assessment": {
+    "status": "NOT_DIRECTLY_ASSESSED_BY_V2_2_INTERFACE",
+    "reason": "The frozen forced-choice interface has evidence-sufficiency and relation outputs but no causal-output field.",
+    "boundary_controls": "PASS_6_OF_6",
+    "bounded_interpretation": "All copied-requirement, future-review, reviewer-only, and revision-history adverse bundles were correctly classified as insufficient. This does not establish corpus absence or measure free-form causal generation."
+  },
+  "cross_corpus_interpretation": [
+    "KCC V-2 and CI-6 independently repeat MULTI_FACET_OVERALIGNMENT: both frozen PARTIALLY_ALIGNED cases were predicted ALIGNED with near-unit conditional probability.",
+    "KCC S-2 repeats a conservative evidence-sufficiency undercall under the same output-scope qualification that made Verisk S-2 contract-sensitive.",
+    "All six KCC adverse controls passed, so this test did not produce reviewer-only sufficiency, future-tense completion, copied-requirement sufficiency, or revision-history wrong-scope overclaim."
+  ],
+  "parser_portability": {
+    "whole_document": "FAIL_TABLE_IDENTITY",
+    "truth_supporting_narrative_reconstruction": "PASS",
+    "affected_table_evidence": "EXCLUDED"
+  },
+  "limitations": [
+    "No CONFLICT primary case occurred, so conflict discrimination remains untested.",
+    "Candidate-renormalized next-token probabilities are conditional scores under the frozen prompt, label order, verbalizers, tokenizer, and decoding configuration; they do not establish global calibration.",
+    "The fixed scorer's embedded generic limitation text describes its earlier development fixture. The numerical scores and row-level truths are valid; this final report supplies the correct KCC held-out interpretation without changing the scorer.",
+    "The forced-choice interface does not measure free-form answer generation or causal-language behavior.",
+    "KCC whole-document parser portability failed on four table panels, although every truth-supporting narrative proposition reconstructs exactly and affected table evidence was excluded."
+  ],
+  "post_test_policy": {
+    "prompt_changes": false,
+    "verbalizer_changes": false,
+    "model_changes": false,
+    "scorer_changes": false,
+    "rerun_authorized": false,
+    "fine_tuning_authorized": false,
+    "additional_vendor_evaluation_authorized": false
+  }
+}

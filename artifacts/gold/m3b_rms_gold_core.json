@@ -1,0 +1,621 @@
+{
+  "reference_version": "gold-case-001-v0.3.0",
+  "case_id": "gold_case_001_m3b_rms21",
+  "documents": [
+    {
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_type": "standard",
+      "title": "Hurricane Standards Report of Activities as of November 1, 2019",
+      "author": "Florida Commission on Hurricane Loss Projection Methodology",
+      "vendor": null,
+      "standards_year": 2019,
+      "model_name": null,
+      "model_version": null,
+      "publication_date": "2019-11-01",
+      "date_basis": "Cover and dated transmittal letter; the standards-cycle date, not website upload date.",
+      "source_url": "https://fchlpm.sbafla.com/media/o10dfucl/2019_hurricaneroa.pdf",
+      "local_path": "data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "num_pages": 310,
+      "ingestion_timestamp": "2026-09-09T21:05:46.887183+00:00"
+    },
+    {
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_type": "vendor_submission",
+      "title": "RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+      "author": "Risk Management Solutions, Inc.",
+      "vendor": "RMS",
+      "standards_year": 2019,
+      "model_name": "North Atlantic Hurricane Models",
+      "model_version": "21.0",
+      "model_build": "2050",
+      "publication_date": "2021-04-22",
+      "date_basis": "April 22, 2021 cover and matching footer date identify this revised submission snapshot, not its original submission or model release date. The model-identification form on PDF page 4 separately says June 2021.",
+      "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "num_pages": 337,
+      "ingestion_timestamp": "2026-09-09T21:05:47.982728+00:00"
+    },
+    {
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_type": "professional_team_report",
+      "title": "RMS Professional Team Report, April 19-22, 2021",
+      "author": "FCHLPM Professional Team",
+      "vendor": "RMS",
+      "standards_year": 2019,
+      "model_name": "North Atlantic Hurricane Models",
+      "model_version": "21.0",
+      "model_build": "2050",
+      "publication_date": null,
+      "date_basis": "The report identifies the April 19-22, 2021 review interval. Its exact publication/posting date is unknown and is not imputed from the review end date.",
+      "review_start_date": "2021-04-19",
+      "review_end_date": "2021-04-22",
+      "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf",
+      "local_path": "data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "num_pages": 63,
+      "ingestion_timestamp": "2026-09-09T21:05:48.481155+00:00"
+    }
+  ],
+  "gold_core": {
+    "evidence_ids": [
+      "S_M3B",
+      "S_M3_CONTEXT",
+      "V_M3B",
+      "V_SMOOTHING",
+      "V_POISSON",
+      "T_LANDFALL_REVIEW",
+      "T_M3_REVIEW",
+      "V_PRIOR_UPDATE",
+      "V_BASELINE_VERSION",
+      "T_OPENING_UPDATES",
+      "T_HISTORY",
+      "V_M1_TABLE"
+    ],
+    "selection_rationale": {
+      "S_M3B": "Regulatory coastal-segment historical-consistency requirement.",
+      "S_M3_CONTEXT": "Same-standard purpose and intensity context qualify consistency; selected instead of adding S_S1_DIFFERENCES to the denominator.",
+      "V_M3B": "Vendor compliance assertion, distinct from a dated review response.",
+      "V_SMOOTHING": "Coastal-frequency smoothing and calibration methodology.",
+      "V_POISSON": "Poisson means calibrated toward smoothed coastal counts; continuation must survive parsing.",
+      "T_LANDFALL_REVIEW": "Completed scrutiny of gate/category updates and historical-frequency smoothing.",
+      "T_M3_REVIEW": "Actual M-3 comments and verification; no explicit modification instruction in these comments.",
+      "V_PRIOR_UPDATE": "Update description explicitly uses the prior-accepted to initial-submission baseline.",
+      "V_BASELINE_VERSION": "Identifies the versions being compared and prevents a within-review baseline substitution.",
+      "T_OPENING_UPDATES": "The event-set update was already presented at the opening briefing.",
+      "T_HISTORY": "Actual change-history reference remains unmatched; selected instead of S_REVISION_PROCESS for this minimum.",
+      "V_M1_TABLE": "Observed and modeled values differ; table row/column associations matter."
+    },
+    "selection_basis": "User-proposed minimal set; S_M3_CONTEXT and T_HISTORY chosen for the suggested alternatives.",
+    "minimality": "Operational sufficient reference for this case, not a proof of a unique globally minimal set.",
+    "recall_denominator": 12,
+    "denominator_unit": "unique_core_passage_record"
+  },
+  "evaluation_contract": {
+    "primary_metric": "gold_core_record_recovery",
+    "denominator_evidence_ids": [
+      "S_M3B",
+      "S_M3_CONTEXT",
+      "V_M3B",
+      "V_SMOOTHING",
+      "V_POISSON",
+      "T_LANDFALL_REVIEW",
+      "T_M3_REVIEW",
+      "V_PRIOR_UPDATE",
+      "V_BASELINE_VERSION",
+      "T_OPENING_UPDATES",
+      "T_HISTORY",
+      "V_M1_TABLE"
+    ],
+    "denominator": 12,
+    "numerator_rule": "Count a core record only if all its constituent source spans are recoverable from parser output. Report coherent-unit and table-structure checks separately.",
+    "deduplication": "Count each core evidence ID once across all five questions, regardless of number of spans or repeated question assignments.",
+    "absent_slots_are_positive_recall_targets": false,
+    "audit_context_in_primary_denominator": false,
+    "negative_and_causal_assessment": "Assess bounded-absence labeling and causal validity separately in later semantic evaluation; absence cannot be a positive passage-retrieval target.",
+    "current_metric_values": null,
+    "limitations": "No empirical recovery result is supplied by annotation partitioning. Core preservation alone is not retrieval or semantic conclusion accuracy."
+  },
+  "records": [
+    {
+      "evidence_id": "S_M3B",
+      "status": "FOUND",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_code": "S",
+      "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "local_path": "data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "section": "M-3.B",
+      "source_spans": [
+        {
+          "page": 120,
+          "printed_page": "120",
+          "start": 191,
+          "end": 463,
+          "sha256": "c83af0faeaa6f167318a278d30bef4f3c7d2ccd023f2682915df8048ba7f7978",
+          "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+          "source_url": "https://fchlpm.sbafla.com/media/o10dfucl/2019_hurricaneroa.pdf#page=120"
+        }
+      ],
+      "interpretation": "Historical coastal-frequency consistency is required for categories 1–5 in Florida and the three named neighboring states.",
+      "question_ids": [
+        "Q1"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "S_M3_CONTEXT",
+      "status": "FOUND",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_code": "S",
+      "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "local_path": "data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "section": "M-3.A/C and Purpose",
+      "source_spans": [
+        {
+          "page": 120,
+          "printed_page": "120",
+          "start": 0,
+          "end": 190,
+          "sha256": "fc8defd650e6bae9dabb58b2dc6de76041ff39219480846fbae82ce5aadb73a6",
+          "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+          "source_url": "https://fchlpm.sbafla.com/media/o10dfucl/2019_hurricaneroa.pdf#page=120"
+        },
+        {
+          "page": 120,
+          "printed_page": "120",
+          "start": 464,
+          "end": 1714,
+          "sha256": "8cc7a90ed9f4e24ac1da478e8209710318961997ad5e2cadd89717a3efb70887",
+          "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+          "source_url": "https://fchlpm.sbafla.com/media/o10dfucl/2019_hurricaneroa.pdf#page=120"
+        }
+      ],
+      "interpretation": "Intensity has a common wind definition; geographic continuity and reasonable historical agreement frame consistency, without a numeric gatewise tolerance here.",
+      "question_ids": [
+        "Q1",
+        "Q5"
+      ],
+      "role": "qualification",
+      "content_kind": "narrative_and_table",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_M3B",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "M-3.B requirement and non-italic response",
+      "source_spans": [
+        {
+          "page": 67,
+          "printed_page": "67",
+          "start": 250,
+          "end": 856,
+          "sha256": "082094f161078e745e5ff265e8d9a703cf31f6667bbb0b7cf47656e4a410e5cd",
+          "page_text_sha256": "1a8171e10353f5e4692f0f60a76d47494d5be31b590eeb9c2c5a3258c2325482",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=67"
+        }
+      ],
+      "interpretation": "RMS asserts regional total/intensity consistency and cites Form M-1; this is submission justification without a matched reviewer-response chronology.",
+      "question_ids": [
+        "Q3"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_SMOOTHING",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "G-1.2 calibration paragraph",
+      "source_spans": [
+        {
+          "page": 16,
+          "printed_page": "16",
+          "start": 259,
+          "end": 841,
+          "sha256": "601051107f440623b97beff625c77d5086d113d4406a3bebc63c0f7da488c16a",
+          "page_text_sha256": "830b13a443350522fba872ec233b889f180ca8ad8af7b55fe0f2f3a247cb98b4",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+        }
+      ],
+      "interpretation": "RMS describes smoothed historical targets on 69 coastal segments and adjusting simulated events toward them to reduce sampling artifacts; this is an existing method description.",
+      "question_ids": [
+        "Q3",
+        "Q4",
+        "Q5"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_POISSON",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "S-1.1 Storm Frequency, continued",
+      "source_spans": [
+        {
+          "page": 88,
+          "printed_page": "88",
+          "start": 3550,
+          "end": 3753,
+          "sha256": "b0a6463a0e3b77d939d92b8166583c85d132767b2a8ed6a0241fa63931086ad3",
+          "page_text_sha256": "fba557977cbfeddfad6ec4b7057b16cccbb821f6988265d6ee3e05f531545c62",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=88"
+        },
+        {
+          "page": 89,
+          "printed_page": "89",
+          "start": 62,
+          "end": 446,
+          "sha256": "236d3e62563b89d3de3038acddf54444573c9640e5ae1a10bddb023a55b0f7cf",
+          "page_text_sha256": "526d410f2b0fe2d646926fc6576143aff4a65320cc4779c89ef6d5607c65fdfd",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=89"
+        }
+      ],
+      "interpretation": "RMS describes storm-specific Poisson means calibrated toward smoothed coastal counts and reports goodness-of-fit checks.",
+      "question_ids": [
+        "Q3"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "T_LANDFALL_REVIEW",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_code": "T",
+      "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "local_path": "data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "section": "M-2 verification and Team comments",
+      "source_spans": [
+        {
+          "page": 17,
+          "printed_page": "17",
+          "start": 1921,
+          "end": 2024,
+          "sha256": "6998911fdf6318a666bdcccfb12b8cd67bd816b816af44c822463ef239091c78",
+          "page_text_sha256": "50a0063fecbb99c9773139cdaa81742ab19822e914f2b9a24225e639c95e20ff",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=17"
+        },
+        {
+          "page": 18,
+          "printed_page": "18",
+          "start": 47,
+          "end": 162,
+          "sha256": "59b945a61481e53038f361138af186195cbdb36285b711fe6bb36cb982c4c8a9",
+          "page_text_sha256": "d13ce92852e019b0e03d96eacef7e92e802cbe80adcb7c918d204c35489f8c8c",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=18"
+        }
+      ],
+      "interpretation": "The Team reviewed annual-rate updates, gate/category methodology, and historical-frequency smoothing; examination is not evidence that reviewers caused the updates.",
+      "question_ids": [
+        "Q2",
+        "Q4",
+        "Q5"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "T_M3_REVIEW",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_code": "T",
+      "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "local_path": "data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "section": "M-3 verification and Team comments",
+      "source_spans": [
+        {
+          "page": 20,
+          "printed_page": "20",
+          "start": 128,
+          "end": 313,
+          "sha256": "3a6bb2a3985db434d0832176391828b5cfdf0df034f56a6944410b3db4abfd9a",
+          "page_text_sha256": "4671d74cb518e8daaeeb0aaeb7408f455d9e4bec75a9c451013a57c2f1193714",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=20"
+        }
+      ],
+      "interpretation": "The Team marks M-3 verified and records gate-map and Form S-3 distribution/source review. No change instruction is stated in these comments.",
+      "question_ids": [
+        "Q2",
+        "Q4"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_PRIOR_UPDATE",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "G-1.7.A, Stochastic Module",
+      "source_spans": [
+        {
+          "page": 35,
+          "printed_page": "35",
+          "start": 651,
+          "end": 1180,
+          "sha256": "e164f9063a8048860c53c427301ddb8b8f4f287d277e9f543a2f194bfb5d3485",
+          "page_text_sha256": "82189d3500b92b36f17f2a907d2408809bc77dcee9e00201f3c5107b97eba9b0",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=35"
+        },
+        {
+          "page": 35,
+          "printed_page": "35",
+          "start": 1639,
+          "end": 1918,
+          "sha256": "c3fa3427cdf55501159adbae379875ed77a7088bbe70dedbd0a77fa9ed58ab5f",
+          "page_text_sha256": "82189d3500b92b36f17f2a907d2408809bc77dcee9e00201f3c5107b97eba9b0",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=35"
+        }
+      ],
+      "interpretation": "Landfall and bypass rates were revised using July 2019 HURDAT2; the question sets the comparison from previously accepted model to this year’s initial submission.",
+      "question_ids": [
+        "Q4",
+        "Q5"
+      ],
+      "role": "support",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_BASELINE_VERSION",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "G-1.7.B",
+      "source_spans": [
+        {
+          "page": 36,
+          "printed_page": "36",
+          "start": 1690,
+          "end": 2237,
+          "sha256": "dcefb310b6ca9220d469713a5410ee72d2d759f8d0692fd1fb72bc3ad6afaa74",
+          "page_text_sha256": "ad1ee7021b5ed2b4e85bfe6f3e98f439545d0fca6b7f7ffa8be444b60662a3af",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=36"
+        }
+      ],
+      "interpretation": "The identified comparison is version 21.0 build 2050 versus version 18.1 build 1945; it is not a before/after-April-review comparison.",
+      "question_ids": [
+        "Q4",
+        "Q5"
+      ],
+      "role": "qualification",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "T_OPENING_UPDATES",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_code": "T",
+      "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "local_path": "data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "section": "Opening briefing",
+      "source_spans": [
+        {
+          "page": 3,
+          "printed_page": "3",
+          "start": 393,
+          "end": 1390,
+          "sha256": "b316ef8747e3282e84ab76c02b07c6482813d56785eca2f088b9dafcf536262a",
+          "page_text_sha256": "cdcda9db5f91f715ddc538f718d119c91d2c9183acba3447e1f81753c0206f51",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+        }
+      ],
+      "interpretation": "The opening briefing already lists the July 2019 HURDAT2 event-set update. This weighs against attributing that listed update to later scrutiny in the same review.",
+      "question_ids": [
+        "Q4",
+        "Q5"
+      ],
+      "role": "qualification",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "T_HISTORY",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_code": "T",
+      "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "local_path": "data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "section": "CI-6.D, Question 46, and Team comments",
+      "source_spans": [
+        {
+          "page": 62,
+          "printed_page": "62",
+          "start": 675,
+          "end": 930,
+          "sha256": "8f4b51037bd9e3ce979c635f0b8d55ae822f383dc5854309a9e2c8b492748718",
+          "page_text_sha256": "1eeaef97b377a568c40ea7b80b46c97c620147b6e0ef8568b48409c6d8394b66",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=62"
+        },
+        {
+          "page": 62,
+          "printed_page": "62",
+          "start": 1625,
+          "end": 1970,
+          "sha256": "fdab21140279e2c22c07c07869ebb6c1a5cbbf264938d529901cfa4a325bba7b",
+          "page_text_sha256": "1eeaef97b377a568c40ea7b80b46c97c620147b6e0ef8568b48409c6d8394b66",
+          "source_url": "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=62"
+        }
+      ],
+      "interpretation": "The Team requested and reviewed model-version history. The underlying entries are absent from these pages, so dates/reasons cannot be reconstructed here.",
+      "question_ids": [
+        "Q4",
+        "Q5"
+      ],
+      "role": "unresolved_dependency",
+      "content_kind": "narrative",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    },
+    {
+      "evidence_id": "V_M1_TABLE",
+      "status": "FOUND",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_code": "V",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "local_path": "data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "section": "Form M-1, Table 18",
+      "source_spans": [
+        {
+          "page": 178,
+          "printed_page": "178",
+          "start": 0,
+          "end": 1468,
+          "sha256": "ea9a591df4ae6f3fa23a3d4d1152a69adeed9b07f903c76b8268f7a7048b7ac6",
+          "page_text_sha256": "ea9a591df4ae6f3fa23a3d4d1152a69adeed9b07f903c76b8268f7a7048b7ac6",
+          "source_url": "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=178"
+        }
+      ],
+      "interpretation": "Historical and modeled rates differ: statewide category 1 is 0.218 versus 0.182; northwest Florida category 4 is 0 versus 0.012. These differences alone establish neither noncompliance nor review-induced change.",
+      "question_ids": [
+        "Q3",
+        "Q5"
+      ],
+      "role": "qualification",
+      "content_kind": "table",
+      "visual_check": "assistant_inspected_rendered_pages",
+      "independent_human_verified": false,
+      "evidence_layer": "gold_core",
+      "is_gold_recall_target": true
+    }
+  ],
+  "overall_status": "UNRESOLVED",
+  "conclusion": "The corpus establishes a requirement, completed scrutiny, vendor methodology/justification, and updates relative to a prior model. It does not establish an explicit post-review M-3.B response or a review-induced M-3.B modification. No-change methodology comments further constrain the claim; causation remains unresolved.",
+  "slot_decisions": {
+    "requirement": {
+      "status": "FOUND",
+      "interpretation": "The requirement and connected provisions are located.",
+      "search_ids": [
+        "SEARCH_Q1"
+      ]
+    },
+    "reviewer_scrutiny": {
+      "status": "FOUND",
+      "interpretation": "Completed scrutiny is recorded.",
+      "search_ids": [
+        "SEARCH_Q2"
+      ]
+    },
+    "specific_m3b_challenge": {
+      "status": "SEARCHED_AND_NOT_FOUND_IN_FIXED_CORPUS",
+      "interpretation": "No explicit coastal-landfall-frequency M-3.B objection was found; bypass, footprint, and wind-radius questions have different targets.",
+      "search_ids": [
+        "SEARCH_Q2"
+      ]
+    },
+    "vendor_methodology_and_justification": {
+      "status": "FOUND",
+      "interpretation": "The revised submission contains methodology and consistency assertions.",
+      "search_ids": [
+        "SEARCH_Q3"
+      ]
+    },
+    "explicit_post_review_vendor_response": {
+      "status": "SEARCHED_AND_NOT_FOUND_IN_FIXED_CORPUS",
+      "interpretation": "No passage explicitly identifies an RMS response after completion of this review to an M-3.B challenge. An April 22 snapshot or compliance response is insufficient chronology.",
+      "search_ids": [
+        "SEARCH_Q3"
+      ]
+    },
+    "documented_model_updates": {
+      "status": "FOUND",
+      "interpretation": "Landfall/bypass rates and the storm set changed relative to a prior model; this is not a newly identified review-induced change.",
+      "search_ids": [
+        "SEARCH_Q4"
+      ]
+    },
+    "review_induced_model_modification": {
+      "status": "SEARCHED_AND_NOT_FOUND_IN_FIXED_CORPUS",
+      "interpretation": "No explicit documentary link from April reviewer scrutiny to an M-3.B model alteration was found in the three PDFs.",
+      "search_ids": [
+        "SEARCH_Q4"
+      ]
+    },
+    "causal_attribution": {
+      "status": "UNRESOLVED",
+      "interpretation": "Requirements, review, justification, and prior-version updates do not identify review causation. Original/within-cycle revisions and actual dated version history remain unmatched.",
+      "search_ids": [
+        "SEARCH_Q4"
+      ]
+    },
+    "qualifications_and_counterevidence": {
+      "status": "FOUND",
+      "interpretation": "Conditional adjustments, nonidentical frequencies, no-methodology-change comments, chronology, and adjacent-topic questions constrain the interpretation.",
+      "search_ids": [
+        "SEARCH_Q5"
+      ]
+    },
+    "cross_reference_completeness": {
+      "status": "UNRESOLVED",
+      "interpretation": "Key internal form/figure links are resolved, with source numbering discrepancies retained; underlying history, original revisions, spreadsheet, and procedural amendment remain outside the snapshots.",
+      "search_ids": [
+        "SEARCH_Q5"
+      ]
+    }
+  },
+  "human_review": {
+    "date": "2026-09-10",
+    "source": "User message in the current task",
+    "reported_scope": "Spot-check of several critical original pages and explicit endorsement of CAUSAL ATTRIBUTION = UNRESOLVED.",
+    "five_statement_checklist": "User supplied five substantive statements as the adjudication scope; this is not recorded as individual signatures for every passage.",
+    "full_69_record_independent_adjudication_claimed": false
+  },
+  "audit_context_path": "data/gold/m3b_rms_chain.json",
+  "note": "Projection for independent scoring; never a parser input. Audit context is not a recall target."
+}

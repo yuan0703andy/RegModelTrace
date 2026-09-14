@@ -1,0 +1,445 @@
+{
+  "version": "scale-1-checkpoint2-verification-1.0",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Final controls",
+      "passed": true,
+      "detail": {
+        "passed": 9,
+        "total": 9
+      }
+    },
+    {
+      "name": "Frozen input identity",
+      "passed": true,
+      "detail": {
+        "direct": {
+          "requests": "1251113acad5e3d7abe502fa178de9eb7fe9f297fd20529eae9c9fbdc3288891",
+          "microbatches": "9957be89ffab425c5c171bf9ff5b53ee3d083e0d690fab99434e171ea492e436",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "5c7295056711cdd29c5aaa1eacad464e6ba51cc27b92f6ff150aa60157f658ac",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        },
+        "ray1": {
+          "requests": "1251113acad5e3d7abe502fa178de9eb7fe9f297fd20529eae9c9fbdc3288891",
+          "microbatches": "9957be89ffab425c5c171bf9ff5b53ee3d083e0d690fab99434e171ea492e436",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "5c7295056711cdd29c5aaa1eacad464e6ba51cc27b92f6ff150aa60157f658ac",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        },
+        "ray2": {
+          "requests": "1251113acad5e3d7abe502fa178de9eb7fe9f297fd20529eae9c9fbdc3288891",
+          "microbatches": "9957be89ffab425c5c171bf9ff5b53ee3d083e0d690fab99434e171ea492e436",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "5c7295056711cdd29c5aaa1eacad464e6ba51cc27b92f6ff150aa60157f658ac",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        }
+      }
+    },
+    {
+      "name": "direct request conservation and validity",
+      "passed": true,
+      "detail": {
+        "records": 128,
+        "unique": 128,
+        "terminal_dispositions": {
+          "VALID_OUTPUT": 128
+        },
+        "provenance_complete": true
+      }
+    },
+    {
+      "name": "direct durable attempt accounting",
+      "passed": true,
+      "detail": {
+        "raw_attempt_shards": 8,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": []
+      }
+    },
+    {
+      "name": "ray1 request conservation and validity",
+      "passed": true,
+      "detail": {
+        "records": 128,
+        "unique": 128,
+        "terminal_dispositions": {
+          "VALID_OUTPUT": 128
+        },
+        "provenance_complete": true
+      }
+    },
+    {
+      "name": "ray1 durable attempt accounting",
+      "passed": true,
+      "detail": {
+        "raw_attempt_shards": 8,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": []
+      }
+    },
+    {
+      "name": "ray2 request conservation and validity",
+      "passed": true,
+      "detail": {
+        "records": 128,
+        "unique": 128,
+        "terminal_dispositions": {
+          "VALID_OUTPUT": 128
+        },
+        "provenance_complete": true
+      }
+    },
+    {
+      "name": "ray2 durable attempt accounting",
+      "passed": true,
+      "detail": {
+        "raw_attempt_shards": 8,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": []
+      }
+    },
+    {
+      "name": "Direct versus Ray 1-GPU parity",
+      "passed": true,
+      "detail": {
+        "compared": 128,
+        "exact": 128,
+        "differences": []
+      }
+    },
+    {
+      "name": "Direct versus Ray 2-GPU parity",
+      "passed": true,
+      "detail": {
+        "compared": 128,
+        "exact": 128,
+        "differences": []
+      }
+    },
+    {
+      "name": "Two persistent Ray GPU actors",
+      "passed": true,
+      "detail": {
+        "actor_request_counts": {
+          "355b668a65e53489d3075d4f01000000": 80,
+          "850f7ff499ac46635080f5db01000000": 48
+        },
+        "gpu_uuids": [
+          "GPU-92d29792-ef83-ab4b-0577-29d3f068ee36",
+          "GPU-eab0f052-7a0f-ee5b-a53a-123e21350e22"
+        ],
+        "registered_resources": {
+          "num_cpus": 16,
+          "num_gpus": 2,
+          "cuda_visible_devices": [
+            "0",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Bounded GPU accounting",
+      "passed": true,
+      "detail": {
+        "allocated_gpu_hours": 0.5608333333333333,
+        "budget_gpu_hours": 16,
+        "jobs": [
+          {
+            "job_id": "55325333",
+            "job_name": "rmt-s1-controls",
+            "state": "FAILED",
+            "submit": "2026-09-13T13:40:51",
+            "start": "2026-09-13T13:40:54",
+            "end": "2026-09-13T13:41:32",
+            "queue_wait_seconds": 3,
+            "elapsed_seconds": 38,
+            "allocated_gpus": 0,
+            "allocated_gpu_hours": 0.0,
+            "alloc_tres": "billing=8,cpu=8,mem=32G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "1:0",
+            "node_list": "dcc-core-ferc-u-ab39-2-8"
+          },
+          {
+            "job_id": "55325353",
+            "job_name": "rmt-s1-controls",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T13:42:05",
+            "start": "2026-09-13T13:42:06",
+            "end": "2026-09-13T13:42:33",
+            "queue_wait_seconds": 1,
+            "elapsed_seconds": 27,
+            "allocated_gpus": 0,
+            "allocated_gpu_hours": 0.0,
+            "alloc_tres": "billing=8,cpu=8,mem=32G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-ferc-u-ab39-2-8"
+          },
+          {
+            "job_id": "55325365",
+            "job_name": "rmt-s1-gpu1",
+            "state": "FAILED",
+            "submit": "2026-09-13T13:42:46",
+            "start": "2026-09-13T13:44:00",
+            "end": "2026-09-13T13:45:40",
+            "queue_wait_seconds": 74,
+            "elapsed_seconds": 100,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.027777777777777776,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "1:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-1"
+          },
+          {
+            "job_id": "55325437",
+            "job_name": "rmt-s1-gpu1",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T13:46:24",
+            "start": "2026-09-13T13:46:45",
+            "end": "2026-09-13T13:50:03",
+            "queue_wait_seconds": 21,
+            "elapsed_seconds": 198,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.055,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-1"
+          },
+          {
+            "job_id": "55325509",
+            "job_name": "rmt-s1-gpu1",
+            "state": "FAILED",
+            "submit": "2026-09-13T13:50:28",
+            "start": "2026-09-13T13:50:34",
+            "end": "2026-09-13T13:50:36",
+            "queue_wait_seconds": 6,
+            "elapsed_seconds": 2,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.0005555555555555556,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "1:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-1"
+          },
+          {
+            "job_id": "55325680",
+            "job_name": "rmt-s1-controls",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T13:55:47",
+            "start": "2026-09-13T13:55:48",
+            "end": "2026-09-13T13:56:16",
+            "queue_wait_seconds": 1,
+            "elapsed_seconds": 28,
+            "allocated_gpus": 0,
+            "allocated_gpu_hours": 0.0,
+            "alloc_tres": "billing=8,cpu=8,mem=32G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-dhvimdcore-gpu-ferc-s-i11-4"
+          },
+          {
+            "job_id": "55325689",
+            "job_name": "rmt-s1-gpu1",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T13:56:34",
+            "start": "2026-09-13T13:56:38",
+            "end": "2026-09-13T14:00:25",
+            "queue_wait_seconds": 4,
+            "elapsed_seconds": 227,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.06305555555555556,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-5"
+          },
+          {
+            "job_id": "55325690",
+            "job_name": "rmt-s1-gpu1",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T13:56:34",
+            "start": "2026-09-13T13:56:38",
+            "end": "2026-09-13T14:02:08",
+            "queue_wait_seconds": 4,
+            "elapsed_seconds": 330,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.09166666666666666,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-9"
+          },
+          {
+            "job_id": "55325803",
+            "job_name": "rmt-s1-ray2",
+            "state": "CANCELLED by 1546385",
+            "submit": "2026-09-13T14:02:42",
+            "start": "2026-09-13T14:05:28",
+            "end": "2026-09-13T14:10:26",
+            "queue_wait_seconds": 166,
+            "elapsed_seconds": 298,
+            "allocated_gpus": 2,
+            "allocated_gpu_hours": 0.16555555555555557,
+            "alloc_tres": "billing=16,cpu=16,gres/gpu:5000_ada=2,gres/gpu=2,mem=192G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-1"
+          },
+          {
+            "job_id": "55325850",
+            "job_name": "rmt-s1-ray2-6000",
+            "state": "CANCELLED by 1546385",
+            "submit": "2026-09-13T14:04:56",
+            "start": null,
+            "end": "2026-09-13T14:05:16",
+            "queue_wait_seconds": null,
+            "elapsed_seconds": 0,
+            "allocated_gpus": 0,
+            "allocated_gpu_hours": 0.0,
+            "alloc_tres": null,
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": null
+          },
+          {
+            "job_id": "55325878",
+            "job_name": "rmt-s1-ray2-compact",
+            "state": "CANCELLED by 1546385",
+            "submit": "2026-09-13T14:06:14",
+            "start": null,
+            "end": "2026-09-13T14:06:59",
+            "queue_wait_seconds": null,
+            "elapsed_seconds": 0,
+            "allocated_gpus": 0,
+            "allocated_gpu_hours": 0.0,
+            "alloc_tres": null,
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": null
+          },
+          {
+            "job_id": "55325998",
+            "job_name": "rmt-s1-ray2",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T14:10:59",
+            "start": "2026-09-13T14:15:56",
+            "end": "2026-09-13T14:18:41",
+            "queue_wait_seconds": 297,
+            "elapsed_seconds": 165,
+            "allocated_gpus": 2,
+            "allocated_gpu_hours": 0.09166666666666666,
+            "alloc_tres": "billing=16,cpu=16,gres/gpu:5000_ada=2,gres/gpu=2,mem=192G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-5"
+          },
+          {
+            "job_id": "55326219",
+            "job_name": "rmt-s1-gpu1",
+            "state": "COMPLETED",
+            "submit": "2026-09-13T14:18:56",
+            "start": "2026-09-13T14:19:15",
+            "end": "2026-09-13T14:23:11",
+            "queue_wait_seconds": 19,
+            "elapsed_seconds": 236,
+            "allocated_gpus": 1,
+            "allocated_gpu_hours": 0.06555555555555556,
+            "alloc_tres": "billing=8,cpu=8,gres/gpu:5000_ada=1,gres/gpu=1,mem=96G,node=1",
+            "max_rss_top_level": null,
+            "exit_code": "0:0",
+            "node_list": "dcc-core-gpu-ferc-s-aa32-5"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Failure history preserved",
+      "passed": true,
+      "detail": {
+        "events": [
+          {
+            "job_id": "55325333",
+            "stage": "SOFTWARE_CONTROLS",
+            "status": "FAILED",
+            "cause": "Harness checked only the first three sys.path entries and parsed the altered JSONL before checking its hash.",
+            "model_loaded": false,
+            "request_outputs": 0,
+            "disposition": "Harness fixed; failed 7/9 report preserved."
+          },
+          {
+            "job_id": "55325365",
+            "stage": "DIRECT_1GPU",
+            "status": "FAILED",
+            "cause": "FlashInfer JIT could not find the already-installed ninja executable because the frozen runtime bin directory was absent from PATH.",
+            "model_loaded": true,
+            "request_outputs": 0,
+            "disposition": "Batch PATH fixed; job log and incomplete run manifest preserved."
+          },
+          {
+            "job_id": "55325509",
+            "stage": "RAY_1GPU",
+            "status": "FAILED",
+            "cause": "The initial no-dependency Ray overlay passed Ray Core smoke but lacked pandas and could not import ray.data.",
+            "model_loaded": false,
+            "request_outputs": 0,
+            "disposition": "Created isolated environment 1.1 with explicit Ray Data dependencies; frozen inference packages unchanged."
+          },
+          {
+            "job_id": "55325803",
+            "stage": "RAY_2GPU",
+            "status": "CANCELLED_AFTER_DIAGNOSIS",
+            "cause": "ray.init auto-detected all 112 node CPUs instead of the 16 CPUs allocated by SLURM, prestarted excess workers, and logged worker-registration timeouts.",
+            "model_loaded": false,
+            "request_outputs": 0,
+            "disposition": "Exact job cancelled after log inspection; ray.init now registers SLURM_CPUS_PER_TASK and allocated CUDA devices explicitly."
+          }
+        ]
+      }
+    }
+  ],
+  "parity_fields": [
+    "semantic_request_id",
+    "assertion_id",
+    "source_request_sha256",
+    "source_binding_sha256",
+    "microbatch_id",
+    "terminal_disposition",
+    "parse_status",
+    "normalized_label",
+    "raw_model_text",
+    "output_token_ids",
+    "prompt_token_ids_sha256"
+  ],
+  "runs": {
+    "direct": {
+      "path": "regmodeltrace/data/batch/scale-1/runs/direct-1g-final-55325689",
+      "manifest_sha256": "b744d287ba47aed93ee12c76f307d11ff7eca61cb6ee16ac320789c8c92751fc",
+      "results_sha256": "7fa3db0bea707ef50e99ad37573ba1d5ef8b5cdefc261c6a82ededdf3511b149"
+    },
+    "ray1": {
+      "path": "regmodeltrace/data/batch/scale-1/runs/ray-1g-bound-55326219",
+      "manifest_sha256": "425cf87a0eed4c286ebf1c4ceaac02557a9cfeec8213dd3076321d1ee7dd59ce",
+      "results_sha256": "d084389fa4f639a085a15d51d79c5483921f23e488fb795649dbd1bc4c29aa91"
+    },
+    "ray2": {
+      "path": "regmodeltrace/data/batch/scale-1/runs/ray-2g-55325998",
+      "manifest_sha256": "41785c70658ca75d0ee1bdf2f3e0c1de44698a8714b36a4c637da79373d0ec6f",
+      "results_sha256": "aca37e60db881f761ca8b6569e8f52a0b2764c9f19803a09b80807fe707d24b0"
+    }
+  },
+  "controls_sha256": "1e11854409bed682d8e9ae3873e035d92e559184e5970343e4cc859f6c9140cb",
+  "accounting_sha256": "f7903fa60d0b0b91e291356bebe9f1ff6d56b9d99ad7beed6e0a787a2d88d384",
+  "scope": "M3.6 source classification on the frozen 128-request workload only. No large workload, semantic accuracy scoring, v2.2 compatibility claim, fine-tuning, D, or E inference."
+}

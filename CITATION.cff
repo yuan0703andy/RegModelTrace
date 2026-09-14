@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use RegModelTrace, please cite this software."
+title: "RegModelTrace: Auditable local RAG for regulatory technical documents"
+type: software
+authors:
+  - family-names: Hou
+    given-names: Andy
+version: 1.0.0
+date-released: 2026-09-14
+license: MIT
+repository-code: "https://github.com/yuan0703andy/RegModelTrace"
+abstract: >-
+  A provenance-preserving local RAG and alignment-assessment system that keeps
+  regulatory requirements, vendor documentation, and reviewer evidence distinct.

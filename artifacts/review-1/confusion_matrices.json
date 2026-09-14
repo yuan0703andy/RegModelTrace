@@ -1,0 +1,522 @@
+{
+  "corelogic-cotality-2023": {
+    "adverse_controls": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        }
+      }
+    },
+    "combined": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 3,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 1
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    },
+    "primary": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 3,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 1
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    }
+  },
+  "impact-forecasting-2023": {
+    "adverse_controls": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 1,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 3,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        }
+      }
+    },
+    "combined": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 3,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 3,
+          "INVALID": 0,
+          "SUFFICIENT": 2
+        }
+      }
+    },
+    "primary": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 1,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 2,
+          "INVALID": 0,
+          "SUFFICIENT": 2
+        }
+      }
+    }
+  },
+  "kcc-2023-test-e": {
+    "adverse_controls": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        }
+      }
+    },
+    "combined": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 4,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    },
+    "primary": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 4,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    }
+  },
+  "rms-ara-2019-development": {
+    "adverse_controls": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        }
+      }
+    },
+    "combined": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 7,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 2,
+          "INVALID": 0,
+          "SUFFICIENT": 6
+        }
+      }
+    },
+    "primary": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 7,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 2,
+          "INVALID": 0,
+          "SUFFICIENT": 6
+        }
+      }
+    }
+  },
+  "verisk-2023-validation-d": {
+    "adverse_controls": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        }
+      }
+    },
+    "combined": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 5,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    },
+    "primary": {
+      "relation": {
+        "ALIGNED": {
+          "ALIGNED": 5,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 1
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "sufficiency": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 0,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      }
+    }
+  }
+}

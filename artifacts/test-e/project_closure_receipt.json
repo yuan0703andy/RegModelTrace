@@ -1,0 +1,28 @@
+{
+  "version": "regmodeltrace-technical-development-closure-1.0",
+  "created_utc": "2026-09-14T19:43:48.899087+00:00",
+  "test_e": "CLOSED",
+  "project_technical_development": "CLOSED",
+  "dcc_job_id": "55434235",
+  "semantic_runs": 1,
+  "reruns": 0,
+  "execution_integrity": "PASS",
+  "held_out_result": "COMPLETE_WITH_MODEL_ERRORS",
+  "post_test_actions_authorized": {
+    "prompt_or_verbalizer_change": false,
+    "model_or_scorer_change": false,
+    "rerun": false,
+    "fine_tuning": false,
+    "additional_vendor_evaluation": false
+  },
+  "artifact_sha256": {
+    "final_held_out_report.json": "3cff3bbd6f98b7dcb081c81ef3e4eccd99411aedc7b0fa9c8119505fde3ddfa1",
+    "final_held_out_report.md": "3c9b4c2da8f6466d732929198ed6f31a9fb91213170d72eab3c72da1aad72772",
+    "post_run_verification.json": "10cacd1623a87e6bd24ad8f46c184b55da05bbfcf2cff88fc682d3a1dd10bca4",
+    "candidate_logprobs.json": "73adc0057fee526b79141395eb3bac040e6745c2ee0a57bfa72ee942d247a730",
+    "raw_results.json": "f2a0cce27ac7ba79811dd30622c5443e4e699b25aaa28e3aa05170d476fcbffc",
+    "frozen_scorer_output.json": "1b7fcb3f45105daf2341f3352866498b7ac11b8fb9e4db9134a9e56db4de1129",
+    "frozen_fixture_receipt.json": "0a4d1169ebdce46991f881d1c7e3f6604952e7b6a35532003689d4ad9a597e71",
+    "dcc_accounting.txt": "7e9854404bf76af55a2f93bf28b50e58dd556bc61f9142115fa479785a544ec0"
+  }
+}

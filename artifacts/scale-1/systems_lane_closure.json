@@ -1,0 +1,11 @@
+{
+  "version": "scale-1-systems-lane-closure-1.0",
+  "status": "SYSTEMS_LANE_CLOSED",
+  "ray_scale_out": "PASS_WITH_GENERATIVE_NONDETERMINISM_LIMITATION",
+  "checkpoint_3": "PARITY_GATE_FAIL",
+  "checkpoint_3b": "COMPLETE",
+  "checkpoint_3b_diagnostic": "ENVIRONMENT_DIFFERENCE",
+  "checkpoint_3b_report_sha256": "70e761e7fe1aa405be574c9cb746813129dbd1eb5dfe9d4b2be2b418d3519a18",
+  "interpretation_changed": false,
+  "ray_reopened": false
+}

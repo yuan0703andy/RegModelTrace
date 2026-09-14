@@ -1,0 +1,520 @@
+{
+  "version": "scale-1-checkpoint3-verification-1.0",
+  "status": "PARITY_GATE_FAIL",
+  "transport_accounting_pass": true,
+  "exact_parity_pass": false,
+  "scaling_gate_pass": true,
+  "checks": [
+    {
+      "name": "W2 compatibility prerequisite",
+      "passed": true,
+      "detail": {
+        "status": "PASS",
+        "sha256": "a83d70ba9f3c3746f5be12aab8e90f6e90e771d0867355a9aa9445f2cf9a36b9"
+      }
+    },
+    {
+      "name": "Prospective measurement contract",
+      "passed": true,
+      "detail": {
+        "contract_sha256": "44e4431de9e7fa1e8c4deb457fbf551cef86bd2845c8f4c55bb6cd0d62a4d5b5",
+        "input_checks": {
+          "requests": true,
+          "microbatches": true
+        },
+        "formal_gate": {
+          "metric": "END_TO_END_WALL_REQUESTS_PER_SECOND_INCLUDING_MODEL_AND_RAY_STARTUP",
+          "ratio": "RAY_2_GPU_DIVIDED_BY_RAY_1_GPU",
+          "minimum": 1.5,
+          "threshold_is_frozen": true
+        }
+      }
+    },
+    {
+      "name": "Byte-identical large inputs",
+      "passed": true,
+      "detail": {
+        "direct": {
+          "requests": "6cef743cee2d49a71816923a15159d8abb9133ad2c55abde9a24d7b7f9cc3807",
+          "microbatches": "27318b202ae7c278e09a7bacfd35da59d79f4a9ae96a8fe45d787d6752960f00",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "b64e3c47461fc8d55fc02468176562ea6b939d94b3cb3cab848b95e9e9504e49",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        },
+        "ray1": {
+          "requests": "6cef743cee2d49a71816923a15159d8abb9133ad2c55abde9a24d7b7f9cc3807",
+          "microbatches": "27318b202ae7c278e09a7bacfd35da59d79f4a9ae96a8fe45d787d6752960f00",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "b64e3c47461fc8d55fc02468176562ea6b939d94b3cb3cab848b95e9e9504e49",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        },
+        "ray2": {
+          "requests": "6cef743cee2d49a71816923a15159d8abb9133ad2c55abde9a24d7b7f9cc3807",
+          "microbatches": "27318b202ae7c278e09a7bacfd35da59d79f4a9ae96a8fe45d787d6752960f00",
+          "config": "5843caf2dfebd91cf7243f1996da714fb87f623bad2674addd17200358d87291",
+          "prompt": "5e37ede9a8a945c4d3f65c25bcff994f582fda20b5aee5303b2d8d6e88a83eb3",
+          "execution": "b64e3c47461fc8d55fc02468176562ea6b939d94b3cb3cab848b95e9e9504e49",
+          "environment_lock": "c9d0300f3ee79d7bf47b4d1892972b5a0cd4a3658ab0d14205240e543e173545",
+          "checkpoint1": "441dbcad3f1e636838a88b1953097e3eb56235955346da701fea4b532030fa95"
+        }
+      }
+    },
+    {
+      "name": "direct conservation, validity, and actors",
+      "passed": true,
+      "detail": {
+        "status": "COMPLETE",
+        "records": 4096,
+        "unique": 4096,
+        "terminal": {
+          "VALID_OUTPUT": 4078,
+          "INVALID_MODEL_OUTPUT": 18
+        },
+        "provenance_complete": true,
+        "actor_count": 1,
+        "gpu_uuids": [
+          "GPU-072b4918-1a2d-a877-90d4-82d77ae1b4e9"
+        ]
+      }
+    },
+    {
+      "name": "direct durable accounting and GPU telemetry",
+      "passed": true,
+      "detail": {
+        "raw_attempts": 256,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": [],
+        "infrastructure_failures": 0,
+        "gpu_metrics": {
+          "GPU-072b4918-1a2d-a877-90d4-82d77ae1b4e9": {
+            "samples": 647,
+            "active_samples": 626,
+            "mean_utilization_percent": 96.48686244204019,
+            "p95_utilization_percent": 100.0,
+            "active_mean_utilization_percent": 99.38338658146965,
+            "max_memory_used_mib": 27676.0,
+            "reported_memory_total_mib": [
+              30712.0
+            ],
+            "mean_power_watts": 239.79644513137555
+          }
+        }
+      }
+    },
+    {
+      "name": "ray1 conservation, validity, and actors",
+      "passed": true,
+      "detail": {
+        "status": "COMPLETE",
+        "records": 4096,
+        "unique": 4096,
+        "terminal": {
+          "VALID_OUTPUT": 4078,
+          "INVALID_MODEL_OUTPUT": 18
+        },
+        "provenance_complete": true,
+        "actor_count": 1,
+        "gpu_uuids": [
+          "GPU-fe7ad38f-37e1-7f86-9337-2145be854c52"
+        ]
+      }
+    },
+    {
+      "name": "ray1 durable accounting and GPU telemetry",
+      "passed": true,
+      "detail": {
+        "raw_attempts": 256,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": [],
+        "infrastructure_failures": 0,
+        "gpu_metrics": {
+          "GPU-fe7ad38f-37e1-7f86-9337-2145be854c52": {
+            "samples": 646,
+            "active_samples": 623,
+            "mean_utilization_percent": 95.85913312693498,
+            "p95_utilization_percent": 100.0,
+            "active_mean_utilization_percent": 99.35794542536115,
+            "max_memory_used_mib": 27684.0,
+            "reported_memory_total_mib": [
+              30712.0
+            ],
+            "mean_power_watts": 238.10346749226005
+          }
+        }
+      }
+    },
+    {
+      "name": "ray2 conservation, validity, and actors",
+      "passed": true,
+      "detail": {
+        "status": "COMPLETE",
+        "records": 4096,
+        "unique": 4096,
+        "terminal": {
+          "VALID_OUTPUT": 4078,
+          "INVALID_MODEL_OUTPUT": 18
+        },
+        "provenance_complete": true,
+        "actor_count": 2,
+        "gpu_uuids": [
+          "GPU-046c1b64-bfc4-cb64-a7b4-9bc3ffc1d11d",
+          "GPU-4f1e8abd-2682-2fae-468f-f064b9d53424"
+        ]
+      }
+    },
+    {
+      "name": "ray2 durable accounting and GPU telemetry",
+      "passed": true,
+      "detail": {
+        "raw_attempts": 256,
+        "duplicate_equivalent_attempts": 0,
+        "duplicate_conflicts": [],
+        "infrastructure_failures": 0,
+        "gpu_metrics": {
+          "GPU-046c1b64-bfc4-cb64-a7b4-9bc3ffc1d11d": {
+            "samples": 323,
+            "active_samples": 285,
+            "mean_utilization_percent": 87.93498452012383,
+            "p95_utilization_percent": 100.0,
+            "active_mean_utilization_percent": 99.08070175438597,
+            "max_memory_used_mib": 29516.0,
+            "reported_memory_total_mib": [
+              32760.0
+            ],
+            "mean_power_watts": 223.18962848297213
+          },
+          "GPU-4f1e8abd-2682-2fae-468f-f064b9d53424": {
+            "samples": 323,
+            "active_samples": 285,
+            "mean_utilization_percent": 88.09597523219814,
+            "p95_utilization_percent": 100.0,
+            "active_mean_utilization_percent": 99.21052631578948,
+            "max_memory_used_mib": 29516.0,
+            "reported_memory_total_mib": [
+              32760.0
+            ],
+            "mean_power_watts": 221.4978947368421
+          }
+        }
+      }
+    },
+    {
+      "name": "Direct versus ray1 exact parity",
+      "passed": true,
+      "detail": {
+        "compared": 4096,
+        "exact": 4096,
+        "differences": []
+      }
+    },
+    {
+      "name": "Direct versus ray2 exact parity",
+      "passed": false,
+      "detail": {
+        "compared": 4096,
+        "exact": 4095,
+        "differences": [
+          {
+            "semantic_request_id": "R58c78cfaeaafd1fff8218aea",
+            "fields": [
+              "normalized_label",
+              "raw_model_text",
+              "output_token_ids"
+            ],
+            "reference_values": {
+              "normalized_label": "REGULATORY_REQUIREMENT",
+              "raw_model_text": "{\"evidence_type\":\"REGULATORY_REQUIREMENT\"}",
+              "output_token_ids": [
+                4913,
+                68,
+                27480,
+                1819,
+                3252,
+                12173,
+                1094,
+                87258,
+                53927,
+                5328,
+                9207,
+                151645
+              ]
+            },
+            "candidate_values": {
+              "normalized_label": "VENDOR_METHODOLOGY",
+              "raw_model_text": "{\"evidence_type\": \"VENDOR_METHODOLOGY\"}",
+              "output_token_ids": [
+                4913,
+                68,
+                27480,
+                1819,
+                788,
+                330,
+                53,
+                43763,
+                1245,
+                7625,
+                4464,
+                51432,
+                9207,
+                151645
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Formal Ray-2 throughput gate",
+      "passed": true,
+      "detail": {
+        "ratio": 2.0037312867741357,
+        "minimum": 1.5,
+        "metric": "END_TO_END_WALL_REQUESTS_PER_SECOND_INCLUDING_MODEL_AND_RAY_STARTUP"
+      }
+    },
+    {
+      "name": "Checkpoint 3 GPU-hour budget",
+      "passed": true,
+      "detail": {
+        "allocated_gpu_hours": 2.736388888888889,
+        "budget": 16
+      }
+    }
+  ],
+  "runs": {
+    "direct": {
+      "wall_seconds": 3231.5537946950644,
+      "inference_span_seconds": 3128.731038,
+      "requests_per_second": 1.2675017221511258,
+      "input_tokens": 5132748,
+      "output_tokens": 52630,
+      "input_tokens_per_second": 1588.3220042401726,
+      "output_tokens_per_second": 16.286283114456484,
+      "actor_request_counts": {
+        "direct-dcc-core-gpu-ferc-s-aa32-9-93443": 4096
+      },
+      "actor_microbatch_counts": {
+        "direct-dcc-core-gpu-ferc-s-aa32-9-93443": 256
+      },
+      "actor_initialization_seconds": {
+        "direct-dcc-core-gpu-ferc-s-aa32-9-93443": 27.185875391121954
+      },
+      "actor_load_cv": 0.0,
+      "gpu_uuids": [
+        "GPU-072b4918-1a2d-a877-90d4-82d77ae1b4e9"
+      ],
+      "gpu_metrics": {
+        "GPU-072b4918-1a2d-a877-90d4-82d77ae1b4e9": {
+          "samples": 647,
+          "active_samples": 626,
+          "mean_utilization_percent": 96.48686244204019,
+          "p95_utilization_percent": 100.0,
+          "active_mean_utilization_percent": 99.38338658146965,
+          "max_memory_used_mib": 27676.0,
+          "reported_memory_total_mib": [
+            30712.0
+          ],
+          "mean_power_watts": 239.79644513137555
+        }
+      },
+      "raw_attempts": 256,
+      "infrastructure_failures": 0,
+      "manifest_sha256": "b4c5059b6caf8d873e04561d4d2876ed4eb87ee9a4a14e39d1c87fca5fd295cf",
+      "results_sha256": "2dd1113872178872d98e42adb0e2400667ec38147501ce2075ebbfa886def36d"
+    },
+    "ray1": {
+      "wall_seconds": 3227.7887128731236,
+      "inference_span_seconds": 3111.699478,
+      "requests_per_second": 1.2689802104035686,
+      "input_tokens": 5132748,
+      "output_tokens": 52630,
+      "input_tokens_per_second": 1590.1747160616444,
+      "output_tokens_per_second": 16.305280389047805,
+      "actor_request_counts": {
+        "090e7810176cbc4fb053c10801000000": 4096
+      },
+      "actor_microbatch_counts": {
+        "090e7810176cbc4fb053c10801000000": 256
+      },
+      "actor_initialization_seconds": {
+        "090e7810176cbc4fb053c10801000000": 23.877636775374413
+      },
+      "actor_load_cv": 0.0,
+      "gpu_uuids": [
+        "GPU-fe7ad38f-37e1-7f86-9337-2145be854c52"
+      ],
+      "gpu_metrics": {
+        "GPU-fe7ad38f-37e1-7f86-9337-2145be854c52": {
+          "samples": 646,
+          "active_samples": 623,
+          "mean_utilization_percent": 95.85913312693498,
+          "p95_utilization_percent": 100.0,
+          "active_mean_utilization_percent": 99.35794542536115,
+          "max_memory_used_mib": 27684.0,
+          "reported_memory_total_mib": [
+            30712.0
+          ],
+          "mean_power_watts": 238.10346749226005
+        }
+      },
+      "raw_attempts": 256,
+      "infrastructure_failures": 0,
+      "manifest_sha256": "47ccc2d900b4cd534e53614575ffacefb815321581c5488ed4f5c5cd53d2ba10",
+      "results_sha256": "3cb6e7a1db65a5ba6eaf7009131833a4ad7497534548a3e786e60072cd49e3b1"
+    },
+    "ray2": {
+      "wall_seconds": 1610.889012004016,
+      "inference_span_seconds": 1427.825409,
+      "requests_per_second": 2.542695349882856,
+      "input_tokens": 5132748,
+      "output_tokens": 52632,
+      "input_tokens_per_second": 3186.282830009895,
+      "output_tokens_per_second": 32.67264200562366,
+      "actor_request_counts": {
+        "eedef78a61248f336e5dda1701000000": 2048,
+        "c1f12b6d8a55380543010b6301000000": 2048
+      },
+      "actor_microbatch_counts": {
+        "eedef78a61248f336e5dda1701000000": 128,
+        "c1f12b6d8a55380543010b6301000000": 128
+      },
+      "actor_initialization_seconds": {
+        "c1f12b6d8a55380543010b6301000000": 34.94290264416486,
+        "eedef78a61248f336e5dda1701000000": 29.52290867595002
+      },
+      "actor_load_cv": 0.0,
+      "gpu_uuids": [
+        "GPU-046c1b64-bfc4-cb64-a7b4-9bc3ffc1d11d",
+        "GPU-4f1e8abd-2682-2fae-468f-f064b9d53424"
+      ],
+      "gpu_metrics": {
+        "GPU-046c1b64-bfc4-cb64-a7b4-9bc3ffc1d11d": {
+          "samples": 323,
+          "active_samples": 285,
+          "mean_utilization_percent": 87.93498452012383,
+          "p95_utilization_percent": 100.0,
+          "active_mean_utilization_percent": 99.08070175438597,
+          "max_memory_used_mib": 29516.0,
+          "reported_memory_total_mib": [
+            32760.0
+          ],
+          "mean_power_watts": 223.18962848297213
+        },
+        "GPU-4f1e8abd-2682-2fae-468f-f064b9d53424": {
+          "samples": 323,
+          "active_samples": 285,
+          "mean_utilization_percent": 88.09597523219814,
+          "p95_utilization_percent": 100.0,
+          "active_mean_utilization_percent": 99.21052631578948,
+          "max_memory_used_mib": 29516.0,
+          "reported_memory_total_mib": [
+            32760.0
+          ],
+          "mean_power_watts": 221.4978947368421
+        }
+      },
+      "raw_attempts": 256,
+      "infrastructure_failures": 0,
+      "manifest_sha256": "cb16bfe1227f58b11c1e3b3d3eaa023bbebdc14aa85da7a268fa2314376a201b",
+      "results_sha256": "ac46eb5a141a673f56b97ef0c3fce562e514fe91c22233dd0716b19566ff14ff"
+    }
+  },
+  "parity": {
+    "ray1": {
+      "compared": 4096,
+      "exact": 4096,
+      "differences": []
+    },
+    "ray2": {
+      "compared": 4096,
+      "exact": 4095,
+      "differences": [
+        {
+          "semantic_request_id": "R58c78cfaeaafd1fff8218aea",
+          "fields": [
+            "normalized_label",
+            "raw_model_text",
+            "output_token_ids"
+          ],
+          "reference_values": {
+            "normalized_label": "REGULATORY_REQUIREMENT",
+            "raw_model_text": "{\"evidence_type\":\"REGULATORY_REQUIREMENT\"}",
+            "output_token_ids": [
+              4913,
+              68,
+              27480,
+              1819,
+              3252,
+              12173,
+              1094,
+              87258,
+              53927,
+              5328,
+              9207,
+              151645
+            ]
+          },
+          "candidate_values": {
+            "normalized_label": "VENDOR_METHODOLOGY",
+            "raw_model_text": "{\"evidence_type\": \"VENDOR_METHODOLOGY\"}",
+            "output_token_ids": [
+              4913,
+              68,
+              27480,
+              1819,
+              788,
+              330,
+              53,
+              43763,
+              1245,
+              7625,
+              4464,
+              51432,
+              9207,
+              151645
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "spill_observations": {
+    "direct": {
+      "method": "CASE_INSENSITIVE_JOB_LOG_EVENT_SCAN",
+      "matching_line_count": 0,
+      "matching_lines": [],
+      "interpretation": "NO_SPILL_EVENT_REPORTED_IN_JOB_LOG; NOT_A_ZERO_BYTE_MEASUREMENT"
+    },
+    "ray1": {
+      "method": "CASE_INSENSITIVE_JOB_LOG_EVENT_SCAN",
+      "matching_line_count": 0,
+      "matching_lines": [],
+      "interpretation": "NO_SPILL_EVENT_REPORTED_IN_JOB_LOG; NOT_A_ZERO_BYTE_MEASUREMENT"
+    },
+    "ray2": {
+      "method": "CASE_INSENSITIVE_JOB_LOG_EVENT_SCAN",
+      "matching_line_count": 0,
+      "matching_lines": [],
+      "interpretation": "NO_SPILL_EVENT_REPORTED_IN_JOB_LOG; NOT_A_ZERO_BYTE_MEASUREMENT"
+    }
+  },
+  "ray4_disposition": {
+    "version": "scale-1-checkpoint3-ray4-disposition-1.0",
+    "recorded_at_utc": "2026-09-14T01:57:07.836286+00:00",
+    "status": "NOT_RUN_RESOURCE_AVAILABILITY",
+    "mandatory": false,
+    "test_only_job_id": "55349599",
+    "test_only_not_submitted": true,
+    "test_only_observation": "Predicted start 2026-09-14T09:55:36 on dcc-core-gpu-ferc-s-aa32-1 for a same-node 4x RTX 5000 Ada allocation.",
+    "decision": "The allocation was not immediately stable/available, so the optional R4 run was omitted under the frozen rule.",
+    "gpu_hours_consumed": 0,
+    "scope": "No R4 model execution occurred."
+  },
+  "allocated_gpu_hours": 2.736388888888889,
+  "accounting_sha256": "45de3bfe44a29753669dc855f2a320fbf1b2b6b5cc709c8d2be31e987a13b560",
+  "scope": "Systems measurement only. No semantic scoring, Validation D, Sealed Test E, model changes, request changes, or fine-tuning."
+}

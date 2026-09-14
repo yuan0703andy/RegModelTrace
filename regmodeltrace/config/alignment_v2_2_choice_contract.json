@@ -1,0 +1,19 @@
+{
+  "version": "alignment-fixed-choice-1.0",
+  "probability_interpretation": "candidate-renormalized fixed-choice probabilities derived from vLLM next-token log probabilities under the exact frozen prompt, candidate order, verbalizers, tokenizer, and decoding configuration",
+  "tasks": {
+    "evidence_sufficiency": {
+      "choices": [
+        {"label": "INSUFFICIENT", "verbalizer": "A", "token_id": 32},
+        {"label": "SUFFICIENT", "verbalizer": "B", "token_id": 33}
+      ]
+    },
+    "conditional_relation": {
+      "choices": [
+        {"label": "ALIGNED", "verbalizer": "A", "token_id": 32},
+        {"label": "PARTIALLY_ALIGNED", "verbalizer": "B", "token_id": 33},
+        {"label": "CONFLICT", "verbalizer": "C", "token_id": 34}
+      ]
+    }
+  }
+}

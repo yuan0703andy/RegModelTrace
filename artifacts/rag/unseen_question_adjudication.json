@@ -1,0 +1,276 @@
+{
+  "version": "regmodeltrace-unseen-human-adjudication-1.0",
+  "adjudicated_local_date": "2026-09-11",
+  "run_id": "55229862",
+  "inputs": {
+    "results_sha256": "8ca6f3aa7b0f99c430e0a6797b13bfe2661dba42303c4092e6c5daaad50e5140",
+    "run_manifest_sha256": "bb6f075f0e8e990f6d6d87f85accb88a75fee333efebaf67932a980ee8007f73",
+    "rubric_sha256": "91844abf0ab879f8d31a5439e0a64f89c211968a70c590cb983def078f51b7c8",
+    "question_freeze_sha256": "ea6530e6e398843853f267d724114b8afb47cb2cc5435d811a2dbce6166c724e",
+    "system_freeze_sha256": "c4db85f910cb319347be17ee294d858e6759c3772530277ba43d774ed122a257"
+  },
+  "interpretation_rules": {
+    "grounding": "PASS means every substantive model claim was structurally bound to at least one retrieved assertion. Semantic support, actor, and scope are scored under citation_correctness.",
+    "safe_nonanswer": "A response scoped to retrieved evidence can be PARTIAL rather than FAIL when it avoids inventing an answer after a retrieval miss.",
+    "unsupported_claim": "Count a claim when its cited assertions do not support its actor, tense, scope, or proposition.",
+    "retrieval_sufficiency": "This is a diagnostic attribution and is not an acceptance threshold."
+  },
+  "questions": [
+    {
+      "question_id": "U01",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Directly states both required elements and cites exact CI-6.D text."
+    },
+    {
+      "question_id": "U02",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Recovers the validation tests, convergence tests and results, and trial-count requirements."
+    },
+    {
+      "question_id": "U03",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Provides the definition and the table-specific intensity convention."
+    },
+    {
+      "question_id": "U04",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Exact windspeed definition is recovered."
+    },
+    {
+      "question_id": "U05",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Correctly states both the compensating-adjustment prohibition and component-independence principle."
+    },
+    {
+      "question_id": "U06",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Explains the inland filling model, mechanism, reference formulation, and represented decay-rate range."
+    },
+    {
+      "question_id": "U07",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Accurately describes generation of candidate historical realizations and selection by station agreement."
+    },
+    {
+      "question_id": "U08",
+      "answer_usefulness": "PARTIAL",
+      "grounding": "PASS",
+      "citation_correctness": "PARTIAL",
+      "unsupported_claims": 2,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "SYNTHESIS",
+      "note": "The first claim correctly uses the retrieved RMS submission. Two added claims misassign Professional Team actions ('Reviewed' and 'Discussed') to RMS, and the first claim also includes an unnecessary Team citation."
+    },
+    {
+      "question_id": "U09",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Correctly distinguishes over-water, over-land, and extratropical-transition treatment."
+    },
+    {
+      "question_id": "U10",
+      "answer_usefulness": "PARTIAL",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "INSUFFICIENT",
+      "failure_stage": "RETRIEVAL",
+      "note": "The bundle contains broad stochastic-track descriptions but misses the specific genesis-location mechanism. The model reports that bundle limitation without converting it into corpus absence."
+    },
+    {
+      "question_id": "U11",
+      "answer_usefulness": "FAIL",
+      "grounding": "PASS",
+      "citation_correctness": "FAIL",
+      "unsupported_claims": 3,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "SYNTHESIS",
+      "note": "The cited audit language says the sensitivity analysis, techniques, and results 'will be reviewed.' The answer changes all three into completed-review claims. The bundle was sufficient for a qualified answer, but the model upgraded tense and actuality."
+    },
+    {
+      "question_id": "U12",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Directly cites the Professional Team's completed review of the ZIP Code quality-check flowchart."
+    },
+    {
+      "question_id": "U13",
+      "answer_usefulness": "PARTIAL",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "INSUFFICIENT",
+      "failure_stage": "RETRIEVAL",
+      "note": "The response accurately restates Standard G-4, but the bundle misses the Professional Team finding and therefore does not directly answer what the Team reported."
+    },
+    {
+      "question_id": "U14",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Directly recovers the Team's comparison review."
+    },
+    {
+      "question_id": "U15",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Correct version and build are cited from the RMS submission."
+    },
+    {
+      "question_id": "U16",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Correctly names Nate, Irma, and Michael and preserves their years."
+    },
+    {
+      "question_id": "U17",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Keeps the conclusion limited to the retrieved bundle and does not infer that Professional Team scrutiny caused recalibration."
+    },
+    {
+      "question_id": "U18",
+      "answer_usefulness": "PASS",
+      "grounding": "PASS",
+      "citation_correctness": "PASS",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "SUFFICIENT",
+      "failure_stage": "NONE",
+      "note": "Correctly refuses to equate verification or agreement under accepted methods with exact numerical identity."
+    },
+    {
+      "question_id": "U19",
+      "answer_usefulness": "PARTIAL",
+      "grounding": "PASS",
+      "citation_correctness": "PARTIAL",
+      "unsupported_claims": 0,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "PARTIAL",
+      "failure_stage": "RETRIEVAL",
+      "note": "The answer is safely limited to retrieved evidence, but its cited Team statements concern other methodologies rather than inland filling. The bundle contains RMS's inland-filling description but no topic-specific Team change request."
+    },
+    {
+      "question_id": "U20",
+      "answer_usefulness": "PARTIAL",
+      "grounding": "PASS",
+      "citation_correctness": "PARTIAL",
+      "unsupported_claims": 1,
+      "causal_overclaims": 0,
+      "retrieval_sufficiency": "PARTIAL",
+      "failure_stage": "RETRIEVAL_AND_SYNTHESIS",
+      "note": "The RMS internal-review description is well supported. The second claim incorrectly generalizes two standard-specific Professional Team comments into the focus of the Commission's Professional Team review as a whole."
+    }
+  ],
+  "summary": {
+    "question_count": 20,
+    "valid_structured_outputs": 20,
+    "grounding_pass": 20,
+    "answer_usefulness": {
+      "PASS": 14,
+      "PARTIAL": 5,
+      "FAIL": 1
+    },
+    "citation_correctness": {
+      "PASS": 16,
+      "PARTIAL": 3,
+      "FAIL": 1
+    },
+    "unsupported_claims": 6,
+    "questions_with_unsupported_claims": 3,
+    "causal_overclaims": 0,
+    "retrieval_miss_to_corpus_absence_violations": 0,
+    "retrieval_sufficiency": {
+      "SUFFICIENT": 16,
+      "PARTIAL": 2,
+      "INSUFFICIENT": 2,
+      "UNRESOLVED": 0
+    },
+    "primary_failure_attribution": {
+      "SYNTHESIS": 2,
+      "RETRIEVAL": 3,
+      "RETRIEVAL_AND_SYNTHESIS": 1
+    }
+  },
+  "decisions": {
+    "service_contract": "PASS",
+    "same_corpus_unseen_answer_quality": "HUMAN_REVIEW_REQUIRED",
+    "fine_tuning": "NOT_JUSTIFIED",
+    "reason": "The run establishes a functioning persistent local RAG service and preserves the causal and corpus-absence safety boundaries, but six unsupported claims across three questions prevent an unattended-reliability claim. The observed error set is too small and heterogeneous to justify fine-tuning."
+  }
+}

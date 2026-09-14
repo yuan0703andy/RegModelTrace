@@ -1,0 +1,41 @@
+{
+  "version": "regmodeltrace-system-v1.0-public-config",
+  "paths": {
+    "passages": "data/retrieval/passages.jsonl",
+    "passages_database": "data/retrieval/passages.sqlite",
+    "records_database": "data/retrieval/records.sqlite",
+    "embedding_manifest": "data/retrieval/embedding/manifest.json",
+    "passage_matrix": "data/retrieval/embedding/passages.npy",
+    "passage_ids": "data/retrieval/embedding/passage_ids.json",
+    "embedding_model_snapshot": "config/embedding_model_snapshot.json",
+    "prompt": "config/rag_v0_prompt.txt"
+  },
+  "retrieval": {
+    "document_role_order": ["STANDARDS", "PROFESSIONAL_TEAM_REPORT", "VENDOR_SUBMISSION"],
+    "passages_per_role": 3,
+    "rrf_k": 60,
+    "query": "unchanged_user_question",
+    "planner": null
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "maximum_sequence_length": 256,
+    "device": "cpu"
+  },
+  "generation": {
+    "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+    "model_revision": "5c7cb76a268fc6cfbb9c4777eb24ba6e27f9ee6c",
+    "model_path": null,
+    "vllm_version": "0.29.0",
+    "dtype": "float16",
+    "seed": 0,
+    "temperature": 0,
+    "max_model_len": 16384,
+    "max_num_seqs": 20,
+    "gpu_memory_utilization": 0.9,
+    "max_output_tokens": 1536
+  },
+  "service": {"max_batch_questions": 32}
+}
+

@@ -1,0 +1,13 @@
+layer,name,count,unit,note
+corpus,SCALE-1 logical documents,28,logical documents,Includes 20 bulk-eligible and 8 protected Validation D/Test E documents
+parser,bulk eligible pages,5129,pages,Checkpoint 1 bulk partition only
+parser,bulk parsed source blocks,57030,blocks,"57,030 total; body and excluded margins"
+semantic,bulk semantic units,9010,units,Unlabelled deterministic units
+assertion,eligible source assertions,47458,assertions,"Candidates, not Gold comparisons"
+table,bulk numeric cells,1112,cells,Counted from saved tables.json; not a universal portability guarantee
+systems,large unique requests,4096,requests,Systems sample
+systems,direct 1-replica large run,4078,valid outputs,18 invalid outputs; 4096 requests
+systems,ray 1-replica large run,4078,valid outputs,18 invalid outputs; 4096 requests
+systems,ray 2-replica large run,4078,valid outputs,18 invalid outputs; 4096 requests
+human_truth,v2.2 primary comparisons,30,cases,Across five final v2.2 corpus fixtures
+human_truth,v2.2 adverse controls,22,cases,Constructed controls; not independent primary observations

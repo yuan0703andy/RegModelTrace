@@ -1,0 +1,160 @@
+{
+  "interpretation": "RAG retrieval experiments and answer audits use different contracts. They are reported separately from v2.2 alignment classification.",
+  "m4a_saved_retrieval": {
+    "MRR": 0.19723939559854603,
+    "all_required_questions_at_10": 1,
+    "all_required_questions_at_5": 1,
+    "macro_recall_at_10": 0.25,
+    "macro_recall_at_5": 0.1875,
+    "micro_recall_at_10": 0.1875,
+    "micro_recall_at_5": 0.125,
+    "questions": 8,
+    "required_query_record_pairs": 16,
+    "required_recovered_at_10": 3,
+    "required_recovered_at_5": 2
+  },
+  "m4b_saved_ablation": {
+    "R0": {
+      "MRR": 0.19723939559854603,
+      "Q1_Q5_all_required_at_10": 1,
+      "all_required_questions_at_10": 1,
+      "all_required_questions_at_5": 1,
+      "macro_recall_at_10": 0.25,
+      "macro_recall_at_5": 0.1875,
+      "micro_recall_at_10": 0.1875,
+      "micro_recall_at_5": 0.125,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered_at_10": 3,
+      "required_recovered_at_5": 2
+    },
+    "R1": {
+      "MRR": 0.26478444070549334,
+      "Q1_Q5_all_required_at_10": 1,
+      "all_required_questions_at_10": 1,
+      "all_required_questions_at_5": 0,
+      "macro_recall_at_10": 0.1875,
+      "macro_recall_at_5": 0.125,
+      "micro_recall_at_10": 0.1875,
+      "micro_recall_at_5": 0.125,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered_at_10": 3,
+      "required_recovered_at_5": 2
+    },
+    "R2": {
+      "MRR": 0.2259549187892211,
+      "Q1_Q5_all_required_at_10": 1,
+      "all_required_questions_at_10": 1,
+      "all_required_questions_at_5": 0,
+      "macro_recall_at_10": 0.25,
+      "macro_recall_at_5": 0.125,
+      "micro_recall_at_10": 0.1875,
+      "micro_recall_at_5": 0.125,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered_at_10": 3,
+      "required_recovered_at_5": 2
+    },
+    "R3": {
+      "MRR": 0.18422160199392337,
+      "Q1_Q5_all_required_at_10": 0,
+      "all_required_questions_at_10": 0,
+      "all_required_questions_at_5": 0,
+      "macro_recall_at_10": 0.125,
+      "macro_recall_at_5": 0.125,
+      "micro_recall_at_10": 0.125,
+      "micro_recall_at_5": 0.125,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered_at_10": 2,
+      "required_recovered_at_5": 2
+    }
+  },
+  "m4c_saved_passage_bundle": {
+    "C0_PASSAGE_SINGLE": {
+      "Q1_Q5_complete": 3,
+      "complete_questions": 3,
+      "macro_bundle_coverage": 0.5,
+      "maximum_selected_assertions": 30,
+      "maximum_selected_passages": 10,
+      "mean_selected_assertions": 22.375,
+      "mean_selected_passages": 10,
+      "micro_bundle_coverage": 0.375,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered": 6
+    },
+    "C1_ORACLE_BUNDLE": {
+      "Q1_Q5_complete": 4,
+      "complete_questions": 4,
+      "macro_bundle_coverage": 0.6875,
+      "maximum_selected_assertions": 18,
+      "maximum_selected_passages": 9,
+      "mean_selected_assertions": 7.875,
+      "mean_selected_passages": 4.125,
+      "micro_bundle_coverage": 0.5625,
+      "questions": 8,
+      "required_query_record_pairs": 16,
+      "required_recovered": 9
+    }
+  },
+  "rag_v0_development": {
+    "bundle_miss_boundary": {
+      "pass": true,
+      "reason": "Q5, Q7, and Q8 use retrieved-evidence scope and do not claim that an item is absent from the fixed corpus."
+    },
+    "causal_safety": {
+      "pass": true,
+      "reason": "Q7 and Q8 limit their negative conclusions to what the retrieved evidence establishes. No answer converts scrutiny or temporal coexistence into review causation or into proof of no effect."
+    },
+    "citation_entailment": {
+      "reason": "Per-question quality notes identify relevance defects but do not provide a complete claim-level entailment denominator.",
+      "status": "PARTIALLY_AUDITED"
+    },
+    "claim_precision": {
+      "reason": "Traceable claim count is not a semantic-support judgment.",
+      "status": "NOT_COMPUTABLE_FROM_AVAILABLE_ARTIFACTS"
+    },
+    "issue_gap_recall": {
+      "reason": "No independent complete issue inventory exists.",
+      "status": "NOT_COMPUTABLE_FROM_AVAILABLE_ARTIFACTS"
+    },
+    "traceability": {
+      "claims_checked": 16,
+      "claims_traceable": 16,
+      "pass": true,
+      "reason": "Every model-written claim is bound to supplied evidence handles that the host resolves to original assertion text, document role, page, exact source span, and PDF link."
+    }
+  },
+  "system_v1_same_corpus_unseen": {
+    "answer_usefulness": {
+      "FAIL": 1,
+      "PARTIAL": 5,
+      "PASS": 14
+    },
+    "causal_overclaims": 0,
+    "citation_correctness": {
+      "FAIL": 1,
+      "PARTIAL": 3,
+      "PASS": 16
+    },
+    "grounding_pass": 20,
+    "primary_failure_attribution": {
+      "RETRIEVAL": 3,
+      "RETRIEVAL_AND_SYNTHESIS": 1,
+      "SYNTHESIS": 2
+    },
+    "question_count": 20,
+    "questions_with_unsupported_claims": 3,
+    "retrieval_miss_to_corpus_absence_violations": 0,
+    "retrieval_sufficiency": {
+      "INSUFFICIENT": 2,
+      "PARTIAL": 2,
+      "SUFFICIENT": 16,
+      "UNRESOLVED": 0
+    },
+    "unsupported_claims": 6,
+    "valid_structured_outputs": 20
+  }
+}

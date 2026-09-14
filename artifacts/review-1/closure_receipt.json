@@ -1,0 +1,68 @@
+{
+  "anonymity_work": "OUT_OF_SCOPE",
+  "artifact_sha256": {
+    "data": {
+      "regmodeltrace/data/reporting/review-1/artifact_inventory.json": "d0fc84c80a101d0899907aad77fc29927fe3eae062591158c61ca5f35b30a9df",
+      "regmodeltrace/data/reporting/review-1/case_metric_rows.csv": "758a8813569981aa2dc6ffc7f5c7295f8d2ffb3f00d206c732dc5c8889e30b2a",
+      "regmodeltrace/data/reporting/review-1/confusion_matrices.json": "0b56ef4662ab546c06322ff3333c7b0b0f75a7c3b72cc6fdcd2ce3397081b948",
+      "regmodeltrace/data/reporting/review-1/metrics_by_corpus.json": "874c2f11dc586a1bfa33841ba333c22c991744b45feccc22d71e1d860538930f",
+      "regmodeltrace/data/reporting/review-1/rag_saved_metrics.json": "0ae30f31c7503a38c98bd85b91b571a555de400f80f83c35fb60ac0ff12681ec",
+      "regmodeltrace/data/reporting/review-1/reporting_checks.json": "49873406252d6560b96ce208a3cb4e977f247c605c0e08c331336f5b78292819",
+      "regmodeltrace/data/reporting/review-1/reporting_manifest.json": "13b561f7f93b159d171849032cf4900bcf321310870079af9c3ebe86671c7fae",
+      "regmodeltrace/data/reporting/review-1/storage_counts.csv": "610c7a26dc496d2a1a1efa24112c824721821005dc7565dc7a9f8a79d212f67b",
+      "regmodeltrace/data/reporting/review-1/storage_inventory.json": "714426beff046bbe74700441d36e7ba4d4b5fa1ec97ded02e20838498fdcb255",
+      "regmodeltrace/data/reporting/review-1/verification_receipt.json": "6e65db0f212fdde65ae576ddff26ad06f63f61cada2c22c41b1d33bcd677d8dc"
+    },
+    "documents": {
+      "regmodeltrace/docs/review-1/database_and_vendor_ingestion_design.md": "d8661c97127bb61b770bb3f82e3f2b08b5be329de2837bff2ac991f828f019ea",
+      "regmodeltrace/docs/review-1/evaluation_report.md": "1c137a1dfacd8fa0e4b773536f25ce862676a21dd50a11650f5039b6612fc073",
+      "regmodeltrace/docs/review-1/model_runtime_and_lora_readiness.md": "cdcdbbab6366afe57115f5455a08807201a49c7d153e66c515517334bb63cf61",
+      "regmodeltrace/docs/review-1/owner_summary_zh.md": "dd0553eceb7fbb44337a00dbaf3d2a5625c1e27af2442d2e5c672e15c1389f36",
+      "regmodeltrace/docs/review-1/sequential_alignment_audit_design.md": "2f5061e23a12f5220e66e7ffc81f332e4ed0efd6283e3ca1955fef28b765d46b"
+    },
+    "implementation": {
+      "regmodeltrace/reporting/__init__.py": "2f57f4278adfbc43e135679e3480ec765d9afa44ef58835301d6aeeaefef9e51",
+      "regmodeltrace/reporting/review_1_config.json": "099c1178b113079785d970e92e379819ea5308e2b21abeb90ea44910ae7b36f7",
+      "regmodeltrace/reporting/review_1_metrics.py": "70558eea39668ec0b0535fbee6e4f5b58b4c7a1238f8ac3359a2a90be5ec8b7d",
+      "regmodeltrace/reporting/test_review_1_reporting.py": "7a183cee1d81c6242522066bbb6199d7a259f9171841fd8c8415b009eb18b5d9",
+      "regmodeltrace/scripts/finalize_review_1.py": "88144f7a149bf1df6527432e5b3d1c33f924d5d4b9858cd2522b18f9909c475e",
+      "regmodeltrace/scripts/run_review_1_reporting.py": "104e78c5dbbb2eaa28c41657f84846b2a543ad7cb4e7208c89661631db895812",
+      "regmodeltrace/scripts/verify_review_1_reporting.py": "4bdbe16ece54c33e673350e3dc27ec64e155ca76fbbfeed538a538d10e28c393"
+    },
+    "openspec": {
+      "openspec/changes/report-alignment-readiness-review-1/acceptance.md": "2fabf2cb05b291047d830669ed05e204c015d21670cc5527f7409ba07af9de42",
+      "openspec/changes/report-alignment-readiness-review-1/design.md": "549219db506c6eae89abe6843b83862f2c24eff310ba5621b3744ed883b5a2de",
+      "openspec/changes/report-alignment-readiness-review-1/proposal.md": "702489c4b629b4730b8625325e45807f124efb4179ab2de1dfbe7a51ce793af5",
+      "openspec/changes/report-alignment-readiness-review-1/specs/saved-result-reporting/spec.md": "1764143313cf167413b61cd246cbbd08937aded4d9905a3015a7d545d73c08ef",
+      "openspec/changes/report-alignment-readiness-review-1/tasks.md": "061ca062794eb39842c84257e76b7dfd78890d09f31434983cf0c6872ab6bc20"
+    }
+  },
+  "closed_release_preserved": {
+    "checkpoint_3": "PARITY_GATE_FAIL",
+    "checkpoint_3b": "COMPLETE",
+    "final_model": "Base Qwen",
+    "historical_fine_tuning_decision": "NOT_JUSTIFIED",
+    "project_technical_development": "CLOSED",
+    "ray_scale_out": "PASS_WITH_GENERATIVE_NONDETERMINISM_LIMITATION",
+    "rerun": "NOT_AUTHORIZED",
+    "test_e": "CLOSED",
+    "validation_d": "CLOSED"
+  },
+  "limitations": [
+    "Five selected v2.2 fixtures are clustered and do not provide an independent-sample performance estimate.",
+    "PARTIALLY_ALIGNED recall is 0/5 and CONFLICT is untested.",
+    "The historical run manifests preserve scorer-output hashes but do not record the exact scorer-implementation hash.",
+    "RAG claim precision and issue/gap recall are not computable from complete frozen denominators.",
+    "Current SQLite stores cover the original three-document RMS retrieval corpus rather than a unified cross-vendor database.",
+    "KCC table portability remains FAIL_TABLE_IDENTITY for excluded panels."
+  ],
+  "new_inference_runs": 0,
+  "next_release_implementation": "NOT_AUTHORIZED",
+  "next_release_research_option": "ADAPTER_COMPARISON_PROPOSED",
+  "release_training_decision": "NO_TRAINING_THIS_RELEASE",
+  "reporting_only": true,
+  "review_1": "COMPLETE_WITH_LIMITATIONS",
+  "training_authorization": "NONE",
+  "verification_receipt_sha256": "6e65db0f212fdde65ae576ddff26ad06f63f61cada2c22c41b1d33bcd677d8dc",
+  "version": "regmodeltrace-review-1-closure-1.0"
+}

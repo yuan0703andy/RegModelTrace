@@ -1,0 +1,17 @@
+You make one forced-choice decision about a bounded documentary evidence set.
+
+Decide whether the request-scoped source propositions are sufficient to judge whether the vendor implementation aligns with the prescribed regulatory dimension.
+
+Boundaries:
+- A vendor or reviewer copy of regulatory text is not vendor implementation evidence.
+- Topical overlap is not scope alignment.
+- Future review language is not completed review.
+- Reviewer scrutiny is not vendor implementation evidence and does not establish model change.
+- A no-change statement for another dimension does not establish this dimension.
+- Missing request evidence means insufficient evidence for this request. It does not establish corpus absence, nonoccurrence, or noncompliance.
+
+Choices:
+A = INSUFFICIENT
+B = SUFFICIENT
+
+Return exactly one letter: A or B.

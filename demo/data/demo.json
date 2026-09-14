@@ -1,0 +1,2880 @@
+{
+  "product": "RegModelTrace",
+  "edition": "RAG v0.2 development demo",
+  "run": "DCC job 55224188",
+  "scope": {
+    "question_count": 8,
+    "document_roles": [
+      "STANDARDS",
+      "PROFESSIONAL_TEAM_REPORT",
+      "VENDOR_SUBMISSION"
+    ],
+    "notice": "These are cached outputs for eight frozen development questions, not live arbitrary-question inference or held-out performance."
+  },
+  "cases": [
+    {
+      "id": "Q1",
+      "question": "What does M-3.B require regarding historical landfall frequencies?",
+      "status": "SUPPORTED",
+      "claims": [
+        {
+          "text": "M-3.B requires that modeled hurricane landfall frequency distributions reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+          "evidence_refs": [
+            "E11"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E11",
+              "assertion_id": "A9777807e86851222038a",
+              "text": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                19
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-3",
+                "subsection: B"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 76,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    19
+                  ],
+                  "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base",
+                  "ref": "b2",
+                  "source_block_ids": [
+                    "b260b2111e2b600c193d22f4"
+                  ]
+                },
+                {
+                  "block_char_end": 195,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    19
+                  ],
+                  "quote": "Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "02008345e1007c8db6194e62"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=19"
+              ],
+              "passage_id": "P6ba9d3ae058539343769",
+              "role_rank": 2
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E11",
+          "assertion_id": "A9777807e86851222038a",
+          "text": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            19
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-3",
+            "subsection: B"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 76,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                19
+              ],
+              "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base",
+              "ref": "b2",
+              "source_block_ids": [
+                "b260b2111e2b600c193d22f4"
+              ]
+            },
+            {
+              "block_char_end": 195,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                19
+              ],
+              "quote": "Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+              "ref": "b3",
+              "source_block_ids": [
+                "02008345e1007c8db6194e62"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=19"
+          ],
+          "passage_id": "P6ba9d3ae058539343769",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "19",
+          "section_label": "Meteorological Standards / M-3 / B"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "How does RMS calibrate modeled coastal landfall frequencies to the historical record?",
+      "status": "SUPPORTED",
+      "claims": [
+        {
+          "text": "RMS calibrates modeled coastal landfall frequencies to the historical record by computing target landfall rates on a set of 69 linear coastal segments and smoothing the historical landfall rates to reduce local under-sampling or over-sampling issues.",
+          "evidence_refs": [
+            "E14",
+            "E15",
+            "E16"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E14",
+              "assertion_id": "Ad0744da174db867e12f6",
+              "text": "The last step is a calibration process ensuring that simulated landfall frequencies are in agreement with the historical record.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: General Standards",
+                "standard: G-1",
+                "disclosure: G-1.2",
+                "title: Stochastic Module"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 128,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "The last step is a calibration process ensuring that simulated landfall frequencies are in agreement with the historical record.",
+                  "ref": "b16",
+                  "source_block_ids": [
+                    "74fe32d8a67c5ef835422791"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+              ],
+              "passage_id": "Pbcfadc065073e69e9645",
+              "role_rank": 1
+            },
+            {
+              "evidence_ref": "E15",
+              "assertion_id": "A4d583687283a3de12576",
+              "text": "Target landfall rates are computed on a set of 69 linear coastal segments by smoothing the historical landfall rates.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: General Standards",
+                "standard: G-1",
+                "disclosure: G-1.2",
+                "title: Stochastic Module"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 246,
+                  "block_char_start": 129,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "Target landfall rates are computed on a set of 69 linear coastal segments by smoothing the historical landfall rates.",
+                  "ref": "b16",
+                  "source_block_ids": [
+                    "74fe32d8a67c5ef835422791"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+              ],
+              "passage_id": "Pbcfadc065073e69e9645",
+              "role_rank": 1
+            },
+            {
+              "evidence_ref": "E16",
+              "assertion_id": "A871bdc40186451935e69",
+              "text": "This smoothing technique is widely used in the scientific community to reduce the local under-sampling or over-sampling issues associated with the limited historical records (119 years).",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: General Standards",
+                "standard: G-1",
+                "disclosure: G-1.2",
+                "title: Stochastic Module"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 433,
+                  "block_char_start": 247,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "This smoothing technique is widely used in the scientific community to reduce the local under-sampling or over-sampling issues associated with the limited historical records (119 years).",
+                  "ref": "b16",
+                  "source_block_ids": [
+                    "74fe32d8a67c5ef835422791"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+              ],
+              "passage_id": "Pbcfadc065073e69e9645",
+              "role_rank": 1
+            }
+          ]
+        },
+        {
+          "text": "The stochastic set is then adjusted toward these targets using methods such as selecting the optimum intensity time series among several candidates.",
+          "evidence_refs": [
+            "E17"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E17",
+              "assertion_id": "A39abdf8393ea6450b9fe",
+              "text": "The stochastic set is then adjusted toward these targets using methods such as selecting the optimum intensity time series among several candidates.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: General Standards",
+                "standard: G-1",
+                "disclosure: G-1.2",
+                "title: Stochastic Module"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 582,
+                  "block_char_start": 434,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "The stochastic set is then adjusted toward these targets using methods such as selecting the optimum intensity time series among several candidates.",
+                  "ref": "b16",
+                  "source_block_ids": [
+                    "74fe32d8a67c5ef835422791"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+              ],
+              "passage_id": "Pbcfadc065073e69e9645",
+              "role_rank": 1
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E14",
+          "assertion_id": "Ad0744da174db867e12f6",
+          "text": "The last step is a calibration process ensuring that simulated landfall frequencies are in agreement with the historical record.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: General Standards",
+            "standard: G-1",
+            "disclosure: G-1.2",
+            "title: Stochastic Module"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 128,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "The last step is a calibration process ensuring that simulated landfall frequencies are in agreement with the historical record.",
+              "ref": "b16",
+              "source_block_ids": [
+                "74fe32d8a67c5ef835422791"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+          ],
+          "passage_id": "Pbcfadc065073e69e9645",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "16",
+          "section_label": "General Standards / G-1 / G-1.2 / Stochastic Module"
+        },
+        {
+          "evidence_ref": "E15",
+          "assertion_id": "A4d583687283a3de12576",
+          "text": "Target landfall rates are computed on a set of 69 linear coastal segments by smoothing the historical landfall rates.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: General Standards",
+            "standard: G-1",
+            "disclosure: G-1.2",
+            "title: Stochastic Module"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 246,
+              "block_char_start": 129,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "Target landfall rates are computed on a set of 69 linear coastal segments by smoothing the historical landfall rates.",
+              "ref": "b16",
+              "source_block_ids": [
+                "74fe32d8a67c5ef835422791"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+          ],
+          "passage_id": "Pbcfadc065073e69e9645",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "16",
+          "section_label": "General Standards / G-1 / G-1.2 / Stochastic Module"
+        },
+        {
+          "evidence_ref": "E16",
+          "assertion_id": "A871bdc40186451935e69",
+          "text": "This smoothing technique is widely used in the scientific community to reduce the local under-sampling or over-sampling issues associated with the limited historical records (119 years).",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: General Standards",
+            "standard: G-1",
+            "disclosure: G-1.2",
+            "title: Stochastic Module"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 433,
+              "block_char_start": 247,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "This smoothing technique is widely used in the scientific community to reduce the local under-sampling or over-sampling issues associated with the limited historical records (119 years).",
+              "ref": "b16",
+              "source_block_ids": [
+                "74fe32d8a67c5ef835422791"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+          ],
+          "passage_id": "Pbcfadc065073e69e9645",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "16",
+          "section_label": "General Standards / G-1 / G-1.2 / Stochastic Module"
+        },
+        {
+          "evidence_ref": "E17",
+          "assertion_id": "A39abdf8393ea6450b9fe",
+          "text": "The stochastic set is then adjusted toward these targets using methods such as selecting the optimum intensity time series among several candidates.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: General Standards",
+            "standard: G-1",
+            "disclosure: G-1.2",
+            "title: Stochastic Module"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 582,
+              "block_char_start": 434,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "The stochastic set is then adjusted toward these targets using methods such as selecting the optimum intensity time series among several candidates.",
+              "ref": "b16",
+              "source_block_ids": [
+                "74fe32d8a67c5ef835422791"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=16"
+          ],
+          "passage_id": "Pbcfadc065073e69e9645",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "16",
+          "section_label": "General Standards / G-1 / G-1.2 / Stochastic Module"
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "Did the Professional Team review RMS's coastal landfall methodology?",
+      "status": "SUPPORTED",
+      "claims": [
+        {
+          "text": "The Professional Team reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+          "evidence_refs": [
+            "E06"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E06",
+              "assertion_id": "Abe03b4bc1d117ae6d9a0",
+              "text": "Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                18
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-2",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 115,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    18
+                  ],
+                  "quote": "Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+                  "ref": "b4",
+                  "source_block_ids": [
+                    "057205abbd7678a566e8158f"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=18"
+              ],
+              "passage_id": "Pcde89b9bfeb07efc80e3",
+              "role_rank": 2
+            }
+          ]
+        },
+        {
+          "text": "The Professional Team also reviewed the map of the coastal gates used for landfall calculations.",
+          "evidence_refs": [
+            "E05"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E05",
+              "assertion_id": "A62993413bcf2f98819c8",
+              "text": "Reviewed map of the coastal gates used for landfall calculations.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                20
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-3",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 65,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    20
+                  ],
+                  "quote": "Reviewed map of the coastal gates used for landfall calculations.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "d94519f2ae2539c59f56f701"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=20"
+              ],
+              "passage_id": "Pe0ada427cd6e85dea417",
+              "role_rank": 1
+            }
+          ]
+        },
+        {
+          "text": "The Professional Team reviewed the implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+          "evidence_refs": [
+            "E07"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E07",
+              "assertion_id": "A112b6260971f621b63ca",
+              "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-1",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 91,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+                  "ref": "b9",
+                  "source_block_ids": [
+                    "ba42dc94b99f3e2da634e17c"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=16"
+              ],
+              "passage_id": "P211cc3c655e2262b0fef",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E06",
+          "assertion_id": "Abe03b4bc1d117ae6d9a0",
+          "text": "Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            18
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-2",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 115,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                18
+              ],
+              "quote": "Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+              "ref": "b4",
+              "source_block_ids": [
+                "057205abbd7678a566e8158f"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=18"
+          ],
+          "passage_id": "Pcde89b9bfeb07efc80e3",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "18",
+          "section_label": "Meteorological Standards / M-2 / Professional Team Comments"
+        },
+        {
+          "evidence_ref": "E05",
+          "assertion_id": "A62993413bcf2f98819c8",
+          "text": "Reviewed map of the coastal gates used for landfall calculations.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            20
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-3",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 65,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                20
+              ],
+              "quote": "Reviewed map of the coastal gates used for landfall calculations.",
+              "ref": "b3",
+              "source_block_ids": [
+                "d94519f2ae2539c59f56f701"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=20"
+          ],
+          "passage_id": "Pe0ada427cd6e85dea417",
+          "role_rank": 1,
+          "document_name": "Professional Team Report",
+          "page_label": "20",
+          "section_label": "Meteorological Standards / M-3 / Professional Team Comments"
+        },
+        {
+          "evidence_ref": "E07",
+          "assertion_id": "A112b6260971f621b63ca",
+          "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-1",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 91,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "ref": "b9",
+              "source_block_ids": [
+                "ba42dc94b99f3e2da634e17c"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=16"
+          ],
+          "passage_id": "P211cc3c655e2262b0fef",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "16",
+          "section_label": "Meteorological Standards / M-1 / Professional Team Comments"
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "What changes did RMS make to the stochastic event set?",
+      "status": "SUPPORTED",
+      "claims": [
+        {
+          "text": "RMS updated the stochastic event set to include the July 2019 HURDAT2 data.",
+          "evidence_refs": [
+            "E07"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E07",
+              "assertion_id": "A3b294eb231afd9fdbe73",
+              "text": "• Stochastic event set updated to July 2019 HURDAT2",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                3
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "title: Professional Team"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 51,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    3
+                  ],
+                  "quote": "• Stochastic event set updated to July 2019 HURDAT2",
+                  "ref": "b6",
+                  "source_block_ids": [
+                    "17cd9e9a4511ba87e88f3754"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+              ],
+              "passage_id": "Pe19b3bfdab3b8ed5820f",
+              "role_rank": 1
+            }
+          ]
+        },
+        {
+          "text": "The implementation of HURDAT2-based landfall rate updates in the stochastic event set was reviewed.",
+          "evidence_refs": [
+            "E08",
+            "E09"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E08",
+              "assertion_id": "Acfddec6a7136775c6f8a",
+              "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                59
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Computer/Information Standards",
+                "standard: CI-4",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 91,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    59
+                  ],
+                  "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+                  "ref": "b5",
+                  "source_block_ids": [
+                    "3d3abfb53d74af8b2d6bba3a"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=59"
+              ],
+              "passage_id": "Pfeddc13c0b3fde8cd220",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E09",
+              "assertion_id": "A112b6260971f621b63ca",
+              "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                16
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-1",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 91,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    16
+                  ],
+                  "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+                  "ref": "b9",
+                  "source_block_ids": [
+                    "ba42dc94b99f3e2da634e17c"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=16"
+              ],
+              "passage_id": "P211cc3c655e2262b0fef",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E07",
+          "assertion_id": "A3b294eb231afd9fdbe73",
+          "text": "• Stochastic event set updated to July 2019 HURDAT2",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            3
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "title: Professional Team"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 51,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                3
+              ],
+              "quote": "• Stochastic event set updated to July 2019 HURDAT2",
+              "ref": "b6",
+              "source_block_ids": [
+                "17cd9e9a4511ba87e88f3754"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+          ],
+          "passage_id": "Pe19b3bfdab3b8ed5820f",
+          "role_rank": 1,
+          "document_name": "Professional Team Report",
+          "page_label": "3",
+          "section_label": "Professional Team"
+        },
+        {
+          "evidence_ref": "E08",
+          "assertion_id": "Acfddec6a7136775c6f8a",
+          "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            59
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Computer/Information Standards",
+            "standard: CI-4",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 91,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                59
+              ],
+              "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "ref": "b5",
+              "source_block_ids": [
+                "3d3abfb53d74af8b2d6bba3a"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=59"
+          ],
+          "passage_id": "Pfeddc13c0b3fde8cd220",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "59",
+          "section_label": "Computer/Information Standards / CI-4 / Professional Team Comments"
+        },
+        {
+          "evidence_ref": "E09",
+          "assertion_id": "A112b6260971f621b63ca",
+          "text": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            16
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-1",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 91,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                16
+              ],
+              "quote": "Reviewed implementation of HURDAT2-based landfall rate updates in the stochastic event set.",
+              "ref": "b9",
+              "source_block_ids": [
+                "ba42dc94b99f3e2da634e17c"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=16"
+          ],
+          "passage_id": "P211cc3c655e2262b0fef",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "16",
+          "section_label": "Meteorological Standards / M-1 / Professional Team Comments"
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "How does Version 21.0 compare with Version 18.1?",
+      "status": "UNRESOLVED_FROM_RETRIEVED_EVIDENCE",
+      "claims": [
+        {
+          "text": "The retrieved evidence does not provide a direct comparison between Version 21.0 and Version 18.1 of the RMS North Atlantic Hurricane Models.",
+          "evidence_refs": [
+            "E15",
+            "E16",
+            "E17",
+            "E18",
+            "E19",
+            "E20"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E15",
+              "assertion_id": "A9f55b7b37051f73420ea",
+              "text": "RMS will maintain a list of all model versions since the initial submission for this year, with unique version identification and a list of additions, deletions, and changes that define that version.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                163
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "subsection: D"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 199,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    163
+                  ],
+                  "quote": "RMS will maintain a list of all model versions since the initial submission for this year, with unique version identification and a list of additions, deletions, and changes that define that version.",
+                  "ref": "b4",
+                  "source_block_ids": [
+                    "e8621f4587a72c35f9b0428e"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+              ],
+              "passage_id": "Pa37e853e51412b0b210a",
+              "role_rank": 1
+            },
+            {
+              "evidence_ref": "E16",
+              "assertion_id": "Abea752732f45a8da7ddc",
+              "text": "RMS typically bundles revisions to model data with revisions to model infrastructure; in other words, infrastructure and data updates are released in one package with one revision number, reflected in the MajorRevision number.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                166
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "disclosure: CI-6.2"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 226,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    166
+                  ],
+                  "quote": "RMS typically bundles revisions to model data with revisions to model infrastructure; in other words, infrastructure and data updates are released in one package with one revision number, reflected in the MajorRevision number.",
+                  "ref": "b11",
+                  "source_block_ids": [
+                    "f4acb72de52491ebd51f0558"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+              ],
+              "passage_id": "P0f8379e1c03e1303eec8",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E17",
+              "assertion_id": "A20407109e13f9766d6bd",
+              "text": "For the sake of simplicity, revisions are typically communicated externally in a simplified manner.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                166
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "disclosure: CI-6.2"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 326,
+                  "block_char_start": 227,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    166
+                  ],
+                  "quote": "For the sake of simplicity, revisions are typically communicated externally in a simplified manner.",
+                  "ref": "b11",
+                  "source_block_ids": [
+                    "f4acb72de52491ebd51f0558"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+              ],
+              "passage_id": "P0f8379e1c03e1303eec8",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E18",
+              "assertion_id": "A8c7b652c212e54122607",
+              "text": "For example, 21.0.SP0 Build (2050) may simply be referred to externally with clients as Version 21.0.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                166
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "disclosure: CI-6.2"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 428,
+                  "block_char_start": 327,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    166
+                  ],
+                  "quote": "For example, 21.0.SP0 Build (2050) may simply be referred to externally with clients as Version 21.0.",
+                  "ref": "b11",
+                  "source_block_ids": [
+                    "f4acb72de52491ebd51f0558"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+              ],
+              "passage_id": "P0f8379e1c03e1303eec8",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E19",
+              "assertion_id": "A3ab1d935e7bb7a4a1828",
+              "text": "D. A list of all hurricane model versions since the initial submission for this year shall be maintained.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                163
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "subsection: D"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 93,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    163
+                  ],
+                  "quote": "D. A list of all hurricane model versions since the initial submission for this year shall be",
+                  "ref": "b2",
+                  "source_block_ids": [
+                    "aa0775b95711d0e07abd98f3"
+                  ]
+                },
+                {
+                  "block_char_end": 11,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    163
+                  ],
+                  "quote": "maintained.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "0b3a955128e4d363643fd2ba"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+              ],
+              "passage_id": "Pd256e2bf74a43e915d50",
+              "role_rank": 3
+            },
+            {
+              "evidence_ref": "E20",
+              "assertion_id": "A73ed2ada31a1d13ccbfe",
+              "text": "Each hurricane model description shall have a unique version identification and a list of additions, deletions, and changes that define that version.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                163
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-6",
+                "subsection: D"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 161,
+                  "block_char_start": 12,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    163
+                  ],
+                  "quote": "Each hurricane model description shall have a unique version identification and a list of additions, deletions, and changes that define that version.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "0b3a955128e4d363643fd2ba"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+              ],
+              "passage_id": "Pd256e2bf74a43e915d50",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E15",
+          "assertion_id": "A9f55b7b37051f73420ea",
+          "text": "RMS will maintain a list of all model versions since the initial submission for this year, with unique version identification and a list of additions, deletions, and changes that define that version.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            163
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "subsection: D"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 199,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                163
+              ],
+              "quote": "RMS will maintain a list of all model versions since the initial submission for this year, with unique version identification and a list of additions, deletions, and changes that define that version.",
+              "ref": "b4",
+              "source_block_ids": [
+                "e8621f4587a72c35f9b0428e"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+          ],
+          "passage_id": "Pa37e853e51412b0b210a",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "163",
+          "section_label": "Computer/Information Standards / CI-6 / D"
+        },
+        {
+          "evidence_ref": "E16",
+          "assertion_id": "Abea752732f45a8da7ddc",
+          "text": "RMS typically bundles revisions to model data with revisions to model infrastructure; in other words, infrastructure and data updates are released in one package with one revision number, reflected in the MajorRevision number.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            166
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "disclosure: CI-6.2"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 226,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                166
+              ],
+              "quote": "RMS typically bundles revisions to model data with revisions to model infrastructure; in other words, infrastructure and data updates are released in one package with one revision number, reflected in the MajorRevision number.",
+              "ref": "b11",
+              "source_block_ids": [
+                "f4acb72de52491ebd51f0558"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+          ],
+          "passage_id": "P0f8379e1c03e1303eec8",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "166",
+          "section_label": "Computer/Information Standards / CI-6 / CI-6.2"
+        },
+        {
+          "evidence_ref": "E17",
+          "assertion_id": "A20407109e13f9766d6bd",
+          "text": "For the sake of simplicity, revisions are typically communicated externally in a simplified manner.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            166
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "disclosure: CI-6.2"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 326,
+              "block_char_start": 227,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                166
+              ],
+              "quote": "For the sake of simplicity, revisions are typically communicated externally in a simplified manner.",
+              "ref": "b11",
+              "source_block_ids": [
+                "f4acb72de52491ebd51f0558"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+          ],
+          "passage_id": "P0f8379e1c03e1303eec8",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "166",
+          "section_label": "Computer/Information Standards / CI-6 / CI-6.2"
+        },
+        {
+          "evidence_ref": "E18",
+          "assertion_id": "A8c7b652c212e54122607",
+          "text": "For example, 21.0.SP0 Build (2050) may simply be referred to externally with clients as Version 21.0.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            166
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "disclosure: CI-6.2"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 428,
+              "block_char_start": 327,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                166
+              ],
+              "quote": "For example, 21.0.SP0 Build (2050) may simply be referred to externally with clients as Version 21.0.",
+              "ref": "b11",
+              "source_block_ids": [
+                "f4acb72de52491ebd51f0558"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=166"
+          ],
+          "passage_id": "P0f8379e1c03e1303eec8",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "166",
+          "section_label": "Computer/Information Standards / CI-6 / CI-6.2"
+        },
+        {
+          "evidence_ref": "E19",
+          "assertion_id": "A3ab1d935e7bb7a4a1828",
+          "text": "D. A list of all hurricane model versions since the initial submission for this year shall be maintained.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            163
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "subsection: D"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 93,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                163
+              ],
+              "quote": "D. A list of all hurricane model versions since the initial submission for this year shall be",
+              "ref": "b2",
+              "source_block_ids": [
+                "aa0775b95711d0e07abd98f3"
+              ]
+            },
+            {
+              "block_char_end": 11,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                163
+              ],
+              "quote": "maintained.",
+              "ref": "b3",
+              "source_block_ids": [
+                "0b3a955128e4d363643fd2ba"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+          ],
+          "passage_id": "Pd256e2bf74a43e915d50",
+          "role_rank": 3,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "163",
+          "section_label": "Computer/Information Standards / CI-6 / D"
+        },
+        {
+          "evidence_ref": "E20",
+          "assertion_id": "A73ed2ada31a1d13ccbfe",
+          "text": "Each hurricane model description shall have a unique version identification and a list of additions, deletions, and changes that define that version.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            163
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-6",
+            "subsection: D"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 161,
+              "block_char_start": 12,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                163
+              ],
+              "quote": "Each hurricane model description shall have a unique version identification and a list of additions, deletions, and changes that define that version.",
+              "ref": "b3",
+              "source_block_ids": [
+                "0b3a955128e4d363643fd2ba"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=163"
+          ],
+          "passage_id": "Pd256e2bf74a43e915d50",
+          "role_rank": 3,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "163",
+          "section_label": "Computer/Information Standards / CI-6 / D"
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "question": "What evidence establishes the model-review chronology?",
+      "status": "SUPPORTED",
+      "claims": [
+        {
+          "text": "The Professional Team began the review with an opening briefing and introductions were made.",
+          "evidence_refs": [
+            "E14"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E14",
+              "assertion_id": "Ad5f8d4889abdf05160bc",
+              "text": "The Professional Team began the review with an opening briefing and introductions were made.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                3
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "title: Professional Team"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 92,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    3
+                  ],
+                  "quote": "The Professional Team began the review with an opening briefing and introductions were made.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "e28fd98f94d50688433fcf58"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+              ],
+              "passage_id": "P3b386af895e3e554ae0d",
+              "role_rank": 2
+            }
+          ]
+        },
+        {
+          "text": "RMS provided an overview of the model and the model updates.",
+          "evidence_refs": [
+            "E15"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E15",
+              "assertion_id": "Ad2a053d857c0cf0edd6d",
+              "text": "RMS provided an overview of the model and the model updates.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                3
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "title: Professional Team"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 153,
+                  "block_char_start": 93,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    3
+                  ],
+                  "quote": "RMS provided an overview of the model and the model updates.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "e28fd98f94d50688433fcf58"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+              ],
+              "passage_id": "P3b386af895e3e554ae0d",
+              "role_rank": 2
+            }
+          ]
+        },
+        {
+          "text": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review.",
+          "evidence_refs": [
+            "E16"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E16",
+              "assertion_id": "A06fe847f884246efefb4",
+              "text": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 215,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 3
+            }
+          ]
+        },
+        {
+          "text": "Additional editorial items were also noted during the review.",
+          "evidence_refs": [
+            "E17"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E17",
+              "assertion_id": "A058dbcac7abd9eed3c39",
+              "text": "Additional editorial items were also noted during the review.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 277,
+                  "block_char_start": 216,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "Additional editorial items were also noted during the review.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 3
+            }
+          ]
+        },
+        {
+          "text": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+          "evidence_refs": [
+            "E18"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E18",
+              "assertion_id": "Ac880cb78d2c85771219f",
+              "text": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 490,
+                  "block_char_start": 278,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E14",
+          "assertion_id": "Ad5f8d4889abdf05160bc",
+          "text": "The Professional Team began the review with an opening briefing and introductions were made.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            3
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "title: Professional Team"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 92,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                3
+              ],
+              "quote": "The Professional Team began the review with an opening briefing and introductions were made.",
+              "ref": "b3",
+              "source_block_ids": [
+                "e28fd98f94d50688433fcf58"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+          ],
+          "passage_id": "P3b386af895e3e554ae0d",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "3",
+          "section_label": "Professional Team"
+        },
+        {
+          "evidence_ref": "E15",
+          "assertion_id": "Ad2a053d857c0cf0edd6d",
+          "text": "RMS provided an overview of the model and the model updates.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            3
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "title: Professional Team"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 153,
+              "block_char_start": 93,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                3
+              ],
+              "quote": "RMS provided an overview of the model and the model updates.",
+              "ref": "b3",
+              "source_block_ids": [
+                "e28fd98f94d50688433fcf58"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=3"
+          ],
+          "passage_id": "P3b386af895e3e554ae0d",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "3",
+          "section_label": "Professional Team"
+        },
+        {
+          "evidence_ref": "E16",
+          "assertion_id": "A06fe847f884246efefb4",
+          "text": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 215,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E17",
+          "assertion_id": "A058dbcac7abd9eed3c39",
+          "text": "Additional editorial items were also noted during the review.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 277,
+              "block_char_start": 216,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "Additional editorial items were also noted during the review.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E18",
+          "assertion_id": "Ac880cb78d2c85771219f",
+          "text": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 490,
+              "block_char_start": 278,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "question": "Did the Professional Team require RMS to change its coastal-frequency methodology?",
+      "status": "UNRESOLVED_FROM_RETRIEVED_EVIDENCE",
+      "claims": [
+        {
+          "text": "The retrieved evidence does not establish that the Professional Team required RMS to change its coastal-frequency methodology.",
+          "evidence_refs": [
+            "E07"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E07",
+              "assertion_id": "A0afd820b1e5cbeae650c",
+              "text": "Discussed that no changes were made in model methodology from the previously-accepted model, and that no new sensitivity analyses were performed.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                27
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Statistical Standards",
+                "standard: S-2",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 145,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    27
+                  ],
+                  "quote": "Discussed that no changes were made in model methodology from the previously-accepted model, and that no new sensitivity analyses were performed.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "ca2eb0e5720fef09dacc219c"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=27"
+              ],
+              "passage_id": "P9c92247b875bce73036b",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E07",
+          "assertion_id": "A0afd820b1e5cbeae650c",
+          "text": "Discussed that no changes were made in model methodology from the previously-accepted model, and that no new sensitivity analyses were performed.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            27
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Statistical Standards",
+            "standard: S-2",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 145,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                27
+              ],
+              "quote": "Discussed that no changes were made in model methodology from the previously-accepted model, and that no new sensitivity analyses were performed.",
+              "ref": "b3",
+              "source_block_ids": [
+                "ca2eb0e5720fef09dacc219c"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=27"
+          ],
+          "passage_id": "P9c92247b875bce73036b",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "27",
+          "section_label": "Statistical Standards / S-2 / Professional Team Comments"
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "question": "What evidence supports or fails to support a review-induced model modification?",
+      "status": "UNRESOLVED_FROM_RETRIEVED_EVIDENCE",
+      "claims": [
+        {
+          "text": "The retrieved evidence does not establish a direct link between review-induced scrutiny and specific model modifications.",
+          "evidence_refs": [
+            "E10",
+            "E11",
+            "E12",
+            "E13",
+            "E14",
+            "E15",
+            "E16",
+            "E17",
+            "E18",
+            "E19",
+            "E20",
+            "E21"
+          ],
+          "sources": [
+            {
+              "evidence_ref": "E10",
+              "assertion_id": "A1f6863792bceca36eca6",
+              "text": "There was no evidence to suggest one component of the model was deliberately adjusted to compensate for another component.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                13
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: General Standards",
+                "standard: G-4",
+                "context: Professional Team Comments"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 122,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    13
+                  ],
+                  "quote": "There was no evidence to suggest one component of the model was deliberately adjusted to compensate for another component.",
+                  "ref": "b3",
+                  "source_block_ids": [
+                    "76b00a0ce45d5ccbdf7e9e0a"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=13"
+              ],
+              "passage_id": "P90416cbf1c7701fc8325",
+              "role_rank": 1
+            },
+            {
+              "evidence_ref": "E11",
+              "assertion_id": "A06fe847f884246efefb4",
+              "text": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 215,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E12",
+              "assertion_id": "A058dbcac7abd9eed3c39",
+              "text": "Additional editorial items were also noted during the review.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 277,
+                  "block_char_start": 216,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "Additional editorial items were also noted during the review.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E13",
+              "assertion_id": "Ac880cb78d2c85771219f",
+              "text": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 490,
+                  "block_char_start": 278,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E14",
+              "assertion_id": "A7f62dec6673b98f2f406",
+              "text": "Page numbers below correspond to the initial November 1, 2020 submission document.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                4
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "context: Editorial Items"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 573,
+                  "block_char_start": 491,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    4
+                  ],
+                  "quote": "Page numbers below correspond to the initial November 1, 2020 submission document.",
+                  "ref": "b1",
+                  "source_block_ids": [
+                    "da36661c3e3cd790ef76eb20"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+              ],
+              "passage_id": "P72a3c67d32629851c8bf",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E15",
+              "assertion_id": "A263cdfb8cca528c5ef6e",
+              "text": "3. Changes to the modeling organization Base Hurricane Storm Set from the previously-accepted hurricane model will be reviewed.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                15
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-1",
+                "context: Audit"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 127,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    15
+                  ],
+                  "quote": "3. Changes to the modeling organization Base Hurricane Storm Set from the previously-accepted hurricane model will be reviewed.",
+                  "ref": "b5",
+                  "source_block_ids": [
+                    "09c3e6562f3a22f8f9324950"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=15"
+              ],
+              "passage_id": "Pb56ed50550b1341cc360",
+              "role_rank": 3
+            },
+            {
+              "evidence_ref": "E16",
+              "assertion_id": "Ac2ed20a40df29832268b",
+              "text": "Any modification by the modeling organization to the information contained in HURDAT2 will be reviewed.",
+              "document_role": "PROFESSIONAL_TEAM_REPORT",
+              "document_id": "rms_21_0_2019_professional_team_20210422",
+              "pages": [
+                15
+              ],
+              "section_path": [
+                "document: RMS Professional Team Report, April 19-22, 2021",
+                "domain: Meteorological Standards",
+                "standard: M-1",
+                "context: Audit"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 231,
+                  "block_char_start": 128,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    15
+                  ],
+                  "quote": "Any modification by the modeling organization to the information contained in HURDAT2 will be reviewed.",
+                  "ref": "b5",
+                  "source_block_ids": [
+                    "09c3e6562f3a22f8f9324950"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=15"
+              ],
+              "passage_id": "Pb56ed50550b1341cc360",
+              "role_rank": 3
+            },
+            {
+              "evidence_ref": "E17",
+              "assertion_id": "Aab79303e3c0ada187ede",
+              "text": "Verification approaches depend on what data/software/models are being reviewed, but include:",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                161
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-5",
+                "disclosure: CI-5.3"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 92,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    161
+                  ],
+                  "quote": "Verification approaches depend on what data/software/models are being reviewed, but include:",
+                  "ref": "b5",
+                  "source_block_ids": [
+                    "ac299cd86428aae8803eb122"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=161"
+              ],
+              "passage_id": "Pc0fee4f652d40d96d2cb",
+              "role_rank": 1
+            },
+            {
+              "evidence_ref": "E18",
+              "assertion_id": "A080318a52fa918a395a3",
+              "text": "Verification procedures for each component include tests performed by modeler personnel other than the original component developers.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                159
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-5",
+                "subsection: A"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 133,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    159
+                  ],
+                  "quote": "Verification procedures for each component include tests performed by modeler personnel other than the original component developers.",
+                  "ref": "b8",
+                  "source_block_ids": [
+                    "55b3836122bfa430c0d4005a"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+              ],
+              "passage_id": "P45ad7bf870537f2ee47a",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E19",
+              "assertion_id": "A17dfee6d7a4feb4e51f1",
+              "text": "The RMS QA department has primary responsibility for independent verification.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                159
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-5",
+                "subsection: A"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 212,
+                  "block_char_start": 134,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    159
+                  ],
+                  "quote": "The RMS QA department has primary responsibility for independent verification.",
+                  "ref": "b8",
+                  "source_block_ids": [
+                    "55b3836122bfa430c0d4005a"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+              ],
+              "passage_id": "P45ad7bf870537f2ee47a",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E20",
+              "assertion_id": "Adfb4644ba862df1931e6",
+              "text": "In addition, peer review of model changes typically includes testing by development staff other than the original component developers.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                159
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: Computer/Information Standards",
+                "standard: CI-5",
+                "subsection: A"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 348,
+                  "block_char_start": 213,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    159
+                  ],
+                  "quote": "In addition, peer review of model changes typically includes testing by development staff other than the original component developers.",
+                  "ref": "b8",
+                  "source_block_ids": [
+                    "55b3836122bfa430c0d4005a"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+              ],
+              "passage_id": "P45ad7bf870537f2ee47a",
+              "role_rank": 2
+            },
+            {
+              "evidence_ref": "E21",
+              "assertion_id": "A7df111952e89c773f9c5",
+              "text": "RMS follows a review process with multiple reviewers to ensure that final subject matter content reflects edits suggested by each subject matter expert.",
+              "document_role": "VENDOR_SUBMISSION",
+              "document_id": "rms_21_0_2019_submission_20210422",
+              "pages": [
+                58
+              ],
+              "section_path": [
+                "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+                "domain: General Standards",
+                "standard: G-5",
+                "disclosure: G-5.1"
+              ],
+              "source_spans": [
+                {
+                  "block_char_end": 152,
+                  "block_char_start": 0,
+                  "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+                  "pages": [
+                    58
+                  ],
+                  "quote": "RMS follows a review process with multiple reviewers to ensure that final subject matter content reflects edits suggested by each subject matter expert.",
+                  "ref": "b5",
+                  "source_block_ids": [
+                    "3275bdfb6c50ff0d80031dba"
+                  ]
+                }
+              ],
+              "source_links": [
+                "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=58"
+              ],
+              "passage_id": "Pd753fc33760ef825f76e",
+              "role_rank": 3
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "evidence_ref": "E10",
+          "assertion_id": "A1f6863792bceca36eca6",
+          "text": "There was no evidence to suggest one component of the model was deliberately adjusted to compensate for another component.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            13
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: General Standards",
+            "standard: G-4",
+            "context: Professional Team Comments"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 122,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                13
+              ],
+              "quote": "There was no evidence to suggest one component of the model was deliberately adjusted to compensate for another component.",
+              "ref": "b3",
+              "source_block_ids": [
+                "76b00a0ce45d5ccbdf7e9e0a"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=13"
+          ],
+          "passage_id": "P90416cbf1c7701fc8325",
+          "role_rank": 1,
+          "document_name": "Professional Team Report",
+          "page_label": "13",
+          "section_label": "General Standards / G-4 / Professional Team Comments"
+        },
+        {
+          "evidence_ref": "E11",
+          "assertion_id": "A06fe847f884246efefb4",
+          "text": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 215,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "Editorial items were noted by the Professional Team in the pre-visit letter for correction prior to the start of the virtual review in order to facilitate efficiency during the review and to avoid last minute edits.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E12",
+          "assertion_id": "A058dbcac7abd9eed3c39",
+          "text": "Additional editorial items were also noted during the review.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 277,
+              "block_char_start": 216,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "Additional editorial items were also noted during the review.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E13",
+          "assertion_id": "Ac880cb78d2c85771219f",
+          "text": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 490,
+              "block_char_start": 278,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "The Professional Team reviewed the following corrections to be included in the revised submission to be provided to the Commission no later than 10 days prior to the meeting to review the model for acceptability.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E14",
+          "assertion_id": "A7f62dec6673b98f2f406",
+          "text": "Page numbers below correspond to the initial November 1, 2020 submission document.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            4
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "context: Editorial Items"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 573,
+              "block_char_start": 491,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                4
+              ],
+              "quote": "Page numbers below correspond to the initial November 1, 2020 submission document.",
+              "ref": "b1",
+              "source_block_ids": [
+                "da36661c3e3cd790ef76eb20"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=4"
+          ],
+          "passage_id": "P72a3c67d32629851c8bf",
+          "role_rank": 2,
+          "document_name": "Professional Team Report",
+          "page_label": "4",
+          "section_label": "Editorial Items"
+        },
+        {
+          "evidence_ref": "E15",
+          "assertion_id": "A263cdfb8cca528c5ef6e",
+          "text": "3. Changes to the modeling organization Base Hurricane Storm Set from the previously-accepted hurricane model will be reviewed.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            15
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-1",
+            "context: Audit"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 127,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                15
+              ],
+              "quote": "3. Changes to the modeling organization Base Hurricane Storm Set from the previously-accepted hurricane model will be reviewed.",
+              "ref": "b5",
+              "source_block_ids": [
+                "09c3e6562f3a22f8f9324950"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=15"
+          ],
+          "passage_id": "Pb56ed50550b1341cc360",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "15",
+          "section_label": "Meteorological Standards / M-1 / Audit"
+        },
+        {
+          "evidence_ref": "E16",
+          "assertion_id": "Ac2ed20a40df29832268b",
+          "text": "Any modification by the modeling organization to the information contained in HURDAT2 will be reviewed.",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "pages": [
+            15
+          ],
+          "section_path": [
+            "document: RMS Professional Team Report, April 19-22, 2021",
+            "domain: Meteorological Standards",
+            "standard: M-1",
+            "context: Audit"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 231,
+              "block_char_start": 128,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                15
+              ],
+              "quote": "Any modification by the modeling organization to the information contained in HURDAT2 will be reviewed.",
+              "ref": "b5",
+              "source_block_ids": [
+                "09c3e6562f3a22f8f9324950"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/uzkplkto/20210422_rms_2019stds_ptrpt.pdf#page=15"
+          ],
+          "passage_id": "Pb56ed50550b1341cc360",
+          "role_rank": 3,
+          "document_name": "Professional Team Report",
+          "page_label": "15",
+          "section_label": "Meteorological Standards / M-1 / Audit"
+        },
+        {
+          "evidence_ref": "E17",
+          "assertion_id": "Aab79303e3c0ada187ede",
+          "text": "Verification approaches depend on what data/software/models are being reviewed, but include:",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            161
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-5",
+            "disclosure: CI-5.3"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 92,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                161
+              ],
+              "quote": "Verification approaches depend on what data/software/models are being reviewed, but include:",
+              "ref": "b5",
+              "source_block_ids": [
+                "ac299cd86428aae8803eb122"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=161"
+          ],
+          "passage_id": "Pc0fee4f652d40d96d2cb",
+          "role_rank": 1,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "161",
+          "section_label": "Computer/Information Standards / CI-5 / CI-5.3"
+        },
+        {
+          "evidence_ref": "E18",
+          "assertion_id": "A080318a52fa918a395a3",
+          "text": "Verification procedures for each component include tests performed by modeler personnel other than the original component developers.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            159
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-5",
+            "subsection: A"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 133,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                159
+              ],
+              "quote": "Verification procedures for each component include tests performed by modeler personnel other than the original component developers.",
+              "ref": "b8",
+              "source_block_ids": [
+                "55b3836122bfa430c0d4005a"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+          ],
+          "passage_id": "P45ad7bf870537f2ee47a",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "159",
+          "section_label": "Computer/Information Standards / CI-5 / A"
+        },
+        {
+          "evidence_ref": "E19",
+          "assertion_id": "A17dfee6d7a4feb4e51f1",
+          "text": "The RMS QA department has primary responsibility for independent verification.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            159
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-5",
+            "subsection: A"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 212,
+              "block_char_start": 134,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                159
+              ],
+              "quote": "The RMS QA department has primary responsibility for independent verification.",
+              "ref": "b8",
+              "source_block_ids": [
+                "55b3836122bfa430c0d4005a"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+          ],
+          "passage_id": "P45ad7bf870537f2ee47a",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "159",
+          "section_label": "Computer/Information Standards / CI-5 / A"
+        },
+        {
+          "evidence_ref": "E20",
+          "assertion_id": "Adfb4644ba862df1931e6",
+          "text": "In addition, peer review of model changes typically includes testing by development staff other than the original component developers.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            159
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: Computer/Information Standards",
+            "standard: CI-5",
+            "subsection: A"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 348,
+              "block_char_start": 213,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                159
+              ],
+              "quote": "In addition, peer review of model changes typically includes testing by development staff other than the original component developers.",
+              "ref": "b8",
+              "source_block_ids": [
+                "55b3836122bfa430c0d4005a"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=159"
+          ],
+          "passage_id": "P45ad7bf870537f2ee47a",
+          "role_rank": 2,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "159",
+          "section_label": "Computer/Information Standards / CI-5 / A"
+        },
+        {
+          "evidence_ref": "E21",
+          "assertion_id": "A7df111952e89c773f9c5",
+          "text": "RMS follows a review process with multiple reviewers to ensure that final subject matter content reflects edits suggested by each subject matter expert.",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "pages": [
+            58
+          ],
+          "section_path": [
+            "document: RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+            "domain: General Standards",
+            "standard: G-5",
+            "disclosure: G-5.1"
+          ],
+          "source_spans": [
+            {
+              "block_char_end": 152,
+              "block_char_start": 0,
+              "coordinate_system": "M2_CHARACTER_HALF_OPEN",
+              "pages": [
+                58
+              ],
+              "quote": "RMS follows a review process with multiple reviewers to ensure that final subject matter content reflects edits suggested by each subject matter expert.",
+              "ref": "b5",
+              "source_block_ids": [
+                "3275bdfb6c50ff0d80031dba"
+              ]
+            }
+          ],
+          "source_links": [
+            "https://fchlpm.sbafla.com/media/c5apncqi/rms19standardsdisclosures_04222021.pdf#page=58"
+          ],
+          "passage_id": "Pd753fc33760ef825f76e",
+          "role_rank": 3,
+          "document_name": "RMS Version 21.0 Submission",
+          "page_label": "58",
+          "section_label": "General Standards / G-5 / G-5.1"
+        }
+      ]
+    }
+  ]
+}

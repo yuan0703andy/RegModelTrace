@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RegModelTrace: source-traceable answers for regulated technical documents." />
+    <meta name="theme-color" content="#102b2c" />
+    <title>RegModelTrace — Evidence Workbench</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#answer-panel">Skip to answer</a>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="RegModelTrace home">
+        <span class="brand-mark" aria-hidden="true"><span></span><i></i><b></b></span>
+        <span>
+          <strong>RegModelTrace</strong>
+          <small>Evidence-bounded regulatory research</small>
+        </span>
+      </a>
+      <div class="demo-label" title="This interface uses preserved results from the successful v0.2 development run.">
+        <span class="demo-dot" aria-hidden="true"></span>
+        Development demo · 8 frozen questions
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="case-rail" aria-label="Development questions">
+        <div class="rail-heading">
+          <p class="eyebrow">Gold Case 001</p>
+          <h1>Review the evidence chain</h1>
+          <p>Select a preserved question to inspect the answer and every source it cites.</p>
+        </div>
+
+        <label class="search-box">
+          <span class="sr-only">Filter questions</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.4A7.75 7.75 0 1 1 3.5 11.25a7.75 7.75 0 0 1 15.5 0Z" /></svg>
+          <input id="question-filter" type="search" placeholder="Filter questions…" autocomplete="off" />
+        </label>
+
+        <nav id="question-list" class="question-list" aria-label="Frozen development questions"></nav>
+
+        <details class="scope-note">
+          <summary>What this demo proves</summary>
+          <p>It demonstrates a connected product that returns source-traceable answers while preserving causal and absence boundaries.</p>
+          <p>It does not establish held-out performance, complete evidence recall, or live arbitrary-question support.</p>
+        </details>
+      </aside>
+
+      <section id="answer-panel" class="answer-panel" aria-live="polite" tabindex="-1">
+        <div class="question-kicker"><span id="case-number">Question 01</span><span>RAG v0.2</span></div>
+        <h2 id="active-question">Loading question…</h2>
+
+        <div id="status-card" class="status-card">
+          <div class="status-icon" aria-hidden="true"></div>
+          <div>
+            <p id="status-label">Loading evidence status</p>
+            <span id="status-explanation"></span>
+          </div>
+        </div>
+
+        <div class="answer-heading">
+          <div>
+            <p class="eyebrow">Answer</p>
+            <h3>What the retrieved evidence supports</h3>
+          </div>
+          <span id="claim-count" class="claim-count"></span>
+        </div>
+
+        <div id="claims" class="claims"></div>
+
+        <section class="interpretation-rule" aria-label="Interpretation boundary">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 3.5 6.5v5.25c0 4.8 3.56 8.47 8.5 9.75 4.94-1.28 8.5-4.95 8.5-9.75V6.5L12 3Z"/><path d="m8.5 12 2.25 2.25L15.8 9.2"/></svg>
+          <div>
+            <strong>Interpretation boundary</strong>
+            <p>Reviewer scrutiny is not treated as a challenge. A documented update is not treated as review-caused. A retrieval miss is not treated as corpus absence.</p>
+          </div>
+        </section>
+      </section>
+
+      <aside class="evidence-panel" aria-label="Cited evidence">
+        <div class="evidence-header">
+          <div>
+            <p class="eyebrow">Evidence</p>
+            <h2>Source trail</h2>
+          </div>
+          <span id="evidence-count"></span>
+        </div>
+        <p class="evidence-intro">These are the exact source assertions bound by the host to the answer above.</p>
+        <div id="evidence-groups"></div>
+      </aside>
+    </main>
+
+    <noscript>This evidence workbench requires JavaScript to switch between the eight preserved cases.</noscript>
+  </body>
+</html>

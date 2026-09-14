@@ -1,0 +1,36 @@
+{
+  "cleaned_tree_before_git_commit": {
+    "bytes": 873292,
+    "files": 94
+  },
+  "release_stage": {
+    "bytes": 846757,
+    "files": 78
+  },
+  "removed_categories": [
+    "unrelated soil/water artifacts",
+    "raw and duplicate PDFs",
+    "SQLite and embedding indexes",
+    "cluster attempts and logs",
+    "superseded prompts and run scripts",
+    "historical audit packs",
+    "completed intermediate OpenSpec changes",
+    "caches and nested Git metadata"
+  ],
+  "retained_categories": [
+    "core application and contracts",
+    "final parser/assertion/retrieval/generation/Ray implementations",
+    "offline tests",
+    "static source-bound demo",
+    "final reports and receipts",
+    "Gold Core sample",
+    "final durable OpenSpec"
+  ],
+  "scientific_boundary": "The compact GitHub repository reports historical evaluations but does not contain the large artifacts required to replay them.",
+  "source_snapshot": {
+    "bytes_excluding_git": 2745477298,
+    "files_excluding_git": 18828,
+    "root": "/Users/andyhou/Documents/ChatGPT/CIRCAD-LLM"
+  },
+  "version": "github-release-cleanup-manifest-1.0"
+}

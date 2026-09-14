@@ -1,0 +1,3751 @@
+{
+  "corelogic-cotality-2023": {
+    "constant_aligned_baseline": {
+      "accuracy": 0.6,
+      "correct": 3,
+      "eligible": 5,
+      "status": "REPORTING_COMPARATOR_ONLY"
+    },
+    "label": "CoreLogic/Cotality 2023",
+    "proper_scores_saved": {
+      "binary_brier_evidence_sufficiency": 0.14033590127873788,
+      "binary_log_evidence_sufficiency": 0.4278136643112313,
+      "binary_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient.",
+      "multiclass_brier_conditional_relation": 0.8000000092310007,
+      "multiclass_log_conditional_relation": 9.796910155144039,
+      "multiclass_log_has_infinite_loss": false,
+      "valid_binary_score_denominator": 6,
+      "valid_conditional_relation_score_denominator": 5
+    },
+    "views": {
+      "adverse_controls": {
+        "joint": {
+          "accuracy": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "correct": 0,
+          "eligible": 0,
+          "lost_at": {}
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 0,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [],
+            "reason": "NO_DEFINED_CLASS_F1",
+            "value": null
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 0
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 0,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [],
+            "reason": "NO_DEFINED_CLASS_F1",
+            "value": null
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            }
+          },
+          "valid": 0
+        }
+      },
+      "combined": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.5
+          },
+          "correct": 3,
+          "eligible": 6,
+          "lost_at": {
+            "relation_stage": 2,
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 5,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.6
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 8,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.75
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 3,
+                "reason": null,
+                "value": 0.6
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 3,
+              "true_positive": 3
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 2,
+              "true_positive": 0
+            }
+          },
+          "correct": 3,
+          "eligible": 5,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.375
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 3,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 5
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 1,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 5,
+              "true_positive": 5
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 1
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 6
+        }
+      },
+      "primary": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.5
+          },
+          "correct": 3,
+          "eligible": 6,
+          "lost_at": {
+            "relation_stage": 2,
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 5,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.6
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 8,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.75
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 3,
+                "reason": null,
+                "value": 0.6
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 3,
+              "true_positive": 3
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 2,
+              "true_positive": 0
+            }
+          },
+          "correct": 3,
+          "eligible": 5,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.375
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 3,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 5
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 1,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 5,
+              "true_positive": 5
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 1
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 6
+        }
+      }
+    }
+  },
+  "impact-forecasting-2023": {
+    "constant_aligned_baseline": {
+      "accuracy": 0.75,
+      "correct": 3,
+      "eligible": 4,
+      "status": "REPORTING_COMPARATOR_ONLY"
+    },
+    "label": "Impact Forecasting 2023",
+    "proper_scores_saved": {
+      "binary_brier_evidence_sufficiency": 0.3752956729782149,
+      "binary_log_evidence_sufficiency": 3.43870374103606,
+      "binary_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient.",
+      "multiclass_brier_conditional_relation": 1.222291105435526,
+      "multiclass_log_conditional_relation": 10.668304512308929,
+      "multiclass_log_has_infinite_loss": false,
+      "valid_binary_score_denominator": 8,
+      "valid_conditional_relation_score_denominator": 5
+    },
+    "views": {
+      "adverse_controls": {
+        "joint": {
+          "accuracy": {
+            "denominator": 4,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.75
+          },
+          "correct": 3,
+          "eligible": 4,
+          "lost_at": {
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 1,
+            "numerator": 0,
+            "reason": null,
+            "value": 0.0
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 1,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 1,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.0
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 1,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 1
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 4,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.75
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 7,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "precision": {
+                "denominator": 4,
+                "numerator": 3,
+                "reason": null,
+                "value": 0.75
+              },
+              "predicted_count": 4,
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 3,
+              "true_positive": 3
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 1,
+              "true_positive": 0
+            }
+          },
+          "correct": 3,
+          "eligible": 4,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.42857142857142855
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 3,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 1,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            }
+          },
+          "valid": 4
+        }
+      },
+      "combined": {
+        "joint": {
+          "accuracy": {
+            "denominator": 8,
+            "numerator": 4,
+            "reason": null,
+            "value": 0.5
+          },
+          "correct": 4,
+          "eligible": 8,
+          "lost_at": {
+            "relation_stage": 1,
+            "sufficiency_stage": 3
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 5,
+            "numerator": 2,
+            "reason": null,
+            "value": 0.4
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 7,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.5714285714285714
+              },
+              "precision": {
+                "denominator": 4,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.5
+              },
+              "predicted_count": 4,
+              "recall": {
+                "denominator": 3,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "support": 3,
+              "true_positive": 2
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 3,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 2,
+              "true_positive": 0
+            }
+          },
+          "correct": 2,
+          "eligible": 5,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.2857142857142857
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 5
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 8,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.625
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 9,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 3,
+                "reason": null,
+                "value": 0.5
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 3,
+              "true_positive": 3
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 7,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.5714285714285714
+              },
+              "precision": {
+                "denominator": 2,
+                "numerator": 2,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 2,
+              "recall": {
+                "denominator": 5,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.4
+              },
+              "support": 5,
+              "true_positive": 2
+            }
+          },
+          "correct": 5,
+          "eligible": 8,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.6190476190476191
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 3,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 3,
+              "INVALID": 0,
+              "SUFFICIENT": 2
+            }
+          },
+          "valid": 8
+        }
+      },
+      "primary": {
+        "joint": {
+          "accuracy": {
+            "denominator": 4,
+            "numerator": 1,
+            "reason": null,
+            "value": 0.25
+          },
+          "correct": 1,
+          "eligible": 4,
+          "lost_at": {
+            "relation_stage": 1,
+            "sufficiency_stage": 2
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 4,
+            "numerator": 2,
+            "reason": null,
+            "value": 0.5
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 6,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "precision": {
+                "denominator": 3,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "predicted_count": 3,
+              "recall": {
+                "denominator": 3,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "support": 3,
+              "true_positive": 2
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 1,
+              "true_positive": 0
+            }
+          },
+          "correct": 2,
+          "eligible": 4,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.3333333333333333
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 1,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 4
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 4,
+            "numerator": 2,
+            "reason": null,
+            "value": 0.5
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 2,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 6,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "precision": {
+                "denominator": 2,
+                "numerator": 2,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 2,
+              "recall": {
+                "denominator": 4,
+                "numerator": 2,
+                "reason": null,
+                "value": 0.5
+              },
+              "support": 4,
+              "true_positive": 2
+            }
+          },
+          "correct": 2,
+          "eligible": 4,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.3333333333333333
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 2,
+              "INVALID": 0,
+              "SUFFICIENT": 2
+            }
+          },
+          "valid": 4
+        }
+      }
+    }
+  },
+  "kcc-2023-test-e": {
+    "constant_aligned_baseline": {
+      "accuracy": 0.6666666666666666,
+      "correct": 4,
+      "eligible": 6,
+      "status": "REPORTING_COMPARATOR_ONLY"
+    },
+    "label": "KCC final Test E",
+    "proper_scores_saved": {
+      "binary_brier_evidence_sufficiency": 0.06862664357058956,
+      "binary_log_evidence_sufficiency": 0.1996899799191357,
+      "binary_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient.",
+      "multiclass_brier_conditional_relation": 0.6666716833485092,
+      "multiclass_log_conditional_relation": 8.735031717150793,
+      "multiclass_log_has_infinite_loss": false,
+      "valid_binary_score_denominator": 12,
+      "valid_conditional_relation_score_denominator": 6
+    },
+    "views": {
+      "adverse_controls": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "correct": 6,
+          "eligible": 6,
+          "lost_at": {}
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 0,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [],
+            "reason": "NO_DEFINED_CLASS_F1",
+            "value": null
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 0
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 12,
+                "numerator": 12,
+                "reason": null,
+                "value": 1.0
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 6,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 1.0
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            }
+          },
+          "valid": 6
+        }
+      },
+      "combined": {
+        "joint": {
+          "accuracy": {
+            "denominator": 12,
+            "numerator": 9,
+            "reason": null,
+            "value": 0.75
+          },
+          "correct": 9,
+          "eligible": 12,
+          "lost_at": {
+            "relation_stage": 2,
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 4,
+            "reason": null,
+            "value": 0.6666666666666666
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 10,
+                "numerator": 8,
+                "reason": null,
+                "value": 0.8
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 4,
+                "numerator": 4,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 4,
+              "true_positive": 4
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 2,
+              "true_positive": 0
+            }
+          },
+          "correct": 4,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.4
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 4,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 6
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 12,
+            "numerator": 11,
+            "reason": null,
+            "value": 0.9166666666666666
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 13,
+                "numerator": 12,
+                "reason": null,
+                "value": 0.9230769230769231
+              },
+              "precision": {
+                "denominator": 7,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "predicted_count": 7,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            }
+          },
+          "correct": 11,
+          "eligible": 12,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.916083916083916
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 1,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 12
+        }
+      },
+      "primary": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 3,
+            "reason": null,
+            "value": 0.5
+          },
+          "correct": 3,
+          "eligible": 6,
+          "lost_at": {
+            "relation_stage": 2,
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 4,
+            "reason": null,
+            "value": 0.6666666666666666
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 10,
+                "numerator": 8,
+                "reason": null,
+                "value": 0.8
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 4,
+                "reason": null,
+                "value": 0.6666666666666666
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 4,
+                "numerator": 4,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 4,
+              "true_positive": 4
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "support": 2,
+              "true_positive": 0
+            }
+          },
+          "correct": 4,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.4
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 4,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 2,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 6
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 1,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 6
+        }
+      }
+    }
+  },
+  "pooled_descriptive": {
+    "adverse_controls": {
+      "joint": {
+        "accuracy": {
+          "denominator": 22,
+          "numerator": 21,
+          "reason": null,
+          "value": 0.9545454545454546
+        },
+        "correct": 21,
+        "eligible": 22,
+        "lost_at": {
+          "sufficiency_stage": 1
+        }
+      },
+      "relation": {
+        "accuracy_all_eligible": {
+          "denominator": 1,
+          "numerator": 0,
+          "reason": null,
+          "value": 0.0
+        },
+        "class_metrics": {
+          "ALIGNED": {
+            "f1": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "precision": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "predicted_count": 1,
+            "recall": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+              "value": null
+            },
+            "support": 0,
+            "true_positive": 0
+          },
+          "CONFLICT": {
+            "f1": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "precision": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "predicted_count": 0,
+            "recall": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+              "value": null
+            },
+            "support": 0,
+            "true_positive": 0
+          },
+          "PARTIALLY_ALIGNED": {
+            "f1": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "precision": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "predicted_count": 0,
+            "recall": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "support": 1,
+            "true_positive": 0
+          }
+        },
+        "correct": 0,
+        "eligible": 1,
+        "invalid": 0,
+        "labels": [
+          "ALIGNED",
+          "PARTIALLY_ALIGNED",
+          "CONFLICT"
+        ],
+        "macro_f1_defined_classes": {
+          "included_classes": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED"
+          ],
+          "reason": null,
+          "value": 0.0
+        },
+        "matrix": {
+          "ALIGNED": {
+            "ALIGNED": 0,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 0
+          },
+          "CONFLICT": {
+            "ALIGNED": 0,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 0
+          },
+          "PARTIALLY_ALIGNED": {
+            "ALIGNED": 1,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 0
+          }
+        },
+        "valid": 1
+      },
+      "sufficiency": {
+        "accuracy_all_eligible": {
+          "denominator": 22,
+          "numerator": 21,
+          "reason": null,
+          "value": 0.9545454545454546
+        },
+        "class_metrics": {
+          "INSUFFICIENT": {
+            "f1": {
+              "denominator": 43,
+              "numerator": 42,
+              "reason": null,
+              "value": 0.9767441860465116
+            },
+            "precision": {
+              "denominator": 22,
+              "numerator": 21,
+              "reason": null,
+              "value": 0.9545454545454546
+            },
+            "predicted_count": 22,
+            "recall": {
+              "denominator": 21,
+              "numerator": 21,
+              "reason": null,
+              "value": 1.0
+            },
+            "support": 21,
+            "true_positive": 21
+          },
+          "SUFFICIENT": {
+            "f1": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "precision": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "predicted_count": 0,
+            "recall": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "support": 1,
+            "true_positive": 0
+          }
+        },
+        "correct": 21,
+        "eligible": 22,
+        "invalid": 0,
+        "labels": [
+          "SUFFICIENT",
+          "INSUFFICIENT"
+        ],
+        "macro_f1_defined_classes": {
+          "included_classes": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "reason": null,
+          "value": 0.4883720930232558
+        },
+        "matrix": {
+          "INSUFFICIENT": {
+            "INSUFFICIENT": 21,
+            "INVALID": 0,
+            "SUFFICIENT": 0
+          },
+          "SUFFICIENT": {
+            "INSUFFICIENT": 1,
+            "INVALID": 0,
+            "SUFFICIENT": 0
+          }
+        },
+        "valid": 22
+      }
+    },
+    "primary": {
+      "joint": {
+        "accuracy": {
+          "denominator": 30,
+          "numerator": 18,
+          "reason": null,
+          "value": 0.6
+        },
+        "correct": 18,
+        "eligible": 30,
+        "lost_at": {
+          "relation_stage": 5,
+          "sufficiency_stage": 7
+        }
+      },
+      "relation": {
+        "accuracy_all_eligible": {
+          "denominator": 29,
+          "numerator": 21,
+          "reason": null,
+          "value": 0.7241379310344828
+        },
+        "class_metrics": {
+          "ALIGNED": {
+            "f1": {
+              "denominator": 50,
+              "numerator": 42,
+              "reason": null,
+              "value": 0.84
+            },
+            "precision": {
+              "denominator": 26,
+              "numerator": 21,
+              "reason": null,
+              "value": 0.8076923076923077
+            },
+            "predicted_count": 26,
+            "recall": {
+              "denominator": 24,
+              "numerator": 21,
+              "reason": null,
+              "value": 0.875
+            },
+            "support": 24,
+            "true_positive": 21
+          },
+          "CONFLICT": {
+            "f1": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "precision": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_PREDICTIONS_FOR_CLASS",
+              "value": null
+            },
+            "predicted_count": 0,
+            "recall": {
+              "denominator": 0,
+              "numerator": 0,
+              "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+              "value": null
+            },
+            "support": 0,
+            "true_positive": 0
+          },
+          "PARTIALLY_ALIGNED": {
+            "f1": {
+              "denominator": 8,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "precision": {
+              "denominator": 3,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "predicted_count": 3,
+            "recall": {
+              "denominator": 5,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "support": 5,
+            "true_positive": 0
+          }
+        },
+        "correct": 21,
+        "eligible": 29,
+        "invalid": 0,
+        "labels": [
+          "ALIGNED",
+          "PARTIALLY_ALIGNED",
+          "CONFLICT"
+        ],
+        "macro_f1_defined_classes": {
+          "included_classes": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED"
+          ],
+          "reason": null,
+          "value": 0.42
+        },
+        "matrix": {
+          "ALIGNED": {
+            "ALIGNED": 21,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 3
+          },
+          "CONFLICT": {
+            "ALIGNED": 0,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 0
+          },
+          "PARTIALLY_ALIGNED": {
+            "ALIGNED": 5,
+            "CONFLICT": 0,
+            "INVALID": 0,
+            "PARTIALLY_ALIGNED": 0
+          }
+        },
+        "valid": 29
+      },
+      "sufficiency": {
+        "accuracy_all_eligible": {
+          "denominator": 30,
+          "numerator": 23,
+          "reason": null,
+          "value": 0.7666666666666667
+        },
+        "class_metrics": {
+          "INSUFFICIENT": {
+            "f1": {
+              "denominator": 7,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "precision": {
+              "denominator": 6,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "predicted_count": 6,
+            "recall": {
+              "denominator": 1,
+              "numerator": 0,
+              "reason": null,
+              "value": 0.0
+            },
+            "support": 1,
+            "true_positive": 0
+          },
+          "SUFFICIENT": {
+            "f1": {
+              "denominator": 53,
+              "numerator": 46,
+              "reason": null,
+              "value": 0.8679245283018868
+            },
+            "precision": {
+              "denominator": 24,
+              "numerator": 23,
+              "reason": null,
+              "value": 0.9583333333333334
+            },
+            "predicted_count": 24,
+            "recall": {
+              "denominator": 29,
+              "numerator": 23,
+              "reason": null,
+              "value": 0.7931034482758621
+            },
+            "support": 29,
+            "true_positive": 23
+          }
+        },
+        "correct": 23,
+        "eligible": 30,
+        "invalid": 0,
+        "labels": [
+          "SUFFICIENT",
+          "INSUFFICIENT"
+        ],
+        "macro_f1_defined_classes": {
+          "included_classes": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "reason": null,
+          "value": 0.4339622641509434
+        },
+        "matrix": {
+          "INSUFFICIENT": {
+            "INSUFFICIENT": 0,
+            "INVALID": 0,
+            "SUFFICIENT": 1
+          },
+          "SUFFICIENT": {
+            "INSUFFICIENT": 6,
+            "INVALID": 0,
+            "SUFFICIENT": 23
+          }
+        },
+        "valid": 30
+      }
+    },
+    "warning": "Corpora, related submissions, shared requirements, and controls are clustered; this is not an independent-replication estimate."
+  },
+  "rms-ara-2019-development": {
+    "constant_aligned_baseline": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "eligible": 8,
+      "status": "REPORTING_COMPARATOR_ONLY"
+    },
+    "label": "RMS/ARA development",
+    "proper_scores_saved": {
+      "binary_brier_evidence_sufficiency": 0.09308765768004067,
+      "binary_log_evidence_sufficiency": 1.280196817513696,
+      "binary_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient.",
+      "multiclass_brier_conditional_relation": 0.24874127895742149,
+      "multiclass_log_conditional_relation": 2.0436029392697224,
+      "multiclass_log_has_infinite_loss": false,
+      "valid_binary_score_denominator": 14,
+      "valid_conditional_relation_score_denominator": 8
+    },
+    "views": {
+      "adverse_controls": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "correct": 6,
+          "eligible": 6,
+          "lost_at": {}
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 0,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [],
+            "reason": "NO_DEFINED_CLASS_F1",
+            "value": null
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 0
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 12,
+                "numerator": 12,
+                "reason": null,
+                "value": 1.0
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 6,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 1.0
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            }
+          },
+          "valid": 6
+        }
+      },
+      "combined": {
+        "joint": {
+          "accuracy": {
+            "denominator": 14,
+            "numerator": 12,
+            "reason": null,
+            "value": 0.8571428571428571
+          },
+          "correct": 12,
+          "eligible": 14,
+          "lost_at": {
+            "sufficiency_stage": 2
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 8,
+            "numerator": 7,
+            "reason": null,
+            "value": 0.875
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 15,
+                "numerator": 14,
+                "reason": null,
+                "value": 0.9333333333333333
+              },
+              "precision": {
+                "denominator": 7,
+                "numerator": 7,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 7,
+              "recall": {
+                "denominator": 8,
+                "numerator": 7,
+                "reason": null,
+                "value": 0.875
+              },
+              "support": 8,
+              "true_positive": 7
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 7,
+          "eligible": 8,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.4666666666666667
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 7,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 8
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 14,
+            "numerator": 12,
+            "reason": null,
+            "value": 0.8571428571428571
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 14,
+                "numerator": 12,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "precision": {
+                "denominator": 8,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.75
+              },
+              "predicted_count": 8,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 14,
+                "numerator": 12,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 8,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.75
+              },
+              "support": 8,
+              "true_positive": 6
+            }
+          },
+          "correct": 12,
+          "eligible": 14,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.8571428571428571
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 2,
+              "INVALID": 0,
+              "SUFFICIENT": 6
+            }
+          },
+          "valid": 14
+        }
+      },
+      "primary": {
+        "joint": {
+          "accuracy": {
+            "denominator": 8,
+            "numerator": 6,
+            "reason": null,
+            "value": 0.75
+          },
+          "correct": 6,
+          "eligible": 8,
+          "lost_at": {
+            "sufficiency_stage": 2
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 8,
+            "numerator": 7,
+            "reason": null,
+            "value": 0.875
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 15,
+                "numerator": 14,
+                "reason": null,
+                "value": 0.9333333333333333
+              },
+              "precision": {
+                "denominator": 7,
+                "numerator": 7,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 7,
+              "recall": {
+                "denominator": 8,
+                "numerator": 7,
+                "reason": null,
+                "value": 0.875
+              },
+              "support": 8,
+              "true_positive": 7
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 7,
+          "eligible": 8,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.4666666666666667
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 7,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 8
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 8,
+            "numerator": 6,
+            "reason": null,
+            "value": 0.75
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 2,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 2,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 14,
+                "numerator": 12,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 8,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.75
+              },
+              "support": 8,
+              "true_positive": 6
+            }
+          },
+          "correct": 6,
+          "eligible": 8,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.42857142857142855
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 2,
+              "INVALID": 0,
+              "SUFFICIENT": 6
+            }
+          },
+          "valid": 8
+        }
+      }
+    }
+  },
+  "verisk-2023-validation-d": {
+    "constant_aligned_baseline": {
+      "accuracy": 1.0,
+      "correct": 6,
+      "eligible": 6,
+      "status": "REPORTING_COMPARATOR_ONLY"
+    },
+    "label": "Verisk Validation D",
+    "proper_scores_saved": {
+      "binary_brier_evidence_sufficiency": 0.0833311292739065,
+      "binary_log_evidence_sufficiency": 0.9169636717056033,
+      "binary_log_has_infinite_loss": false,
+      "conventions": "Probabilities are host-renormalized from frozen candidate next-token log probabilities. Binary Brier is mean squared error; multiclass Brier is sum over classes then mean; log scores use natural logarithms; no numerical floor; conditional relation is scored only when human truth says evidence is sufficient.",
+      "multiclass_brier_conditional_relation": 0.3320019193182875,
+      "multiclass_log_conditional_relation": 1.0524485001322987,
+      "multiclass_log_has_infinite_loss": false,
+      "valid_binary_score_denominator": 12,
+      "valid_conditional_relation_score_denominator": 6
+    },
+    "views": {
+      "adverse_controls": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "correct": 6,
+          "eligible": 6,
+          "lost_at": {}
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 0,
+            "numerator": 0,
+            "reason": "NO_ELIGIBLE_CASES",
+            "value": null
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 0,
+          "eligible": 0,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [],
+            "reason": "NO_DEFINED_CLASS_F1",
+            "value": null
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 0
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 6,
+            "reason": null,
+            "value": 1.0
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 12,
+                "numerator": 12,
+                "reason": null,
+                "value": 1.0
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 6,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 6,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 1.0
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            }
+          },
+          "valid": 6
+        }
+      },
+      "combined": {
+        "joint": {
+          "accuracy": {
+            "denominator": 12,
+            "numerator": 11,
+            "reason": null,
+            "value": 0.9166666666666666
+          },
+          "correct": 11,
+          "eligible": 12,
+          "lost_at": {
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 5,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 6
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 12,
+            "numerator": 11,
+            "reason": null,
+            "value": 0.9166666666666666
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 13,
+                "numerator": 12,
+                "reason": null,
+                "value": 0.9230769230769231
+              },
+              "precision": {
+                "denominator": 7,
+                "numerator": 6,
+                "reason": null,
+                "value": 0.8571428571428571
+              },
+              "predicted_count": 7,
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "reason": null,
+                "value": 1.0
+              },
+              "support": 6,
+              "true_positive": 6
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            }
+          },
+          "correct": 11,
+          "eligible": 12,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.916083916083916
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 6,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 1,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 12
+        }
+      },
+      "primary": {
+        "joint": {
+          "accuracy": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "correct": 5,
+          "eligible": 6,
+          "lost_at": {
+            "sufficiency_stage": 1
+          }
+        },
+        "relation": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "ALIGNED": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            },
+            "CONFLICT": {
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_OR_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_PREDICTIONS_FOR_CLASS",
+                "value": null
+              },
+              "predicted_count": 0,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "ALIGNED",
+            "PARTIALLY_ALIGNED",
+            "CONFLICT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "ALIGNED",
+              "PARTIALLY_ALIGNED"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "ALIGNED": {
+              "ALIGNED": 5,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 1
+            },
+            "CONFLICT": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            },
+            "PARTIALLY_ALIGNED": {
+              "ALIGNED": 0,
+              "CONFLICT": 0,
+              "INVALID": 0,
+              "PARTIALLY_ALIGNED": 0
+            }
+          },
+          "valid": 6
+        },
+        "sufficiency": {
+          "accuracy_all_eligible": {
+            "denominator": 6,
+            "numerator": 5,
+            "reason": null,
+            "value": 0.8333333333333334
+          },
+          "class_metrics": {
+            "INSUFFICIENT": {
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "reason": null,
+                "value": 0.0
+              },
+              "predicted_count": 1,
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "reason": "NO_TRUTH_SUPPORT_FOR_CLASS",
+                "value": null
+              },
+              "support": 0,
+              "true_positive": 0
+            },
+            "SUFFICIENT": {
+              "f1": {
+                "denominator": 11,
+                "numerator": 10,
+                "reason": null,
+                "value": 0.9090909090909091
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 5,
+                "reason": null,
+                "value": 1.0
+              },
+              "predicted_count": 5,
+              "recall": {
+                "denominator": 6,
+                "numerator": 5,
+                "reason": null,
+                "value": 0.8333333333333334
+              },
+              "support": 6,
+              "true_positive": 5
+            }
+          },
+          "correct": 5,
+          "eligible": 6,
+          "invalid": 0,
+          "labels": [
+            "SUFFICIENT",
+            "INSUFFICIENT"
+          ],
+          "macro_f1_defined_classes": {
+            "included_classes": [
+              "SUFFICIENT",
+              "INSUFFICIENT"
+            ],
+            "reason": null,
+            "value": 0.45454545454545453
+          },
+          "matrix": {
+            "INSUFFICIENT": {
+              "INSUFFICIENT": 0,
+              "INVALID": 0,
+              "SUFFICIENT": 0
+            },
+            "SUFFICIENT": {
+              "INSUFFICIENT": 1,
+              "INVALID": 0,
+              "SUFFICIENT": 5
+            }
+          },
+          "valid": 6
+        }
+      }
+    }
+  }
+}

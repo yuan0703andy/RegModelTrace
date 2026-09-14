@@ -1,0 +1,159 @@
+{
+  "checks": [
+    {
+      "check": "identity_join:rms-ara-2019-development",
+      "detail": {
+        "cases": 14,
+        "results": 14,
+        "scores": 14,
+        "truth": 14
+      },
+      "pass": true
+    },
+    {
+      "check": "identity_join:impact-forecasting-2023",
+      "detail": {
+        "cases": 8,
+        "results": 8,
+        "scores": 8,
+        "truth": 8
+      },
+      "pass": true
+    },
+    {
+      "check": "identity_join:corelogic-cotality-2023",
+      "detail": {
+        "cases": 6,
+        "results": 6,
+        "scores": 6,
+        "truth": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "identity_join:verisk-2023-validation-d",
+      "detail": {
+        "cases": 12,
+        "results": 12,
+        "scores": 12,
+        "truth": 12
+      },
+      "pass": true
+    },
+    {
+      "check": "identity_join:kcc-2023-test-e",
+      "detail": {
+        "cases": 12,
+        "results": 12,
+        "scores": 12,
+        "truth": 12
+      },
+      "pass": true
+    },
+    {
+      "check": "proper_score_reconciliation:rms-ara-2019-development",
+      "detail": {
+        "binary_brier_recomputed": 0.09308765768004067,
+        "multiclass_brier_recomputed": 0.24874127895742149
+      },
+      "pass": true
+    },
+    {
+      "check": "proper_score_reconciliation:impact-forecasting-2023",
+      "detail": {
+        "binary_brier_recomputed": 0.3752956729782149,
+        "multiclass_brier_recomputed": 1.222291105435526
+      },
+      "pass": true
+    },
+    {
+      "check": "proper_score_reconciliation:corelogic-cotality-2023",
+      "detail": {
+        "binary_brier_recomputed": 0.14033590127873788,
+        "multiclass_brier_recomputed": 0.8000000092310007
+      },
+      "pass": true
+    },
+    {
+      "check": "proper_score_reconciliation:verisk-2023-validation-d",
+      "detail": {
+        "binary_brier_recomputed": 0.0833311292739065,
+        "multiclass_brier_recomputed": 0.3320019193182875
+      },
+      "pass": true
+    },
+    {
+      "check": "proper_score_reconciliation:kcc-2023-test-e",
+      "detail": {
+        "binary_brier_recomputed": 0.06862664357058955,
+        "multiclass_brier_recomputed": 0.6666716833485093
+      },
+      "pass": true
+    },
+    {
+      "check": "total_case_conservation",
+      "detail": 52,
+      "pass": true
+    },
+    {
+      "check": "primary_control_conservation",
+      "detail": {
+        "controls": 22,
+        "primary": 30
+      },
+      "pass": true
+    },
+    {
+      "check": "kcc_reconciliation_sufficiency",
+      "detail": {
+        "INSUFFICIENT": {
+          "INSUFFICIENT": 6,
+          "INVALID": 0,
+          "SUFFICIENT": 0
+        },
+        "SUFFICIENT": {
+          "INSUFFICIENT": 1,
+          "INVALID": 0,
+          "SUFFICIENT": 5
+        }
+      },
+      "pass": true
+    },
+    {
+      "check": "kcc_reconciliation_relation",
+      "detail": {
+        "ALIGNED": {
+          "ALIGNED": 4,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "CONFLICT": {
+          "ALIGNED": 0,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        },
+        "PARTIALLY_ALIGNED": {
+          "ALIGNED": 2,
+          "CONFLICT": 0,
+          "INVALID": 0,
+          "PARTIALLY_ALIGNED": 0
+        }
+      },
+      "pass": true
+    },
+    {
+      "check": "historical_inputs_present",
+      "detail": [],
+      "pass": true
+    },
+    {
+      "check": "no_new_inference",
+      "detail": 0,
+      "pass": true
+    }
+  ],
+  "status": "PASS",
+  "version": "review-1-reporting-checks-1.0"
+}

@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "check": "historical_input_hashes_before",
+      "detail": {
+        "checked": 63,
+        "mismatches": []
+      },
+      "pass": true
+    },
+    {
+      "check": "declared_output_hashes_before",
+      "detail": {
+        "checked": 8,
+        "mismatches": []
+      },
+      "pass": true
+    },
+    {
+      "check": "synthetic_arithmetic_controls",
+      "detail": "PASS",
+      "pass": true
+    },
+    {
+      "check": "deterministic_regeneration",
+      "detail": {
+        "manifest_identical": true,
+        "output_hashes_identical": true
+      },
+      "pass": true
+    },
+    {
+      "check": "historical_input_hashes_after",
+      "detail": {
+        "checked": 63,
+        "mismatches": []
+      },
+      "pass": true
+    },
+    {
+      "check": "case_identity_and_denominators",
+      "detail": {
+        "kinds": {
+          "ADVERSE_CONTROL": 22,
+          "PRIMARY": 30
+        },
+        "rows": 52,
+        "unique_identities": 52
+      },
+      "pass": true
+    },
+    {
+      "check": "reporting_checks",
+      "detail": "PASS",
+      "pass": true
+    },
+    {
+      "check": "matrix_cells_nonnegative",
+      "detail": {
+        "summed_cells_across_all_views_and_tasks": 164
+      },
+      "pass": true
+    },
+    {
+      "check": "json_undefined_values_are_not_nan",
+      "detail": "Machine-readable undefined values use null plus reason",
+      "pass": true
+    },
+    {
+      "check": "selected_semantic_runs_unchanged",
+      "detail": {
+        "corelogic-cotality-2023": [
+          "run-55311614"
+        ],
+        "impact-forecasting-2023": [
+          "run-55304728"
+        ],
+        "kcc-2023-test-e": [
+          "run-55434235"
+        ],
+        "rms-ara-2019-development": [
+          "run-55276289"
+        ],
+        "verisk-2023-validation-d": [
+          "run-55372902"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "check": "sqlite_inventory_read_only",
+      "detail": [
+        "URI mode=ro&immutable=1; no write statements",
+        "URI mode=ro&immutable=1; no write statements",
+        "URI mode=ro&immutable=1; no write statements"
+      ],
+      "pass": true
+    },
+    {
+      "check": "reporting_boundary",
+      "detail": {
+        "new_inference_runs": 0,
+        "reporting_only": true,
+        "training_authorization": "NONE"
+      },
+      "pass": true
+    }
+  ],
+  "historical_inputs_checked": 63,
+  "new_inference_runs": 0,
+  "status": "PASS",
+  "training_authorization": "NONE",
+  "version": "review-1-verification-1.0"
+}

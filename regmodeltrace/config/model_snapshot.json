@@ -1,0 +1,6 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "revision": "5c7cb76a268fc6cfbb9c4777eb24ba6e27f9ee6c",
+  "local_path_source": "REGMODELTRACE_MODEL_PATH"
+}
+
