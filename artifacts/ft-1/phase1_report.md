@@ -15,7 +15,7 @@ The completed release remains closed at Git commit `9b0c0d29f3970613e14b5411041a
 - Separate research-only schemas, dataset builder, Condition B/C contracts, GPU runner, scorer, and agreement checker.
 - Hash inventory of five external frozen v2.2 fixtures.
 - Leakage metadata for vendor lineage, version, requirement family, regulator text, source passage, revision ancestry, and review ancestry.
-- A blinded 24-case pilot with two blank independent-adjudicator return files and one resolution template.
+- A provisional 19-case candidate pack excluding CoreLogic, with two blank adjudicator returns and a resolution template. Source-only eligibility is not yet certified.
 - Saved Condition A import and summary; the closed fixtures were not rerun.
 
 ## Current data audit
@@ -66,7 +66,7 @@ TRAINING_DATA_READY = NO
 DECISION = EVIDENCE_INCONCLUSIVE
 ```
 
-The next valid action is for two human adjudicators to complete `adjudicator_a_return.json` and `adjudicator_b_return.json` independently using `pilot_pack.md`, followed by human resolution and prospective truth freeze. Only then may the prepared DCC B/C runner execute.
+The next valid action is to verify or newly establish outcome-independent evidence scopes for other cases, complete the 20–30-case pilot, and then obtain two independent human facet adjudications, resolution, and prospective truth freeze. Historical fixture membership alone does not certify blindness. Only then may the DCC B/C runner execute.
 
 ## Verification
 
@@ -76,3 +76,14 @@ The next valid action is for two human adjudicators to complete `adjudicator_a_r
 - Qwen inference: not run, by gate.
 - Blank-return fail-closed check: passed; freeze creation stopped before writing output.
 - LoRA/QLoRA: not run and not authorized.
+
+## Project-owner scope update
+
+```text
+CORELOGIC_SOURCE_ONLY_REAUDIT = SKIPPED
+Reason = original blinded package unavailable after cleanup
+Do not reconstruct from adjudicated fixture
+Historical CoreLogic judgment = ERROR_ANALYSIS_ONLY
+```
+
+Five CoreLogic entries were removed from the pilot and return templates. The remaining 19 historical candidates are provisional: they require clean source-scope verification or replacement by new independently established cases. No class labels or known model outcomes are used to backfill the pilot. The 20–30-case pilot target and independent human gate remain unchanged.

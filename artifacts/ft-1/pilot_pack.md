@@ -1,80 +1,8 @@
-# FT-1 Blinded Human Adjudication Pilot
+# FT-1 Provisional Adjudication Candidate Pack
 
-Historical labels and model outputs are intentionally omitted. Use the annotation guide and one blank return file.
+Labels and model outputs are omitted, but these historical-fixture candidates still require independent source-scope verification before blinded adjudication. CoreLogic is excluded. This pack is not certified source-only.
 
-## 1. FC-CL25-M2
-
-- Corpus: `corelogic-cotality-2023`
-- Requirement: `M-2`
-- Vendor group: `corelogic_cotality`
-
-### Candidate regulatory facets
-
-- `M-2.F1`: Methods for depicting all modeled hurricane parameters shall be based on information documented in current scientific literature and current technical literature.
-
-### Bounded source propositions
-
-**Pd6cefcc741480914f9a4 — REGULATOR — fchlpm_2023_hurricane_standards, p. 142**
-
-> Methods for depicting all modeled hurricane parameters shall be based on information documented in current scientific literature and current technical literature.
-
-**P280b5910471efca81c98 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 55**
-
-> The historical data used is information contained in Hurricane Research Division’s HURDAT Reanalysis Project (1900-1970, 2021-2023), NOAA Technical Report NWS 38 (1971-1984), National Hurricane Center’s Tropical Cyclone Reports and Advisories (1985-1987), and DeMaria’s Extended Best Track (1988-2020) updated through the 2023 hurricane season.
-
-**P563cd1a9c0c2bfbdc533 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 55**
-
-> The historical data used is information contained in HURDAT2 (1900-1970 and 1983-2021) and NOAA Technical Report NWS 38 (1971-1982), updated through the 2023 hurricane season.
-
-**Pe2c2ac813a7cebc48325 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 55, 56**
-
-> The historical data used is the National Hurricane Center Marine Exposure from the Advisory Archives (1963-1967), DeMaria’s Extended Best Track (1988-2003), and HURDAT2 (2004- 2023).
-
-**P6a62f66b96535b9a2000 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 56**
-
-> We have analyzed the dependence of the radius of maximum winds (Rmax) on intensity using the empirical data taken from NWS 38 Tables 1 and 2, Hurricane Research Division’s HURDAT Reanalysis Project, National Hurricane Center’s Tropical Cyclone Reports and Advisories, and DeMaria’s Extended Best Track.
-
-**Pcc66e07d5162df7cab96 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 56**
-
-> The modeling of the Inflow Angle is based on Kwon and Cheong (2010).
-
-**P9c567e42b15bd2da7e73 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 57**
-
-> The joint probability distribution for landfall location, track direction, and maximum one-minute sustained wind speed is obtained from a Maximum Likelihood Estimation kernel smoothing technique applied to the historical data.
-
-**Pa5d6fa6b443d10300d95 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 57**
-
-> The parameter representations have been selected so as to provide agreement with historical data and to extrapolate to the full range of potential values, or to provide the best fit to historical data among commonly used distributions.
-
-**Pdb814394aac0dde8e1d1 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 17**
-
-> Verified: YES
-
-**P7d020605c47a834837dc — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 17**
-
-> Reviewed the methodology for calculating Rmax, forward speed, and profile factor.
-
-**P14ae77ae298b4b58db85 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 17**
-
-> Discussed the external data sources for the hazard component updates.
-
-**P353336918a00d9e71608 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 18**
-
-> Reviewed the datasets for landfall location, maximum sustained winds, Rmax, translational speed, filling rate, and profile factor.
-
-**P509bee76eadd5a5b3103 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 18**
-
-> Discussed the hurricane parameters landfall location, track direction, maximum one-minute sustained winds, Rmax, translational speed, filling rate, and profile factor, and their associated distributions.
-
-**P6fee08f543ad4487e441 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 17**
-
-> Reviewed a revised response to bullet point 9 in M-2.2 to include these variables.
-
-**Pe3167c5d7aac2b5d82dc — VENDOR — corelogic_cotality_2023_submission_20250506, p. 54**
-
-> The modeling of hurricane parameters and characteristics is based on information documented by current scientific literature and current technical literature or on CoreLogic analyses of meteorological data as indicated in Standard M-2, Disclosure 2.
-
-## 2. FC-IF23-CI5B-COMPONENT-TESTING
+## 1. FC-IF23-CI5B-COMPONENT-TESTING
 
 - Corpus: `impact-forecasting-2023`
 - Requirement: `IF23-CI5B-COMPONENT-TESTING`
@@ -149,7 +77,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Discussed the need to improve verification testing and the use of verification tools.
 
-## 3. FC-TE23-V2
+## 2. FC-TE23-V2
 
 - Corpus: `kcc-2023-exposed-test-e`
 - Requirement: `V-2`
@@ -222,7 +150,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > The impact of water infiltration is not explicitly modeled; however, since insurance claims data from historical events are used to validate the contents vulnerability functions, the impact of water infiltration, which is included in the insured claims data sets, is implicitly accounted for by the contents vulnerability functions.
 
-## 4. FC-M3B-ARA
+## 3. FC-M3B-ARA
 
 - Corpus: `rms-ara-2019-development`
 - Requirement: `M-3.B:historical-coastal-consistency`
@@ -258,7 +186,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > The model does not use coastline segments or partitions for determining parameters.
 
-## 5. FC-VD23-V2
+## 4. FC-VD23-V2
 
 - Corpus: `verisk-2023-validation-d`
 - Requirement: `V-2`
@@ -346,103 +274,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Discussed that claims typically lack a detailed breakdown of the cause of loss other than identifying wind versus flood.
 
-## 6. FC-CL25-CI5
-
-- Corpus: `corelogic-cotality-2023`
-- Requirement: `CI-5`
-- Vendor group: `corelogic_cotality`
-
-### Candidate regulatory facets
-
-- `CI-5.F1`: A. General For each component, procedures shall be maintained for verification, such as code inspections, reviews, calculation crosschecks, and walkthroughs, sufficient to demonstrate code correctness. Verification procedures shall include tests performed by modeling organization personnel other than the original component developers. B. Component Testing 1. Testing software shall be used to assist in documenting and analyzing all components. 2. Unit tests shall be performed and documented for each updated component. 3. Regression tests shall be performed and documented on incremental builds. 4. Integration tests shall be performed and documented to ensure the correctness of all hurricane model components. Sufficient testing shall be performed to ensure that all components have been executed at least once. C. Data Testing 1. Testing software shall be used to assist in documenting and analyzing all databases and data files accessed by components. 2. Integrity, consistency, and correctness checks shall be performed and documented on all databases and data files accessed by the components.
-
-### Bounded source propositions
-
-**P73ab074c79ef6cfb5c8f — REGULATOR — fchlpm_2023_hurricane_standards, p. 275**
-
-> A. General For each component, procedures shall be maintained for verification, such as code inspections, reviews, calculation crosschecks, and walkthroughs, sufficient to demonstrate code correctness. Verification procedures shall include tests performed by modeling organization personnel other than the original component developers. B. Component Testing 1. Testing software shall be used to assist in documenting and analyzing all components. 2. Unit tests shall be performed and documented for each updated component. 3. Regression tests shall be performed and documented on incremental builds. 4. Integration tests shall be performed and documented to ensure the correctness of all hurricane model components. Sufficient testing shall be performed to ensure that all components have been executed at least once. C. Data Testing 1. Testing software shall be used to assist in documenting and analyzing all databases and data files accessed by components. 2. Integrity, consistency, and correctness checks shall be performed and documented on all databases and data files accessed by the components.
-
-**P16378cdba8a7f67735d6 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> The models have been extensively tested to verify that calculated results are consistent with the intended simulation approach.
-
-**P5f527e75f9f98c3e33d5 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> These include algorithm verification through comparison to independently developed software packages, hand calculations, and sensitivity analyses.
-
-**P2ba5de46cecaba73fd2a — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> Much of this verification is performed by personnel other than the original component developers.
-
-**Pb41646cac5354da7fe65 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> Testing software is used to assist in documenting and analyzing all components.
-
-**P97c7ed830db9def78298 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> Unit tests have been performed and documented for each updated component relevant to residential hurricane loss costs in Florida.
-
-**Pd0075ed88548a3ad8d93 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 167**
-
-> A suite of automated regression tests is regularly run on the software to ensure integrity of the various components as well as the results produced by the integrated system.
-
-**P2d7379c68cda7700a7bf — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> Testing software is used to assist in documenting and analyzing all databases and data files accessed by components.
-
-**P05b7f87d55f91502d236 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> Client data is extensively tested during the import process into the CoreLogic system to confirm its accuracy.
-
-**P459f88e024d0fe32624e — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> Field level validation is performed to confirm that every data element within each record falls within known ranges.
-
-**P3cbaac693848947d511d — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> Child/parent and other key relationships are also checked.
-
-**Pfbfbebba38488f648d7b — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> A summary log is displayed at the end of import process denoting the number records which have warnings or errors.
-
-**P762fe07329ac3d29bb6c — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 76**
-
-> Verified: YES
-
-**Pd81bae7a8d0f9a008c2c — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Discussed the process used for algorithm verification performed by personnel other than the code developers.
-
-**P3178d5039e8b0cfffad5 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Discussed the various testing software used for the different types of unit testing.
-
-**Pda78f7f45ba8fc2f37ae — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Discussed that unit testing is performed for every build.
-
-**Pa3569107f19080e9382a — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Discussed the frequency of integration tests.
-
-**Pce75acd7646c2a80b11d — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Reviewed the QA test procedures.
-
-**Pe7c156b50ef9f4af23aa — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 77**
-
-> Reviewed the “Test Runs, Test Plan and Summary of Results” documentation.
-
-**Pc08cb319ee86d5505051 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 78**
-
-> Reviewed the continuous integration/continuous delivery testing harness for running automated tests on the updated model code.
-
-**P039ec1aeb15b33d9a7c2 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 168**
-
-> A suite of automated regression tests is regularly run on the software to ensure integrity of the various components as well as the results produced by the integrated system.
-
-## 7. FC-IF23-M3B-HISTORICAL-LANDFALL-OUTPUT
+## 5. FC-IF23-M3B-HISTORICAL-LANDFALL-OUTPUT
 
 - Corpus: `impact-forecasting-2023`
 - Requirement: `IF23-M3B-HISTORICAL-LANDFALL-OUTPUT`
@@ -488,7 +320,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > The goodness- of-fit of modeled to the Reference Hurricane Set statewide and regional hurricane frequencies as provided in Form M-1 will be reviewed.
 
-## 8. FC-TE23-S2
+## 6. FC-TE23-S2
 
 - Corpus: `kcc-2023-exposed-test-e`
 - Requirement: `S-2`
@@ -549,7 +381,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Consequently, an analysis of the temporal sensitivities of the lost cost was not performed.
 
-## 9. FC-CI5B-ARA
+## 7. FC-CI5B-ARA
 
 - Corpus: `rms-ara-2019-development`
 - Requirement: `CI-5.B:component-testing`
@@ -573,7 +405,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Reviewed the series of logical tests performed on the loss cost relationships in Form A-6. Discussed the process and tests performed on the surface roughness update.
 
-## 10. FC-VD23-CI6
+## 8. FC-VD23-CI6
 
 - Corpus: `verisk-2023-validation-d`
 - Requirement: `CI-6`
@@ -664,111 +496,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > A demonstration of the FL template user interface will be conducted during the audit.
 
-## 11. FC-CL25-V1
-
-- Corpus: `corelogic-cotality-2023`
-- Requirement: `V-1`
-- Vendor group: `corelogic_cotality`
-
-### Candidate regulatory facets
-
-- `V-1.F1`: A. Development of the building hurricane vulnerability functions shall be based on a combination of available insurance company hurricane claims data and rational engineering analysis supported by laboratory testing, field testing, or post-event site investigations. B. The development of the building hurricane vulnerability functions and the treatment of associated uncertainties shall be theoretically sound and consistent with fundamental engineering principles. C. Residential building stock classification shall be representative of Florida construction for personal and commercial residential buildings. D. Building height/number of stories, primary construction material, year of construction, location, building code, and other construction characteristics, as applicable, shall be used in the development and application of building hurricane vulnerability functions. E. Hurricane vulnerability functions shall be developed for commercial residential building structures, personal residential building structures, manufactured homes, and appurtenant structures. F. The minimum windspeed that generates damage shall be consistent with fundamental engineering principles. G. Building hurricane vulnerability functions shall include damage as attributable to windspeed and wind pressure, water infiltration, and missile impact associated with hurricanes. Building hurricane vulnerability functions shall not include explicit damage to the building due to flood (including hurricane storm surge and wave action).
-
-### Bounded source propositions
-
-**P296583faa80c554cbb2d — REGULATOR — fchlpm_2023_hurricane_standards, p. 191**
-
-> A. Development of the building hurricane vulnerability functions shall be based on a combination of available insurance company hurricane claims data and rational engineering analysis supported by laboratory testing, field testing, or post-event site investigations. B. The development of the building hurricane vulnerability functions and the treatment of associated uncertainties shall be theoretically sound and consistent with fundamental engineering principles. C. Residential building stock classification shall be representative of Florida construction for personal and commercial residential buildings. D. Building height/number of stories, primary construction material, year of construction, location, building code, and other construction characteristics, as applicable, shall be used in the development and application of building hurricane vulnerability functions. E. Hurricane vulnerability functions shall be developed for commercial residential building structures, personal residential building structures, manufactured homes, and appurtenant structures. F. The minimum windspeed that generates damage shall be consistent with fundamental engineering principles. G. Building hurricane vulnerability functions shall include damage as attributable to windspeed and wind pressure, water infiltration, and missile impact associated with hurricanes. Building hurricane vulnerability functions shall not include explicit damage to the building due to flood (including hurricane storm surge and wave action).
-
-**P48b2ba7b6d992a8b9424 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 92**
-
-> CoreLogic’s United States hurricane model building vulnerability functions are based on historically observed damage (in terms of both hurricane claims data and post-hurricane field surveys), and experimental research conducted by Professors Kishor Mehta and James McDonald at Texas Tech.
-
-**P856911982a926afe8918 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 92**
-
-> CoreLogic1 teams have conducted post-disaster field surveys for several storms in the past few years, including Hurricanes Andrew (1992), Iniki (1992), Luis (1995), Marilyn (1995), Opal (1995), Georges (1998), Irene (1999), Lili (2002), Fabian (2003), Isabel (2003), Charley (2004), Frances (2004), Ivan (2004), Jeanne (2004), Katrina (2005), Rita (2005), and Ike (2008); Typhoon Paka (1997); and the Oklahoma City (1999), Fort Worth (2000), Midwest (2003) tornado outbreaks, Sandy (2012), Florence (2018), Ian (2022), Helene (2024), and Milton (2024).
-
-**P6d3f48b85af22e5ae18d — VENDOR — corelogic_cotality_2023_submission_20250506, p. 97**
-
-> The CoreLogic building hurricane vulnerability functions used by the Florida Hurricane Model have been derived through multi-year claims data, engineering analysis, and post-hurricane surveys.
-
-**P9ab5524882455ae09abe — VENDOR — corelogic_cotality_2023_submission_20250506, p. 93**
-
-> The method of development of the CoreLogic’s hurricane vulnerability functions and treatment of associated uncertainties is theoretically sound and consistent with fundamental engineering principles as indicated in Standard V-1, Disclosure 2 and Disclosure 6.
-
-**P133af504839c6cfa67b7 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 93**
-
-> Residential building stock classification of the Florida Hurricane Model is representative of Florida construction for personal and commercial residential buildings.
-
-**P97ddc84d0f84b48e1e85 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 93**
-
-> The Florida Hurricane Model allows a user to account for the unique features of individual buildings, including building height/number of stories, primary construction material, year of construction, location, building code, and other construction characteristics.
-
-**P307cdc59d16d7e86ec71 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 93**
-
-> CoreLogic’s hurricane vulnerability functions are developed for commercial residential building structures, personal residential building structures, manufactured homes, and appurtenant structures.
-
-**P40a2599594faf7c7a62e — VENDOR — corelogic_cotality_2023_submission_20250506, p. 93**
-
-> CoreLogic’s hurricane vulnerability functions calculate damage for all peak gust windspeeds greater than or equal to 40 miles per hour.
-
-**P6124238c259473a21b6b — VENDOR — corelogic_cotality_2023_submission_20250506, p. 94**
-
-> CoreLogic’s hurricane vulnerability functions include damage due to hurricane hazards such as windspeed and wind pressure, water infiltration, and missile impact.
-
-**P1f81e6381f985fa9e597 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 94**
-
-> CoreLogic’s hurricane vulnerability functions do not include explicit damage due to flood, storm surge, or wave action.
-
-**P24a6bacde4b5906c9303 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 99**
-
-> The Florida Hurricane Model uses a total of 96 basic construction types, covering all occupancies.
-
-**P19c88274664c78af2683 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 103**
-
-> The hurricane model addresses the wind-borne missile impact damage and water infiltration using secondary structural modifiers.
-
-**Pdf3ac32922aad67a61a6 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 37**
-
-> Verified: YES
-
-**P73e996364c566c5d545d — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 39**
-
-> Reviewed post-hurricane surveys for Hurricane Ian (2022) and Hurricane Milton (2024).
-
-**P7f4ea604c4405ef416b1 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 39**
-
-> Reviewed examples of masonry and wood frame coefficients of variation from the claims data.
-
-**P20067683675b1d66419e — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 40**
-
-> Reviewed the default building characteristics as a function of the year of construction.
-
-**P1560a61b6fd0d37778ae — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 40**
-
-> Discussed that secondary structural modifiers that address various roofing system features are used to capture a building’s water resistance performance.
-
-**Pda2abdedc09463cc9687 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 39**
-
-> Discussed the claims data used for development of the building and appurtenant structure vulnerability functions.
-
-**P0e3775f44534078e2575 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 43**
-
-> Reviewed building vulnerability functions for untied manufactured homes, tied-down manufactured homes, wood frame, unreinforced masonry, and reinforced masonry.
-
-**Pcde82527aeff450aa178 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 43**
-
-> Discussed that enhanced structural resilience through enforcement of the Florida Building Code is accounted for in the vulnerability functions.
-
-**P623c91f7135a8375de9e — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 43**
-
-> Discussed that claims data (up to 2005), the MacDonald and Mehta report, and the “Secondary Structural Modifiers: Features and Model Description” documentation were used to develop the building hurricane vulnerability functions.
-
-**P8cf835a1f570ae9a6b38 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 43**
-
-> Discussed that no laboratory or field-testing data were used in developing the hurricane vulnerability functions.
-
-## 12. FC-IF23-S3-UNCERTAINTY-ANALYSIS
+## 9. FC-IF23-S3-UNCERTAINTY-ANALYSIS
 
 - Corpus: `impact-forecasting-2023`
 - Requirement: `IF23-S3-UNCERTAINTY-ANALYSIS`
@@ -838,7 +566,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > May 28, 2025 154 The temporal uncertainty analysis results described above are location-specific and could vary significantly depending on the selected grid point.
 
-## 13. FC-TE23-G2
+## 10. FC-TE23-G2
 
 - Corpus: `kcc-2023-exposed-test-e`
 - Requirement: `G-2`
@@ -947,7 +675,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Verified: YES
 
-## 14. FC-V1A-ARA
+## 11. FC-V1A-ARA
 
 - Corpus: `rms-ara-2019-development`
 - Requirement: `V-1.A:derivation-basis`
@@ -971,7 +699,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Discussed new claims data received from Hurricane Irma (2017) and Hurricane Michael (2018) used for validation of the model. Discussed that no changes were made to the vulnerability model based on the analysis of the new claims data. Reviewed examples of commercial residential vulnerability curves for different numbers of stories.
 
-## 15. FC-VD23-S2
+## 12. FC-VD23-S2
 
 - Corpus: `verisk-2023-validation-d`
 - Requirement: `S-2`
@@ -1038,63 +766,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Decadal and even century-long data collection and investigation are needed to quantify the sensitivity and uncertainty due to such long-term change, which is beyond the scope of this submission.
 
-## 16. FC-CL25-S6
-
-- Corpus: `corelogic-cotality-2023`
-- Requirement: `S-6`
-- Vendor group: `corelogic_cotality`
-
-### Candidate regulatory facets
-
-- `S-6.F1`: The difference, due to uncertainty, between historical and modeled annual average statewide hurricane loss costs shall be reasonable, given the body of data, by established statistical expectations and norms.
-
-### Bounded source propositions
-
-**P0fb77a8de7a44aa1f643 — REGULATOR — fchlpm_2023_hurricane_standards, p. 166**
-
-> The difference, due to uncertainty, between historical and modeled annual average statewide hurricane loss costs shall be reasonable, given the body of data, by established statistical expectations and norms.
-
-**P3147f56bbbe4f822f5df — VENDOR — corelogic_cotality_2023_submission_20250506, p. 90**
-
-> The difference, due to uncertainty, between historical and modeled annual average statewide hurricane loss costs is statistically reasonable, as shown in the information provided in Standard S-6, Disclosures 1-3.
-
-**P36c46b480cf4b7f2050c — VENDOR — corelogic_cotality_2023_submission_20250506, p. 90**
-
-> The results of our hurricane model were validated by checking each component of the model separately.
-
-**Pf3256222da9b145e1e98 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 90**
-
-> In addition, comparisons of statewide expected annual loss versus the average of all historical events impacting Florida in this century were compared in order to validate estimated hurricane losses.
-
-**P5f0ca419954bdf118068 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 90**
-
-> The expected annual hurricane loss estimates produced by the model are further checked for reasonability against alternative methods of obtaining the same results.
-
-**P53083f28f58fcafbb4de — VENDOR — corelogic_cotality_2023_submission_20250506, p. 91**
-
-> Convergence tests were also performed to ensure that the model produces stable results and that additional detail (i.e., simulated storms) would not significantly alter the result.
-
-**Pbbc843bfcbd9d72cb23a — VENDOR — corelogic_cotality_2023_submission_20250506, p. 91**
-
-> There are no differences in how the hurricane model produces loss costs for specific historical events versus hurricane loss costs for events in the stochastic hurricane set.
-
-**Pf17cba02c8e717343fc8 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 35**
-
-> Verified: YES
-
-**P5c469bfbd47b8a769fa4 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 35**
-
-> Reviewed the new methodology for calculating the standard error of A.
-
-**Pf2e24ea2f09b53f91e09 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 35**
-
-> Reviewed a revised Form S-5.C providing the confidence interval.
-
-**P322225f01db354217ec4 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 35**
-
-> Reviewed revised values of A1 and A2 based on the new methodology computing the differences.
-
-## 17. FC-IF23-G4-COMPONENT-INDEPENDENCE
+## 13. FC-IF23-G4-COMPONENT-INDEPENDENCE
 
 - Corpus: `impact-forecasting-2023`
 - Requirement: `IF23-G4-COMPONENT-INDEPENDENCE`
@@ -1152,7 +824,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Verified: YES
 
-## 18. FC-TE23-CI6
+## 14. FC-TE23-CI6
 
 - Corpus: `kcc-2023-exposed-test-e`
 - Requirement: `CI-6`
@@ -1210,7 +882,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Verified: YES
 
-## 19. FC-CI5B-RMS
+## 15. FC-CI5B-RMS
 
 - Corpus: `rms-ara-2019-development`
 - Requirement: `CI-5.B:component-testing`
@@ -1234,7 +906,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Reviewed unit test for hazard event rates implementation.
 
-## 20. FC-VD23-M3
+## 16. FC-VD23-M3
 
 - Corpus: `verisk-2023-validation-d`
 - Requirement: `M-3`
@@ -1352,71 +1024,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > No changes have been made to the modeled distributions of parameters in the Model Base Hurricane Set that are not contained in Form S-3: Distributions of Stochastic Hurricane Parameters.
 
-## 21. FC-CL25-A5
-
-- Corpus: `corelogic-cotality-2023`
-- Requirement: `A-5`
-- Vendor group: `corelogic_cotality`
-
-### Candidate regulatory facets
-
-- `A-5.F1`: A. The methods used in the development of mathematical distributions to reflect the effects of deductibles and policy limits shall be actuarially sound. B. The relationship among the modeled deductible hurricane loss costs shall be reasonable. C. Deductible hurricane loss costs shall be calculated in accordance with s. 627.701(5)(a), F.S.
-
-### Bounded source propositions
-
-**Pc74cd6d98240a799cfd9 — REGULATOR — fchlpm_2023_hurricane_standards, p. 228**
-
-> A. The methods used in the development of mathematical distributions to reflect the effects of deductibles and policy limits shall be actuarially sound. B. The relationship among the modeled deductible hurricane loss costs shall be reasonable. C. Deductible hurricane loss costs shall be calculated in accordance with s. 627.701(5)(a), F.S.
-
-**P5ff4ef362e2846834ae2 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 151**
-
-> The methods used in the development of mathematical distributions to reflect the effects of deductibles and policy limits are actuarially sound as indicated in Standard A-5, Disclosure 1.
-
-**P9b8b8c51236c105c6bf1 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 151**
-
-> The loss distribution is estimated through the discrete calculations of the site damage distribution, taking into account deductibles and limits, as shown in Figure 33 below.
-
-**P60d18fdb4573339ea121 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 152**
-
-> All hurricane loss costs have been calculated in accordance with s.627.701(5)(a), F.S. as indicated in Standard A-5, Disclosure 3.
-
-**Pec4dbc93704e9a71bf06 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 152**
-
-> The user may input a flat deductible (i.e., a fixed dollar amount) or a percentage amount (a percentage of the TIV).
-
-**P0d909243af1c021d2f69 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 153**
-
-> As each simulated year progresses, losses from each hurricane during that year are tracked by policy and the corresponding effect on the remaining amount of the hurricane deductible evaluated.
-
-**P3d98366cc5223cfb9e76 — VENDOR — corelogic_cotality_2023_submission_20250506, p. 153**
-
-> The results are used to quantify the annual hurricane deductible effects.
-
-**P23ff5e805a125c780d1e — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 61**
-
-> Verified: YES
-
-**Pd04b4cf234d6a84ce13a — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 61**
-
-> Reviewed the annual deductible calculation.
-
-**Pd423ce83d80c79cf6f30 — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 61**
-
-> Reviewed examples of annual deductibles and per occurrence deductibles.
-
-**P2e5647b1a5d48064742a — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 61**
-
-> Discussed that there was no change in the treatment of deductibles from the current accepted model.
-
-**P24c8e0424f8b3ffb54df — REVIEWER — corelogic_cotality_2023_professional_team_20250410, p. 61**
-
-> 4. Justification for the changes from the current accepted hurricane model in the relativities among corresponding deductible amounts for the same coverage will be reviewed.
-
-**Pfc020b9eb904d965ee2f — REGULATOR_COPY — corelogic_cotality_2023_submission_20250506, p. 151**
-
-> shall be reasonable.
-
-## 22. FC-TE23-A2
+## 17. FC-TE23-A2
 
 - Corpus: `kcc-2023-exposed-test-e`
 - Requirement: `A-2`
@@ -1493,7 +1101,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > The Professional Team reviewed the error, how it occurred, the revised forms, and corrective actions taken by KCC to mitigate against similar issues in the future, and confirmed there was no issue with the model, the platform, or other submission forms.
 
-## 23. FC-M3B-RMS
+## 18. FC-M3B-RMS
 
 - Corpus: `rms-ara-2019-development`
 - Requirement: `M-3.B:historical-coastal-consistency`
@@ -1521,7 +1129,7 @@ Historical labels and model outputs are intentionally omitted. Use the annotatio
 
 > Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.
 
-## 24. FC-VD23-A2
+## 19. FC-VD23-A2
 
 - Corpus: `verisk-2023-validation-d`
 - Requirement: `A-2`

@@ -4,7 +4,8 @@
 - [x] Define the facet ontology, annotation guide, and deterministic aggregation rule.
 - [x] Implement schemas, dataset preparation, grouping, Condition A loading, B/C contracts, aggregation, and metrics.
 - [x] Re-express cases that already have explicit human facet decisions; mark all inferred or composite cases as non-Gold.
-- [x] Build a 24-case blinded independent-adjudication pilot and blank return templates.
+- [x] Build provisional candidate and return packs; exclude CoreLogic under the owner-approved skip decision.
+- [ ] Establish clean source-only evidence scopes for other/new cases and complete the 20–30-case independent pilot.
 - [ ] Obtain two independent human facet adjudications for the pilot.
 - [ ] Resolve guide ambiguities and freeze pilot truth prospectively.
 - [ ] Run Base Qwen Conditions B/C on DCC against the identical frozen bundles.

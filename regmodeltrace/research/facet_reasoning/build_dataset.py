@@ -271,11 +271,18 @@ def select_pilot(cases: list[FacetCase], size: int = 24) -> list[FacetCase]:
     Selection uses case identity, corpus, and family only. Historical truth is not
     consulted, which prevents hand-picking errors or relation classes.
     """
-    ranked = sorted(cases, key=lambda case: (text_hash(case.case_id), case.case_id))
+    ranked = sorted(
+        [case for case in cases if case.vendor_group != "corelogic_cotality"],
+        key=lambda case: (text_hash(case.case_id), case.case_id),
+    )
     selected: list[FacetCase] = []
     by_corpus: dict[str, list[FacetCase]] = defaultdict(list)
     for case in ranked:
         by_corpus[case.corpus_id].append(case)
+    # Preserve the original per-corpus candidate quota. Missing source-only
+    # cases must be supplied from clean/new inputs, not backfilled from truth.
+    for corpus in by_corpus:
+        by_corpus[corpus] = by_corpus[corpus][:5]
     while len(selected) < min(size, len(cases)):
         progressed = False
         for corpus in sorted(by_corpus):
@@ -363,9 +370,9 @@ def historical_counts(input_root: Path, cases: list[FacetCase]) -> dict[str, Any
 
 def render_pilot_markdown(pilot: list[FacetCase]) -> str:
     lines = [
-        "# FT-1 Blinded Human Adjudication Pilot",
+        "# FT-1 Provisional Adjudication Candidate Pack",
         "",
-        "Historical labels and model outputs are intentionally omitted. Use the annotation guide and one blank return file.",
+        "Labels and model outputs are omitted, but these historical-fixture candidates still require independent source-scope verification before blinded adjudication. CoreLogic is excluded. This pack is not certified source-only.",
         "",
     ]
     for index, case in enumerate(pilot, 1):
@@ -416,6 +423,15 @@ def main() -> None:
     write_json(output / "facet_case_inventory.json", [case.model_dump(mode="json") for case in cases])
     write_json(output / "historical_counts.json", historical_counts(args.input_root, cases))
     write_json(output / "pilot_pack.json", [blinded_case(case) for case in pilot])
+    write_json(output / "pilot_selection_manifest.json", {
+        "status": "PROVISIONAL_REQUIRES_SOURCE_SCOPE_VERIFICATION",
+        "target_size": 24,
+        "current_size": len(pilot),
+        "CORELOGIC_SOURCE_ONLY_REAUDIT": "SKIPPED",
+        "reason": "Original blinded package unavailable after cleanup; do not reconstruct from adjudicated fixture.",
+        "historical_corelogic_use": "ERROR_ANALYSIS_ONLY",
+        "cases": [{"case_id": case.case_id, "source_scope_status": "NOT_VERIFIED", "evidence_scope_frozen_without_truth": False} for case in pilot],
+    })
     (output / "pilot_pack.md").write_text(render_pilot_markdown(pilot), encoding="utf-8")
     write_json(output / "adjudicator_a_return.json", return_template(pilot, "A"))
     write_json(output / "adjudicator_b_return.json", return_template(pilot, "B"))
@@ -463,6 +479,10 @@ def main() -> None:
             "PRODUCTION_DEPLOYMENT": "NOT_AUTHORIZED",
         },
         "pilot_size": len(pilot),
+        "pilot_status": "PROVISIONAL_REQUIRES_SOURCE_SCOPE_VERIFICATION",
+        "CORELOGIC_SOURCE_ONLY_REAUDIT": "SKIPPED",
+        "corelogic_skip_reason": "Original blinded package unavailable after cleanup; do not reconstruct from adjudicated fixture.",
+        "historical_corelogic_use": "ERROR_ANALYSIS_ONLY",
         "independent_human_returns_complete": 0,
         "conditions": {"A": "IMPORTED_SAVED_RESULTS", "B": "BLOCKED_HUMAN_GATE", "C": "BLOCKED_HUMAN_GATE", "D": "NOT_AUTHORIZED"},
         "decision": "EVIDENCE_INCONCLUSIVE",

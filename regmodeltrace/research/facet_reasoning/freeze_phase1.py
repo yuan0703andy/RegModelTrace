@@ -76,6 +76,7 @@ def adjudicated_cases(pilot_path: Path, resolution: dict[str, Any]) -> list[Face
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--pilot", type=Path, required=True)
+    parser.add_argument("--source-scope-verification", type=Path, required=True)
     parser.add_argument("--adjudicator-a", type=Path, required=True)
     parser.add_argument("--adjudicator-b", type=Path, required=True)
     parser.add_argument("--resolution", type=Path, required=True)
@@ -88,6 +89,17 @@ def main() -> None:
 
     if args.output.exists():
         raise RuntimeError("Refusing to overwrite an FT-1 freeze")
+    source_scope = load(args.source_scope_verification)
+    pilot_ids = {case["case_id"] for case in load(args.pilot)}
+    scope_cases = {case["case_id"]: case for case in source_scope["cases"]}
+    if set(scope_cases) != pilot_ids or any(
+        case.get("source_scope_status") != "SOURCE_ONLY_VERIFIED"
+        or case.get("evidence_scope_frozen_without_truth") is not True
+        for case in scope_cases.values()
+    ):
+        raise ValueError("Pilot evidence scope is not independently source-only verified")
+    if not 20 <= len(pilot_ids) <= 30:
+        raise ValueError("Independent pilot requires 20–30 source-verified cases")
     a, b, resolution = load(args.adjudicator_a), load(args.adjudicator_b), load(args.resolution)
     report = agreement(a, b)
     validate_return(resolution)
@@ -111,6 +123,7 @@ def main() -> None:
         (args.annotation_guide, "annotation_guide.md"),
         (args.aggregation_rule, "aggregation_rule.json"),
         (args.model_config, "model_config.json"),
+        (args.source_scope_verification, "source_scope_verification.json"),
         (args.decision_rule, "decision_rule.json"),
     ]:
         shutil.copy2(source, args.output / name)
