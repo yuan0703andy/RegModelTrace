@@ -1,0 +1,155 @@
+{
+  "cases": [
+    {
+      "case_id": "FT1-SOURCE-IMPACT-G-5",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-G-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-M-6",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-M-1",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-S-4",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-S-5",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-V-2",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-V-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-A-1",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-A-6",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-CI-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-IMPACT-CI-2",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-G-5",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-G-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-M-6",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-M-1",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-S-4",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-S-5",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-V-2",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-V-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-A-1",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-A-6",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-CI-3",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    },
+    {
+      "case_id": "FT1-SOURCE-VERISK-CI-2",
+      "navigation_prototype_input_tokens": 2,
+      "prototype_fits": true,
+      "reserved_output_tokens": 1024
+    }
+  ],
+  "max_model_len": 12288,
+  "model_inference_runs": 0,
+  "model_weights_loaded": false,
+  "note": "Navigation scope is not a frozen model context. Final verified human scope requires exact B/C template counting again, without truncation.",
+  "pilot_sha256": "696b7bca1d9d72cc3ba8f7fc3587a8f430c633f14fcb63b0249b553b95e2e58b",
+  "prototype_over_budget_count": 0,
+  "status": "TOKENIZATION_ONLY_NOT_INFERENCE_NOT_FINAL_MODEL_REQUESTS"
+}

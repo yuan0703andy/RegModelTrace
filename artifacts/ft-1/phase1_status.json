@@ -1,6 +1,8 @@
 {
   "CORELOGIC_SOURCE_ONLY_REAUDIT": "SKIPPED",
-  "candidate_pack_size": 19,
+  "budget_diagnostic_v1": "INVALID_MAPPING_FIELD_COUNT",
+  "budget_diagnostic_v2": "COMPLETE_TOKENIZATION_ONLY",
+  "candidate_pack_size": 24,
   "conditions": {
     "A": "SAVED_REFERENCE_ONLY_UNLESS_IDENTICAL_BUNDLE",
     "B": "BLOCKED_SOURCE_SCOPE_AND_HUMAN_GATE",
@@ -9,8 +11,9 @@
   },
   "corelogic_skip_reason": "Original blinded package unavailable after cleanup; do not reconstruct from adjudicated fixture.",
   "decision": "EVIDENCE_INCONCLUSIVE",
-  "decision_reason": "All current fixture-derived scopes excluded; fresh source scopes and independent human truth are pending.",
+  "decision_reason": "New 24-case source-only candidate pack prepared; independent source-scope verification, two human returns, truth freeze, and matched A/B/C protocol remain pending.",
   "eligible_pilot_size": 0,
+  "final_context_budget_status": "PENDING_FINAL_VERIFIED_SCOPE_AND_EXACT_TEMPLATE",
   "historical_corelogic_use": "ERROR_ANALYSIS_ONLY",
   "historical_release": {
     "FINAL_MODEL": "Base Qwen",
@@ -20,14 +23,20 @@
     "TEST_E": "CLOSED"
   },
   "independent_human_returns_complete": 0,
+  "independent_source_scope_verifications_complete": 0,
+  "matched_condition_a_status": "PENDING_PROSPECTIVE_PROTOCOL",
+  "navigation_prototype_over_budget_count": 19,
+  "new_candidate_size": 24,
   "pilot_size": 0,
-  "pilot_status": "AUDITED_NO_CURRENT_SCOPE_ELIGIBLE",
+  "pilot_status": "PREPARED_PENDING_INDEPENDENT_SCOPE_AND_HUMANS",
   "research_track": {
     "FINE_TUNING_EXPERIMENT": "CONDITIONALLY_JUSTIFIED",
     "NEXT_RELEASE_RESEARCH": "OPEN",
     "PRODUCTION_DEPLOYMENT": "NOT_AUTHORIZED",
     "TRAINING_DATA_READY": "NO"
   },
+  "retired_candidate_pack_size": 19,
+  "source_only_preparation": "COMPLETE",
   "source_scope_audit": "COMPLETE",
   "source_seed_counts": {
     "KEEP": 9,

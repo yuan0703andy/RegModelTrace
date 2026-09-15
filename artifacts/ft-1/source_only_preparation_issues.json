@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "FT1-SOURCE-IMPACT-G-5",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-G-3",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-M-6",
+    "issues": [
+      "PARSER_STATUS_WARNING"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-M-1",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-S-4",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-S-5",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-V-2",
+    "issues": [
+      "PARSER_STATUS_WARNING"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-V-3",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-A-1",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-A-6",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-CI-3",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-IMPACT-CI-2",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-G-5",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-G-3",
+    "issues": [
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-M-6",
+    "issues": [],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-M-1",
+    "issues": [
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-S-4",
+    "issues": [
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-S-5",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-V-2",
+    "issues": [
+      "PARSER_STATUS_WARNING"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-V-3",
+    "issues": [],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-A-1",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-A-6",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-CI-3",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  },
+  {
+    "case_id": "FT1-SOURCE-VERISK-CI-2",
+    "issues": [
+      "PARSER_STATUS_WARNING",
+      "FORM_EVIDENCE_REQUIRES_HUMAN_SCOPE_CHECK"
+    ],
+    "shortlist_absence_is_not_corpus_absence": true
+  }
+]

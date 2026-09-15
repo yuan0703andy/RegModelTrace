@@ -1,0 +1,8 @@
+{
+  "historical_model_results_affected": false,
+  "model_inference_runs": 0,
+  "raw_receipt": "source_only_budget_diagnostic_invalid_v1.json",
+  "reason": "len(mapping) counted fields rather than input_ids",
+  "status": "INVALID_DIAGNOSTIC",
+  "superseded_by": "source_only_budget_diagnostic.json"
+}

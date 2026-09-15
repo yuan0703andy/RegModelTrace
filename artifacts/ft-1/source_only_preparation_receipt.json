@@ -1,0 +1,128 @@
+{
+  "alignment_labels_read": false,
+  "all_source_blocks_exactly_reconstructed": true,
+  "builder_sha256": "d4e1974c849bf2902707e70989f53398a3d56845b572b2f7c11d4b1f2382f0bf",
+  "candidate_count": 24,
+  "condition_a": "HISTORICAL_REFERENCE_ONLY_DIFFERENT_BUNDLES",
+  "human_truth_frozen": false,
+  "independent_pilot_ready": 0,
+  "inference_runs": 0,
+  "input_reads": [
+    {
+      "corpus": "impact",
+      "file": "tables.json",
+      "sha256": "42f838ded7cc004516b0e4bc8eb5466a1a6f7cb7edc515b4fd736b3fa5c7504a"
+    },
+    {
+      "corpus": "impact",
+      "file": "source_words.parquet",
+      "sha256": "5e475c109697a8e1f3ee1784735466b9da244dcdc9849e2e84f0b1734edabe63"
+    },
+    {
+      "corpus": "impact",
+      "file": "continuations.json",
+      "sha256": "c3cab29a80113ffc28c6fa00cade9c8b3713d378b81eb509a6335f0c4112d747"
+    },
+    {
+      "corpus": "impact",
+      "file": "parsed_blocks.parquet",
+      "sha256": "e74fd8ef1e0469f6a2210d4bdd571cb38844ef071c77181de992a66053445ada"
+    },
+    {
+      "corpus": "impact",
+      "file": "source_pages.parquet",
+      "sha256": "19eb32aec6266cb94ab19c57a4e83d771462d58f67d8b181c89c3528884ff996"
+    },
+    {
+      "corpus": "impact",
+      "file": "portability_report.json",
+      "sha256": "c5368f18192e978bde63342ab6633971d7b9bd81c039b6494100a355922a48aa"
+    },
+    {
+      "corpus": "impact",
+      "file": "diagnostics.json",
+      "sha256": "81fedff4964d08ddf3e400c5882d3f20428425820f426a5d7676e5414a397f16"
+    },
+    {
+      "corpus": "impact",
+      "file": "parser_run_manifest.json",
+      "sha256": "e0935c85564974dbc6cee9448cf7814e4c9cc28b7dc829e0c531bfaac2718f69"
+    },
+    {
+      "corpus": "impact",
+      "file": "units.json",
+      "sha256": "ddde9b1d5203d16a648654c3a6f3e4ae86c1b84482f2540a2993254b8bec0c0e"
+    },
+    {
+      "corpus": "impact",
+      "file": "input_access_log.json",
+      "sha256": "fd032d1928a1b695c9f7d960dfbeff498d5a5c1e30b52059fe8ea295f7466aa4"
+    },
+    {
+      "corpus": "verisk",
+      "file": "tables.json",
+      "sha256": "9b5345ada085d01adae8d50ba707bd6788799b819f7896eb8cfc88cbab7c6cb5"
+    },
+    {
+      "corpus": "verisk",
+      "file": "source_words.parquet",
+      "sha256": "b9449bf5601f30317bdcb6d37a3a3855631af57d3b166633515bb4a658c6838d"
+    },
+    {
+      "corpus": "verisk",
+      "file": "continuations.json",
+      "sha256": "f2457355d42a4cec664c5c6b2c85e83e839fba5e7c70c77dae0f5777ca181334"
+    },
+    {
+      "corpus": "verisk",
+      "file": "parsed_blocks.parquet",
+      "sha256": "32c328ed90d28dfb433e6be4ca83ff3070eacce79cec79d9924687a91f53d033"
+    },
+    {
+      "corpus": "verisk",
+      "file": "source_pages.parquet",
+      "sha256": "8857b71aca7e912726c8d63539e5159dcda2f52c43ca945bc75b7c3ef214e7a3"
+    },
+    {
+      "corpus": "verisk",
+      "file": "portability_report.json",
+      "sha256": "a8c7b0bda007ae7aff09ba12c1f85be03bbfda3d0e5e47d7adada8d0a54bc350"
+    },
+    {
+      "corpus": "verisk",
+      "file": "diagnostics.json",
+      "sha256": "884a69681b594dd8a3215266d9ddc25699fcbb1451aabc5edfc338c84f57552a"
+    },
+    {
+      "corpus": "verisk",
+      "file": "parser_run_manifest.json",
+      "sha256": "6cc124e423bda0dd3fc3bf30267952d06f5196bc221a59e1034a5fa1ada5f548"
+    },
+    {
+      "corpus": "verisk",
+      "file": "units.json",
+      "sha256": "1595c5785b1ae031f327a6a96912f3eb5484a01fea11cbf5944c861cf0411e0c"
+    },
+    {
+      "corpus": "verisk",
+      "file": "input_access_log.json",
+      "sha256": "209a58cbb436ad8f75104b36d2182be188d90f785f19ba36581082427325bbfb"
+    }
+  ],
+  "model_outputs_read": false,
+  "pending_gates": [
+    "Independent source-scope verification",
+    "Two actual independent human facet adjudications",
+    "Disagreement resolution and prospective truth freeze",
+    "Matched prospective A/B/C protocol before comparative compute"
+  ],
+  "raw_pdfs": {
+    "fchlpm_2023_hurricane_standards.pdf": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+    "impact_forecasting_2023_professional_team_20250425.pdf": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff",
+    "impact_forecasting_2023_submission_20250528.pdf": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa",
+    "verisk_2023_professional_team_20250403.pdf": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e",
+    "verisk_2023_submission_20250527.pdf": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+  },
+  "selection_sha256": "1507701856fb52964e24ffd36d0d5d38637639fbfae78906a2f8aa5fd13c890b",
+  "status": "PREPARED_NOT_ADJUDICATED_NOT_MODEL_EVALUATED"
+}

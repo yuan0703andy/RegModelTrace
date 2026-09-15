@@ -13,7 +13,7 @@ from typing import Any
 from .adjudication import agreement, validate_return
 from .aggregate import AGGREGATION_RULE_VERSION, aggregate_relation
 from .baselines import build_request
-from .schema import EvidenceSufficiency, FacetCase, FacetDefinition, FacetState
+from .schema import EvidenceProposition, EvidenceSufficiency, FacetCase, FacetDefinition, FacetState
 
 
 def sha(path: Path) -> str:
@@ -35,15 +35,23 @@ def adjudicated_cases(pilot_path: Path, resolution: dict[str, Any]) -> list[Face
         raise ValueError("Resolution and pilot case identities differ")
     cases = []
     for case_id in sorted(pilot):
-        base = dict(pilot[case_id])
+        base = {k: v for k, v in pilot[case_id].items() if k in FacetCase.model_fields}
+        base["evidence"] = [
+            {k: v for k, v in item.items() if k in EvidenceProposition.model_fields}
+            for item in base["evidence"]
+        ]
         outcome = resolved[case_id]
         allowed_ids = {item["proposition_id"] for item in base["evidence"]}
+        vendor_ids = {item["proposition_id"] for item in base["evidence"]
+                      if item["actor_role"] in {"VENDOR", "VENDOR_SUBMISSION"}}
         facets = []
         for item in outcome["facets"]:
             support = set(item["supporting_proposition_ids"])
             limits = set(item["limiting_proposition_ids"])
             if not support | limits <= allowed_ids:
                 raise ValueError(f"Unknown proposition membership in {case_id}/{item['facet_id']}")
+            if item["state"] == "DEMONSTRATED" and not support & vendor_ids:
+                raise ValueError("Demonstrated vendor facet requires vendor supporting evidence")
             facets.append(
                 FacetDefinition(
                     facet_id=item["facet_id"],
@@ -90,6 +98,12 @@ def main() -> None:
     if args.output.exists():
         raise RuntimeError("Refusing to overwrite an FT-1 freeze")
     source_scope = load(args.source_scope_verification)
+    if source_scope.get("pilot_sha256") != sha(args.pilot):
+        raise ValueError("Source-scope verification does not bind these pilot bytes")
+    if any(not source_scope.get(field) for field in (
+        "verifier_name", "verification_date", "attestation"
+    )):
+        raise ValueError("Independent source-scope verification is unsigned")
     pilot_ids = {case["case_id"] for case in load(args.pilot)}
     scope_cases = {case["case_id"]: case for case in source_scope["cases"]}
     if set(scope_cases) != pilot_ids or any(
@@ -125,6 +139,7 @@ def main() -> None:
         (args.model_config, "model_config.json"),
         (args.source_scope_verification, "source_scope_verification.json"),
         (args.decision_rule, "decision_rule.json"),
+        (args.pilot, "source_pilot.json"),
     ]:
         shutil.copy2(source, args.output / name)
     files = sorted(path for path in args.output.iterdir() if path.name != "freeze.json")

@@ -26,8 +26,14 @@ def model_payload(case: FacetCase) -> tuple[dict[str, Any], dict[str, str]]:
     for index, item in enumerate(case.evidence, 1):
         handle = f"E{index:02d}"
         bindings[handle] = item.proposition_id
-        if item.actor_role in grouped:
-            grouped[item.actor_role].append({"handle": handle, "text": item.text})
+        role = {
+            "STANDARDS": "REGULATOR",
+            "VENDOR_SUBMISSION": "VENDOR",
+            "PROFESSIONAL_TEAM_REPORT": "REVIEWER",
+        }.get(item.actor_role, item.actor_role)
+        if role not in grouped:
+            raise ValueError(f"Unknown provenance actor role: {item.actor_role}")
+        grouped[role].append({"handle": handle, "text": item.text})
     payload = {
         "requirement": {
             "id": case.requirement_id,

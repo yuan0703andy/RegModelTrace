@@ -18,6 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .token_budget import count_chat_tokens
+
 os.environ["VLLM_ENABLE_V1_MULTIPROCESSING"] = "0"
 
 
@@ -148,7 +150,7 @@ def main() -> None:
             {"role": "system", "content": request["system"]},
             {"role": "user", "content": user},
         ]
-        token_count = len(tokenizer.apply_chat_template(conversation, tokenize=True, add_generation_prompt=True))
+        token_count = count_chat_tokens(tokenizer, conversation)
         if token_count + config["max_output_tokens"] > config["max_model_len"]:
             raise ValueError(f"Context truncation forbidden: {request['request_id']}")
         messages.append(conversation)

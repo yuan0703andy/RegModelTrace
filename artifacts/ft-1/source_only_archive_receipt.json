@@ -1,0 +1,14 @@
+{
+  "archive_bytes": 93465314,
+  "archive_filename": "RegModelTrace-FT1-SourceOnly-20260915.zip",
+  "archive_sha256": "4556c96af4c65c502dac9e3215f1bff11d59859c2ed34a4bf26ac34aa87bcc68",
+  "dcc_archive_sha256_verified": true,
+  "durable_archive_copies": [
+    "Downloads",
+    "DCC research-runs"
+  ],
+  "human_adjudication_status": "PENDING",
+  "model_inference_runs": 0,
+  "original_pdfs_preserved": 5,
+  "status": "ARCHIVE_INTEGRITY_VERIFIED"
+}

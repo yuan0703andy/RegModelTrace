@@ -82,7 +82,9 @@ def saved_condition_a(path: Path, eligible: set[str]) -> dict[str, Any]:
     return metrics
 
 
-def decide(a: dict[str, Any], c: dict[str, Any], residuals: list[dict[str, Any]], rule: dict[str, Any], safety_violations: int) -> str:
+def decide(a: dict[str, Any], c: dict[str, Any], residuals: list[dict[str, Any]], rule: dict[str, Any], safety_violations: int, *, matched_condition_a: bool = False) -> str:
+    if not matched_condition_a:
+        return "EVIDENCE_INCONCLUSIVE"
     partial_support = c["per_class"]["PARTIALLY_ALIGNED"]["support"]
     aligned_support = c["per_class"]["ALIGNED"]["support"]
     if partial_support < rule["minimum_partial_truth_cases"] or aligned_support < rule["minimum_aligned_truth_cases"]:
@@ -136,6 +138,8 @@ def main() -> None:
     rule = load(args.frozen / "decision_rule.json")
     decision = decide(a, c, c_residuals, rule, args.safety_violations)
     report = {
+        "matched_condition_a": False,
+        "comparative_decision_limitation": "Saved historical A does not certify identical prospectively frozen evidence. A matched-reference protocol is pending.",
         "condition_a": a,
         "condition_b": b,
         "condition_c": c,
@@ -150,7 +154,7 @@ def main() -> None:
             "calibration_claim": "NOT_AUTHORIZED",
         },
         "decision": decision,
-        "lora_authorized": decision == "WEIGHT_ADAPTATION_STILL_JUSTIFIED",
+        "lora_authorized": False,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write(args.output, report)

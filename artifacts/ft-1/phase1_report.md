@@ -70,7 +70,7 @@ The next valid action is to verify or newly establish outcome-independent eviden
 
 ## Verification
 
-- Offline tests: 11 passed.
+- Offline tests: 16 passed.
 - Deterministic source-scope audit rerun and retained regulator-metadata copy hashes: passed.
 - OpenSpec strict validation: 7/7 items passed.
 - DCC archive presence and compute-node routing: passed.
@@ -92,3 +92,15 @@ Five CoreLogic entries were removed from the pilot and return templates. The rem
 ## Completed source-scope audit
 
 All 19 current fixture-derived bundles are EXCLUDE for independent adjudication. Nine original Impact/Verisk regulator/source seeds are KEEP for fresh scope construction; ten seeds are UNRESOLVED. Independent pilot ready: 0. Existing return templates are retired. B/C remain blocked; no inference or training occurred. See [the eligibility report](source_scope_audit/eligibility_report.md). Historical A is reference-only when rebuilt bundles differ; matched A/B/C inputs remain a prerequisite.
+
+## Source-only preparation completed
+
+A separate 24-case development candidate pack is prepared for Impact and Verisk (12 full standards per vendor). Dimensions were selected from regulator-only structure using two hash-ordered standards per discipline and locked before vendor/reviewer input reads. No class balance, historical membership, alignment labels, or model output influenced the rebuild.
+
+All source text blocks reconstruct from canonical page spans, and five original PDF hashes match the archive. Geometry alignment and unsupported table-header warnings remain explicit. The broad 7,846 block references are navigation context, not Gold evidence or a recall denominator. Mechanical subsection proposals still require human atomic splitting and OR/condition review.
+
+The self-contained review package and checksum inventory are preserved outside Git. Preparation is COMPLETE; independent scope verification, two actual human adjudications, disagreement resolution, prospective truth freeze, and a matched A/B/C reference are NOT COMPLETE. No model inference or training occurred. FT-1 remains EVIDENCE_INCONCLUSIVE.
+
+## Corrected context-budget diagnostic
+
+The first CPU tokenizer diagnostic was invalid because len(mapping) counted fields, not token IDs. Its raw receipt is preserved under an explicitly invalid v1 filename. Corrected token-ID counting found 19/24 broad navigation prototypes over the frozen budget (input-token range 6,186–29,985). This is not a final B/C context assessment. Scope finalization and exact-template preflight remain required; no truncation or inference occurred. The same generic counting defect was fixed in the research runner before any run.
