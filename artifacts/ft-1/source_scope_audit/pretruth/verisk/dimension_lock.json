@@ -1,0 +1,17 @@
+{
+  "version": "validation-d-dimension-lock-1.0",
+  "status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+  "dimension_selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+  "selected_dimension_ids": [
+    "G-2",
+    "M-3",
+    "S-2",
+    "V-2",
+    "A-2",
+    "CI-6"
+  ],
+  "selection_count": 6,
+  "vendor_or_reviewer_artifacts_read": false,
+  "alignment_truth_present": false,
+  "selection_code_sha256": "244b3da995f463a26f188d8c9bf9d4c56b62bae3312c02a27402d72fd46c33a6"
+}

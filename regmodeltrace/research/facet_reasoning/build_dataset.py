@@ -416,6 +416,9 @@ def main() -> None:
     parser.add_argument("--baseline-csv", type=Path)
     args = parser.parse_args()
 
+    if (args.output_root / "source_scope_audit" / "eligibility_report.json").exists():
+        raise ValueError("Audited candidate pack cannot be overwritten by historical fixture import")
+
     cases, manifest = load_cases(args.input_root)
     pilot = select_pilot(cases)
     output = args.output_root

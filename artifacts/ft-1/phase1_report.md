@@ -15,7 +15,7 @@ The completed release remains closed at Git commit `9b0c0d29f3970613e14b5411041a
 - Separate research-only schemas, dataset builder, Condition B/C contracts, GPU runner, scorer, and agreement checker.
 - Hash inventory of five external frozen v2.2 fixtures.
 - Leakage metadata for vendor lineage, version, requirement family, regulator text, source passage, revision ancestry, and review ancestry.
-- A provisional 19-case candidate pack excluding CoreLogic, with two blank adjudicator returns and a resolution template. Source-only eligibility is not yet certified.
+- A 19-case historical candidate pack excluding CoreLogic, now retired for independent adjudication following the source-scope audit.
 - Saved Condition A import and summary; the closed fixtures were not rerun.
 
 ## Current data audit
@@ -70,7 +70,8 @@ The next valid action is to verify or newly establish outcome-independent eviden
 
 ## Verification
 
-- Offline tests: 9 passed.
+- Offline tests: 11 passed.
+- Deterministic source-scope audit rerun and retained regulator-metadata copy hashes: passed.
 - OpenSpec strict validation: 7/7 items passed.
 - DCC archive presence and compute-node routing: passed.
 - Qwen inference: not run, by gate.
@@ -87,3 +88,7 @@ Historical CoreLogic judgment = ERROR_ANALYSIS_ONLY
 ```
 
 Five CoreLogic entries were removed from the pilot and return templates. The remaining 19 historical candidates are provisional: they require clean source-scope verification or replacement by new independently established cases. No class labels or known model outcomes are used to backfill the pilot. The 20–30-case pilot target and independent human gate remain unchanged.
+
+## Completed source-scope audit
+
+All 19 current fixture-derived bundles are EXCLUDE for independent adjudication. Nine original Impact/Verisk regulator/source seeds are KEEP for fresh scope construction; ten seeds are UNRESOLVED. Independent pilot ready: 0. Existing return templates are retired. B/C remain blocked; no inference or training occurred. See [the eligibility report](source_scope_audit/eligibility_report.md). Historical A is reference-only when rebuilt bundles differ; matched A/B/C inputs remain a prerequisite.

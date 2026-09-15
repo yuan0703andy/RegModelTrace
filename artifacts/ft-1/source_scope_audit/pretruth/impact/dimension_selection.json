@@ -1,0 +1,244 @@
+{
+  "version": "alignment-dataset-dimension-selection-1.0",
+  "created_utc": "2026-09-13T09:46:48.236191+00:00",
+  "status": "FROZEN_FROM_REGULATOR_TEXT_BEFORE_PAIRED_ALIGNMENT_REVIEW",
+  "corpus": "FCHLPM 2023 / Impact Forecasting Version 3.0",
+  "regulator_document_id": "fchlpm_2023_hurricane_standards",
+  "regulator_document_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+  "selection_basis": {
+    "source_accessed": "REGULATOR_ONLY",
+    "paired_vendor_sections_inspected_for_alignment_truth": false,
+    "paired_reviewer_sections_inspected_for_alignment_truth": false,
+    "target_class_quota_used": false,
+    "rule": "Select dimensions from regulator text that instantiate the three predeclared recurrence probes: requirement scope versus implementation method, reviewer scrutiny versus vendor implementation evidence, and documentary sufficiency for complex multi-part requirements.",
+    "strongest_objection": "Selecting dimensions after observing vendor or reviewer outcomes could manufacture class variation. These dimensions are frozen without those outcomes; natural truth distribution will be reported rather than optimized."
+  },
+  "cross_cutting_adjudication_invariants": [
+    "Reviewer scrutiny is not vendor implementation evidence.",
+    "An implementation method not prescribed by the requirement is not a conflict merely because it differs from another method.",
+    "Evidence for one facet or dimension does not establish a distinct facet or dimension.",
+    "A copied or paraphrased requirement is not proof of implementation.",
+    "Absence from a bounded evidence bundle is not absence from the fixed corpus."
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "IF23-M3B-HISTORICAL-LANDFALL-OUTPUT",
+      "standard_id": "M-3",
+      "subsection_id": "B",
+      "title": "Historical consistency of modeled coastal landfall-frequency outputs",
+      "selection_rationale": "Prospectively probes requirement-output scope versus an implementation method that the standard does not itself prescribe.",
+      "required_facets": [
+        "Modeled hurricane landfall-frequency distributions reflect the Model Base Hurricane Set for category 1 to 5 hurricanes.",
+        "Modeled distributions are consistent with observations for each coastal segment of Florida and neighboring states.",
+        "Any differences are justifiable."
+      ],
+      "regulator_sources": [
+        {
+          "block_id": "262520e0995dc4ce92548c4d",
+          "physical_pdf_page": 144,
+          "printed_page_label": "144",
+          "block_type": "heading",
+          "text": "B. Modeled hurricane landfall frequency distributions shall reflect the",
+          "text_sha256": "107d40352bff9804f3aaa38f757055cbf5916a7e8eb2ee59b4f63ff33eeddb4f",
+          "source_spans": [
+            {
+              "end": 290,
+              "page": 144,
+              "page_text_sha256": "9e2d0e37b5d0865ef45ab1eed92163f8fd0ac8188483cf2d6fa3c0258ea52295",
+              "start": 219
+            }
+          ]
+        },
+        {
+          "block_id": "ed24c350786daea510130df5",
+          "physical_pdf_page": 144,
+          "printed_page_label": "144",
+          "block_type": "paragraph",
+          "text": "Model Base Hurricane Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi). Any differences shall be justifiable.",
+          "text_sha256": "cc52e3d9d72ecfe53c901b73da6c40b149b3eebac860594fddf1d53553f034ab",
+          "source_spans": [
+            {
+              "end": 529,
+              "page": 144,
+              "page_text_sha256": "9e2d0e37b5d0865ef45ab1eed92163f8fd0ac8188483cf2d6fa3c0258ea52295",
+              "start": 291
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "IF23-CI5B-COMPONENT-TESTING",
+      "standard_id": "CI-5",
+      "subsection_id": "B",
+      "title": "Multi-part component-testing documentation and execution",
+      "selection_rationale": "Prospectively probes documentary sufficiency for a four-part requirement rather than accepting one testing activity as proof of the whole.",
+      "required_facets": [
+        "Testing software assists in documenting and analyzing all components.",
+        "Unit tests are performed and documented for each updated component.",
+        "Regression tests are performed and documented on incremental builds.",
+        "Integration tests are performed and documented for all components, with sufficient testing to execute every component at least once."
+      ],
+      "regulator_sources": [
+        {
+          "block_id": "750ab65a3562da9c060bdfbc",
+          "physical_pdf_page": 275,
+          "printed_page_label": "275",
+          "block_type": "list",
+          "text": "1. Testing software shall be used to assist in documenting and analyzing all components.",
+          "text_sha256": "197e76012010ae89e6fc9b75069d1cefc102f25ff033b9b04b8ccc04749b5aec",
+          "source_spans": [
+            {
+              "end": 505,
+              "page": 275,
+              "page_text_sha256": "23081be46e2f036ccaf575a72b34e0c48281c15bab6f5d55d06de283ad662b36",
+              "start": 417
+            }
+          ]
+        },
+        {
+          "block_id": "c94b7f89fecd5419e0e8ee05",
+          "physical_pdf_page": 275,
+          "printed_page_label": "275",
+          "block_type": "list",
+          "text": "2. Unit tests shall be performed and documented for each updated component.",
+          "text_sha256": "d768553b0d83ca816e58871fcc8f958f99d11fa808b4090c66c9faa8b714d022",
+          "source_spans": [
+            {
+              "end": 581,
+              "page": 275,
+              "page_text_sha256": "23081be46e2f036ccaf575a72b34e0c48281c15bab6f5d55d06de283ad662b36",
+              "start": 506
+            }
+          ]
+        },
+        {
+          "block_id": "a9e9ae23e771fb85c7bcf2d2",
+          "physical_pdf_page": 275,
+          "printed_page_label": "275",
+          "block_type": "list",
+          "text": "3. Regression tests shall be performed and documented on incremental builds.",
+          "text_sha256": "216ffaad332adfc721de4e0081adbeffbc914b4ce4e35187c0b919664e995636",
+          "source_spans": [
+            {
+              "end": 658,
+              "page": 275,
+              "page_text_sha256": "23081be46e2f036ccaf575a72b34e0c48281c15bab6f5d55d06de283ad662b36",
+              "start": 582
+            }
+          ]
+        },
+        {
+          "block_id": "704a1c5d3fbe88741ba0d1a8",
+          "physical_pdf_page": 275,
+          "printed_page_label": "275",
+          "block_type": "list",
+          "text": "4. Integration tests shall be performed and documented to ensure the correctness of all hurricane model components. Sufficient testing shall be performed to ensure that all components have been executed at least once.",
+          "text_sha256": "b5a62b804e24dd3508906afec1940ef90e329ffa742c5a438e563b8024326804",
+          "source_spans": [
+            {
+              "end": 876,
+              "page": 275,
+              "page_text_sha256": "23081be46e2f036ccaf575a72b34e0c48281c15bab6f5d55d06de283ad662b36",
+              "start": 659
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "IF23-G4-COMPONENT-INDEPENDENCE",
+      "standard_id": "G-4",
+      "subsection_id": null,
+      "title": "Theoretical soundness and non-compensating component independence",
+      "selection_rationale": "Prospectively probes wrong-dimension evidence and whether a statement about one component can support the broader non-compensation requirement.",
+      "required_facets": [
+        "Meteorology, vulnerability, and actuarial components are each theoretically sound without compensation for potential bias from other components.",
+        "Adjustments to one component do not compensate for deficiencies in another.",
+        "Interrelationships among components are reasonable, logical, and justifiable."
+      ],
+      "regulator_sources": [
+        {
+          "block_id": "56ec5efd031ab8d32732d5fa",
+          "physical_pdf_page": 123,
+          "printed_page_label": "123",
+          "block_type": "paragraph",
+          "text": "The meteorology, vulnerability, and actuarial components of the hurricane model shall each be theoretically sound without compensation for potential bias from other components.",
+          "text_sha256": "02740c66b12486369b618d3912c5aab27e52dce9b99a8a12914e52c30b3e663b",
+          "source_spans": [
+            {
+              "end": 223,
+              "page": 123,
+              "page_text_sha256": "ca9d7aba1a211085d11846cf5c58f137128c59c39052b41895c3b738fc7aedb9",
+              "start": 47
+            }
+          ]
+        },
+        {
+          "block_id": "661af10721dd6e5ddd04ae27",
+          "physical_pdf_page": 123,
+          "printed_page_label": "123",
+          "block_type": "paragraph",
+          "text": "Purpose: The primary components of the hurricane model shall be individually sound and operate independently. In other words, the hurricane model shall not allow adjustments to one component to compensate for deficiencies in other components (compensation which could inflate or reduce hurricane loss costs and hurricane probable maximum loss levels). A hurricane model would not meet this standard if an unjustifiable calibration or adjustment has been made to improve the match between hurricane model output and the Model Base Hurricane Set for a specific hurricane.",
+          "text_sha256": "137d38c13d83617d5cc7fd613f8e2ae7cf5bb9a8a45e4a9d1d10a61d1bbc867a",
+          "source_spans": [
+            {
+              "end": 793,
+              "page": 123,
+              "page_text_sha256": "ca9d7aba1a211085d11846cf5c58f137128c59c39052b41895c3b738fc7aedb9",
+              "start": 224
+            }
+          ]
+        },
+        {
+          "block_id": "f0dcb97c3692a668f32e40ea",
+          "physical_pdf_page": 123,
+          "printed_page_label": "123",
+          "block_type": "paragraph",
+          "text": "In addition to each component of the hurricane model meeting its respective standards, the interrelationship of the hurricane model components as a whole shall be reasonable, logical, and justifiable.",
+          "text_sha256": "0fe60881c65da0c40f2a8b96c369cfc9081525bd6a1a220ddc0078358e9bbcd1",
+          "source_spans": [
+            {
+              "end": 994,
+              "page": 123,
+              "page_text_sha256": "ca9d7aba1a211085d11846cf5c58f137128c59c39052b41895c3b738fc7aedb9",
+              "start": 794
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dimension_id": "IF23-S3-UNCERTAINTY-ANALYSIS",
+      "standard_id": "S-3",
+      "subsection_id": null,
+      "title": "Uncertainty analysis of temporal and spatial model outputs",
+      "selection_rationale": "Prospectively probes documentary sufficiency for a compound analytical requirement that includes method, simultaneous variation, attribution, and action.",
+      "required_facets": [
+        "An uncertainty analysis is performed on temporal and spatial hurricane-model outputs using current scientific and statistical methods.",
+        "Appropriate action is taken.",
+        "The analysis identifies and quantifies how input variables affect output uncertainty when inputs are simultaneously varied."
+      ],
+      "regulator_sources": [
+        {
+          "block_id": "70b1244c76d6556d6b081628",
+          "physical_pdf_page": 161,
+          "printed_page_label": "161",
+          "block_type": "paragraph",
+          "text": "The modeling organization shall have performed an uncertainty analysis on the temporal and spatial outputs of the hurricane model using current scientific and statistical methods in the appropriate disciplines and shall have taken appropriate action. The analysis shall identify and quantify the extent that input variables impact the uncertainty in hurricane model output as the input variables are simultaneously varied.",
+          "text_sha256": "b86e695912cc2e784c8c77cc805e80e07d680b58263999374a5614115ddbf743",
+          "source_spans": [
+            {
+              "end": 499,
+              "page": 161,
+              "page_text_sha256": "be84074d91861366e9bd62d31d4265b88fe42285e10e4943ef173655d0eec5cd",
+              "start": 77
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "truth_status": "NOT_ADJUDICATED",
+  "model_inference_status": "NOT_RUN"
+}

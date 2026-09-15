@@ -1,0 +1,15 @@
+{
+  "version": "alignment-dataset-dimension-lock-1.0",
+  "created_utc": "2026-09-13T09:46:48.236191+00:00",
+  "status": "FROZEN_BEFORE_VENDOR_REVIEWER_ALIGNMENT_ADJUDICATION",
+  "dimension_selection_sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d",
+  "dimension_ids": [
+    "IF23-M3B-HISTORICAL-LANDFALL-OUTPUT",
+    "IF23-CI5B-COMPONENT-TESTING",
+    "IF23-G4-COMPONENT-INDEPENDENCE",
+    "IF23-S3-UNCERTAINTY-ANALYSIS"
+  ],
+  "number_of_dimensions": 4,
+  "paired_alignment_truth_inspected_before_freeze": false,
+  "target_class_quota_used": false
+}

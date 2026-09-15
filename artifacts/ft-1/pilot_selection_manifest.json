@@ -1,1 +1,224 @@
-{"CORELOGIC_SOURCE_ONLY_REAUDIT":"SKIPPED","cases":[{"case_id":"FC-IF23-CI5B-COMPONENT-TESTING","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-TE23-V2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-M3B-ARA","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-VD23-V2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-IF23-M3B-HISTORICAL-LANDFALL-OUTPUT","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-TE23-S2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-CI5B-ARA","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-VD23-CI6","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-IF23-S3-UNCERTAINTY-ANALYSIS","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-TE23-G2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-V1A-ARA","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-VD23-S2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-IF23-G4-COMPONENT-INDEPENDENCE","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-TE23-CI6","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-CI5B-RMS","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-VD23-M3","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-TE23-A2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-M3B-RMS","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"},{"case_id":"FC-VD23-A2","evidence_scope_frozen_without_truth":false,"source_scope_status":"NOT_VERIFIED"}],"current_size":19,"historical_corelogic_use":"ERROR_ANALYSIS_ONLY","reason":"Original blinded package unavailable after cleanup; do not reconstruct from adjudicated fixture.","status":"PROVISIONAL_REQUIRES_SOURCE_SCOPE_VERIFICATION","target_size":24}
+{
+  "CORELOGIC_SOURCE_ONLY_REAUDIT": "SKIPPED",
+  "cases": [
+    {
+      "case_id": "FC-IF23-CI5B-COMPONENT-TESTING",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-TE23-V2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-M3B-ARA",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-VD23-V2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-IF23-M3B-HISTORICAL-LANDFALL-OUTPUT",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-TE23-S2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-CI5B-ARA",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-VD23-CI6",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-IF23-S3-UNCERTAINTY-ANALYSIS",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-TE23-G2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-V1A-ARA",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-VD23-S2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-IF23-G4-COMPONENT-INDEPENDENCE",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-TE23-CI6",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-CI5B-RMS",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-VD23-M3",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    },
+    {
+      "case_id": "FC-TE23-A2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-M3B-RMS",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED"
+    },
+    {
+      "case_id": "FC-VD23-A2",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_scope_frozen_without_truth": false,
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP"
+    }
+  ],
+  "current_size": 19,
+  "eligible_pilot_size": 0,
+  "historical_corelogic_use": "ERROR_ANALYSIS_ONLY",
+  "reason": "Original blinded package unavailable after cleanup; do not reconstruct from adjudicated fixture.",
+  "source_seed_counts": {
+    "KEEP": 9,
+    "UNRESOLVED": 10
+  },
+  "status": "AUDITED_NO_CURRENT_SCOPE_ELIGIBLE",
+  "target_size": 24
+}

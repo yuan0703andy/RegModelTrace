@@ -1,0 +1,1120 @@
+{
+  "alignment_labels_used": false,
+  "candidate_counts": {
+    "EXCLUDE": 19
+  },
+  "cases": [
+    {
+      "case_id": "FC-IF23-CI5B-COMPONENT-TESTING",
+      "corpus_id": "impact-forecasting-2023",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "19ed7ebf4b0ce352c75f4000d8ead85fd2941ef3930545f7f46dfc7051a0688d",
+        "lock_status": "FROZEN_BEFORE_VENDOR_REVIEWER_ALIGNMENT_ADJUDICATION",
+        "selection_sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d",
+        "source_block_ids": [
+          "750ab65a3562da9c060bdfbc",
+          "c94b7f89fecd5419e0e8ee05",
+          "a9e9ae23e771fb85c7bcf2d2",
+          "704a1c5d3fbe88741ba0d1a8"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "IF23-CI5B-COMPONENT-TESTING",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2023_hurricane_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_professional_team_20250425",
+          "expected_sha256": [
+            "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_submission_20250528",
+          "expected_sha256": [
+            "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-TE23-V2",
+      "corpus_id": "kcc-2023-exposed-test-e",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "V-2",
+      "source_documents": [
+        {
+          "document_id": "karen_clark_company_2023_kcc_review",
+          "expected_sha256": [
+            "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "karen_clark_company_2023_kcc_submission",
+          "expected_sha256": [
+            "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-M3B-ARA",
+      "corpus_id": "rms-ara-2019-development",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "M-3.B:historical-coastal-consistency",
+      "source_documents": [
+        {
+          "document_id": "ara_hurloss_10_0_2019_professional_team_20210311",
+          "expected_sha256": [
+            "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504"
+          ],
+          "matching_raw_paths": [
+            "data/raw/reviews/ara_2019_professional_team_20210311.pdf"
+          ]
+        },
+        {
+          "document_id": "ara_hurloss_10_0_2019_submission_20210310",
+          "expected_sha256": [
+            "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673"
+          ],
+          "matching_raw_paths": [
+            "data/raw/submissions/ara_2019_submission_20210310.pdf"
+          ]
+        },
+        {
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "expected_sha256": [
+            "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+          ],
+          "matching_raw_paths": [
+            "data/raw/standards/fchlpm_2019_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located"
+      ]
+    },
+    {
+      "case_id": "FC-VD23-V2",
+      "corpus_id": "verisk-2023-validation-d",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6",
+        "lock_status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+        "selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+        "source_block_ids": [
+          "f4f196a4ddbeed38a5726bfc",
+          "8b6779e92772b21c125488b6",
+          "ed3c3acc8c6a8b16a66c50f1",
+          "771db8765d9963295881d2c5"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "V-2",
+      "source_documents": [
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_review",
+          "expected_sha256": [
+            "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_submission",
+          "expected_sha256": [
+            "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-IF23-M3B-HISTORICAL-LANDFALL-OUTPUT",
+      "corpus_id": "impact-forecasting-2023",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "19ed7ebf4b0ce352c75f4000d8ead85fd2941ef3930545f7f46dfc7051a0688d",
+        "lock_status": "FROZEN_BEFORE_VENDOR_REVIEWER_ALIGNMENT_ADJUDICATION",
+        "selection_sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d",
+        "source_block_ids": [
+          "262520e0995dc4ce92548c4d",
+          "ed24c350786daea510130df5"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "IF23-M3B-HISTORICAL-LANDFALL-OUTPUT",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2023_hurricane_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_professional_team_20250425",
+          "expected_sha256": [
+            "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_submission_20250528",
+          "expected_sha256": [
+            "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-TE23-S2",
+      "corpus_id": "kcc-2023-exposed-test-e",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "S-2",
+      "source_documents": [
+        {
+          "document_id": "karen_clark_company_2023_kcc_review",
+          "expected_sha256": [
+            "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "karen_clark_company_2023_kcc_submission",
+          "expected_sha256": [
+            "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-CI5B-ARA",
+      "corpus_id": "rms-ara-2019-development",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "CI-5.B:component-testing",
+      "source_documents": [
+        {
+          "document_id": "ara_hurloss_10_0_2019_professional_team_20210311",
+          "expected_sha256": [
+            "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504"
+          ],
+          "matching_raw_paths": [
+            "data/raw/reviews/ara_2019_professional_team_20210311.pdf"
+          ]
+        },
+        {
+          "document_id": "ara_hurloss_10_0_2019_submission_20210310",
+          "expected_sha256": [
+            "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673"
+          ],
+          "matching_raw_paths": [
+            "data/raw/submissions/ara_2019_submission_20210310.pdf"
+          ]
+        },
+        {
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "expected_sha256": [
+            "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+          ],
+          "matching_raw_paths": [
+            "data/raw/standards/fchlpm_2019_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located"
+      ]
+    },
+    {
+      "case_id": "FC-VD23-CI6",
+      "corpus_id": "verisk-2023-validation-d",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6",
+        "lock_status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+        "selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+        "source_block_ids": [
+          "1df5e9f3e82e0fafc694da4c",
+          "9fb0dd168f0d75480e4ceef0",
+          "72a90cdf885b1793f6710f28",
+          "e192c3bb048a46b385e02b0a",
+          "1619a60261519e4c98802513",
+          "8eff604cc45298cd60330417"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "CI-6",
+      "source_documents": [
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_review",
+          "expected_sha256": [
+            "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_submission",
+          "expected_sha256": [
+            "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-IF23-S3-UNCERTAINTY-ANALYSIS",
+      "corpus_id": "impact-forecasting-2023",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "19ed7ebf4b0ce352c75f4000d8ead85fd2941ef3930545f7f46dfc7051a0688d",
+        "lock_status": "FROZEN_BEFORE_VENDOR_REVIEWER_ALIGNMENT_ADJUDICATION",
+        "selection_sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d",
+        "source_block_ids": [
+          "70b1244c76d6556d6b081628"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "IF23-S3-UNCERTAINTY-ANALYSIS",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2023_hurricane_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_professional_team_20250425",
+          "expected_sha256": [
+            "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_submission_20250528",
+          "expected_sha256": [
+            "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-TE23-G2",
+      "corpus_id": "kcc-2023-exposed-test-e",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "G-2",
+      "source_documents": [
+        {
+          "document_id": "karen_clark_company_2023_kcc_review",
+          "expected_sha256": [
+            "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "karen_clark_company_2023_kcc_submission",
+          "expected_sha256": [
+            "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-V1A-ARA",
+      "corpus_id": "rms-ara-2019-development",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "V-1.A:derivation-basis",
+      "source_documents": [
+        {
+          "document_id": "ara_hurloss_10_0_2019_professional_team_20210311",
+          "expected_sha256": [
+            "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504"
+          ],
+          "matching_raw_paths": [
+            "data/raw/reviews/ara_2019_professional_team_20210311.pdf"
+          ]
+        },
+        {
+          "document_id": "ara_hurloss_10_0_2019_submission_20210310",
+          "expected_sha256": [
+            "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673"
+          ],
+          "matching_raw_paths": [
+            "data/raw/submissions/ara_2019_submission_20210310.pdf"
+          ]
+        },
+        {
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "expected_sha256": [
+            "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+          ],
+          "matching_raw_paths": [
+            "data/raw/standards/fchlpm_2019_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located"
+      ]
+    },
+    {
+      "case_id": "FC-VD23-S2",
+      "corpus_id": "verisk-2023-validation-d",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6",
+        "lock_status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+        "selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+        "source_block_ids": [
+          "b5e1af9fa33566bd0bbcff15"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "S-2",
+      "source_documents": [
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_review",
+          "expected_sha256": [
+            "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_submission",
+          "expected_sha256": [
+            "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-IF23-G4-COMPONENT-INDEPENDENCE",
+      "corpus_id": "impact-forecasting-2023",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "19ed7ebf4b0ce352c75f4000d8ead85fd2941ef3930545f7f46dfc7051a0688d",
+        "lock_status": "FROZEN_BEFORE_VENDOR_REVIEWER_ALIGNMENT_ADJUDICATION",
+        "selection_sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d",
+        "source_block_ids": [
+          "56ec5efd031ab8d32732d5fa",
+          "661af10721dd6e5ddd04ae27",
+          "f0dcb97c3692a668f32e40ea"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "IF23-G4-COMPONENT-INDEPENDENCE",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2023_hurricane_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_professional_team_20250425",
+          "expected_sha256": [
+            "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf"
+          ]
+        },
+        {
+          "document_id": "impact_forecasting_2023_submission_20250528",
+          "expected_sha256": [
+            "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-TE23-CI6",
+      "corpus_id": "kcc-2023-exposed-test-e",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "CI-6",
+      "source_documents": [
+        {
+          "document_id": "karen_clark_company_2023_kcc_review",
+          "expected_sha256": [
+            "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "karen_clark_company_2023_kcc_submission",
+          "expected_sha256": [
+            "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-CI5B-RMS",
+      "corpus_id": "rms-ara-2019-development",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "CI-5.B:component-testing",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "expected_sha256": [
+            "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+          ],
+          "matching_raw_paths": [
+            "data/raw/standards/fchlpm_2019_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "expected_sha256": [
+            "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "expected_sha256": [
+            "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610"
+          ],
+          "matching_raw_paths": []
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-VD23-M3",
+      "corpus_id": "verisk-2023-validation-d",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6",
+        "lock_status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+        "selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+        "source_block_ids": [
+          "aef39cdaa4d3b986671a49d9",
+          "3ac06d4df078321b08053b88",
+          "262520e0995dc4ce92548c4d",
+          "ed24c350786daea510130df5",
+          "babf3a968b77f53bb807fb67",
+          "53cd1d2d30c574eb925c33d6"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "M-3",
+      "source_documents": [
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_review",
+          "expected_sha256": [
+            "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_submission",
+          "expected_sha256": [
+            "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    },
+    {
+      "case_id": "FC-TE23-A2",
+      "corpus_id": "kcc-2023-exposed-test-e",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "A-2",
+      "source_documents": [
+        {
+          "document_id": "karen_clark_company_2023_kcc_review",
+          "expected_sha256": [
+            "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "karen_clark_company_2023_kcc_submission",
+          "expected_sha256": [
+            "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-M3B-RMS",
+      "corpus_id": "rms-ara-2019-development",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Resolve source/lock dependencies independently or replace with a new case. Do not use the current fixture bundle.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": null,
+        "lock_status": null,
+        "selection_sha256": null,
+        "source_block_ids": [],
+        "verified": false
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_DEFINITIONS_READ_FROM_ADJUDICATED_COMPARISON_RECORD"
+      ],
+      "requirement_id": "M-3.B:historical-coastal-consistency",
+      "source_documents": [
+        {
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "expected_sha256": [
+            "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+          ],
+          "matching_raw_paths": [
+            "data/raw/standards/fchlpm_2019_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "expected_sha256": [
+            "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0"
+          ],
+          "matching_raw_paths": []
+        },
+        {
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "expected_sha256": [
+            "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610"
+          ],
+          "matching_raw_paths": []
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "UNRESOLVED",
+      "unresolved_dependencies": [
+        "Original pre-adjudication regulator dimension lock not located",
+        "One or more exact raw PDFs not located in checked archive paths"
+      ]
+    },
+    {
+      "case_id": "FC-VD23-A2",
+      "corpus_id": "verisk-2023-validation-d",
+      "current_candidate_verdict": "EXCLUDE",
+      "evidence_membership_exactly_matches_fixture": true,
+      "evidence_scope_frozen_without_truth": false,
+      "next_action": "Retain the regulator dimension seed; establish a new evidence scope from raw sources without fixture memberships or prior truth.",
+      "pretruth_regulator_dimension": {
+        "lock_sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6",
+        "lock_status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+        "selection_sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b",
+        "source_block_ids": [
+          "3231709da01fa706d49ee0d5",
+          "48bd685c5965a34bce55dd1c",
+          "41c2ed78e68e671cafa2be92",
+          "4c10c148fe42bcd3351ce007"
+        ],
+        "verified": true
+      },
+      "reason_codes": [
+        "EVIDENCE_MEMBERSHIP_FROM_ADJUDICATED_FIXTURE",
+        "FACET_BOUNDARIES_IMPORTED_FROM_HISTORICAL_HUMAN_DECISIONS"
+      ],
+      "requirement_id": "A-2",
+      "source_documents": [
+        {
+          "document_id": "shared_standards_2023_standards",
+          "expected_sha256": [
+            "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af"
+          ],
+          "matching_raw_paths": [
+            "data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+            "data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_review",
+          "expected_sha256": [
+            "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf"
+          ]
+        },
+        {
+          "document_id": "verisk_2023_verisk_submission",
+          "expected_sha256": [
+            "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed"
+          ],
+          "matching_raw_paths": [
+            "data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf"
+          ]
+        }
+      ],
+      "source_scope_status": "EXCLUDED_CURRENT_FIXTURE_SCOPE",
+      "source_seed_verdict": "KEEP",
+      "unresolved_dependencies": []
+    }
+  ],
+  "corelogic": "SKIPPED_DO_NOT_RECONSTRUCT_FROM_ADJUDICATED_FIXTURE",
+  "independent_pilot_ready": 0,
+  "model_inference_runs": 0,
+  "model_predictions_used": false,
+  "reads": [
+    {
+      "file": "pilot_pack.json",
+      "sha256": "75a04e671e9bab89f81fab820fff11dfc22d64ff69c9c82c155c891ce5b5684e"
+    },
+    {
+      "file": "model_cases.json",
+      "sha256": "7aefcf933d434a454548dfbd89e0c2a0e6cc040073dd90bf934141964c177104"
+    },
+    {
+      "file": "source_assertions.json",
+      "sha256": "d87dcd9e976d48e8d1c10e5b8fd171d1428028062544b221d2687898876e82c7"
+    },
+    {
+      "file": "model_cases.json",
+      "sha256": "cc00bf0b936644c781aa8caecbf75908049d45b2c1b94d7e0902442c697de2ed"
+    },
+    {
+      "file": "source_assertions.json",
+      "sha256": "240d4bd21df12e81dccf4ad08cca42fd67a0145b240e1b55e41ad0aff46b7173"
+    },
+    {
+      "file": "model_cases.json",
+      "sha256": "acfa961540bbef89f2feb7b390dde9041eab77493278647c78705025cc6bd58f"
+    },
+    {
+      "file": "source_assertions.json",
+      "sha256": "aca62ffc4ff2932271cccaf6805325d8159c489286c7f22ff56dda4e8c5bd6ea"
+    },
+    {
+      "file": "model_cases.json",
+      "sha256": "bafc03f5cd258809afe8015ebf58a6573e8c3d482059ee39c12c7fc90a1838ab"
+    },
+    {
+      "file": "source_assertions.json",
+      "sha256": "6fd192fae4fac545da840ca3e82dc93d840459bc3596efab6628a1c4244d7315"
+    },
+    {
+      "file": "dimension_selection.json",
+      "sha256": "3c9deb40c1e3b91a5f82196bf91e41cf73c99647cb23bdaa80d03dcc1cdb9a1d"
+    },
+    {
+      "file": "dimension_lock.json",
+      "sha256": "19ed7ebf4b0ce352c75f4000d8ead85fd2941ef3930545f7f46dfc7051a0688d"
+    },
+    {
+      "file": "validation_d_dimension_selection.json",
+      "sha256": "7c704de65e536279a6a02d0cf8a1f5ec79fbe391d38d59e552d1a967f25f3e0b"
+    },
+    {
+      "file": "dimension_lock.json",
+      "sha256": "d6bd538a5631bbca1b3bb5f068706a08dcd2b0180814221939e8dd8c685758e6"
+    }
+  ],
+  "scope_caveats": [
+    "KEEP source seeds are not KEEP fixture bundles and not frozen facet truth.",
+    "Historical sources are exposed development data; use independent annotators who have not seen their judgments.",
+    "A new evidence bundle cannot be causally compared against a saved A prediction on a different bundle. Pair A/B/C only on identical prospectively frozen evidence; closed Test E reruns remain prohibited.",
+    "No missing path is treated as corpus-wide source absence."
+  ],
+  "source_seed_counts": {
+    "KEEP": 9,
+    "UNRESOLVED": 10
+  },
+  "status": "COMPLETE",
+  "unit": "CURRENT_CANDIDATE_PACK_VERSION",
+  "version": "ft1-source-scope-eligibility-audit-1.0"
+}

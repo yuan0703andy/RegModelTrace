@@ -1,0 +1,247 @@
+{
+  "version": "validation-d-regulator-dimension-selection-1.0",
+  "status": "FROZEN_BEFORE_PAIRED_OUTCOME_REVIEW",
+  "selection_seed_sha256": "a56deee83b75d2ac3d783eb550c24905538cdf2a605cb383a9bd6118c73c04b7",
+  "selection_seed_source": "Frozen SCALE-1 pre-outcome split seed",
+  "selection_rule": "one standard per discipline; int(SHA256(seed + ':' + discipline), 16) modulo standards in numerical order",
+  "regulator_document_id": "shared_standards_2023_standards",
+  "regulator_parser_run_sha256": "60df1134939af38103c37342a4c094ba165e88556265172180febd9ace15cfe9",
+  "vendor_or_reviewer_artifacts_read": false,
+  "known_model_errors_used": false,
+  "expected_truth_used": false,
+  "desired_class_balance_used": false,
+  "dimensions": [
+    {
+      "discipline": "GENERAL",
+      "eligible_standard_ids": [
+        "G-1",
+        "G-2",
+        "G-3",
+        "G-4",
+        "G-5"
+      ],
+      "discipline_hash": "29afa7aa44b437ff0cad1c573223f0da831bcb430e6b1673e7351ac53b52c632",
+      "zero_based_index": 1,
+      "dimension_id": "G-2",
+      "standard_unit_id": "7c835d6428b99be3bdffc2a7",
+      "physical_pdf_pages": [
+        118
+      ],
+      "regulatory_source_block_ids": [
+        "79174444425dcbd1b27fbeb4",
+        "38fc9f06e7b8f46029073fe6",
+        "caeb53fdcbe31cee5d14576c",
+        "5ddda3f684d377364b75bacc",
+        "33c4d7287496dd042a1fae3d",
+        "048ba6414002bf52d4070f68"
+      ],
+      "requirement_text": "Consultants Engaged in Development and Implementation of the Hurricane Model* A. Hurricane model construction, testing, and evaluation shall be performed by modeling organization personnel or consultants who possess the necessary skills, formal education, and experience to develop the relevant components for hurricane loss projection methodologies. B. The hurricane model and hurricane model submission documentation shall be reviewed by modeling organization personnel or consultants in the following professional disciplines with requisite experience: structural/wind engineering (current licensed professional engineer), statistics (advanced degree or equivalent experience), actuarial science (Associate or Fellow of Casualty Actuarial Society or Society of Actuaries), meteorology (advanced degree), and computer/information science (advanced degree or equivalent experience and certifications). These individuals shall certify Expert Certification Forms G-1 through G-6 as applicable.",
+      "required_facets": [
+        {
+          "facet_id": "G-2.1",
+          "text": "Consultants Engaged in Development and Implementation of the Hurricane Model*"
+        },
+        {
+          "facet_id": "G-2.A",
+          "text": "A. Hurricane model construction, testing, and evaluation shall be performed by modeling organization personnel or consultants who possess the necessary skills, formal education, and experience to develop the relevant components for hurricane loss projection methodologies."
+        },
+        {
+          "facet_id": "G-2.B",
+          "text": "B. The hurricane model and hurricane model submission documentation shall be reviewed by modeling organization personnel or consultants in the following professional disciplines with requisite experience: structural/wind engineering (current licensed professional engineer), statistics (advanced degree or equivalent experience), actuarial science (Associate or Fellow of Casualty Actuarial Society or Society of Actuaries), meteorology (advanced degree), and computer/information science (advanced degree or equivalent experience and certifications). These individuals shall certify Expert Certification Forms G-1 through G-6 as applicable."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    },
+    {
+      "discipline": "METEOROLOGICAL",
+      "eligible_standard_ids": [
+        "M-1",
+        "M-2",
+        "M-3",
+        "M-4",
+        "M-5",
+        "M-6"
+      ],
+      "discipline_hash": "481fcb1ffba23b046d60c3a0dcceea33d319ca0fd99aed3dfaa7f6bb21effc96",
+      "zero_based_index": 2,
+      "dimension_id": "M-3",
+      "standard_unit_id": "8deeb601ef84d0d38324af07",
+      "physical_pdf_pages": [
+        144
+      ],
+      "regulatory_source_block_ids": [
+        "aef39cdaa4d3b986671a49d9",
+        "3ac06d4df078321b08053b88",
+        "262520e0995dc4ce92548c4d",
+        "ed24c350786daea510130df5",
+        "babf3a968b77f53bb807fb67",
+        "53cd1d2d30c574eb925c33d6"
+      ],
+      "requirement_text": "A. Modeled probability distributions of hurricane parameters shall be consistent with the Model Base Hurricane Set. Any differences shall be justifiable. B. Modeled hurricane landfall frequency distributions shall reflect the Model Base Hurricane Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi). Any differences shall be justifiable. C. The hurricane model shall use maximum one-minute sustained 10-meter windspeed when defining hurricane landfall intensity. This applies both to the Model Base Hurricane Set used to develop landfall frequency distributions as a function of coastal location and to the modeled winds in each hurricane which causes damage. The associated maximum one-minute sustained 10-meter windspeed shall be within the range of windspeeds (in statute miles per hour) categorized by the Saffir- Simpson Hurricane Wind Scale.",
+      "required_facets": [
+        {
+          "facet_id": "M-3.A",
+          "text": "A. Modeled probability distributions of hurricane parameters shall be consistent with the Model Base Hurricane Set. Any differences shall be justifiable."
+        },
+        {
+          "facet_id": "M-3.B",
+          "text": "B. Modeled hurricane landfall frequency distributions shall reflect the Model Base Hurricane Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi). Any differences shall be justifiable."
+        },
+        {
+          "facet_id": "M-3.C",
+          "text": "C. The hurricane model shall use maximum one-minute sustained 10-meter windspeed when defining hurricane landfall intensity. This applies both to the Model Base Hurricane Set used to develop landfall frequency distributions as a function of coastal location and to the modeled winds in each hurricane which causes damage. The associated maximum one-minute sustained 10-meter windspeed shall be within the range of windspeeds (in statute miles per hour) categorized by the Saffir- Simpson Hurricane Wind Scale."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    },
+    {
+      "discipline": "STATISTICAL",
+      "eligible_standard_ids": [
+        "S-1",
+        "S-2",
+        "S-3",
+        "S-4",
+        "S-5",
+        "S-6"
+      ],
+      "discipline_hash": "011c4132c89c17cd33e8ab47bf3ad6d722c961c4e5f783ffd7b0bc096851700d",
+      "zero_based_index": 1,
+      "dimension_id": "S-2",
+      "standard_unit_id": "a7339ef5dab7e5c2d2a4d6c0",
+      "physical_pdf_pages": [
+        160
+      ],
+      "regulatory_source_block_ids": [
+        "b5e1af9fa33566bd0bbcff15"
+      ],
+      "requirement_text": "The modeling organization shall have assessed the sensitivity of temporal and spatial outputs with respect to the simultaneous variation of input variables using current scientific and statistical methods in the appropriate disciplines and shall have taken appropriate action.",
+      "required_facets": [
+        {
+          "facet_id": "S-2.1",
+          "text": "The modeling organization shall have assessed the sensitivity of temporal and spatial outputs with respect to the simultaneous variation of input variables using current scientific and statistical methods in the appropriate disciplines and shall have taken appropriate action."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    },
+    {
+      "discipline": "VULNERABILITY",
+      "eligible_standard_ids": [
+        "V-1",
+        "V-2",
+        "V-3",
+        "V-4"
+      ],
+      "discipline_hash": "904837288a193f5e90c617ca93a6038321a9afd9b2ba567a070d953a5ad173e1",
+      "zero_based_index": 1,
+      "dimension_id": "V-2",
+      "standard_unit_id": "a9692554adaf17bbce980e93",
+      "physical_pdf_pages": [
+        196
+      ],
+      "regulatory_source_block_ids": [
+        "f4f196a4ddbeed38a5726bfc",
+        "8b6779e92772b21c125488b6",
+        "ed3c3acc8c6a8b16a66c50f1",
+        "771db8765d9963295881d2c5"
+      ],
+      "requirement_text": "A. Development of the contents hurricane vulnerability functions shall be based on a combination of available insurance company hurricane claims data and rational engineering analysis supported by laboratory testing, field testing, or post-event site investigations. B. The relationship between the hurricane model building and contents hurricane vulnerability functions shall be consistent with, and supported by, the relationship observed in insurance company hurricane claims data.",
+      "required_facets": [
+        {
+          "facet_id": "V-2.A",
+          "text": "A. Development of the contents hurricane vulnerability functions shall be based on a combination of available insurance company hurricane claims data and rational engineering analysis supported by laboratory testing, field testing, or post-event site investigations."
+        },
+        {
+          "facet_id": "V-2.B",
+          "text": "B. The relationship between the hurricane model building and contents hurricane vulnerability functions shall be consistent with, and supported by, the relationship observed in insurance company hurricane claims data."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    },
+    {
+      "discipline": "ACTUARIAL",
+      "eligible_standard_ids": [
+        "A-1",
+        "A-2",
+        "A-3",
+        "A-4",
+        "A-5",
+        "A-6"
+      ],
+      "discipline_hash": "3b5d7f4db66e2f4fe81e47092be6eea785d3511a76d32dfc9219825a5ae535c3",
+      "zero_based_index": 1,
+      "dimension_id": "A-2",
+      "standard_unit_id": "9164d4f438740805207f2fdd",
+      "physical_pdf_pages": [
+        221
+      ],
+      "regulatory_source_block_ids": [
+        "3231709da01fa706d49ee0d5",
+        "48bd685c5965a34bce55dd1c",
+        "41c2ed78e68e671cafa2be92",
+        "4c10c148fe42bcd3351ce007"
+      ],
+      "requirement_text": "A. Modeled hurricane loss costs and hurricane probable maximum loss levels shall reflect all insured wind related damages from hurricanes that produce minimum damaging windspeeds or greater on land in Florida. B. The modeling organization shall have a documented procedure for distinguishing wind-related hurricane losses from other peril losses.",
+      "required_facets": [
+        {
+          "facet_id": "A-2.A",
+          "text": "A. Modeled hurricane loss costs and hurricane probable maximum loss levels shall reflect all insured wind related damages from hurricanes that produce minimum damaging windspeeds or greater on land in Florida."
+        },
+        {
+          "facet_id": "A-2.B",
+          "text": "B. The modeling organization shall have a documented procedure for distinguishing wind-related hurricane losses from other peril losses."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    },
+    {
+      "discipline": "COMPUTER_INFORMATION",
+      "eligible_standard_ids": [
+        "CI-1",
+        "CI-2",
+        "CI-3",
+        "CI-4",
+        "CI-5",
+        "CI-6",
+        "CI-7",
+        "CI-8"
+      ],
+      "discipline_hash": "ef97fbb8f11fc45fd9f6304b1d44b3b54a2d85327b2b26f3151d54d150c9c1a5",
+      "zero_based_index": 5,
+      "dimension_id": "CI-6",
+      "standard_unit_id": "c9011c5f23b30ebf4789b7e0",
+      "physical_pdf_pages": [
+        277
+      ],
+      "regulatory_source_block_ids": [
+        "1df5e9f3e82e0fafc694da4c",
+        "9fb0dd168f0d75480e4ceef0",
+        "72a90cdf885b1793f6710f28",
+        "e192c3bb048a46b385e02b0a",
+        "1619a60261519e4c98802513",
+        "8eff604cc45298cd60330417"
+      ],
+      "requirement_text": "A. Interfaces shall be implemented as consistent with accepted principles and practices of Human-Computer Interaction (HCI), Interaction Design, and User Experience (UX) engineering. B. Interface options used in the hurricane model shall be unique, explicit, and distinctly emphasized. C. For a Florida insurance rate filing, interface options shall be limited to those options found acceptable by the Commission.",
+      "required_facets": [
+        {
+          "facet_id": "CI-6.A",
+          "text": "A. Interfaces shall be implemented as consistent with accepted principles and practices of Human-Computer Interaction (HCI), Interaction Design, and User Experience (UX) engineering."
+        },
+        {
+          "facet_id": "CI-6.B",
+          "text": "B. Interface options used in the hurricane model shall be unique, explicit, and distinctly emphasized."
+        },
+        {
+          "facet_id": "CI-6.C",
+          "text": "C. For a Florida insurance rate filing, interface options shall be limited to those options found acceptable by the Commission."
+        }
+      ],
+      "source_role": "REGULATOR",
+      "selection_rationale": "Explicit FCHLPM requirement selected by the pre-outcome one-per-discipline hash rule; not selected from Verisk or reviewer outcomes."
+    }
+  ]
+}

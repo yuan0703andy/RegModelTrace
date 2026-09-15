@@ -1,3 +1,5 @@
+> RETIRED FOR INDEPENDENT ADJUDICATION: all current evidence scopes derive from adjudicated fixtures. Retained for audit history only. See source_scope_audit/eligibility_report.md.
+
 # FT-1 Provisional Adjudication Candidate Pack
 
 Labels and model outputs are omitted, but these historical-fixture candidates still require independent source-scope verification before blinded adjudication. CoreLogic is excluded. This pack is not certified source-only.

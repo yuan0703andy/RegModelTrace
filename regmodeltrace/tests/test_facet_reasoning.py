@@ -64,3 +64,26 @@ def test_agreement_rejects_unsigned_machine_like_returns() -> None:
     value = {"adjudicator_name": None, "adjudication_date": None, "attestation": None, "cases": []}
     with pytest.raises(ValueError, match="unsigned"):
         agreement(value, value)
+
+
+def test_source_scope_audit_denies_truth_before_opening(tmp_path) -> None:
+    from regmodeltrace.research.facet_reasoning.audit_source_scope import read_json
+
+    reads = []
+    with pytest.raises(PermissionError, match='cannot read truth'):
+        read_json(tmp_path / 'comparison_truth.json', reads)
+    assert reads == []
+
+
+def test_builder_cannot_overwrite_retired_audited_pack(tmp_path, monkeypatch) -> None:
+    import sys
+    from regmodeltrace.research.facet_reasoning import build_dataset
+
+    report = tmp_path / 'source_scope_audit' / 'eligibility_report.json'
+    report.parent.mkdir()
+    report.write_text('{}')
+    monkeypatch.setattr(sys, 'argv', ['builder', '--input-root', str(tmp_path / 'absent'),
+                                    '--output-root', str(tmp_path)])
+    with pytest.raises(ValueError, match='cannot be overwritten'):
+        build_dataset.main()
+    assert report.read_text() == '{}'
