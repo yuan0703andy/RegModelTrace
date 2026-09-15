@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct-AWQ",
+  "model_revision": "5c7cb76a268fc6cfbb9c4777eb24ba6e27f9ee6c",
+  "model_path": "/hpc/group/borsuklab/yh421/regmodeltrace-runtime/hf-cache/hub/models--Qwen--Qwen2.5-32B-Instruct-AWQ/snapshots/5c7cb76a268fc6cfbb9c4777eb24ba6e27f9ee6c",
+  "vllm_version": "0.29.0",
+  "dtype": "auto",
+  "max_model_len": 12288,
+  "max_output_tokens": 1024,
+  "max_num_seqs": 4,
+  "gpu_memory_utilization": 0.9,
+  "temperature": 0.0,
+  "seed": 1847,
+  "semantic_retries": 0,
+  "enable_prefix_caching": false
+}

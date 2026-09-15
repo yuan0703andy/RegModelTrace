@@ -1,0 +1,24 @@
+{
+  "historical_release_commit": "9b0c0d29f3970613e14b5411041a8a88e2e22f93",
+  "historical_release_tree": "65e809e82e061647aad02ab3376bc941f8b3a63e",
+  "immutable_files": {
+    "artifacts/review-1/closure_receipt.json": "bfdb8b1dc1ea25fc9ebcbdf4c8ecbc2239b4778dc91c69f0e334294aaf06a3ae",
+    "artifacts/scale-1/systems_lane_closure.json": "0de87423d35bee25e279d0e8d6f298bca7eb93c31dac87249ca27b5a1e5211a8",
+    "artifacts/test-e/final_held_out_report.json": "3cff3bbd6f98b7dcb081c81ef3e4eccd99411aedc7b0fa9c8119505fde3ddfa1",
+    "artifacts/test-e/project_closure_receipt.json": "626f73d396150662f7d20acbac2f9954ef5ff38bb5cc22c3027175a25158451a",
+    "regmodeltrace/config/alignment_v2_2_choice_contract.json": "77142e8d60feaf3a764f2b823537990c65555bdc61a638189f6c779b94c4b99a"
+  },
+  "new_track": {
+    "FINE_TUNING_EXPERIMENT": "CONDITIONALLY_JUSTIFIED",
+    "NEXT_RELEASE_RESEARCH": "OPEN",
+    "PRODUCTION_DEPLOYMENT": "NOT_AUTHORIZED",
+    "TRAINING_DATA_READY": "NO"
+  },
+  "status": {
+    "FINAL_MODEL": "Base Qwen",
+    "FINE_TUNING": "NOT_JUSTIFIED",
+    "PROJECT_TECHNICAL_DEVELOPMENT": "CLOSED",
+    "RERUN": "NOT_AUTHORIZED",
+    "TEST_E": "CLOSED"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "ft1-phase1-decision-1.0",
+  "frozen_prospectively": true,
+  "minimum_partial_truth_cases": 3,
+  "minimum_aligned_truth_cases": 3,
+  "representation_problem_dominant": {
+    "minimum_condition_c_partial_recall_gain_over_a": 0.4,
+    "minimum_condition_c_false_aligned_rate_reduction_from_a": 0.4,
+    "minimum_condition_c_facet_macro_f1": 0.8,
+    "maximum_aligned_precision_regression": 0.05,
+    "maximum_new_safety_violations": 0
+  },
+  "weight_adaptation_still_justified": {
+    "maximum_condition_c_partial_recall": 0.6,
+    "minimum_condition_c_false_aligned_rate": 0.4,
+    "minimum_residual_error_corpora": 2,
+    "minimum_residual_error_requirement_families": 2
+  },
+  "otherwise": "EVIDENCE_INCONCLUSIVE",
+  "condition_d_authorization": "Only WEIGHT_ADAPTATION_STILL_JUSTIFIED may authorize a separate LoRA proposal."
+}

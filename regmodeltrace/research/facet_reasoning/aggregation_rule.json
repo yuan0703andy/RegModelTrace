@@ -1,0 +1,16 @@
+{
+  "version": "ft1-aggregation-1.0",
+  "frozen_prospectively": true,
+  "not_prescribed": null,
+  "insufficient_or_not_applicable_evidence": null,
+  "empty_applicable_facets": null,
+  "precedence": [
+    "CONTRADICTED -> CONFLICT",
+    "all applicable DEMONSTRATED -> ALIGNED",
+    "DEMONSTRATED plus NOT_DEMONSTRATED -> PARTIALLY_ALIGNED",
+    "otherwise -> null"
+  ],
+  "or_rule": "Unused regulator-permitted alternatives are NOT_APPLICABLE after a qualifying alternative is demonstrated.",
+  "reviewer_rule": "Reviewer evidence cannot change a vendor facet state.",
+  "training_tuning": "PROHIBITED"
+}
