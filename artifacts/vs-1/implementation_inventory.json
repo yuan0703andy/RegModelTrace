@@ -1,0 +1,495 @@
+{
+  "inventory_version": "vs-1-task0-inventory-1.0",
+  "change_id": "VS-1",
+  "task": "Task 0 - implementation inventory only",
+  "generated_at": "2026-09-16T17:45:39-04:00",
+  "repository": {
+    "root": "/Users/andyhou/Documents/ChatGPT/CIRCAD-LLM",
+    "active_commit": "781d4bd7ddeeecf7ec93f4538b387fd34c8235c7",
+    "active_branch": "codex/ft-1-facet-diagnostic",
+    "spec_reviewed_baseline": "9b0c0d29f3970613e14b5411041a8a88e2e22f93",
+    "working_tree_clean": false,
+    "pre_existing_modified_paths": [
+      "notes/extraction_failures.md",
+      "regmodeltrace/service.py"
+    ],
+    "pre_existing_untracked_areas": [
+      "artifacts/er-1/",
+      "artifacts/ja-1/",
+      "artifacts/ja-1h/",
+      "artifacts/model-comparison/",
+      "artifacts/model-smoke/",
+      "config/",
+      "docs/er_1_implementation_map.md",
+      "docs/er_1_runbook.md",
+      "docs/er_1_status.md",
+      "openspec/changes/add-evidence-recovery-er-1/",
+      "regmodeltrace/evidence_recovery/"
+    ]
+  },
+  "authorization_boundary": {
+    "code_changes": false,
+    "model_inference": false,
+    "retrieval_tuning": false,
+    "ui_architecture_changes": false,
+    "outputs_authorized": [
+      "artifacts/vs-1/implementation_inventory.json",
+      "artifacts/vs-1/implementation_inventory.md"
+    ]
+  },
+  "spec_package_observation": {
+    "revised_spec_text_read": true,
+    "zip_or_openspec_change_found_in_active_workspace": false,
+    "note": "The revised VS-1 text was available as the pasted attachment. No RegModelTrace_VS1_OpenSpec_Package.zip or openspec/changes/vs-1 directory was present in the active workspace, so no package files were copied or inferred during Task 0."
+  },
+  "verified_asset_summary": {
+    "recovered_data_root": "regmodeltrace/data",
+    "recovered_data_bytes_approx": 1600000000,
+    "physical_pdf_copies": 45,
+    "unique_pdf_hashes": 33,
+    "candidate_vs1_corpus_documents": 3,
+    "candidate_vs1_corpus_pages": 710,
+    "candidate_vs1_corpus_hashes_verified": 3,
+    "parsed_blocks": 8390,
+    "semantic_units": 1443,
+    "m4a_narrative_candidates": 9750,
+    "m4c_passages": 6009,
+    "m4c_role_counts": {
+      "STANDARDS": 2672,
+      "PROFESSIONAL_TEAM_REPORT": 627,
+      "VENDOR_SUBMISSION": 2710
+    },
+    "sqlite_stores_checked": 3,
+    "sqlite_quick_check_passed": 3,
+    "parser_diagnostics": {
+      "ALIGNMENT_FAILED": 126,
+      "UNSUPPORTED_TABLE_HEADERS": 7
+    },
+    "offline_contract_tests": {
+      "command": "python -m pytest -q regmodeltrace/tests/test_system_v1.py regmodeltrace/tests/test_evidence_recovery.py",
+      "passed": 25,
+      "failed": 0
+    }
+  },
+  "capabilities": [
+    {
+      "capability": "immutable_original_pdf_custody",
+      "status": "IMPLEMENTED",
+      "repository_paths": [],
+      "artifact_paths": [
+        "regmodeltrace/data/raw/",
+        "regmodeltrace/data/corpus/scale-1/raw/",
+        "regmodeltrace/data/corpus/scale-1-validation-d/raw/",
+        "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/",
+        "artifacts/er-1/corpus_recovery_report.md"
+      ],
+      "verification_method": "Enumerated every recovered PDF and computed SHA-256; observed 45 physical files and 33 unique hashes. Rechecked the three candidate VS-1 corpus files against document_manifest.json; all three matched.",
+      "notes": "Custody exists locally outside Git. VS-1 still needs to freeze an explicit three-document CorpusSnapshot rather than treat the full recovered tree as one implicit corpus.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "deterministic_pdf_parser",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/src/parse/parser.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/processed/parser_run_manifest.json",
+        "regmodeltrace/data/processed/parsed_blocks.parquet",
+        "regmodeltrace/data/processed/source_pages.parquet",
+        "regmodeltrace/data/processed/diagnostics.json"
+      ],
+      "verification_method": "Inspected code and parser manifest; loaded Parquet outputs. Manifest records 710 pages, 8,390 blocks, parser/config hashes, source hashes, and a canonical output hash.",
+      "notes": "Overall parse status is PARTIAL because 126 alignment failures and 7 unsupported table-header diagnostics are retained explicitly.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "canonical_page_identity_and_text_hash",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/src/parse/parser.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/processed/source_pages.parquet"
+      ],
+      "verification_method": "Loaded 710 CanonicalPage-like rows with document_id, one-based physical page, page text, page_text_sha256, dimensions, and printed_page_label.",
+      "notes": "The existing schema uses one-based page values. VS-1 resolver/API must keep this distinct from zero-based PDF viewer indices.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "geometry_and_line_alignment",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/src/parse/parser.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/processed/parsed_blocks.parquet",
+        "regmodeltrace/data/processed/diagnostics.json"
+      ],
+      "verification_method": "Loaded block rows containing bbox, line_geometry, source spans, and parse status; verified alignment failures are recorded rather than silently dropped.",
+      "notes": "Geometry exists at block/line level where alignment succeeds, but the current product citation path does not expose it through an authoritative real-corpus resolver.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "first_class_source_span_contract",
+      "status": "IMPLEMENTED_BUT_NOT_PRODUCTIZED",
+      "repository_paths": [
+        "regmodeltrace/src/parse/parser.py",
+        "regmodeltrace/evidence_recovery/source.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/processed/parsed_blocks.parquet",
+        "artifacts/er-1/checkpoint-1-synthetic/source_resolution.jsonl"
+      ],
+      "verification_method": "Verified parser spans and synthetic resolver receipts. No active service API currently materializes a uniform SourceSpan from real corpus IDs.",
+      "notes": "Parser spans and ER-1 receipts use related but not identical field names and precision vocabularies; VS-1 must adapt without rewriting source truth.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "assertion_and_passage_construction",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/src/extract/assertion_candidates.py",
+        "regmodeltrace/src/extract/evidence_v2.py",
+        "regmodeltrace/src/retrieve/store.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/semantic/semantic_units.parquet",
+        "regmodeltrace/data/retrieval/m4-foundation-v1.sqlite",
+        "regmodeltrace/data/retrieval/m4c-v1/passages.jsonl"
+      ],
+      "verification_method": "Loaded 1,443 semantic units, inspected stable candidate/assertion ID construction, and counted 6,009 deterministic retrieval passages.",
+      "notes": "Passage is already a retrieval unit and assertion is the finer evidence identity. Existing identities should be reused within the frozen VS-1 snapshot.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "corpus_snapshot_contract",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [],
+      "artifact_paths": [
+        "regmodeltrace/data/document_manifest.json",
+        "regmodeltrace/data/processed/parser_run_manifest.json"
+      ],
+      "verification_method": "Searched application code and non-data specs for CorpusSnapshot/corpus_snapshot_id; found no active runtime contract or persisted snapshot object.",
+      "notes": "The three-document manifest and parser manifest are sufficient inputs to create a VS-1 snapshot, but are not themselves the approved CorpusSnapshot contract.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "source_document_registry",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/src/retrieve/store.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/document_manifest.json",
+        "regmodeltrace/data/document_manifest.parquet",
+        "regmodeltrace/data/corpus/scale-1/source_eligibility_ledger.json"
+      ],
+      "verification_method": "Loaded the three-document Gold Case manifest and inspected additional corpus-specific manifests/ledgers.",
+      "notes": "Document identity, hashes, roles, source URLs, and local paths exist, but there is no single snapshot-scoped registry used by the live service across recovered corpora.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "index_build_manifest_contract",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/retrieval.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/retrieval/m4c-v1/embedding-run/manifest.json",
+        "regmodeltrace/data/retrieval/m4c-v1/ranking-run/manifest.json",
+        "regmodeltrace/data/rag/v0/retrieval_manifest.json"
+      ],
+      "verification_method": "Verified model revision, passage hashes, vector hashes, ranking hashes, and retrieval configuration in historical manifests.",
+      "notes": "Historical build manifests exist, but no runtime IndexBuildManifest identity is bound alongside a CorpusSnapshot in RetrievalRun.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "hybrid_role_partitioned_retrieval",
+      "status": "IMPLEMENTED_BUT_NOT_PRODUCTIZED",
+      "repository_paths": [
+        "regmodeltrace/retrieval.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/retrieval/m4c-v1/passages.sqlite",
+        "regmodeltrace/data/retrieval/m4c-v1/passages.jsonl",
+        "regmodeltrace/data/retrieval/m4c-v1/embedding-run/passages.npy",
+        "regmodeltrace/data/rag/v0/retrieval_bundles.json"
+      ],
+      "verification_method": "Inspected HybridPassageRetriever BM25, dense, RRF, and three-role fan-out; verified 6,009 passages and historical embeddings/indexes are present and SQLite quick_check passes.",
+      "notes": "The current system_v1 config points to missing compact-release paths under data/retrieval/*. The recovered artifacts live under versioned subdirectories and are not bound to the service. No embedding-model environment path is configured in the current shell.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "per_run_document_scope_before_search",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/retrieval.py",
+        "regmodeltrace/evidence_recovery/source.py"
+      ],
+      "artifact_paths": [],
+      "verification_method": "Inspected fixed role partitioning and ER-1 resolver allowlists.",
+      "notes": "Role filtering exists and source resolution can enforce allowlists, but the live retriever has no case-specific allowed_document_ids or CorpusSnapshot binding before search.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "retrieval_stage_loss_trace",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/audit.py",
+        "regmodeltrace/service.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/evidence_stage_ledger.jsonl",
+        "artifacts/er-1/checkpoint-1-synthetic/search_execution.json",
+        "artifacts/er-1/checkpoint_1_acceptance.json"
+      ],
+      "verification_method": "Ran 25 offline system/ER-1 tests; inspected synthetic persisted ledger and closure receipt.",
+      "notes": "Current frozen retriever exposes only final top passages per role. Discarded lexical/dense candidates and true ranking loss are not available, so real route-complete accounting is not implemented.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "candidate_packet_serialization",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/audit.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/candidate_packet.json"
+      ],
+      "verification_method": "Inspected candidate_packet() implementation and synthetic exported packet; contract tests pass.",
+      "notes": "No real-corpus retrieval run has produced a VS-1 CandidateEvidence packet with stable corpus/index build identities or tri-state stages.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "context_payload_accounting",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/audit.py",
+        "regmodeltrace/service.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/model_context_manifest.json"
+      ],
+      "verification_method": "Offline test verifies instrumentation does not change conversation bytes and detects retrieved-but-not-packed evidence.",
+      "notes": "Useful when Qwen is reconnected. Retrieval-only stages must remain NOT_REACHED rather than false failures under the revised VS-1 contract.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "authoritative_provenance_resolver",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/source.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/source_resolution.jsonl"
+      ],
+      "verification_method": "Offline fixtures verify assertion/passage identity, canonical text hash, offsets, printed page labels, cross-page geometry, and fail-closed behavior.",
+      "notes": "The resolver currently receives in-memory dictionaries and expected hashes. It does not open the real local PDF, verify the physical file hash on resolution, use the recovered SQLite store directly, or implement the revised RESOLVED-plus-warning geometry contract on the real corpus.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "host_owned_evidence_reference_validation",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/contracts.py",
+        "regmodeltrace/service.py"
+      ],
+      "artifact_paths": [],
+      "verification_method": "Offline tests pass for valid host citations, unknown evidence refs, duplicate JSON keys, and bounded public response fields.",
+      "notes": "This is the existing Qwen-facing contract and should be reused only after retrieval-only Gate C passes.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "bounded_qwen_synthesis",
+      "status": "IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/generation.py",
+        "regmodeltrace/contracts.py",
+        "regmodeltrace/service.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/rag/v0/generation_inputs.json",
+        "artifacts/rag/rag_v0_report.md"
+      ],
+      "verification_method": "Inspected service/generation contracts and preserved RAG outputs. No new inference was run.",
+      "notes": "Operational runtime still requires an external pinned model path. VS-1 explicitly blocks reconnection until retrieval-only workflow passes.",
+      "vs1_action": "DEFER"
+    },
+    {
+      "capability": "live_application_service",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/server.py",
+        "regmodeltrace/__main__.py"
+      ],
+      "artifact_paths": [],
+      "verification_method": "Inspected FastAPI /health and /ask endpoints and CLI ask/serve commands.",
+      "notes": "There are no case, retrieval-only search, candidate source, PDF, review-session, disposition, or export endpoints. The default service cannot initialize from the recovered versioned retrieval artifacts without rebinding.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "static_evidence_demo",
+      "status": "IMPLEMENTED_BUT_NOT_PRODUCTIZED",
+      "repository_paths": [
+        "demo/index.html",
+        "demo/app.js",
+        "demo/styles.css"
+      ],
+      "artifact_paths": [
+        "demo/data/demo.json"
+      ],
+      "verification_method": "Inspected the static eight-question replay, source cards, and remote PDF links.",
+      "notes": "The demo replays frozen outputs. It does not perform live retrieval, display full retrieval trace, persist human actions, bind to local immutable PDFs, or render exact geometry.",
+      "vs1_action": "REUSE"
+    },
+    {
+      "capability": "retrieval_only_evidence_workbench",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [],
+      "artifact_paths": [
+        "demo/"
+      ],
+      "verification_method": "Compared required VS-1 flow against server endpoints and static demo behavior.",
+      "notes": "No live question-to-retrieval-to-candidate-to-review workflow exists without invoking the generation service.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "original_pdf_navigation",
+      "status": "PARTIALLY_IMPLEMENTED",
+      "repository_paths": [
+        "demo/app.js"
+      ],
+      "artifact_paths": [
+        "demo/data/demo.json",
+        "regmodeltrace/data/raw/"
+      ],
+      "verification_method": "Inspected demo links and recovered original PDFs.",
+      "notes": "Static cards open official remote URLs with #page fragments. There is no authoritative local PDF endpoint, hash check at open time, exact bbox viewer integration, or explicit precision badge.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "human_disposition_capture_and_persistence",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/audit.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/review_events.jsonl"
+      ],
+      "verification_method": "Offline test verifies append-only in-memory review events and export refusal on overwrite.",
+      "notes": "The synthetic persisted review_events file is empty; no ReviewSession store, UI/API action path, reload test, or latest-state view exists for real review use.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "controlled_broader_search",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [],
+      "artifact_paths": [],
+      "verification_method": "Searched service, server, demo, and ER-1 modules for a parent-linked broader-search run contract.",
+      "notes": "ER-1 can record a human review note, but it does not create a new parent-linked RetrievalRun with changed query/scope.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "machine_readable_evidence_export",
+      "status": "SYNTHETICALLY_VALIDATED_ONLY",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/audit.py"
+      ],
+      "artifact_paths": [
+        "artifacts/er-1/checkpoint-1-synthetic/candidate_packet.json",
+        "artifacts/er-1/checkpoint-1-synthetic/evidence_stage_ledger.jsonl",
+        "artifacts/er-1/checkpoint-1-synthetic/source_resolution.jsonl"
+      ],
+      "verification_method": "Inspected export() outputs and synthetic closure receipt.",
+      "notes": "Existing output is an ER-1 sidecar, not a VS-1 case-scoped evidence_packet.json with CorpusSnapshot, IndexBuildManifest, candidate tri-state stages, and persisted dispositions.",
+      "vs1_action": "WIRE"
+    },
+    {
+      "capability": "human_readable_evidence_export",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [],
+      "artifact_paths": [],
+      "verification_method": "No product exporter producing evidence_packet.md was found.",
+      "notes": "Historical reports are not equivalent to exporting the current reviewer case and audit state.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "real_corpus_source_roundtrip",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/source.py"
+      ],
+      "artifact_paths": [
+        "regmodeltrace/data/retrieval/m4-foundation-v1.sqlite",
+        "regmodeltrace/data/processed/source_pages.parquet",
+        "regmodeltrace/data/raw/"
+      ],
+      "verification_method": "Confirmed required source assets exist but found no persisted real-corpus resolver receipt or product round-trip demonstration.",
+      "notes": "This is the central Gate B gap: passage/assertion ID must reach verified local PDF hash, physical page, source text/span, and declared geometry precision.",
+      "vs1_action": "IMPLEMENT"
+    },
+    {
+      "capability": "real_corpus_recovery_benchmark",
+      "status": "NOT_IMPLEMENTED",
+      "repository_paths": [
+        "regmodeltrace/evidence_recovery/evaluation.py"
+      ],
+      "artifact_paths": [
+        "docs/er_1_status.md",
+        "artifacts/er-1/checkpoint_1_acceptance.json"
+      ],
+      "verification_method": "ER-1 closure ledger states REAL_RECOVERY_BENCHMARK=NOT_RUN.",
+      "notes": "Not a VS-1 release blocker. No-gold product use must not report recall.",
+      "vs1_action": "DEFER"
+    },
+    {
+      "capability": "longitudinal_and_as_of_review",
+      "status": "OUT_OF_SCOPE_FOR_VS1",
+      "repository_paths": [],
+      "artifact_paths": [
+        "regmodeltrace/data/corpus/scale-1/"
+      ],
+      "verification_method": "Classified under the explicit VS-1 non-goals.",
+      "notes": "Multiple cycles are present in recovered data, but VS-1 does not productize temporal comparison or as-of search.",
+      "vs1_action": "DEFER"
+    },
+    {
+      "capability": "ray_batch_optimization",
+      "status": "OUT_OF_SCOPE_FOR_VS1",
+      "repository_paths": [
+        "regmodeltrace/src/batch/scale1_executor.py"
+      ],
+      "artifact_paths": [
+        "artifacts/scale-1/systems_lane_closure.json"
+      ],
+      "verification_method": "Classified under the explicit VS-1 non-goals and closed systems lane.",
+      "notes": "No Ray work is required for the interactive retrieval-only path.",
+      "vs1_action": "DEFER"
+    },
+    {
+      "capability": "graphrag_or_automatic_agents",
+      "status": "OUT_OF_SCOPE_FOR_VS1",
+      "repository_paths": [],
+      "artifact_paths": [],
+      "verification_method": "Classified under the explicit VS-1 non-goals.",
+      "notes": "No implementation is needed for the vertical slice.",
+      "vs1_action": "DEFER"
+    }
+  ],
+  "gate_a": {
+    "inventory_complete": true,
+    "inventory_grounded": true,
+    "reconciliation_status": "COMPLETE_WITH_MATERIAL_GAPS_IDENTIFIED",
+    "recommendation": "READY_FOR_PROJECT_OWNER_REVIEW",
+    "implementation_started": false,
+    "blocking_findings_before_gate_b": [
+      "No formal CorpusSnapshot or runtime IndexBuildManifest binding exists.",
+      "system_v1 config points to missing compact-release artifact paths instead of recovered versioned assets.",
+      "The provenance resolver is synthetic-only and does not verify a real physical PDF at resolution time.",
+      "No live retrieval-only workbench or required product endpoints exist.",
+      "Human disposition persistence and reload are not implemented.",
+      "No authoritative local PDF viewer path or exact/fallback location display exists."
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "vs1-stage-loss-fixture-1.0",
+  "cases": [
+    {
+      "case_id": "RETRIEVAL_MISS",
+      "ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "NO"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "NOT_REACHED"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "expected": "RETRIEVAL_MISS",
+      "observed": "RETRIEVAL_MISS"
+    },
+    {
+      "case_id": "RANKING_LOSS",
+      "ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "NO"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "expected": "RANKING_LOSS",
+      "observed": "RANKING_LOSS"
+    },
+    {
+      "case_id": "CONTEXT_PACKING_LOSS",
+      "ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NO"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "expected": "CONTEXT_PACKING_LOSS",
+      "observed": "CONTEXT_PACKING_LOSS"
+    },
+    {
+      "case_id": "MODEL_NON_SELECTION",
+      "ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "YES"
+        },
+        "MODEL_SELECTED": {
+          "state": "NO"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "expected": "MODEL_NON_SELECTION",
+      "observed": "MODEL_NON_SELECTION"
+    },
+    {
+      "case_id": "RETRIEVAL_ONLY_NOT_REACHED",
+      "ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "expected": null,
+      "observed": null
+    }
+  ]
+}

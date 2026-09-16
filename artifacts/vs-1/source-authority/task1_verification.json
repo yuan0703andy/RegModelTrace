@@ -1,0 +1,627 @@
+{
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "created_at": "2026-09-16T22:39:21.814664+00:00",
+  "degraded_geometry_control": {
+    "assertions": [
+      {
+        "assertion_id": "Abbb64f89f05cad4c5c7b",
+        "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+        "document_id": "fchlpm_2019_hurricane_standards",
+        "document_role": "STANDARDS",
+        "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+        "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+        "fuzzy_substitution_used": false,
+        "index_build_id": "IB_e922be7973b49bb13e2b340a",
+        "local_original_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+        "location_precision": "PAGE_TEXT",
+        "pages": [
+          161
+        ],
+        "quote": "0.75 Rmax",
+        "quote_sha256": "b94142c4cc1e6caa45a3871f029c140924648de93c61bc693fb9e171eb9d6302",
+        "requested_id": "Abbb64f89f05cad4c5c7b",
+        "requested_type": "ASSERTION",
+        "source_file_hash_verified": true,
+        "source_spans": [
+          {
+            "alignment_status": "ALIGNMENT_FAILED",
+            "bbox": null,
+            "char_end": 77,
+            "char_start": 68,
+            "line_geometry": [
+              {
+                "alignment": "ALIGNMENT_FAILED",
+                "bbox": null,
+                "end": 77,
+                "start": 68,
+                "word_ids": []
+              }
+            ],
+            "page_text_sha256": "6c9da5f5ca16ec71878da9831d19dc0993e1f63fd1ede7d756caf97e84fe64fc",
+            "pdf_page_index_zero_based": 160,
+            "physical_page_index": 161,
+            "printed_page_label": "161",
+            "quote": "0.75 Rmax",
+            "quote_sha256": "b94142c4cc1e6caa45a3871f029c140924648de93c61bc693fb9e171eb9d6302",
+            "source_block_id": "b38d2f9def3a2a5436a461f3",
+            "source_span_id": "SS_d1864035d15a94e233956b74"
+          }
+        ],
+        "status": "RESOLVED",
+        "warnings": [
+          "SOURCE_GEOMETRY_UNAVAILABLE"
+        ]
+      }
+    ],
+    "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+    "document_id": "fchlpm_2019_hurricane_standards",
+    "document_role": "STANDARDS",
+    "fuzzy_substitution_used": false,
+    "index_build_id": "IB_e922be7973b49bb13e2b340a",
+    "location_precision": "PAGE_TEXT",
+    "pages": [
+      161
+    ],
+    "passage_id": "Pd7cb5aa1146a9fc93ee2",
+    "quote": "0.75 Rmax",
+    "requested_id": "Pd7cb5aa1146a9fc93ee2",
+    "requested_type": "PASSAGE",
+    "status": "RESOLVED",
+    "warnings": [
+      "SOURCE_GEOMETRY_UNAVAILABLE"
+    ]
+  },
+  "direct_source_span_roundtrip": {
+    "assertion_id": "A1f90ec5955bb55ce77f4",
+    "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+    "document_id": "fchlpm_2019_hurricane_standards",
+    "document_role": "STANDARDS",
+    "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+    "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+    "fuzzy_substitution_used": false,
+    "index_build_id": "IB_e922be7973b49bb13e2b340a",
+    "local_original_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+    "location_precision": "EXACT_GEOMETRY",
+    "pages": [
+      120
+    ],
+    "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+    "quote_sha256": "c83af0faeaa6f167318a278d30bef4f3c7d2ccd023f2682915df8048ba7f7978",
+    "requested_id": "SS_7c62a815445bfa360ba79f24",
+    "requested_type": "SOURCE_SPAN",
+    "source_file_hash_verified": true,
+    "source_span_id": "SS_7c62a815445bfa360ba79f24",
+    "source_spans": [
+      {
+        "alignment_status": "ALIGNED",
+        "bbox": [
+          108.0,
+          141.624,
+          540.0756,
+          152.724
+        ],
+        "char_end": 267,
+        "char_start": 191,
+        "line_geometry": [
+          {
+            "alignment": "ALIGNED",
+            "bbox": [
+              108.0,
+              141.624,
+              540.0756,
+              152.724
+            ],
+            "end": 267,
+            "start": 191,
+            "word_ids": [
+              "773198f70e83b82b849d46a0",
+              "f2162f20322fad37caedf836",
+              "f562fdaa1dab9ecea4716d37",
+              "07773f7687a77d8b35575fb0",
+              "1dcf9dcf99f5f953185c9e61",
+              "e2fe58757562bc2a8f79cad2",
+              "73475602629ba90f75af8f23",
+              "d180eaf1fafff4bd5c807915",
+              "9ba78e7e8b3af11262e92bce",
+              "09ab07f3b11185547bf2be7c"
+            ]
+          }
+        ],
+        "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+        "pdf_page_index_zero_based": 119,
+        "physical_page_index": 120,
+        "printed_page_label": "120",
+        "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base",
+        "quote_sha256": "d066abafc72ff63376c9bc5fbe27e27efd1d75daeadedf4c140edfb7fe893c01",
+        "source_block_id": "bc2cfb6ec2840a104ead8b92",
+        "source_span_id": "SS_7c62a815445bfa360ba79f24"
+      }
+    ],
+    "status": "RESOLVED",
+    "warnings": []
+  },
+  "document_hashes_verified": 3,
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "invalid_identity_control": {
+    "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+    "detail": null,
+    "error": "ID_NOT_IN_SNAPSHOT",
+    "fuzzy_substitution_used": false,
+    "index_build_id": "IB_e922be7973b49bb13e2b340a",
+    "requested_id": "P_DOES_NOT_EXIST",
+    "status": "FAILED"
+  },
+  "new_model_inference_runs": 0,
+  "real_passage_roundtrips": {
+    "M3B_CRITICAL": {
+      "assertions": [
+        {
+          "assertion_id": "A1f90ec5955bb55ce77f4",
+          "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "document_role": "STANDARDS",
+          "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+          "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+          "fuzzy_substitution_used": false,
+          "index_build_id": "IB_e922be7973b49bb13e2b340a",
+          "local_original_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+          "location_precision": "EXACT_GEOMETRY",
+          "pages": [
+            120
+          ],
+          "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+          "quote_sha256": "c83af0faeaa6f167318a278d30bef4f3c7d2ccd023f2682915df8048ba7f7978",
+          "requested_id": "A1f90ec5955bb55ce77f4",
+          "requested_type": "ASSERTION",
+          "source_file_hash_verified": true,
+          "source_spans": [
+            {
+              "alignment_status": "ALIGNED",
+              "bbox": [
+                108.0,
+                141.624,
+                540.0756,
+                152.724
+              ],
+              "char_end": 267,
+              "char_start": 191,
+              "line_geometry": [
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    108.0,
+                    141.624,
+                    540.0756,
+                    152.724
+                  ],
+                  "end": 267,
+                  "start": 191,
+                  "word_ids": [
+                    "773198f70e83b82b849d46a0",
+                    "f2162f20322fad37caedf836",
+                    "f562fdaa1dab9ecea4716d37",
+                    "07773f7687a77d8b35575fb0",
+                    "1dcf9dcf99f5f953185c9e61",
+                    "e2fe58757562bc2a8f79cad2",
+                    "73475602629ba90f75af8f23",
+                    "d180eaf1fafff4bd5c807915",
+                    "9ba78e7e8b3af11262e92bce",
+                    "09ab07f3b11185547bf2be7c"
+                  ]
+                }
+              ],
+              "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+              "pdf_page_index_zero_based": 119,
+              "physical_page_index": 120,
+              "printed_page_label": "120",
+              "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base",
+              "quote_sha256": "d066abafc72ff63376c9bc5fbe27e27efd1d75daeadedf4c140edfb7fe893c01",
+              "source_block_id": "bc2cfb6ec2840a104ead8b92",
+              "source_span_id": "SS_7c62a815445bfa360ba79f24"
+            },
+            {
+              "alignment_status": "ALIGNED",
+              "bbox": [
+                126.0,
+                155.424,
+                540.1356,
+                194.124
+              ],
+              "char_end": 463,
+              "char_start": 268,
+              "line_geometry": [
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    126.0,
+                    155.424,
+                    540.0732,
+                    166.524
+                  ],
+                  "end": 336,
+                  "start": 268,
+                  "word_ids": [
+                    "82ceaf7e4a12d3bfb6c281f7",
+                    "8ab7744ca494ad3b7bbf2a94",
+                    "fe2a40ffdf5d46eeacebccf7",
+                    "856bfd86246220489903394b",
+                    "ade369a89ce02b34a1d06d44",
+                    "1746105faf9642f94ede02c0",
+                    "4a8d458f82125fd72f924a77",
+                    "08b06be6de953a39a5d73cbf",
+                    "4b51fb8c4620ebe6658affa7",
+                    "4b4f7155bf808475333f2c36",
+                    "2e8b872ba351aaf554f00bb6",
+                    "351f28538e223ccd26e1b9f0",
+                    "b956265e454d8f0afc7b12d5"
+                  ]
+                },
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    126.0,
+                    169.224,
+                    540.1356,
+                    180.324
+                  ],
+                  "end": 407,
+                  "start": 337,
+                  "word_ids": [
+                    "7e312f0cf0615ffd3f60d137",
+                    "7ef206c37778ac93a8c88839",
+                    "f3d0c9049207c6e006d6aff4",
+                    "8af63145c419305dfdd2df1f",
+                    "b23238d99893b50f0a34ca9b",
+                    "d55c8012e10dcec9a04b97ec",
+                    "7752085da9c26d48ddf1f4b6",
+                    "137b7af425f99468318ac0b4",
+                    "fdeaad77f987e04ffa747a30",
+                    "bd1445bb5d69f7f267405f44",
+                    "c4060d349c3ef03337305e9c"
+                  ]
+                },
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    126.0,
+                    183.024,
+                    446.2572,
+                    194.124
+                  ],
+                  "end": 463,
+                  "start": 408,
+                  "word_ids": [
+                    "bc36870e94d777bbdab78798",
+                    "54351b2c741bc9965867563b",
+                    "79f33e0fd86a3f183e1cf026",
+                    "187ef358282d519b8f6efafb",
+                    "e0f5a0d8c4ed217cfa12a6ae",
+                    "11ac48f3f2197c086eee670f"
+                  ]
+                }
+              ],
+              "page_text_sha256": "a223f6de7e396be0c0e515942c41df253a8b0ece5d3e294895e14b8baafbec22",
+              "pdf_page_index_zero_based": 119,
+              "physical_page_index": 120,
+              "printed_page_label": "120",
+              "quote": "Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+              "quote_sha256": "08367ba6b8779e1eed1db3b4839babfbc77b77bfefd477ddbf92a537ff6b967b",
+              "source_block_id": "cc559e683c0db7a2f50e9445",
+              "source_span_id": "SS_88d69142ceb8b003fd3c2f40"
+            }
+          ],
+          "status": "RESOLVED",
+          "warnings": []
+        }
+      ],
+      "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "fuzzy_substitution_used": false,
+      "index_build_id": "IB_e922be7973b49bb13e2b340a",
+      "location_precision": "EXACT_GEOMETRY",
+      "pages": [
+        120
+      ],
+      "passage_id": "Pb842ca0167c52c4b9ccd",
+      "quote": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+      "requested_id": "Pb842ca0167c52c4b9ccd",
+      "requested_type": "PASSAGE",
+      "status": "RESOLVED",
+      "warnings": []
+    },
+    "ROLE_PROFESSIONAL_TEAM_REPORT": {
+      "assertions": [
+        {
+          "assertion_id": "A50a70828d97cc00c841b",
+          "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+          "document_id": "rms_21_0_2019_professional_team_20210422",
+          "document_role": "PROFESSIONAL_TEAM_REPORT",
+          "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+          "document_title": "RMS Professional Team Report, April 19-22, 2021",
+          "fuzzy_substitution_used": false,
+          "index_build_id": "IB_e922be7973b49bb13e2b340a",
+          "local_original_path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+          "location_precision": "EXACT_GEOMETRY",
+          "pages": [
+            1
+          ],
+          "quote": "Florida Commission on Hurricane Loss Projection Methodology",
+          "quote_sha256": "b4b7519c2e07140172913358cf62b73d0df6136757debfdc7720779fa723ee5c",
+          "requested_id": "A50a70828d97cc00c841b",
+          "requested_type": "ASSERTION",
+          "source_file_hash_verified": true,
+          "source_spans": [
+            {
+              "alignment_status": "ALIGNED",
+              "bbox": [
+                97.08,
+                51.672,
+                523.5288,
+                112.056
+              ],
+              "char_end": 59,
+              "char_start": 0,
+              "line_geometry": [
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    97.08,
+                    51.672,
+                    523.5288,
+                    83.976
+                  ],
+                  "end": 36,
+                  "start": 0,
+                  "word_ids": [
+                    "9feda4337b7cf9ee8cadc85c",
+                    "0d4ee93817b03d40dbf642c9",
+                    "730eed7cc0db1c78d8ad5851",
+                    "0188f3ec22d3456437905894",
+                    "005323dfea13f1dc49085e91"
+                  ]
+                },
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    177.96,
+                    79.752,
+                    442.584,
+                    112.056
+                  ],
+                  "end": 59,
+                  "start": 37,
+                  "word_ids": [
+                    "5b47e02aa018f59d77248433",
+                    "746f5d880168eebc29637d82"
+                  ]
+                }
+              ],
+              "page_text_sha256": "87297cb3976159faf0642f8ea24cfa2ccf6d5eb1f96c87e68a010325550a4bf5",
+              "pdf_page_index_zero_based": 0,
+              "physical_page_index": 1,
+              "printed_page_label": null,
+              "quote": "Florida Commission on Hurricane Loss Projection Methodology",
+              "quote_sha256": "b4b7519c2e07140172913358cf62b73d0df6136757debfdc7720779fa723ee5c",
+              "source_block_id": "487770872b07ac76a9af2755",
+              "source_span_id": "SS_28053d6033fb6681fe8adaca"
+            }
+          ],
+          "status": "RESOLVED",
+          "warnings": []
+        }
+      ],
+      "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "fuzzy_substitution_used": false,
+      "index_build_id": "IB_e922be7973b49bb13e2b340a",
+      "location_precision": "EXACT_GEOMETRY",
+      "pages": [
+        1
+      ],
+      "passage_id": "Pa420e46659bae3adc578",
+      "quote": "Florida Commission on Hurricane Loss Projection Methodology",
+      "requested_id": "Pa420e46659bae3adc578",
+      "requested_type": "PASSAGE",
+      "status": "RESOLVED",
+      "warnings": []
+    },
+    "ROLE_STANDARDS": {
+      "assertions": [
+        {
+          "assertion_id": "A24a2ea028e68f74bc832",
+          "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+          "document_id": "fchlpm_2019_hurricane_standards",
+          "document_role": "STANDARDS",
+          "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+          "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+          "fuzzy_substitution_used": false,
+          "index_build_id": "IB_e922be7973b49bb13e2b340a",
+          "local_original_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+          "location_precision": "EXACT_GEOMETRY",
+          "pages": [
+            1
+          ],
+          "quote": "as of November 1, 2019",
+          "quote_sha256": "302be804a6d95efe7c2ad8c226f385aa8ad6068465b9d4cda05f497c6285e4a4",
+          "requested_id": "A24a2ea028e68f74bc832",
+          "requested_type": "ASSERTION",
+          "source_file_hash_verified": true,
+          "source_spans": [
+            {
+              "alignment_status": "ALIGNED",
+              "bbox": [
+                142.968,
+                135.096,
+                469.0452,
+                230.82
+              ],
+              "char_end": 63,
+              "char_start": 41,
+              "line_geometry": [
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    262.848,
+                    135.096,
+                    349.104,
+                    187.512
+                  ],
+                  "end": 46,
+                  "start": 41,
+                  "word_ids": [
+                    "563d3b2c1d58a704d59fd8b8",
+                    "7d16413fe36f7480f6034c81"
+                  ]
+                },
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    142.968,
+                    178.404,
+                    469.0452,
+                    230.82
+                  ],
+                  "end": 63,
+                  "start": 47,
+                  "word_ids": [
+                    "426b435d9e19ea59bb695340",
+                    "46cc519ab0a198661c4e7c84",
+                    "cb3ecf3714cfc373f2c7a74d"
+                  ]
+                }
+              ],
+              "page_text_sha256": "5d3e92bfcd41e6e27bb6f9994908b3275270315dea688e25f43cc949088fc9e4",
+              "pdf_page_index_zero_based": 0,
+              "physical_page_index": 1,
+              "printed_page_label": null,
+              "quote": "as of November 1, 2019",
+              "quote_sha256": "302be804a6d95efe7c2ad8c226f385aa8ad6068465b9d4cda05f497c6285e4a4",
+              "source_block_id": "9398027afcf351ccc92393e6",
+              "source_span_id": "SS_8988c335ad1fc84c45ef6a57"
+            }
+          ],
+          "status": "RESOLVED",
+          "warnings": []
+        }
+      ],
+      "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "fuzzy_substitution_used": false,
+      "index_build_id": "IB_e922be7973b49bb13e2b340a",
+      "location_precision": "EXACT_GEOMETRY",
+      "pages": [
+        1
+      ],
+      "passage_id": "P6a558351bb1f8fd351c2",
+      "quote": "as of November 1, 2019",
+      "requested_id": "P6a558351bb1f8fd351c2",
+      "requested_type": "PASSAGE",
+      "status": "RESOLVED",
+      "warnings": []
+    },
+    "ROLE_VENDOR_SUBMISSION": {
+      "assertions": [
+        {
+          "assertion_id": "Ac695e4b2320298a3b4d1",
+          "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+          "document_id": "rms_21_0_2019_submission_20210422",
+          "document_role": "VENDOR_SUBMISSION",
+          "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+          "document_title": "RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+          "fuzzy_substitution_used": false,
+          "index_build_id": "IB_e922be7973b49bb13e2b340a",
+          "local_original_path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+          "location_precision": "EXACT_GEOMETRY",
+          "pages": [
+            1
+          ],
+          "quote": "Models Version 21.0 (Build 2050)",
+          "quote_sha256": "18b82a09096c1f75bfd17b02344c7b52e494ea5a63e5d8dfd90d95b5a4b48831",
+          "requested_id": "Ac695e4b2320298a3b4d1",
+          "requested_type": "ASSERTION",
+          "source_file_hash_verified": true,
+          "source_spans": [
+            {
+              "alignment_status": "ALIGNED",
+              "bbox": [
+                50.4,
+                222.85472,
+                253.484,
+                275.336
+              ],
+              "char_end": 57,
+              "char_start": 25,
+              "line_geometry": [
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    50.4,
+                    222.85472,
+                    146.63832,
+                    248.71772
+                  ],
+                  "end": 31,
+                  "start": 25,
+                  "word_ids": [
+                    "4123d350dfc35111578fbb44"
+                  ]
+                },
+                {
+                  "alignment": "ALIGNED",
+                  "bbox": [
+                    50.4,
+                    258.686,
+                    253.484,
+                    275.336
+                  ],
+                  "end": 57,
+                  "start": 32,
+                  "word_ids": [
+                    "7a605aba76a9d7323098d343",
+                    "7d4a1ab86aa5cac102ce95f7",
+                    "7c80e4801ca532b5a5d71790",
+                    "40e9c16679d91f4d5432af55"
+                  ]
+                }
+              ],
+              "page_text_sha256": "3df9e95919156aee60f87af51dbaa2c2e9c4bdc5eedfdb50064e8b6a3b3c7e37",
+              "pdf_page_index_zero_based": 0,
+              "physical_page_index": 1,
+              "printed_page_label": null,
+              "quote": "Models Version 21.0 (Build 2050)",
+              "quote_sha256": "18b82a09096c1f75bfd17b02344c7b52e494ea5a63e5d8dfd90d95b5a4b48831",
+              "source_block_id": "95c171b00bd1e502a1ddc603",
+              "source_span_id": "SS_9ce1428a5b4d5dc953ffdfbd"
+            }
+          ],
+          "status": "RESOLVED",
+          "warnings": []
+        }
+      ],
+      "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "fuzzy_substitution_used": false,
+      "index_build_id": "IB_e922be7973b49bb13e2b340a",
+      "location_precision": "EXACT_GEOMETRY",
+      "pages": [
+        1
+      ],
+      "passage_id": "P5e8e359edf77b4e5dfd7",
+      "quote": "Models Version 21.0 (Build 2050)",
+      "requested_id": "P5e8e359edf77b4e5dfd7",
+      "requested_type": "PASSAGE",
+      "status": "RESOLVED",
+      "warnings": []
+    }
+  },
+  "retrieval_rebuilt": false,
+  "retrieval_tuned": false,
+  "schema_version": "vs1-task1-verification-1.0",
+  "source_artifacts_copied": false,
+  "status": "PASS",
+  "task": "VS-1 Task 1 source authority and real-corpus binding"
+}

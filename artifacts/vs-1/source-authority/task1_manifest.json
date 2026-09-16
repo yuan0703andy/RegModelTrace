@@ -1,0 +1,13 @@
+{
+  "files": {
+    "corpus_snapshot.json": "7d5d90a24e5ab1998c3e995e4faef408ab448bfb688905046b5c665bc0772e03",
+    "index_build_manifest.json": "25920f46decf88339ce5824866001697b6ac8a721aade831acde6ed6ce73dcd1",
+    "runtime_binding.json": "a9d6f92f44fe657cc12ddbd69b4db254cefc0ec3788e42129068fd0ada47f039",
+    "source_documents.json": "c258a1738d4420491e7fae3c88cfa01952ec6c651197ace84cda057f054544d7",
+    "task1_report.md": "54cd5694a2cbf1386b1acee295bd405e5ba6812740ae0023ad3ad8e03ab24d6a",
+    "task1_verification.json": "ca77006acef9cbaa0e818652c7070bc85769be251b2fc7a53a2fae773252d1d5"
+  },
+  "new_model_inference_runs": 0,
+  "schema_version": "vs1-task1-manifest-1.0",
+  "status": "PASS"
+}

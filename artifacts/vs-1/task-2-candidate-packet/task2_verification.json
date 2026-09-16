@@ -1,0 +1,29 @@
+{
+  "schema_version": "vs1-task2-verification-1.0",
+  "status": "PASS",
+  "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "candidate_count": 9,
+  "role_counts": {
+    "STANDARDS": 3,
+    "PROFESSIONAL_TEAM_REPORT": 3,
+    "VENDOR_SUBMISSION": 3
+  },
+  "candidate_packet_canonical_sha256": "58b888e3dea64778c1950a0f7655511ed24fc1f1d1fd2fffa10c7cb6ca42630d",
+  "replay_without_retrieval": true,
+  "stable_candidate_ids": true,
+  "all_model_stages_not_reached": true,
+  "new_model_inference_runs": 0,
+  "retrieval_executed_in_task": false,
+  "retrieval_behavior_changed": false,
+  "embedding_rebuilt": false,
+  "retrieval_tuned": false,
+  "issues_observed": [
+    {
+      "issue": "MULTI_ASSERTION_PASSAGE_SEPARATOR_MISMATCH",
+      "disposition": "FIXED_WITH_REGRESSION_TEST",
+      "detail": "The source resolver accepted space-joined assertion text while some canonical passages use newline joins. Resolution now accepts either deterministic separator and still requires exact passage text."
+    }
+  ]
+}

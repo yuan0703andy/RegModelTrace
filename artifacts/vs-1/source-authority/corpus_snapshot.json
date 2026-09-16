@@ -1,0 +1,31 @@
+{
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "created_at": "2026-09-16T22:39:20.434238+00:00",
+  "document_identities": [
+    {
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4"
+    },
+    {
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0"
+    },
+    {
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610"
+    }
+  ],
+  "document_ids": [
+    "fchlpm_2019_hurricane_standards",
+    "rms_21_0_2019_professional_team_20210422",
+    "rms_21_0_2019_submission_20210422"
+  ],
+  "notes": "VS-1 three-document RMS 21.0 / 2019 Standards corpus.",
+  "parser_canonical_output_sha256": "a731438e17cad7fc35316786c052278048a1bfbdf4b71737f1674c9c0b028eb6",
+  "parser_config_sha256": "0a92e36d2aa7e3746e3881d220fddcb6ae3a212675e8019d94f3ace478ab31d0",
+  "parser_version": "pdf-structure-0.1.0",
+  "passage_inventory_sha256": "dfb1f205bdd446d4219d219518560ed862d0f6c9edb5e9f0a312002f1b28f05f",
+  "schema_version": "corpus-snapshot-1.0",
+  "source_manifest_sha256": "e689eaac70f3d84885fd2d97437c889db256e3a446b54b772358aee3fc329261",
+  "status": "VALID"
+}

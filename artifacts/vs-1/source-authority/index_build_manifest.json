@@ -1,0 +1,57 @@
+{
+  "artifacts": [
+    {
+      "artifact_role": "embedding_manifest",
+      "bytes": 2432,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/embedding-run/manifest.json",
+      "sha256": "737d0f1080a48d72c256d12199432fb7e71c25315dad925192d46cf8177820a4"
+    },
+    {
+      "artifact_role": "passage_fts_database",
+      "bytes": 17178624,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/passages.sqlite",
+      "sha256": "d60e369e761f4965ba503272e92aaf136461ff62a466cc24bd06da6869cf389b"
+    },
+    {
+      "artifact_role": "passage_ids",
+      "bytes": 162246,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/embedding-run/passage_ids.json",
+      "sha256": "3183c1fcf91e9a48678bac4381f6d1aa4d1734c2e10c15c1978c3b2716e7aa0f"
+    },
+    {
+      "artifact_role": "passage_inventory",
+      "bytes": 9494695,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/passages.jsonl",
+      "sha256": "dfb1f205bdd446d4219d219518560ed862d0f6c9edb5e9f0a312002f1b28f05f"
+    },
+    {
+      "artifact_role": "passage_matrix",
+      "bytes": 9229952,
+      "path": "regmodeltrace/data/retrieval/m4c-v1/embedding-run/passages.npy",
+      "sha256": "6fb31d70caf27673a6cfc25681ba3f7232143870b08a1bf6ec901694b69157ec"
+    },
+    {
+      "artifact_role": "records_database",
+      "bytes": 47767552,
+      "path": "regmodeltrace/data/retrieval/m4-foundation-v1.sqlite",
+      "sha256": "b6db06f527dd0e023c1684d878975a4b97f48466c78911291fcd45d3ba727068"
+    },
+    {
+      "artifact_role": "source_pages",
+      "bytes": 407533,
+      "path": "regmodeltrace/data/processed/source_pages.parquet",
+      "sha256": "8b4e3d99c4180463a32477191a0dd603b1f6d5687215a1befed4b9c94c60e59e"
+    }
+  ],
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "created_at": "2026-09-16T22:39:20.434238+00:00",
+  "embedding_dimension": 384,
+  "embedding_model_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "passage_count": 6009,
+  "retrieval_artifact_manifest_sha256": "9d60c830e64de2911651840cac5fe8aeb31597a3c75a7e66fa9e1b176480e7aa",
+  "retrieval_config_sha256": "277fdfe513917f64a73bd95a7927b8d1f1425ae6889b1bf19d6ba4685b97356a",
+  "schema_version": "index-build-manifest-1.0",
+  "status": "VALID"
+}

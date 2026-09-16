@@ -1,0 +1,12 @@
+{
+  "schema_version": "vs1-task2-manifest-1.0",
+  "status": "PASS",
+  "artifacts": {
+    "candidate_evidence.jsonl": "ba3e09143900007ab0cc82e44f8ad26ed8c4b02eb427452f62a943402a329032",
+    "candidate_packet.json": "0a5c3972d3c30f3ac688665c79a68e93ce6046cca20732e4b7addb5b748c01cc",
+    "retrieval_run.json": "ff2c2b1f4237e127ceffe6b610d92853b5957f5b224e0ab8b5c3894c27a26521",
+    "stage_loss_fixture.json": "d7858995ed3597c403675103753955dda88a2c43de8a9b825c1c5803bda62d7c",
+    "task2_report.md": "98e2d5be151ba6d85cd765852cb8088b26da1332b8870117acb2083dccdfa0f6",
+    "task2_verification.json": "02b54de5cbd1e4f967a1f1b4a4cd3c8f399aa24b528f11fa5fe7b0408de92a6f"
+  }
+}

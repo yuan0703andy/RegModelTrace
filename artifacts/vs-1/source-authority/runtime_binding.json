@@ -1,0 +1,9 @@
+{
+  "corpus_snapshot_file": "corpus_snapshot.json",
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "index_build_manifest_file": "index_build_manifest.json",
+  "path_base": "REPOSITORY_ROOT",
+  "schema_version": "vs1-source-authority-binding-1.0",
+  "source_documents_file": "source_documents.json"
+}
