@@ -139,3 +139,20 @@ without rerunning retrieval, changing rankings, or invoking Qwen.
 - **WHEN** the workbench loads the Task 2 packet
 - **THEN** it displays all 9 candidates and preserves their stable identity,
   retrieval metadata, tri-state ledger, corpus snapshot, and index build
+
+### Requirement: Human dispositions persist without mutating frozen evidence
+
+The workbench SHALL store review sessions and append-only candidate dispositions
+separately from the frozen packet, with host-owned provenance, a structured
+reason code, and required rationale. Decision outcome, reason code, and human
+explanation SHALL remain separate fields.
+
+#### Scenario: Reviewer revises a disposition
+
+- **WHEN** a reviewer submits a decision with the current previous event identity
+- **THEN** a new event is appended and the prior event remains readable
+
+#### Scenario: Retry or stale edit
+
+- **WHEN** an identical event is retried or a stale previous identity is submitted
+- **THEN** the retry returns the saved event without duplication and the stale edit is rejected

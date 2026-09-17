@@ -130,8 +130,11 @@ async function selectCandidate(candidateId) {
   el("page-stage").innerHTML = '<div class="page-loading">Resolving authoritative source...</div>';
   const response = await fetch(`/api/candidates/${encodeURIComponent(candidateId)}`);
   if (!response.ok) throw new Error(`Source resolution failed (${response.status})`);
-  state.detail = await response.json();
+  const detail = await response.json();
+  if (state.activeId !== candidateId) return;
+  state.detail = detail;
   renderDetail();
+  await loadReview();
   const url = new URL(window.location.href);
   url.searchParams.set("candidate", candidateId);
   history.replaceState(null, "", url);
@@ -151,5 +154,67 @@ async function init() {
     el("page-stage").innerHTML = `<div class="page-loading error">${escapeHtml(error.message)}</div>`;
   }
 }
+
+let reviewSession = localStorage.getItem("rmt-review-session");
+let reviewHistory = [];
+let pendingDecision = null;
+
+async function reviewRequest(url, body) {
+  const response = await fetch(url, body ? {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)
+  } : {});
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.detail || "Review request failed");
+  return result;
+}
+
+async function loadReview() {
+  const candidateId = state.activeId;
+  el("save-review").disabled = true;
+  el("review-history").textContent = "";
+  el("review-rationale").value = "";
+  el("review-message").textContent = "";
+  pendingDecision = null;
+  reviewHistory = [];
+  if (!reviewSession) return;
+  try {
+    const session = await reviewRequest(`/api/review-sessions/${encodeURIComponent(reviewSession)}`);
+    const rows = await reviewRequest(`/api/review-sessions/${encodeURIComponent(reviewSession)}/candidates/${encodeURIComponent(candidateId)}`);
+    if (state.activeId !== candidateId) return;
+    reviewHistory = rows;
+    el("review-session").textContent = `${session.reviewer} — ${session.session_id}`;
+    el("review-history").innerHTML = rows.map(row => `<p><strong>${escapeHtml(row.decision)}</strong> · ${escapeHtml(row.reason_code)} · ${escapeHtml(row.created_at)}<br>${escapeHtml(row.rationale)}</p>`).join("");
+    el("save-review").disabled = false;
+  } catch (error) { el("review-message").textContent = error.message; }
+}
+
+el("start-review").addEventListener("click", async () => {
+  try {
+    const session = await reviewRequest("/api/review-sessions", {reviewer: el("reviewer-name").value});
+    reviewSession = session.session_id;
+    localStorage.setItem("rmt-review-session", reviewSession);
+    await loadReview();
+  } catch (error) { el("review-message").textContent = error.message; }
+});
+el("save-review").addEventListener("click", async () => {
+  const candidateId = state.activeId;
+  const sessionId = reviewSession;
+  const values = {decision: el("review-decision").value, reason_code: el("review-reason").value, rationale: el("review-rationale").value};
+  if (!pendingDecision || pendingDecision.rationale !== values.rationale || pendingDecision.decision !== values.decision || pendingDecision.reason_code !== values.reason_code) {
+    pendingDecision = {...values, event_id: crypto.randomUUID(), previous_event_id: reviewHistory.at(-1)?.event_id ?? null};
+  }
+  el("save-review").disabled = true;
+  try {
+    await reviewRequest(`/api/review-sessions/${encodeURIComponent(sessionId)}/candidates/${encodeURIComponent(candidateId)}`, pendingDecision);
+    if (state.activeId !== candidateId || reviewSession !== sessionId) return;
+    await loadReview();
+    el("review-message").textContent = "Decision saved. Prior decisions remain in history.";
+  } catch (error) {
+    if (state.activeId === candidateId) {
+      el("review-message").textContent = error.message;
+      el("save-review").disabled = false;
+    }
+  }
+});
 
 init();

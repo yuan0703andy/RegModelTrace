@@ -94,6 +94,19 @@
               <div><dt>Fuzzy substitution</dt><dd>Never</dd></div>
             </dl>
           </section>
+          <section class="provenance-card" id="review-panel">
+            <h2>Human review</h2>
+            <p>Accept or reject this candidate as useful evidence for the displayed question. This is not a compliance verdict.</p>
+            <label>Reviewer <input id="reviewer-name" maxlength="200" /></label>
+            <button id="start-review" type="button">Start new session</button>
+            <p id="review-session"></p>
+            <label>Decision <select id="review-decision"><option>UNRESOLVED</option><option>ACCEPTED</option><option>REJECTED</option></select></label>
+            <label>Reason <select id="review-reason"><option>RELEVANT_SUPPORT</option><option>IRRELEVANT</option><option>INSUFFICIENT_EVIDENCE</option><option>MISSING_QUALIFICATION</option><option>WRONG_SOURCE</option><option>WRONG_VERSION</option><option>NEED_BROADER_SEARCH</option><option>OTHER</option></select></label>
+            <label>Rationale <textarea id="review-rationale" maxlength="10000"></textarea></label>
+            <button id="save-review" type="button" disabled>Save decision</button>
+            <p id="review-message" role="status"></p>
+            <div id="review-history"></div>
+          </section>
           <section class="boundary-note">
             <strong>Audit boundary</strong>
             <p>This replay contains returned and retained candidates only. It does not reconstruct the historical pre-ranking universe.</p>

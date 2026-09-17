@@ -1,0 +1,39 @@
+{
+  "status": "LOCAL_PASS",
+  "baseline_commit": "2d79734d7ea525a60fb3228007afeb92eeb10334",
+  "qa_only": true,
+  "persisted_event": {
+    "event_id": "task4-qa-first",
+    "session_id": "67d83c2a-756d-4be4-a771-c24dd9ca5244",
+    "candidate_id": "CE_5cfa19fb72d9660f619ee135",
+    "reviewer": "AUTOMATED_PRODUCT_QA_NOT_HUMAN_ADJUDICATION",
+    "decision": "UNRESOLVED",
+    "reason_code": "NEED_BROADER_SEARCH",
+    "rationale": "QA persistence check only; no substantive evidence judgment.",
+    "previous_event_id": null,
+    "passage_id": "P235e3ad6e158b368201a",
+    "document_id": "fchlpm_2019_hurricane_standards",
+    "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
+    "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+    "index_build_id": "IB_e922be7973b49bb13e2b340a",
+    "created_at": "2026-09-17T02:06:41.432246+00:00"
+  },
+  "reopen_exact_match": true,
+  "tests_passed": 74,
+  "browser_interaction_verified": true,
+  "browser_smoke": {
+    "qa_only": true,
+    "candidate_opened": true,
+    "session_created_and_restored": true,
+    "initial_event": "REJECTED:WRONG_SOURCE",
+    "revision_event": "UNRESOLVED:NEED_BROADER_SEARCH",
+    "reload_preserved_two_events": true,
+    "stale_second_tab_write_rejected": true,
+    "visible_conflict_message": "Stale decision; reload history before revising"
+  },
+  "qwen_runs": 0,
+  "retrieval_runs": 0,
+  "frozen_packet_modified": false,
+  "gate_c": "NOT_YET_PASS",
+  "repository_custody": "PENDING"
+}

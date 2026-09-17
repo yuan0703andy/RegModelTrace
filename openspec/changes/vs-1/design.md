@@ -108,3 +108,18 @@ Therefore the three-role acceptance test uses a predeclared frozen fixture known
 ## 8. Boundaries
 
 No new retriever/model optimization is part of VS-1.
+
+## Task 4 — Persistent reviewer decisions
+
+Use a local SQLite store, separate from frozen artifacts. Sessions bind a
+self-declared reviewer to the frozen run/corpus/index. Candidate decisions use
+ACCEPTED, REJECTED, or UNRESOLVED. Each event also stores one structured reason
+code (`RELEVANT_SUPPORT`, `IRRELEVANT`, `INSUFFICIENT_EVIDENCE`,
+`MISSING_QUALIFICATION`, `WRONG_SOURCE`, `WRONG_VERSION`,
+`NEED_BROADER_SEARCH`, or `OTHER`) and a required rationale. Each revision is
+an append-only event; a caller event ID makes retries idempotent. A previous
+event ID provides optimistic concurrency protection. Source resolution must
+succeed before a decision is saved. Host supplies all provenance bindings.
+Session history survives restarts. No frozen ledger is rewritten; these are
+reviewer assertions, not independent certification or authenticated identity.
+Local deployment only; no multi-user authentication is added in this task.

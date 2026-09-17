@@ -135,3 +135,8 @@ button { color: inherit; }
   .case-header { grid-template-columns: 1fr 1fr; }
   .inspection-panel { padding-inline: 20px; }
 }
+
+#review-panel label { display: block; margin: 12px 0; }
+#review-panel input, #review-panel textarea, #review-panel select { width: 100%; box-sizing: border-box; }
+#review-history { max-height: 240px; overflow: auto; overflow-wrap: anywhere; }
+#review-session { overflow-wrap: anywhere; }

@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Response
 from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, ConfigDict
 
+from .review_store import ReviewConflict, ReviewStore
 from .workbench import RetrievalOnlyWorkbench, WorkbenchError
 
 
@@ -19,6 +23,12 @@ WORKBENCH = RetrievalOnlyWorkbench(
     expected_run_id="RR_861400a826be9e9aa4a2d0d0",
     expected_corpus_snapshot_id="CS_815122cca84bcfd9c1637df6",
     expected_index_build_id="IB_e922be7973b49bb13e2b340a",
+)
+
+# Runtime review data is outside the repository and frozen artifact tree.
+REVIEW_STORE = ReviewStore(
+    Path(os.environ.get("RMT_REVIEW_DB", str(Path.home() / ".local/share/regmodeltrace/reviews.sqlite3"))),
+    WORKBENCH,
 )
 
 app = FastAPI(title="RegModelTrace Retrieval-Only Workbench", version="vs1-task3")
@@ -71,3 +81,57 @@ app.mount(
     StaticFiles(directory=ROOT / "workbench", html=True),
     name="workbench",
 )
+
+
+class SessionInput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    reviewer: str
+
+
+class DecisionInput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    event_id: str
+    decision: Literal["ACCEPTED", "REJECTED", "UNRESOLVED"]
+    reason_code: Literal[
+        "RELEVANT_SUPPORT",
+        "IRRELEVANT",
+        "INSUFFICIENT_EVIDENCE",
+        "MISSING_QUALIFICATION",
+        "WRONG_SOURCE",
+        "WRONG_VERSION",
+        "NEED_BROADER_SEARCH",
+        "OTHER",
+    ]
+    rationale: str
+    previous_event_id: str | None = None
+
+
+def review_call(fn, *args, **kwargs):
+    try:
+        return fn(*args, **kwargs)
+    except KeyError as exc:
+        raise HTTPException(404, str(exc)) from exc
+    except (ReviewConflict, WorkbenchError) as exc:
+        raise HTTPException(409, str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(422, str(exc)) from exc
+
+
+@app.post("/api/review-sessions")
+def create_review_session(body: SessionInput):
+    return review_call(REVIEW_STORE.create_session, body.reviewer)
+
+
+@app.get("/api/review-sessions/{session_id}")
+def get_review_session(session_id: str):
+    return review_call(REVIEW_STORE.session, session_id)
+
+
+@app.get("/api/review-sessions/{session_id}/candidates/{candidate_id}")
+def review_history(session_id: str, candidate_id: str):
+    return review_call(REVIEW_STORE.history, session_id, candidate_id)
+
+
+@app.post("/api/review-sessions/{session_id}/candidates/{candidate_id}")
+def append_review(session_id: str, candidate_id: str, body: DecisionInput):
+    return review_call(REVIEW_STORE.append, session_id, candidate_id, **body.model_dump())

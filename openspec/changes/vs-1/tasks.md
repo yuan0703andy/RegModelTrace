@@ -5,7 +5,7 @@
 Tasks 0–2 are accepted; Gates A and B passed. Task 1/2 repository custody
 is verified at `842e404f0cbb1301c0940314f10a37e2c0f808e0`.
 Task 3 is accepted locally; this change performs its authorized custody checkpoint.
-Task 4 implementation is not authorized. Gate C is not yet passed.
+Task 4 human-disposition persistence is authorized by the project owner. Gate C is not yet passed.
 
 ---
 
@@ -80,7 +80,7 @@ warnings, and precision labels were completed and accepted under Task 1.
 
 ## Task 3 — Retrieval-only workbench and PDF navigation
 
-**Status: accepted locally; repository custody pending commit/push verification.**
+**Status: accepted; repository custody verified at `2d79734d7ea525a60fb3228007afeb92eeb10334`.**
 
 - [x] replay the frozen Task 2 retrieval run and display all 9 candidates;
 - [x] show case, corpus, index-build, candidate, retrieval-score, and stage identities;
@@ -99,7 +99,13 @@ human dispositions and evidence/audit export.
 
 ## Task 4 — Human disposition persistence
 
-Not authorized; requires a subsequent bounded approval.
+Completed locally; owner review and repository custody pending.
+
+74 tests passed; lint/compile/JavaScript syntax/OpenSpec validation passed.
+Browser smoke passed for session restore, initial decision, revision, reload,
+and visible stale-write conflict.
+See `artifacts/vs-1/task-4-dispositions/task4_report.md`.
+Gate C remains NOT_YET_PASS.
 
 - review session;
 - append-only dispositions;

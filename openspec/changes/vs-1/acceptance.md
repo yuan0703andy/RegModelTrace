@@ -93,3 +93,12 @@ select frozen corpus
 ```
 
 without requiring a new model, retrieval tuning, Ray optimization, or statistical research.
+
+## Task 4 bounded acceptance
+
+Verify persistence after reopening the store, append-only revisions, identical
+retry deduplication, conflicting retries and stale revisions rejected, unknown
+session/candidate rejected, required reviewer/reason code/rationale validated, and exact
+host-owned run/corpus/index/passage bindings. Source failure prevents writes.
+Read-only navigation must create no disposition. Test data is product QA, not
+human adjudication. Gate C remains pending evidence/audit export.
