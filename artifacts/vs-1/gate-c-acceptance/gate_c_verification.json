@@ -8,6 +8,7 @@
   "gate": "GATE_C_RETRIEVAL_ONLY_REVIEWER_WORKFLOW",
   "human_adjudication_claimed": false,
   "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "implementation_commit": "b4329467b179b860756520741f58980c420a5a96",
   "known_limitations": [
     "RETURNED_RETAINED_CANDIDATES_ONLY",
     "PAGE_ONLY_NOT_REAL_CORPUS_VERIFIED",
@@ -22,7 +23,7 @@
   "next_authorized_state": "QWEN_RECONNECTION_REQUIRES_SEPARATE_OWNER_DECISION",
   "qa_only": true,
   "qwen_runs": 0,
-  "repository_custody": "PENDING",
+  "repository_custody": "VERIFIED",
   "retrieval_executed_in_gate_c": false,
   "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
   "review_event_count": 3,

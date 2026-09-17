@@ -76,7 +76,7 @@ def main() -> None:
         "PASS",
         "PASS",
         "PASS",
-        "LOCAL_PASS",
+        "PASS",
     ]:
         raise ValueError("A prerequisite VS-1 task has not passed its expected gate")
 

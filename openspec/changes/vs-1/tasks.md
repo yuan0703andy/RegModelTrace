@@ -120,7 +120,8 @@ Broader search remains deferred and outside Task 4.
 
 ## Task 5 — Export
 
-**Status: local implementation and verification passed; repository custody pending.**
+**Status: accepted; repository custody verified at
+`b4329467b179b860756520741f58980c420a5a96`.**
 
 Issue log: the first direct builder run exposed a missing repository-root import
 path. The entrypoint was corrected before artifact generation; no partial export
@@ -143,8 +144,8 @@ retry, producing a second append-only QA event; no event was overwritten.
 
 ## Task 6 — Vertical-slice acceptance
 
-**Status: local Gate C verification passed with declared limitations; repository
-custody pending.**
+**Status: Gate C passed with declared limitations; repository custody verified
+at `b4329467b179b860756520741f58980c420a5a96`.**
 
 The accepted fixtures and one bounded frozen Florida product-QA case completed
 the source-authority, retrieval replay, candidate trace, PDF navigation, review

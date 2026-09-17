@@ -2,6 +2,9 @@
 
 Status: `PASS_WITH_DECLARED_LIMITATIONS`.
 
+Repository custody is verified at
+`b4329467b179b860756520741f58980c420a5a96`.
+
 The frozen Florida case completed the full product path: source-authority binding,
 saved three-role retrieval replay, candidate trace inspection, authoritative PDF
 navigation, append-only reviewer disposition, and deterministic evidence/audit
