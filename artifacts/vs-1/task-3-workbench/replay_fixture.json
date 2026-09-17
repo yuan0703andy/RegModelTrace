@@ -1,0 +1,463 @@
+{
+  "schema_version": "vs1-workbench-case-1.0",
+  "baseline_commit": "842e404f0cbb1301c0940314f10a37e2c0f808e0",
+  "question": "What does M-3.B require regarding historical landfall frequencies?",
+  "question_id": "Q1",
+  "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "candidate_universe_scope": "RETURNED_RETAINED_CANDIDATES_ONLY",
+  "candidate_count": 9,
+  "candidates": [
+    {
+      "candidate_id": "CE_5cfa19fb72d9660f619ee135",
+      "passage_id": "P235e3ad6e158b368201a",
+      "assertion_ids": [
+        "Ab08d8990fce808bff159",
+        "A5be350cfe9de6b429b94",
+        "A4f6ef74ca0a527d76c00",
+        "A5eefadde993d3941d77c"
+      ],
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+      "pages": [
+        127
+      ],
+      "text": "The historical frequencies below have been derived from the Base Hurricane Storm Set as defined in Standard M-1, Base Hurricane Storm Set.\nIf the modeling organization Base Hurricane Storm Set differs from that defined in Standard M-1, Base Hurricane Storm Set (for example, using a different historical period), the historical rates in the table shall be edited to reflect this difference (see below).\nAs defined, a by-passing hurricane (ByP) is a hurricane which does not make landfall on Florida, but produces minimum damaging windspeeds or greater on land in Florida.\nFor the by-passing hurricanes included in the table only, the intensity entered is the maximum windspeed at closest approach to Florida, not the windspeed over Florida.",
+      "scores": {
+        "bm25_rank": 1,
+        "dense_rank": 6,
+        "rrf_score": 0.031544957774465976,
+        "role_rank": 1
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_5e382f511fd2dca0a4513149",
+      "passage_id": "P47213bb05acf490e87e8",
+      "assertion_ids": [
+        "A1348ea896690f9ac04ea",
+        "A3ac50d134064ed406add"
+      ],
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+      "pages": [
+        127
+      ],
+      "text": "Purpose: This form illustrates the differences among statewide and regional frequencies of landfalling and by-passing Florida hurricanes for historical and modeled hurricanes.\nThe historical events are derived from the Base Hurricane Storm Set with possible adjustments by the modeling organization as specified in Standard M-1, Base Hurricane Storm Set.",
+      "scores": {
+        "bm25_rank": 4,
+        "dense_rank": 5,
+        "rrf_score": 0.031009615384615385,
+        "role_rank": 2
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_ff9f6fc18e069527dc0019d2",
+      "passage_id": "P541db1047d1cbdbd32a4",
+      "assertion_ids": [
+        "A36f85b73ed3eaf8e6702",
+        "A304f2da18e99c32eefeb",
+        "Ad1d2be6ae83ec98a0d8f"
+      ],
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "document_title": "Hurricane Standards Report of Activities as of November 1, 2019",
+      "pages": [
+        143
+      ],
+      "text": "Purpose: This form illustrates the differences between historical and modeled frequencies of landfalling Florida hurricanes per year.\nThe historical events are derived from the Base Hurricane Storm Set with possible adjustments by the modeling organization as specified in Standard M-1, Base Hurricane Storm Set.\nA. One or more automated programs or scripts shall be used to generate and arrange the data in Form S-1, Probability and Frequency of Florida Landfalling Hurricanes per Year.",
+      "scores": {
+        "bm25_rank": 8,
+        "dense_rank": 7,
+        "rrf_score": 0.029631255487269532,
+        "role_rank": 3
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_81f2d80c185cfc531e2c68a9",
+      "passage_id": "Pcde89b9bfeb07efc80e3",
+      "assertion_ids": [
+        "Abe03b4bc1d117ae6d9a0"
+      ],
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "document_title": "RMS Professional Team Report, April 19-22, 2021",
+      "pages": [
+        18
+      ],
+      "text": "Reviewed the methodology for landfall updates by gate and by category and for smoothing the historical frequencies.",
+      "scores": {
+        "bm25_rank": 1,
+        "dense_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "role_rank": 1
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_9698dbde1bb963d718b1beed",
+      "passage_id": "P6ba9d3ae058539343769",
+      "assertion_ids": [
+        "A9777807e86851222038a"
+      ],
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "document_title": "RMS Professional Team Report, April 19-22, 2021",
+      "pages": [
+        19
+      ],
+      "text": "B. Modeled hurricane landfall frequency distributions shall reflect the Base Hurricane Storm Set used for category 1 to 5 hurricanes and shall be consistent with those observed for each coastal segment of Florida and neighboring states (Alabama, Georgia, and Mississippi).",
+      "scores": {
+        "bm25_rank": 4,
+        "dense_rank": 3,
+        "rrf_score": 0.03149801587301587,
+        "role_rank": 2
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_6fe6fb59e2d023f9b07598e4",
+      "passage_id": "P53d39d16c719407206af",
+      "assertion_ids": [
+        "A97a7439bbdd4e858985a",
+        "Ade31726ad27f1460c953"
+      ],
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "document_title": "RMS Professional Team Report, April 19-22, 2021",
+      "pages": [
+        15
+      ],
+      "text": "5. Modeled probabilities will be compared with observed hurricane frequency using methods documented in current scientific and technical literature.\nThe goodness-of-fit of modeled to historical statewide and regional hurricane frequencies as provided in Form M-1, Annual Occurrence Rates, will be reviewed.",
+      "scores": {
+        "bm25_rank": 2,
+        "dense_rank": 10,
+        "rrf_score": 0.0304147465437788,
+        "role_rank": 3
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_263a9a1c7652ae91bb80e25f",
+      "passage_id": "P852db81e279fad0045ca",
+      "assertion_ids": [
+        "A6e1be4d23f9d4fc83d19",
+        "A76ce63e3db81f7095d21"
+      ],
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "document_title": "RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+      "pages": [
+        67
+      ],
+      "text": "Modeled landfall frequencies are consistent with what has been observed historically for each geographical area of Florida and neighboring states, as demonstrated in Form M-1.\nThe model is consistent both in terms of the total rate of hurricanes making landfall by region, and the rate of hurricanes of various intensities by region.",
+      "scores": {
+        "bm25_rank": 1,
+        "dense_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "role_rank": 1
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_dc5dc72f8698f21e8f58e698",
+      "passage_id": "P25807ed4dbba722833ce",
+      "assertion_ids": [
+        "A00a97c5dbf0067ca8e1a"
+      ],
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "document_title": "RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+      "pages": [
+        60
+      ],
+      "text": "M-1.1 Specify the Base Hurricane Storm Set release date and the time period used to develop and implement landfall and by-passing hurricane frequencies into the hurricane model.",
+      "scores": {
+        "bm25_rank": 6,
+        "dense_rank": 2,
+        "rrf_score": 0.03128054740957967,
+        "role_rank": 2
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    },
+    {
+      "candidate_id": "CE_a601147488cf3b303c96fd9f",
+      "passage_id": "P85273005557137e2fcaf",
+      "assertion_ids": [
+        "A75f68e26c9fed7efb5f8",
+        "Aa20afab1ce248cd3a3b7"
+      ],
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "document_title": "RMS North Atlantic Hurricane Models 21.0 (Build 2050): 2019 Standards submission",
+      "pages": [
+        66
+      ],
+      "text": "▪ \"Equivalent over water\" maximum wind (Vmax)—Modeled and historical landfall frequencies (by intensity and by region) are compared in Form M-1.\nModeled and historical Vmax distributions at landfall are compared in Disclosure S-1.6.",
+      "scores": {
+        "bm25_rank": 2,
+        "dense_rank": 11,
+        "rrf_score": 0.03021353930031804,
+        "role_rank": 3
+      },
+      "stage_ledger": {
+        "SEARCHABLE": {
+          "state": "YES"
+        },
+        "RETRIEVED": {
+          "state": "YES"
+        },
+        "RETAINED_AFTER_RANKING": {
+          "state": "YES"
+        },
+        "INCLUDED_IN_MODEL_CONTEXT": {
+          "state": "NOT_REACHED"
+        },
+        "MODEL_SELECTED": {
+          "state": "NOT_REACHED"
+        },
+        "HOST_RESOLVED": {
+          "state": "NOT_REACHED"
+        },
+        "DELIVERED_TO_HUMAN": {
+          "state": "NOT_REACHED"
+        },
+        "HUMAN_VERIFIED": {
+          "state": "NOT_REACHED"
+        }
+      },
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": []
+    }
+  ]
+}

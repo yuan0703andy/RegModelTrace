@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102b2c" />
+    <meta name="description" content="Review frozen retrieval candidates against authoritative regulatory PDFs." />
+    <title>RegModelTrace - Retrieval Review</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <div><strong>RegModelTrace</strong><span>Retrieval-only review</span></div>
+      </div>
+      <div class="mode"><i></i> Frozen replay - no model</div>
+    </header>
+
+    <main>
+      <section class="case-header" aria-labelledby="question">
+        <div>
+          <p class="eyebrow">Frozen regulatory question</p>
+          <h1 id="question">Loading case...</h1>
+        </div>
+        <dl class="identity-grid">
+          <div><dt>Retrieval run</dt><dd id="run-id">-</dd></div>
+          <div><dt>Corpus</dt><dd id="corpus-id">-</dd></div>
+          <div><dt>Index build</dt><dd id="index-id">-</dd></div>
+          <div><dt>Candidate scope</dt><dd id="scope">-</dd></div>
+        </dl>
+      </section>
+
+      <section class="workspace">
+        <aside class="candidate-panel" aria-label="Frozen candidates">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Candidate evidence</p><h2>Retrieved passages</h2></div>
+            <span id="candidate-count">0</span>
+          </div>
+          <div id="candidate-list" class="candidate-list"></div>
+        </aside>
+
+        <section class="inspection-panel" aria-live="polite">
+          <div class="candidate-detail">
+            <div class="detail-topline">
+              <span id="role-badge" class="role-badge">Role</span>
+              <code id="candidate-id">candidate</code>
+            </div>
+            <h2 id="document-title">Select a candidate</h2>
+            <blockquote id="candidate-text">The frozen passage and its source trace will appear here.</blockquote>
+
+            <div class="metadata-row">
+              <div><span>Physical page</span><strong id="page-label">-</strong></div>
+              <div><span>BM25 rank</span><strong id="bm25-rank">-</strong></div>
+              <div><span>Dense rank</span><strong id="dense-rank">-</strong></div>
+              <div><span>RRF score</span><strong id="rrf-score">-</strong></div>
+              <div><span>Role rank</span><strong id="role-rank">-</strong></div>
+            </div>
+          </div>
+
+          <div class="source-viewer">
+            <div class="viewer-toolbar">
+              <div>
+                <p class="eyebrow">Authoritative source</p>
+                <div class="precision-line">
+                  <span id="precision-badge" class="precision-badge">-</span>
+                  <span id="warning-text"></span>
+                </div>
+              </div>
+              <div class="viewer-actions">
+                <div id="page-tabs" class="page-tabs"></div>
+                <a id="open-pdf" class="open-pdf" href="#" target="_blank" rel="noopener">Open original PDF</a>
+              </div>
+            </div>
+            <div id="fallback-note" class="fallback-note" hidden></div>
+            <div id="page-stage" class="page-stage" aria-label="PDF page with authoritative source highlight">
+              <div class="page-loading">Loading authoritative page...</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="trace-panel" aria-label="Retrieval and provenance trace">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Trace</p><h2>Evidence lifecycle</h2></div>
+          </div>
+          <div id="stage-ledger" class="stage-ledger"></div>
+          <section class="provenance-card">
+            <p class="eyebrow">Source binding</p>
+            <dl>
+              <div><dt>Passage</dt><dd id="passage-id">-</dd></div>
+              <div><dt>Document</dt><dd id="document-id">-</dd></div>
+              <div><dt>Status</dt><dd id="source-status">-</dd></div>
+              <div><dt>Fuzzy substitution</dt><dd>Never</dd></div>
+            </dl>
+          </section>
+          <section class="boundary-note">
+            <strong>Audit boundary</strong>
+            <p>This replay contains returned and retained candidates only. It does not reconstruct the historical pre-ranking universe.</p>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

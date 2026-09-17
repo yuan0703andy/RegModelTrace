@@ -1,0 +1,11 @@
+{
+  "schema_version": "vs1-task3-manifest-1.0",
+  "status": "PASS",
+  "baseline_commit": "842e404f0cbb1301c0940314f10a37e2c0f808e0",
+  "files": {
+    "pdf_navigation_verification.json": "1f6ced798bfb7bb85c24da611b1d4b81d514354a049adb38a116c5c1aa5319af",
+    "replay_fixture.json": "f958e0d435d048d9f3b7051e12f18b149543af0e3d816aeaef06f190c1a34e38",
+    "task3_report.md": "03fcf9adbb879dc29f0cb48c076d012e2aab4ef81b7897070d67593d0ee3551f",
+    "task3_verification.json": "4072741def915327c4d021f9c2e8c336c3e492fbd6602d2b30cdfb75881c955f"
+  }
+}

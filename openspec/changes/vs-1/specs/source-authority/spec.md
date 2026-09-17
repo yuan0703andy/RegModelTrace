@@ -102,3 +102,40 @@ Every candidate SHALL record `NOT_REACHED`, `YES`, or `NO` for `SEARCHABLE`,
 - **WHEN** a reached stage records `NO`
 - **THEN** the system attributes the loss to that stage and leaves later stages
   `NOT_REACHED`
+
+### Requirement: Frozen candidates open authoritative source locations
+
+The retrieval-only workbench SHALL load the frozen candidate packet and SHALL
+resolve every displayed candidate through the frozen source authority before
+displaying its original PDF or page preview.
+
+#### Scenario: Candidate has exact geometry
+
+- **WHEN** the reviewer selects a candidate whose source spans have verified
+  geometry
+- **THEN** the workbench opens the correct one-based physical PDF page and
+  displays the exact source region as a highlight
+
+#### Scenario: Candidate lacks exact geometry
+
+- **WHEN** document, hash, page, and text provenance verify but source geometry
+  is unavailable
+- **THEN** the candidate remains `RESOLVED`, the workbench visibly reports
+  `PAGE_TEXT` or `PAGE_ONLY`, and no exact highlight is fabricated
+
+#### Scenario: Candidate identity is not authoritative
+
+- **WHEN** a requested candidate, passage, document, or page falls outside its
+  frozen binding
+- **THEN** navigation fails closed without fuzzy source substitution
+
+### Requirement: Workbench replay does not execute retrieval or a model
+
+The first workbench fixture SHALL replay `RR_861400a826be9e9aa4a2d0d0`
+without rerunning retrieval, changing rankings, or invoking Qwen.
+
+#### Scenario: Reviewer opens the frozen case
+
+- **WHEN** the workbench loads the Task 2 packet
+- **THEN** it displays all 9 candidates and preserves their stable identity,
+  retrieval metadata, tri-state ledger, corpus snapshot, and index build

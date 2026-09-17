@@ -1,0 +1,34 @@
+{
+  "schema_version": "vs1-task3-verification-1.0",
+  "status": "PASS",
+  "baseline_commit": "842e404f0cbb1301c0940314f10a37e2c0f808e0",
+  "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "candidate_count": 9,
+  "authoritative_pdf_roundtrips": 9,
+  "exact_geometry_candidates": 9,
+  "exact_geometry_regions_present": true,
+  "page_png_render_checks": 9,
+  "degraded_precision_control": {
+    "status": "RESOLVED",
+    "location_precision": "PAGE_TEXT",
+    "warnings": [
+      "SOURCE_GEOMETRY_UNAVAILABLE"
+    ],
+    "region_count": 0
+  },
+  "invalid_id_fails_closed": true,
+  "fuzzy_substitution_used": false,
+  "new_model_inference_runs": 0,
+  "retrieval_executed": false,
+  "human_disposition_persistence": false,
+  "known_non_blocking_issues": [
+    {
+      "issue": "TESTCLIENT_HTTPX_DEPRECATION_WARNING",
+      "scope": "TEST_HARNESS_ONLY",
+      "impact": "NONE_ON_WORKBENCH_RUNTIME",
+      "disposition": "TRACK_FOR_DEPENDENCY_REFRESH"
+    }
+  ]
+}

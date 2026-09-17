@@ -2,9 +2,10 @@
 
 ## Authorization boundary
 
-Task 0 and Task 1 are accepted; Gate A and Gate B passed. Task 2 is authorized
-only for the evidence-stage ledger and candidate packet. Tasks after Task 2
-remain pending.
+Tasks 0–2 are accepted; Gates A and B passed. Task 1/2 repository custody
+is verified at `842e404f0cbb1301c0940314f10a37e2c0f808e0`.
+Task 3 is accepted locally; this change performs its authorized custody checkpoint.
+Task 4 implementation is not authorized. Gate C is not yet passed.
 
 ---
 
@@ -62,7 +63,7 @@ Every `IMPLEMENTED*` claim must cite actual repository/artifact evidence and a v
 
 ## Task 2 — Evidence-stage ledger and candidate packet
 
-**Status: completed; pending owner review.**
+**Status: accepted; repository custody verified at the baseline commit.**
 
 - [x] persist `RetrievalRun`;
 - [x] persist `CandidateEvidence`;
@@ -77,48 +78,49 @@ Every `IMPLEMENTED*` claim must cite actual repository/artifact evidence and a v
 The authoritative provenance resolver, hash/page/span verification, geometry
 warnings, and precision labels were completed and accepted under Task 1.
 
-## Task 5 — Retrieval-only workbench
+## Task 3 — Retrieval-only workbench and PDF navigation
 
-Pending approval after Task 0.
+**Status: accepted locally; repository custody pending commit/push verification.**
 
-- case header;
-- candidate list;
-- trace inspector;
-- source-resolution state;
-- original-PDF action.
+- [x] replay the frozen Task 2 retrieval run and display all 9 candidates;
+- [x] show case, corpus, index-build, candidate, retrieval-score, and stage identities;
+- [x] resolve each candidate against authoritative local PDFs;
+- [x] navigate by one-based physical PDF page;
+- [x] render exact verified geometry as source highlights;
+- [x] display `PAGE_TEXT` / `PAGE_ONLY` fallback without fabricated highlights;
+- [x] fail closed for unknown candidate and out-of-binding page identities;
+- [x] run without Qwen, retrieval execution, or human-disposition persistence.
 
-## Task 6 — PDF navigation
+Task 3 limitations: `EXACT_GEOMETRY` and `PAGE_TEXT` are real-corpus verified;
+`PAGE_ONLY` is a contract path, not real-corpus verified. Candidate universe is
+`RETURNED_RETAINED_CANDIDATES_ONLY`. Browser interaction QA is not human
+adjudication and does not set `HUMAN_VERIFIED`. Gate C still requires persistent
+human dispositions and evidence/audit export.
 
-Pending approval after Task 0.
+## Task 4 — Human disposition persistence
 
-- exact geometry where available;
-- page-text fallback;
-- page-only fallback;
-- precision display.
-
-## Task 7 — Human disposition persistence
-
-Pending approval after Task 0.
+Not authorized; requires a subsequent bounded approval.
 
 - review session;
 - append-only dispositions;
-- broader-search event.
 
-## Task 8 — Export
+Broader search remains deferred and outside Task 4.
 
-Pending approval after Task 0.
+## Task 5 — Export
+
+Not authorized; requires a subsequent bounded approval.
 
 - `evidence_packet.json`;
 - `evidence_packet.md`;
 - `audit_record.jsonl`.
 
-## Task 9 — Vertical-slice acceptance
+## Task 6 — Vertical-slice acceptance
 
-Pending approval after Task 0.
+Not authorized; requires a subsequent bounded approval.
 
 Run accepted fixtures and one bounded frozen Florida demo case.
 
-## Task 10 — Bounded Qwen reconnection
+## Task 7 — Bounded Qwen reconnection
 
 Only after Gate C.
 

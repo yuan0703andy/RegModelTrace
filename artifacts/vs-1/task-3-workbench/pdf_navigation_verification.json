@@ -1,0 +1,544 @@
+{
+  "schema_version": "vs1-pdf-navigation-verification-1.0",
+  "candidate_receipts": [
+    {
+      "candidate_id": "CE_5cfa19fb72d9660f619ee135",
+      "passage_id": "P235e3ad6e158b368201a",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "authoritative_pdf_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 127,
+          "pdf_page_index_zero_based": 126,
+          "printed_page_label": "127",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                90.0,
+                318.924,
+                539.928,
+                343.524
+              ],
+              "left_percent": 14.705882352941176,
+              "top_percent": 40.268181818181816,
+              "width_percent": 73.51764705882353,
+              "height_percent": 3.106060606060609
+            },
+            {
+              "bbox": [
+                90.0,
+                332.724,
+                540.0,
+                384.924
+              ],
+              "left_percent": 14.705882352941176,
+              "top_percent": 42.010606060606065,
+              "width_percent": 73.52941176470588,
+              "height_percent": 6.59090909090909
+            },
+            {
+              "bbox": [
+                90.0,
+                374.124,
+                540.24,
+                412.524
+              ],
+              "left_percent": 14.705882352941176,
+              "top_percent": 47.23787878787879,
+              "width_percent": 73.56862745098039,
+              "height_percent": 4.848484848484846
+            },
+            {
+              "bbox": [
+                90.0,
+                401.724,
+                540.24,
+                440.124
+              ],
+              "left_percent": 14.705882352941176,
+              "top_percent": 50.722727272727276,
+              "width_percent": 73.56862745098039,
+              "height_percent": 4.848484848484853
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 127,
+          "png_sha256": "8c1f73da6d6859edaf2e6aa2df12f7ba001661cd56a08636ff6f67f370a7ef6c",
+          "png_bytes": 136697,
+          "region_count": 4
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_5e382f511fd2dca0a4513149",
+      "passage_id": "P47213bb05acf490e87e8",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "authoritative_pdf_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 127,
+          "pdf_page_index_zero_based": 126,
+          "printed_page_label": "127",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                72.0,
+                100.404,
+                540.0,
+                125.004
+              ],
+              "left_percent": 11.764705882352942,
+              "top_percent": 12.677272727272728,
+              "width_percent": 76.47058823529412,
+              "height_percent": 3.1060606060606073
+            },
+            {
+              "bbox": [
+                126.0,
+                128.004,
+                540.048,
+                166.404
+              ],
+              "left_percent": 20.58823529411765,
+              "top_percent": 16.16212121212121,
+              "width_percent": 67.65490196078431,
+              "height_percent": 4.848484848484849
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 127,
+          "png_sha256": "8c1f73da6d6859edaf2e6aa2df12f7ba001661cd56a08636ff6f67f370a7ef6c",
+          "png_bytes": 136697,
+          "region_count": 2
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_ff9f6fc18e069527dc0019d2",
+      "passage_id": "P541db1047d1cbdbd32a4",
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "document_role": "STANDARDS",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "authoritative_pdf_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 143,
+          "pdf_page_index_zero_based": 142,
+          "printed_page_label": "143",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                72.0,
+                111.924,
+                540.0468,
+                136.524
+              ],
+              "left_percent": 11.764705882352942,
+              "top_percent": 14.131818181818184,
+              "width_percent": 76.47823529411764,
+              "height_percent": 3.1060606060606055
+            },
+            {
+              "bbox": [
+                126.0,
+                125.724,
+                540.0468,
+                164.124
+              ],
+              "left_percent": 20.58823529411765,
+              "top_percent": 15.874242424242423,
+              "width_percent": 67.65470588235293,
+              "height_percent": 4.848484848484848
+            },
+            {
+              "bbox": [
+                72.0,
+                176.364,
+                540.0,
+                200.964
+              ],
+              "left_percent": 11.764705882352942,
+              "top_percent": 22.26818181818182,
+              "width_percent": 76.47058823529412,
+              "height_percent": 3.1060606060606055
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 143,
+          "png_sha256": "7a89cb56107dc73d052cf49ee521130daf4e73c07241e40776b55ee1beda1976",
+          "png_bytes": 107105,
+          "region_count": 3
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_81f2d80c185cfc531e2c68a9",
+      "passage_id": "Pcde89b9bfeb07efc80e3",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "authoritative_pdf_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 18,
+          "pdf_page_index_zero_based": 17,
+          "printed_page_label": "18",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                72.0,
+                64.87296,
+                539.69304,
+                93.08016
+              ],
+              "left_percent": 11.764705882352942,
+              "top_percent": 8.191030303030303,
+              "width_percent": 76.42043137254902,
+              "height_percent": 3.561515151515152
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 18,
+          "png_sha256": "f8d59318616a13fa2a440e5111d33fccc12249e656371d67c12343cb703893c9",
+          "png_bytes": 36006,
+          "region_count": 1
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_9698dbde1bb963d718b1beed",
+      "passage_id": "P6ba9d3ae058539343769",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "authoritative_pdf_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 19,
+          "pdf_page_index_zero_based": 18,
+          "printed_page_label": "19",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                108.0,
+                149.784,
+                540.0756,
+                166.512
+              ],
+              "left_percent": 17.647058823529413,
+              "top_percent": 18.91212121212121,
+              "width_percent": 70.60058823529411,
+              "height_percent": 2.112121212121213
+            },
+            {
+              "bbox": [
+                126.0,
+                163.584,
+                540.1356,
+                207.912
+              ],
+              "left_percent": 20.58823529411765,
+              "top_percent": 20.654545454545453,
+              "width_percent": 67.66921568627451,
+              "height_percent": 5.596969696969698
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 19,
+          "png_sha256": "dc21fd8b1bc947b22a8511de846afddd2dff33a99d7f55774191e6393c8edafb",
+          "png_bytes": 107527,
+          "region_count": 2
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_6fe6fb59e2d023f9b07598e4",
+      "passage_id": "P53d39d16c719407206af",
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "document_role": "PROFESSIONAL_TEAM_REPORT",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "authoritative_pdf_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 15,
+          "pdf_page_index_zero_based": 14,
+          "printed_page_label": "15",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                72.03312,
+                558.63168,
+                540.157824,
+                586.83888
+              ],
+              "left_percent": 11.770117647058823,
+              "top_percent": 70.53430303030302,
+              "width_percent": 76.49096470588235,
+              "height_percent": 3.5615151515151586
+            },
+            {
+              "bbox": [
+                90.03936,
+                572.06736,
+                540.157824,
+                613.71024
+              ],
+              "left_percent": 14.712313725490196,
+              "top_percent": 72.23072727272728,
+              "width_percent": 73.54876862745098,
+              "height_percent": 5.257939393939393
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 15,
+          "png_sha256": "d98432bd6ef930cdfa4d742fa851784888d7af1c5d5b79aa0feab2132066fcad",
+          "png_bytes": 102344,
+          "region_count": 2
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_263a9a1c7652ae91bb80e25f",
+      "passage_id": "P852db81e279fad0045ca",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "authoritative_pdf_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 67,
+          "pdf_page_index_zero_based": 66,
+          "printed_page_label": "67",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                126.02,
+                626.878,
+                528.244,
+                647.103
+              ],
+              "left_percent": 20.591503267973856,
+              "top_percent": 79.15126262626264,
+              "width_percent": 65.72287581699347,
+              "height_percent": 2.553661616161605
+            },
+            {
+              "bbox": [
+                126.02,
+                638.778,
+                528.244,
+                671.103
+              ],
+              "left_percent": 20.591503267973856,
+              "top_percent": 80.65378787878788,
+              "width_percent": 65.72287581699347,
+              "height_percent": 4.081439393939386
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 67,
+          "png_sha256": "8a10fabb78584329d3b518a563cd8689a0b65474660c432168127a93d797c7f7",
+          "png_bytes": 62504,
+          "region_count": 2
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_dc5dc72f8698f21e8f58e698",
+      "passage_id": "P25807ed4dbba722833ce",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "authoritative_pdf_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 60,
+          "pdf_page_index_zero_based": 59,
+          "printed_page_label": "60",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                90.024,
+                336.668,
+                517.312,
+                344.993
+              ],
+              "left_percent": 14.709803921568627,
+              "top_percent": 42.50858585858586,
+              "width_percent": 69.81830065359478,
+              "height_percent": 1.0511363636363622
+            },
+            {
+              "bbox": [
+                126.02,
+                348.668,
+                480.259,
+                356.993
+              ],
+              "left_percent": 20.591503267973856,
+              "top_percent": 44.023737373737376,
+              "width_percent": 57.882189542483665,
+              "height_percent": 1.0511363636363622
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 60,
+          "png_sha256": "55d2a222e1941db374f28a70f169c3201d5645b918e1cea85c4b895b1d36905c",
+          "png_bytes": 102188,
+          "region_count": 2
+        }
+      ]
+    },
+    {
+      "candidate_id": "CE_a601147488cf3b303c96fd9f",
+      "passage_id": "P85273005557137e2fcaf",
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "document_role": "VENDOR_SUBMISSION",
+      "authoritative_pdf_path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "authoritative_pdf_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "source_status": "RESOLVED",
+      "location_precision": "EXACT_GEOMETRY",
+      "warnings": [],
+      "page_views": [
+        {
+          "physical_page": 66,
+          "pdf_page_index_zero_based": 65,
+          "printed_page_label": "66",
+          "page_width": 612.0,
+          "page_height": 792.0,
+          "regions": [
+            {
+              "bbox": [
+                126.02,
+                271.199,
+                521.074,
+                293.153
+              ],
+              "left_percent": 20.591503267973856,
+              "top_percent": 34.24229797979798,
+              "width_percent": 64.55130718954247,
+              "height_percent": 2.771969696969698
+            },
+            {
+              "bbox": [
+                144.02,
+                284.828,
+                521.074,
+                305.153
+              ],
+              "left_percent": 23.532679738562095,
+              "top_percent": 35.963131313131306,
+              "width_percent": 61.61013071895424,
+              "height_percent": 2.5662878787878847
+            }
+          ]
+        }
+      ],
+      "fuzzy_substitution_used": false,
+      "rendered_page_checks": [
+        {
+          "physical_page": 66,
+          "png_sha256": "5359052c56539bd88b23f861e422857a5402b156a217a1471098ba472655f88b",
+          "png_bytes": 69577,
+          "region_count": 2
+        }
+      ]
+    }
+  ],
+  "degraded_precision_control": {
+    "status": "RESOLVED",
+    "document_id": "fchlpm_2019_hurricane_standards",
+    "document_role": "STANDARDS",
+    "location_precision": "PAGE_TEXT",
+    "warnings": [
+      "SOURCE_GEOMETRY_UNAVAILABLE"
+    ],
+    "page_views": [
+      {
+        "physical_page": 161,
+        "pdf_page_index_zero_based": 160,
+        "printed_page_label": "161",
+        "page_width": 612.0,
+        "page_height": 792.0,
+        "regions": []
+      }
+    ],
+    "fuzzy_substitution_used": false
+  }
+}
