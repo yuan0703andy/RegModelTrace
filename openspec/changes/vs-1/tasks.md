@@ -121,7 +121,7 @@ Broader search remains deferred and outside Task 4.
 ## Task 5 — Export
 
 **Status: accepted; repository custody verified at
-`b4329467b179b860756520741f58980c420a5a96`.**
+`b432946768ee764b01f0b522fba12892a007883a`.**
 
 Issue log: the first direct builder run exposed a missing repository-root import
 path. The entrypoint was corrected before artifact generation; no partial export
@@ -145,7 +145,7 @@ retry, producing a second append-only QA event; no event was overwritten.
 ## Task 6 — Vertical-slice acceptance
 
 **Status: Gate C passed with declared limitations; repository custody verified
-at `b4329467b179b860756520741f58980c420a5a96`.**
+at `b432946768ee764b01f0b522fba12892a007883a`.**
 
 The accepted fixtures and one bounded frozen Florida product-QA case completed
 the source-authority, retrieval replay, candidate trace, PDF navigation, review

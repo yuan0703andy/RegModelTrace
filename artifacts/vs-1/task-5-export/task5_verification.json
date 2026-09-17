@@ -13,7 +13,7 @@
   "frozen_stage_ledgers_exact": true,
   "gate_c": "PENDING_VERTICAL_SLICE_ACCEPTANCE",
   "human_adjudication_claimed": false,
-  "implementation_commit": "b4329467b179b860756520741f58980c420a5a96",
+  "implementation_commit": "b432946768ee764b01f0b522fba12892a007883a",
   "output_hashes": {
     "audit_record.jsonl": "a31557249641f244b48412ac912b431270127d391ba02960ff6134cec3570703",
     "evidence_packet.json": "a6218a1d52b0a5f48afd829e5ebdfa41c86b32266f9a428b3342441f1d8f3749",

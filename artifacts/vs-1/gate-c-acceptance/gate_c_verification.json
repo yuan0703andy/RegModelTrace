@@ -8,7 +8,7 @@
   "gate": "GATE_C_RETRIEVAL_ONLY_REVIEWER_WORKFLOW",
   "human_adjudication_claimed": false,
   "index_build_id": "IB_e922be7973b49bb13e2b340a",
-  "implementation_commit": "b4329467b179b860756520741f58980c420a5a96",
+  "implementation_commit": "b432946768ee764b01f0b522fba12892a007883a",
   "known_limitations": [
     "RETURNED_RETAINED_CANDIDATES_ONLY",
     "PAGE_ONLY_NOT_REAL_CORPUS_VERIFIED",

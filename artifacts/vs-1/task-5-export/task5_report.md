@@ -1,7 +1,7 @@
 # VS-1 Task 5 — Evidence and audit export
 
 Status: `PASS`; repository custody verified at
-`b4329467b179b860756520741f58980c420a5a96`.
+`b432946768ee764b01f0b522fba12892a007883a`.
 
 The frozen Florida case exported 9 candidates and
 3 explicitly QA-only review events to JSON,
