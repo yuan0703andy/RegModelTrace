@@ -1,0 +1,9 @@
+{
+  "files": {
+    "gate_c_issues.md": "9eb76b82293f8f382623b2dcfd7f914b343d749914cb967078bc9acbe07cad23",
+    "gate_c_report.md": "fd38cc2813701c24869c2eae4d5e661fc168a004089c83abf77efc5ba51567a4",
+    "gate_c_verification.json": "db992b9f2c7ec82d9a6d136eb4447b7a78678b7a1fd2ccc4ed3d2c9ef99f8349"
+  },
+  "schema_version": "vs1-gate-c-manifest-1.0",
+  "status": "PASS_WITH_DECLARED_LIMITATIONS"
+}

@@ -106,6 +106,12 @@
             <button id="save-review" type="button" disabled>Save decision</button>
             <p id="review-message" role="status"></p>
             <div id="review-history"></div>
+            <div id="review-exports" hidden>
+              <strong>Audit export</strong>
+              <a data-export-name="evidence_packet.json" href="#">JSON packet</a>
+              <a data-export-name="evidence_packet.md" href="#">Markdown packet</a>
+              <a data-export-name="audit_record.jsonl" href="#">JSONL audit record</a>
+            </div>
           </section>
           <section class="boundary-note">
             <strong>Audit boundary</strong>

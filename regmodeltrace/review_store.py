@@ -68,14 +68,36 @@ class ReviewStore:
             raise ReviewConflict('Session belongs to a different frozen case')
         return session
 
+    def snapshot(self, session_id):
+        """Read one session and all events from a consistent SQLite snapshot."""
+
+        with self.connect() as db:
+            db.execute('BEGIN')
+            row = db.execute('SELECT payload FROM sessions WHERE id=?', (session_id,)).fetchone()
+            if row is None:
+                raise KeyError('Unknown review session')
+            session = json.loads(row[0])
+            rows = db.execute(
+                'SELECT payload FROM events WHERE session=? ORDER BY seq', (session_id,)
+            ).fetchall()
+        binding = self.binding()
+        if any(session[k] != v for k, v in binding.items()):
+            raise ReviewConflict('Session belongs to a different frozen case')
+        events = [json.loads(row[0]) for row in rows]
+        for event in events:
+            if event['session_id'] != session_id:
+                raise ReviewConflict('Event belongs to a different review session')
+            if event['candidate_id'] not in self.workbench.candidates:
+                raise ReviewConflict('Event references an unknown frozen candidate')
+            if any(event[k] != v for k, v in binding.items()):
+                raise ReviewConflict('Event belongs to a different frozen case')
+        return session, events
+
     def history(self, session_id, candidate_id):
-        self.session(session_id)
         if candidate_id not in self.workbench.candidates:
             raise KeyError('Unknown candidate')
-        with self.connect() as db:
-            rows = db.execute('SELECT payload FROM events WHERE session=? AND candidate=? ORDER BY seq',
-                              (session_id, candidate_id)).fetchall()
-        return [json.loads(row[0]) for row in rows]
+        _, events = self.snapshot(session_id)
+        return [event for event in events if event['candidate_id'] == candidate_id]
 
     def append(self, session_id, candidate_id, *, event_id, decision, reason_code, rationale,
                previous_event_id=None):

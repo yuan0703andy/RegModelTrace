@@ -156,3 +156,27 @@ explanation SHALL remain separate fields.
 
 - **WHEN** an identical event is retried or a stale previous identity is submitted
 - **THEN** the retry returns the saved event without duplication and the stale edit is rejected
+
+### Requirement: Audit export preserves evidence and review boundaries
+
+The system SHALL export frozen candidate evidence, authoritative provenance, and
+append-only review events in machine-readable, human-readable, and event-stream
+formats without changing source, retrieval, or review state.
+
+#### Scenario: Export a reviewed frozen case
+
+- **WHEN** a bound review session is exported
+- **THEN** JSON, Markdown, and JSONL outputs preserve corpus, index, run,
+  candidate, source, and disposition identities and state the candidate-universe
+  limitation
+
+#### Scenario: Review decision and retrieval ledger differ
+
+- **WHEN** a candidate has a human review event but its frozen `HUMAN_VERIFIED`
+  stage is `NOT_REACHED`
+- **THEN** export preserves both facts separately and does not rewrite the ledger
+
+#### Scenario: Authority changed after retrieval
+
+- **WHEN** a candidate no longer resolves to its frozen source identity or quote
+- **THEN** export fails closed and emits no completed packet

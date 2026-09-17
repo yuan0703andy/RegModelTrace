@@ -123,3 +123,29 @@ succeed before a decision is saved. Host supplies all provenance bindings.
 Session history survives restarts. No frozen ledger is rewritten; these are
 reviewer assertions, not independent certification or authenticated identity.
 Local deployment only; no multi-user authentication is added in this task.
+
+## Task 5 — Evidence and audit export
+
+Export one review session into three host-generated representations:
+
+```text
+evidence_packet.json  machine-readable complete packet
+evidence_packet.md    human-readable review packet
+audit_record.jsonl    append-ordered session and disposition events
+```
+
+The JSON packet binds the frozen corpus snapshot, index build, retrieval run,
+candidate identities, exact source resolution, retrieval metadata, unchanged
+stage ledgers, review session, and append-only disposition history. The latest
+event is exposed separately as a convenience view without deleting history.
+
+Export re-resolves each candidate against source authority and fails closed on
+identity, quote, document, or session-binding mismatch. For fixed packet and
+review database state, repeated export is byte-identical. Export never executes
+retrieval, invokes a model, or mutates the review database or frozen packet.
+
+Human disposition state remains separate from the frozen retrieval-stage ledger.
+An `ACCEPTED` candidate means useful for the displayed question; export SHALL NOT
+rewrite `HUMAN_VERIFIED` or infer regulatory compliance. The packet SHALL state
+that its universe is `RETURNED_RETAINED_CANDIDATES_ONLY` and cannot establish
+historical retrieval recall or fixed-corpus absence.

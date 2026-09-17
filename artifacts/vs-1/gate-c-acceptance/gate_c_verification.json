@@ -1,0 +1,45 @@
+{
+  "authoritative_source_resolutions_exact": true,
+  "browser_export_smoke_verified": true,
+  "candidate_count": 9,
+  "corpus_snapshot_id": "CS_815122cca84bcfd9c1637df6",
+  "export_replay_verified": true,
+  "frozen_stage_ledgers_exact": true,
+  "gate": "GATE_C_RETRIEVAL_ONLY_REVIEWER_WORKFLOW",
+  "human_adjudication_claimed": false,
+  "index_build_id": "IB_e922be7973b49bb13e2b340a",
+  "known_limitations": [
+    "RETURNED_RETAINED_CANDIDATES_ONLY",
+    "PAGE_ONLY_NOT_REAL_CORPUS_VERIFIED",
+    "SELF_DECLARED_REVIEWER_IDENTITY",
+    "NO_CRYPTOGRAPHIC_TAMPER_EVIDENCE",
+    "BROADER_SEARCH_DEFERRED",
+    "PRODUCT_QA_NOT_HUMAN_ADJUDICATION",
+    "TESTCLIENT_HTTPX_DEPRECATION_WARNING",
+    "RESTRICTED_MACOS_CPU_INFO_WARNING"
+  ],
+  "manifest_files_verified": 25,
+  "next_authorized_state": "QWEN_RECONNECTION_REQUIRES_SEPARATE_OWNER_DECISION",
+  "qa_only": true,
+  "qwen_runs": 0,
+  "repository_custody": "PENDING",
+  "retrieval_executed_in_gate_c": false,
+  "retrieval_run_id": "RR_861400a826be9e9aa4a2d0d0",
+  "review_event_count": 3,
+  "role_counts": {
+    "PROFESSIONAL_TEAM_REPORT": 3,
+    "STANDARDS": 3,
+    "VENDOR_SUBMISSION": 3
+  },
+  "schema_version": "vs1-gate-c-verification-1.0",
+  "status": "PASS_WITH_DECLARED_LIMITATIONS",
+  "tests_passed": 76,
+  "vertical_slice": {
+    "audit_packet_exported": true,
+    "authoritative_pdf_navigation_verified": true,
+    "frozen_corpus_selected": true,
+    "retrieval_trace_preserved": true,
+    "review_disposition_persisted": true,
+    "saved_role_aware_retrieval_replayed": true
+  }
+}

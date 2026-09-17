@@ -74,8 +74,10 @@ Requirements:
 
 ### Review/export
 - review events are append-only and survive reload;
-- broader search creates a child retrieval run;
 - export binds corpus + index build + retrieval runs + provenance + dispositions.
+
+Broader search is deferred outside Gate C. `NEED_BROADER_SEARCH` may be recorded
+as a reason code, but this vertical slice does not launch or claim a child run.
 
 ## Final vertical-slice criterion
 
@@ -102,3 +104,16 @@ session/candidate rejected, required reviewer/reason code/rationale validated, a
 host-owned run/corpus/index/passage bindings. Source failure prevents writes.
 Read-only navigation must create no disposition. Test data is product QA, not
 human adjudication. Gate C remains pending evidence/audit export.
+
+## Task 5 bounded acceptance
+
+- JSON, Markdown, and JSONL exports bind the same corpus, index, retrieval run,
+  session, candidates, and authoritative source identities;
+- every candidate is re-resolved before export and a mismatch fails closed;
+- complete disposition history and the latest-event view agree;
+- the frozen stage ledger is byte-equivalent to the candidate packet and is not
+  rewritten from review decisions;
+- a fixed review database exports byte-identically on repeat;
+- unreviewed candidates remain explicit and are not silently omitted;
+- the export states the retained-candidate scope and epistemic limitations;
+- no retrieval or model execution occurs.

@@ -5,7 +5,8 @@
 Tasks 0–2 are accepted; Gates A and B passed. Task 1/2 repository custody
 is verified at `842e404f0cbb1301c0940314f10a37e2c0f808e0`.
 Task 3 is accepted locally; this change performs its authorized custody checkpoint.
-Task 4 human-disposition persistence is authorized by the project owner. Gate C is not yet passed.
+Tasks 4 and 5, followed by bounded Gate C acceptance, are authorized by the
+project owner. Qwen remains off. Gate C is not yet passed.
 
 ---
 
@@ -119,17 +120,35 @@ Broader search remains deferred and outside Task 4.
 
 ## Task 5 — Export
 
-Not authorized; requires a subsequent bounded approval.
+**Status: local implementation and verification passed; repository custody pending.**
+
+Issue log: the first direct builder run exposed a missing repository-root import
+path. The entrypoint was corrected before artifact generation; no partial export
+directory was produced.
+
+The successful builder run emitted non-fatal transitive CPU-info `sysctlbyname`
+permission warnings under the restricted macOS environment. They are recorded
+as an environment limitation; export validation passed.
 
 - `evidence_packet.json`;
 - `evidence_packet.md`;
 - `audit_record.jsonl`.
 
+76 tests, strict OpenSpec validation, lint/compile/JavaScript checks, deterministic
+replay, source re-resolution, and the real-browser export smoke passed. The
+browser smoke used synthetic QA events only. Direct attachment navigation was
+blocked by the in-app browser, while export through the product link downloaded
+successfully. A timed-out composite browser action completed its POST before the
+retry, producing a second append-only QA event; no event was overwritten.
+
 ## Task 6 — Vertical-slice acceptance
 
-Not authorized; requires a subsequent bounded approval.
+**Status: local Gate C verification passed with declared limitations; repository
+custody pending.**
 
-Run accepted fixtures and one bounded frozen Florida demo case.
+The accepted fixtures and one bounded frozen Florida product-QA case completed
+the source-authority, retrieval replay, candidate trace, PDF navigation, review
+persistence, and export path. QA dispositions are not human adjudication.
 
 ## Task 7 — Bounded Qwen reconnection
 

@@ -176,6 +176,7 @@ async function loadReview() {
   el("review-message").textContent = "";
   pendingDecision = null;
   reviewHistory = [];
+  el("review-exports").hidden = true;
   if (!reviewSession) return;
   try {
     const session = await reviewRequest(`/api/review-sessions/${encodeURIComponent(reviewSession)}`);
@@ -184,6 +185,12 @@ async function loadReview() {
     reviewHistory = rows;
     el("review-session").textContent = `${session.reviewer} — ${session.session_id}`;
     el("review-history").innerHTML = rows.map(row => `<p><strong>${escapeHtml(row.decision)}</strong> · ${escapeHtml(row.reason_code)} · ${escapeHtml(row.created_at)}<br>${escapeHtml(row.rationale)}</p>`).join("");
+    el("review-exports").querySelectorAll("[data-export-name]").forEach(link => {
+      const name = link.dataset.exportName;
+      link.href = `/api/review-sessions/${encodeURIComponent(reviewSession)}/exports/${encodeURIComponent(name)}`;
+      link.download = name;
+    });
+    el("review-exports").hidden = false;
     el("save-review").disabled = false;
   } catch (error) { el("review-message").textContent = error.message; }
 }

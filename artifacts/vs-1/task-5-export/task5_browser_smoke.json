@@ -1,0 +1,20 @@
+{
+  "browser": "Codex in-app browser",
+  "candidate_id": "CE_5cfa19fb72d9660f619ee135",
+  "direct_attachment_navigation": "BLOCKED_BY_CLIENT_AS_EXPECTED_FOR_ATTACHMENT",
+  "export_links_visible": [
+    "evidence_packet.json",
+    "evidence_packet.md",
+    "audit_record.jsonl"
+  ],
+  "json_packet_download_from_ui": "PASS",
+  "qa_event_count_observed": 2,
+  "qa_only": true,
+  "review_decision_persisted": "PASS",
+  "reviewer": "VS1_TASK5_BROWSER_QA",
+  "schema_version": "vs1-task5-browser-smoke-1.0",
+  "session_id": "04aac196-deef-4272-b8f4-2fcf31e3ad3e",
+  "source_page_loaded": "PASS",
+  "status": "PASS",
+  "workbench_url": "http://127.0.0.1:8768/workbench/"
+}

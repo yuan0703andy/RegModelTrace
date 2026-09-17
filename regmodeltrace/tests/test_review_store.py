@@ -77,4 +77,11 @@ def test_http_history_and_host_owned_provenance(store, monkeypatch):
     assert len(history) == 1
     assert history[0]['decision'] == 'REJECTED'
     assert history[0]['reason_code'] == 'WRONG_SOURCE'
+    exported = client.get(f'/api/review-sessions/{sid}/exports/evidence_packet.json')
+    assert exported.status_code == 200
+    assert exported.headers['content-disposition'] == (
+        'attachment; filename="evidence_packet.json"'
+    )
+    assert exported.json()['review_event_count'] == 1
+    assert client.get(f'/api/review-sessions/{sid}/exports/unknown').status_code == 404
     assert client.get('/api/review-sessions/unknown').status_code == 404

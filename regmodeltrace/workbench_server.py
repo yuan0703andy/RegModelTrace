@@ -11,6 +11,7 @@ from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict
 
+from .audit_export import AuditExportError, EvidenceAuditExporter
 from .review_store import ReviewConflict, ReviewStore
 from .workbench import RetrievalOnlyWorkbench, WorkbenchError
 
@@ -135,3 +136,25 @@ def review_history(session_id: str, candidate_id: str):
 @app.post("/api/review-sessions/{session_id}/candidates/{candidate_id}")
 def append_review(session_id: str, candidate_id: str, body: DecisionInput):
     return review_call(REVIEW_STORE.append, session_id, candidate_id, **body.model_dump())
+
+
+EXPORT_MEDIA_TYPES = {
+    "evidence_packet.json": "application/json",
+    "evidence_packet.md": "text/markdown; charset=utf-8",
+    "audit_record.jsonl": "application/x-ndjson",
+}
+
+
+@app.get("/api/review-sessions/{session_id}/exports/{filename}")
+def export_review_session(session_id: str, filename: str):
+    if filename not in EXPORT_MEDIA_TYPES:
+        raise HTTPException(404, "Unknown audit-export format")
+    try:
+        payload = EvidenceAuditExporter(WORKBENCH, REVIEW_STORE).render(session_id)[filename]
+    except AuditExportError as exc:
+        raise HTTPException(409, str(exc)) from exc
+    return Response(
+        content=payload,
+        media_type=EXPORT_MEDIA_TYPES[filename],
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )

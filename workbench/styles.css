@@ -140,3 +140,5 @@ button { color: inherit; }
 #review-panel input, #review-panel textarea, #review-panel select { width: 100%; box-sizing: border-box; }
 #review-history { max-height: 240px; overflow: auto; overflow-wrap: anywhere; }
 #review-session { overflow-wrap: anywhere; }
+#review-exports { display: grid; gap: 6px; margin-top: 16px; }
+#review-exports[hidden] { display: none; }

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "audit_record.jsonl": "a31557249641f244b48412ac912b431270127d391ba02960ff6134cec3570703",
+    "evidence_packet.json": "a6218a1d52b0a5f48afd829e5ebdfa41c86b32266f9a428b3342441f1d8f3749",
+    "evidence_packet.md": "d2ad605eb2af26584b91cb0b11505c9a96d8b14bc2dc7c78e189352bd939f544",
+    "task5_browser_smoke.json": "01f760a6b2494cdbffc1d09c7b35c1137735cb29f550e979e5c2b5f1e447fd9f",
+    "task5_issues.md": "904e9b82488237a942d963503a22414f6cf81b6f910c2b4db09e12590ecb4a9f",
+    "task5_report.md": "0ad8eb7e02c5dc4d4bff6a327bf392c108da8063f7c94fbcfbcd6607d556cc4c",
+    "task5_verification.json": "9edfe1931bbfb4e6b845d34a62c66ab39c4651520791a0f3e43ef97f6056f995"
+  },
+  "schema_version": "vs1-task5-manifest-1.0"
+}
