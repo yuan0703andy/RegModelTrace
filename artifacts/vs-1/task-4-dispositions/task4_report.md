@@ -1,6 +1,8 @@
 # Task 4 — Human disposition persistence
 
-Status: LOCAL_PASS; owner review and repository custody pending.
+Status: PASS. The owner-requested structured reason-code contract is applied.
+Repository custody for the implementation is verified at
+`6bf7a70bb11d1d86025d849e11065a92a9e2f9e4`.
 
 Implemented a local SQLite review store, session/history API, and a minimal
 review form in the existing workbench. ACCEPTED / REJECTED / UNRESOLVED refer

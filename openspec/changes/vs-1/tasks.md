@@ -99,7 +99,12 @@ human dispositions and evidence/audit export.
 
 ## Task 4 — Human disposition persistence
 
-Completed locally; owner review and repository custody pending.
+**Status: accepted; repository custody verified at
+`6bf7a70bb11d1d86025d849e11065a92a9e2f9e4`.**
+
+Human disposition persistence is PASS. The structured reason-code contract and
+browser smoke requested in owner review are complete. Task 5 remains pending;
+Gate C is still NOT_YET_PASS.
 
 74 tests passed; lint/compile/JavaScript syntax/OpenSpec validation passed.
 Browser smoke passed for session restore, initial decision, revision, reload,
