@@ -1,0 +1,38 @@
+{
+  "claim_boundaries": {
+    "does_not_establish": [
+      "HUMAN_EVIDENCE_TRUTH",
+      "HISTORICAL_RETRIEVAL_RECALL",
+      "FIXED_CORPUS_ABSENCE",
+      "REGULATORY_COMPLIANCE",
+      "SEMANTIC_MODEL_QUALITY"
+    ],
+    "establishes": [
+      "FROZEN_CORPUS_BINDING",
+      "SAVED_THREE_ROLE_RETRIEVAL_REPLAY",
+      "CANDIDATE_AND_STAGE_TRACE",
+      "AUTHORITATIVE_PDF_INSPECTION",
+      "APPEND_ONLY_REVIEW_EVENTS",
+      "DETERMINISTIC_EVIDENCE_AND_AUDIT_EXPORT"
+    ]
+  },
+  "final_vs1_custody_head": "f14780e518a6dbefa42b7cee9451a50854a5176f",
+  "gate_a": "PASS",
+  "gate_b_source_authority": "PASS",
+  "gate_c_retrieval_only_reviewer_workflow": "PASS_WITH_DECLARED_LIMITATIONS",
+  "implementation_commit": "b432946768ee764b01f0b522fba12892a007883a",
+  "next_change": "VS2_BOUNDED_QWEN_RECONNECTION_REQUIRES_SEPARATE_OWNER_AUTHORIZATION",
+  "original_gate_c_custody_commit": "e426134e87e3340e739e9aa8da1bf0b33f004f2e",
+  "owner_decision_date": "2026-09-17",
+  "qwen_reconnection_authorized": false,
+  "schema_version": "vs1-closure-receipt-1.0",
+  "status": "CLOSED",
+  "tasks": {
+    "VS1_TASK_0": "ACCEPTED",
+    "VS1_TASK_1": "ACCEPTED",
+    "VS1_TASK_2": "ACCEPTED",
+    "VS1_TASK_3": "ACCEPTED",
+    "VS1_TASK_4": "ACCEPTED",
+    "VS1_TASK_5": "ACCEPTED"
+  }
+}

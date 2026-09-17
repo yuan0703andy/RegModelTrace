@@ -1,12 +1,18 @@
 # VS-1 Tasks
 
+**Change status: CLOSED by project-owner decision on 2026-09-17.**
+
+The accepted VS-1 claim boundary is recorded in
+`artifacts/vs-1/closure/vs1_closure_receipt.json`. Later work must not reinterpret
+Gate C as human evidence truth, historical retrieval recall, fixed-corpus
+absence, regulatory compliance, or semantic-model quality.
+
 ## Authorization boundary
 
-Tasks 0–2 are accepted; Gates A and B passed. Task 1/2 repository custody
-is verified at `842e404f0cbb1301c0940314f10a37e2c0f808e0`.
-Task 3 is accepted locally; this change performs its authorized custody checkpoint.
-Tasks 4 and 5, followed by bounded Gate C acceptance, are authorized by the
-project owner. Qwen remains off. Gate C is not yet passed.
+Tasks 0–5 are accepted. Gates A and B passed. Gate C passed with declared
+limitations. Final VS-1 custody is verified through
+`f14780e518a6dbefa42b7cee9451a50854a5176f`. Qwen remained off throughout VS-1
+and is outside this closed change.
 
 ---
 
@@ -153,6 +159,7 @@ persistence, and export path. QA dispositions are not human adjudication.
 
 ## Task 7 — Bounded Qwen reconnection
 
-Only after Gate C.
+**Removed from VS-1 scope; not authorized.**
 
-Reuse existing model/evidence contracts. No new model study.
+Any Qwen reconnection requires a separate owner-approved change named
+`VS2_BOUNDED_QWEN_RECONNECTION`. VS-1 dependencies remain frozen.

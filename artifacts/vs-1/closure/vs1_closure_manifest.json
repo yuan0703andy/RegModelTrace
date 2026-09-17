@@ -1,0 +1,8 @@
+{
+  "files": {
+    "vs1_closure_receipt.json": "21b4f4e7fb2742b402dd068f0fc31195c81bd225046f6ae1a4302de6ece17ee2",
+    "vs1_closure_report.md": "50a6213b9e949aca9dea6f65bafc2b3bbe9f859f7321e7aafccc7a7275dae118"
+  },
+  "schema_version": "vs1-closure-manifest-1.0",
+  "status": "CLOSED"
+}
