@@ -1,6 +1,7 @@
 """Persistent local Qwen/vLLM answer-generation backend."""
 
 import os
+from pathlib import Path
 
 os.environ.setdefault("VLLM_ENABLE_V1_MULTIPROCESSING", "0")
 
@@ -17,13 +18,19 @@ class VLLMGenerationBackend:
             raise ValueError(
                 "Set REGMODELTRACE_MODEL_PATH to the pinned Qwen snapshot before starting inference"
             )
+        expected_revision = config.get("model_revision")
+        if expected_revision and Path(model_path).resolve().name != expected_revision:
+            raise ValueError("Model path does not resolve to the configured revision")
+        self.chat_template_kwargs = {
+            "enable_thinking": bool(config.get("enable_thinking", False))
+        }
         self.llm = LLM(
             model=model_path,
             tokenizer=model_path,
             dtype=config["dtype"],
             max_model_len=config["max_model_len"],
             gpu_memory_utilization=config["gpu_memory_utilization"],
-            tensor_parallel_size=1,
+            tensor_parallel_size=config.get("tensor_parallel_size", 1),
             seed=config["seed"],
             enforce_eager=True,
             max_num_seqs=config["max_num_seqs"],
@@ -41,7 +48,10 @@ class VLLMGenerationBackend:
         prompt_token_counts = []
         for conversation, schema in zip(conversations, schemas):
             rendered = self.tokenizer.apply_chat_template(
-                conversation, tokenize=False, add_generation_prompt=True
+                conversation,
+                tokenize=False,
+                add_generation_prompt=True,
+                **self.chat_template_kwargs,
             )
             token_ids = self.tokenizer.encode(rendered, add_special_tokens=False)
             if len(token_ids) + self.config["max_output_tokens"] > self.config["max_model_len"]:
@@ -55,7 +65,12 @@ class VLLMGenerationBackend:
                     structured_outputs=StructuredOutputsParams(json=schema),
                 )
             )
-        generated = self.llm.chat(conversations, sampling, use_tqdm=False)
+        generated = self.llm.chat(
+            conversations,
+            sampling,
+            chat_template_kwargs=self.chat_template_kwargs,
+            use_tqdm=False,
+        )
         results = []
         for index, output in enumerate(generated):
             response = output.outputs[0]

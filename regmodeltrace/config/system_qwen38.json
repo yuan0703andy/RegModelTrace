@@ -1,0 +1,42 @@
+{
+  "version": "regmodeltrace-system-qwen38-1.0",
+  "paths": {
+    "passages": "data/retrieval/passages.jsonl",
+    "passages_database": "data/retrieval/passages.sqlite",
+    "records_database": "data/retrieval/records.sqlite",
+    "embedding_manifest": "data/retrieval/embedding/manifest.json",
+    "passage_matrix": "data/retrieval/embedding/passages.npy",
+    "passage_ids": "data/retrieval/embedding/passage_ids.json",
+    "embedding_model_snapshot": "config/embedding_model_snapshot.json",
+    "prompt": "config/rag_v0_prompt.txt"
+  },
+  "retrieval": {
+    "document_role_order": ["STANDARDS", "PROFESSIONAL_TEAM_REPORT", "VENDOR_SUBMISSION"],
+    "passages_per_role": 3,
+    "rrf_k": 60,
+    "query": "unchanged_user_question",
+    "planner": null
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "maximum_sequence_length": 256,
+    "device": "cpu"
+  },
+  "generation": {
+    "model": "Qwen/Qwen3.8-27B-FP8",
+    "model_revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+    "model_path": null,
+    "vllm_version": "0.29.0",
+    "dtype": "auto",
+    "seed": 1847,
+    "temperature": 0,
+    "enable_thinking": false,
+    "tensor_parallel_size": 2,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "gpu_memory_utilization": 0.85,
+    "max_output_tokens": 1536
+  },
+  "service": {"max_batch_questions": 32}
+}

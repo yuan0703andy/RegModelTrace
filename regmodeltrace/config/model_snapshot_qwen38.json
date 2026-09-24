@@ -1,0 +1,9 @@
+{
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "local_path_source": "REGMODELTRACE_MODEL_PATH",
+  "runtime": "vLLM 0.29.0",
+  "thinking": false,
+  "tensor_parallel_size": 2,
+  "status": "PENDING_RUNTIME_SMOKE"
+}

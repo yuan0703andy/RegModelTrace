@@ -1,0 +1,13 @@
+{
+  "ended_utc": "2026-09-24T03:59:21.480417+00:00",
+  "files": 81,
+  "hostname": "dcc-fergusonlab-ferc-u-q18-4-8",
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "safetensors_files": 66,
+  "slurm_job_id": "56252522",
+  "snapshot": "/hpc/group/borsuklab/yh421/regmodeltrace-runtime/hf-cache/hub/models--Qwen--Qwen3.8-27B-FP8/snapshots/017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "started_utc": "2026-09-24T03:54:07.929182+00:00",
+  "status": "DOWNLOAD_VERIFIED",
+  "total_bytes": 30890049597
+}
