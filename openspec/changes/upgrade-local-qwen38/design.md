@@ -18,8 +18,11 @@ config; any runtime upgrade must use an isolated environment and a new receipt.
 Match the active tensor-parallel setting to the GPU configuration actually
 verified by the smoke.
 
-After smoke success, update only the active service model snapshot and runtime
-settings. The host retains question, source, and citation identity. The model
+The owner requested the model selection directly. If DCC allocation delays the
+smoke, the active service may select the pinned Qwen3.8 configuration first,
+provided startup fails closed on a missing or mismatched checkpoint and runtime
+readiness remains explicitly pending. The previous frozen configuration remains
+available for rollback. The host retains question, source, and citation identity. The model
 continues to produce bounded answers under the existing citation validator.
 No corpus, retrieval, prompt, scorer, or historical model configuration changes.
 

@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from regmodeltrace.generation import VLLMGenerationBackend
+from regmodeltrace.service import DEFAULT_CONFIG
 
 
 class FakeTokenizer:
@@ -43,6 +44,14 @@ class FakeLLM:
 
 
 class GenerationRuntimeContractTests(unittest.TestCase):
+    def test_active_default_selects_pinned_qwen38(self):
+        import json
+
+        self.assertEqual(DEFAULT_CONFIG.name, "system_qwen38.json")
+        config = json.loads(DEFAULT_CONFIG.read_text())
+        self.assertEqual(config["generation"]["model"], "Qwen/Qwen3.8-27B-FP8")
+        self.assertFalse(config["generation"]["enable_thinking"])
+
     def config(self, path):
         return {
             "model_path": str(path), "model_revision": "pinned-revision",
@@ -90,6 +99,21 @@ class GenerationRuntimeContractTests(unittest.TestCase):
                     FakeLLM.instance.chat_options["chat_template_kwargs"],
                     {"enable_thinking": False},
                 )
+
+    def test_checkpoint_config_hash_is_verified_before_model_load(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "pinned-revision"
+            path.mkdir()
+            (path / "config.json").write_text("wrong config")
+            config = self.config(path)
+            config["model_config_sha256"] = "0" * 64
+            with patch.dict(sys.modules, self.fake_vllm()), patch.dict(
+                "os.environ", {"REGMODELTRACE_MODEL_PATH": str(path)}
+            ):
+                FakeLLM.instance = None
+                with self.assertRaisesRegex(ValueError, "config hash"):
+                    VLLMGenerationBackend(config)
+                self.assertIsNone(FakeLLM.instance)
 
 
 if __name__ == "__main__":

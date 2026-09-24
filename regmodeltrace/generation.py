@@ -1,6 +1,7 @@
 """Persistent local Qwen/vLLM answer-generation backend."""
 
 import os
+import hashlib
 from pathlib import Path
 
 os.environ.setdefault("VLLM_ENABLE_V1_MULTIPROCESSING", "0")
@@ -21,6 +22,14 @@ class VLLMGenerationBackend:
         expected_revision = config.get("model_revision")
         if expected_revision and Path(model_path).resolve().name != expected_revision:
             raise ValueError("Model path does not resolve to the configured revision")
+        expected_config_hash = config.get("model_config_sha256")
+        if expected_config_hash:
+            config_path = Path(model_path) / "config.json"
+            if not config_path.is_file():
+                raise ValueError("Model checkpoint has no config.json")
+            actual_hash = hashlib.sha256(config_path.read_bytes()).hexdigest()
+            if actual_hash != expected_config_hash:
+                raise ValueError("Model checkpoint config hash does not match")
         self.chat_template_kwargs = {
             "enable_thinking": bool(config.get("enable_thinking", False))
         }

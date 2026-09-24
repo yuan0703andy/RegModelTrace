@@ -8,7 +8,7 @@ experiments or claim improved documentary judgment from a runtime smoke test.
 
 The strongest operational objection is that a newer checkpoint may not load in
 the installed vLLM environment, and its default thinking mode may break the
-existing bounded JSON interface. We therefore stage the upgrade: verify the
-exact public revision, download it into the external DCC cache, test one
-synthetic structured response on a compatible compute node, and only then
-change the active configuration.
+existing bounded JSON interface. The exact public revision and checksum-verified
+weights are selected now, with fail-closed model-path validation. A bounded GPU
+smoke remains the separate readiness gate; queue delay must not be reported as
+runtime success or improved semantic quality.

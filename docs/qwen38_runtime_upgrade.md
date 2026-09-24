@@ -11,12 +11,15 @@ size and SHA-256 checks. The receipt and per-file hashes are in
 
 The prepared Qwen3.8 service configuration is separate. It leaves the frozen
 Qwen2.5 system-v1 configuration and Qwen3.5 FG-2 experiment untouched.
-The live default remains unchanged until the GPU smoke passes. The new model
-is configured to run with thinking explicitly disabled for bounded JSON output;
+The live default now selects this pinned configuration, while operational
+compatibility remains pending the queued GPU smoke. A previous system-v1 config
+remains available as a rollback. The new model is configured to run with
+thinking explicitly disabled for bounded JSON output;
 the host still owns evidence IDs, source resolution, and citations. The model
 path must resolve to the pinned revision, or startup fails.
 
-**Runtime smoke:** PENDING, Slurm job `56256759`.
+**Runtime smoke:** PENDING, Slurm job `56256759`. Model selection is active in
+code; a working DCC deployment is not yet claimed.
 
 **Domain quality:** NOT ASSESSED. Newer published general benchmarks do not
 establish improved judgment of regulatory evidence, especially partial
