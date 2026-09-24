@@ -1,0 +1,596 @@
+[
+  {
+    "case_id": "R01",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team reviewed the methodology for landfall updates by gate and by category.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R02",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team reviewed the methodology for landfall updates by gate and by category.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R03",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team examined the calculations for historical coastal landfall frequencies.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R04",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team inspected the coastal gates map and Form S-3 and marked the standard Verified: YES.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R05",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The reviewers assessed the smoothing of historical frequencies and recorded no requested change.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R06",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team reviewed the gate-by-category updates and accepted the submitted explanation.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R07",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team challenged the coastal landfall method and requested a revised calculation.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R08",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The reviewers identified a deficiency in the landfall frequency method and required RMS to correct it.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R09",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team instructed RMS to change its smoothing method before acceptance.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R10",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The reviewers rejected the submitted coastal-frequency method because it did not satisfy the standard.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R11",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team issued a formal objection to the gate-specific calibration and demanded a response.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "R12",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The reviewers found the methodology inconsistent with the requirement and directed the vendor to revise it.",
+        "role": "user"
+      }
+    ],
+    "panel": "reviewer",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "REVIEWER_SCRUTINY",
+            "REVIEWER_CHALLENGE"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C01",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The Professional Team reviewed the coastal landfall method. RMS also reported an update to the event set. The documents do not link the update to the review.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C02",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: At the opening briefing, RMS listed the event-set update as already completed. The Professional Team examined the method later in the review.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C03",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The reviewers verified the standard. The vendor submission describes its smoothing method but gives no response to a review request.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C04",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: After the review meeting, RMS updated its coastal landfall methodology. The document does not state why the update was made.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C05",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: In response to the Professional Team's request to correct coastal-frequency calculations, RMS revised those calculations.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "case_id": "C06",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "messages": [
+      {
+        "content": "Decide whether the supplied synthetic source explicitly connects a review intervention to a vendor or model modification. Review and update occurring together or in sequence do not establish causation. Return only a JSON object with evidence_type. Do not add explanations.",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic source: The review report instructed RMS to revise its coastal landfall method; RMS's written response states that it changed the method because of that instruction.",
+        "role": "user"
+      }
+    ],
+    "panel": "causal",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_type": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "EXPLICIT_REVIEW_CAUSED_MODIFICATION"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_type"
+      ],
+      "type": "object"
+    }
+  }
+]

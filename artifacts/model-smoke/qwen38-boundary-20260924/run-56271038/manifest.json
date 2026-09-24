@@ -1,0 +1,32 @@
+{
+  "cases_sha256": "8a7007b45fcb41659148f0abab2c07a248701ae68c8262c1576a7286982b1c06",
+  "config_sha256": "74227dd615bf1ea975aa676bdf355a0379858c12f394b5365cd9dfa5fc2c70bc",
+  "enable_thinking": false,
+  "ended_utc": "2026-09-24T09:01:43.568204+00:00",
+  "gpu_inventory": "NVIDIA RTX 5000 Ada Generation, GPU-288e2dd1-47c8-68b7-0fc9-706198d63305, 30712 MiB, 610.43.02\nNVIDIA RTX 5000 Ada Generation, GPU-e4f4986d-5b8f-df17-634e-3876942d291f, 30712 MiB, 610.43.02",
+  "hostname": "dcc-core-gpu-ferc-s-aa32-5",
+  "load_seconds": 138.02712451387197,
+  "max_model_len": 8192,
+  "max_num_seqs": 1,
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "model_path": "/hpc/group/borsuklab/yh421/regmodeltrace-runtime/hf-cache/hub/models--Qwen--Qwen3.8-27B-FP8/snapshots/017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "purpose": "SYNTHETIC_BOUNDARY_DIAGNOSTIC_ONLY",
+  "raw_responses_sha256": "b08a90a36c86af14d2f36115cc16ffde05505fecc791dd635fdaaf6fdb0a3193",
+  "requests_sha256": "800f8af9f211df0a351b24067f1e04f0e7bb3cd79506c210cdff00bdb7915111",
+  "responses_persisted": 18,
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "runner_sha256": "8ff51627e8af8091ce15d66b6ea2877ea94ded86f3fc0d6eaf9a19f02e93f932",
+  "runtime": {
+    "huggingface-hub": "1.31.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "vllm": "0.29.0"
+  },
+  "seed": 1847,
+  "semantic_evaluation": "NOT_RUN_BY_INFERENCE_SCRIPT",
+  "slurm_job_id": "56271038",
+  "started_utc": "2026-09-24T08:58:25.444060+00:00",
+  "status": "RAW_OUTPUT_COMPLETE_UNSCORED",
+  "temperature": 0.0,
+  "tensor_parallel_size": 2
+}
