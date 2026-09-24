@@ -1,0 +1,57 @@
+{
+  "discovery_protocol_id": "FG3-SOURCE-DISCOVERY-20260924-v1",
+  "status": "FROZEN_BEFORE_FORMAL_SOURCE_SCREENING",
+  "scope": "Source-only page-level lexical leads; not cases, truth, or model requests",
+  "cycles": [2021, 2023],
+  "document_roots": "regmodeltrace/data/corpus/scale-1/raw",
+  "extraction": {
+    "tool": "pdftotext",
+    "options": ["-layout", "-enc", "UTF-8"],
+    "page_unit": "physical PDF page",
+    "text_normalization_for_match_only": "collapse whitespace; case-insensitive regular expressions",
+    "source_quote": "substring of extracted page text around first match; not yet PDF verified"
+  },
+  "query_sets": {
+    "A": {
+      "document_roles": ["REGULATOR"],
+      "scope": "all physical pages of the 2021 and 2023 standards PDFs",
+      "max_selected_pages_per_document_and_query": 3,
+      "queries": {
+        "A_ILLUSTRATIVE": "\\b(?:such as|for example|may include|including)\\b",
+        "A_MANDATORY": "\\b(?:shall|must|required|is to)\\b",
+        "A_QUANTIFIER": "\\b(?:all|each|every|some|at least one)\\b",
+        "A_DEFINITION": "\\b(?:means|defined as|referred to as|equivalent to)\\b",
+        "A_CROSS_CLAUSE": "\\b(?:however|except|unless|subject to|provided that)\\b"
+      }
+    },
+    "B": {
+      "document_roles": ["REVIEWER"],
+      "scope": "all physical pages of the 2021 and 2023 Florida Public Professional Team reports",
+      "max_selected_pages_per_document_and_query": 4,
+      "queries": {
+        "B_REVIEW": "\\b(?:reviewed|examined|inspected|assessed|verified|confirmed|considered)\\b",
+        "B_CHALLENGE": "\\b(?:deficienc(?:y|ies)|noncompliance|non-compliance|rejected|objected|requested|required|correct(?:ion|ed)|revis(?:e|ed|ion))\\b"
+      }
+    },
+    "C": {
+      "document_roles": ["VENDOR", "REVIEWER"],
+      "scope": "all physical pages of the paired 2021 and 2023 Florida Public submissions and Professional Team reports",
+      "max_selected_pages_per_document_and_query": 4,
+      "queries": {
+        "C_CAUSAL_PHRASE": "\\b(?:in response to|because of|as a result of|at the request of|following the request|due to the review)\\b",
+        "C_CHANGE": "\\b(?:revis(?:e|ed|ion)|modif(?:y|ied|ication)|updat(?:e|ed)|chang(?:e|ed))\\b",
+        "C_NEGATED_CHANGE": "\\b(?:no changes|no change|not changed|not modified|no revision)\\b"
+      }
+    }
+  },
+  "inclusion_rule": "A physical page enters a query hit list if its text matches that query. A hit is only a lead. No evidence label or causal judgment is assigned.",
+  "deduplication_rule": "For each panel and cycle, a physical document page selected by multiple queries appears once in the candidate registry; all matched query IDs are retained. Page leads from the same source document and page share a dedup cluster. Cross-page or cross-document analytical cases are not formed automatically.",
+  "selection_rule": "Within each document and query, rank matching physical pages by SHA-256 of discovery_protocol_id|panel|cycle|document_id|query_id|physical_page and retain the first predeclared maximum. Union selected pages across queries. Never rank by model error, apparent challenge strength, or anticipated label.",
+  "stopping_condition": "Execute every frozen query on every frozen in-scope document exactly once, apply the fixed cap and deduplication rule, persist all hit counts and selected leads, then stop. Do not search further because selected leads appear too easy, hard, sparse, or ambiguous.",
+  "exposure_rule": "All generated leads begin EXPOSURE_UNKNOWN. Prior-exposure audit must separately inspect exact and substantially equivalent clause, vendor/reviewer passages, previous questions, human judgments, demos, model outputs, and synthetic derivation. Only CLEAR_FOR_PROSPECTIVE_EVALUATION may enter the primary set.",
+  "preexisting_exploratory_pages": [
+    {"document_id": "florida_public_2021_fphlm_review", "physical_pages": [3, 5]},
+    {"document_id": "florida_public_2023_fphlm_review", "physical_pages": [7, 27]}
+  ],
+  "prohibited_during_discovery": ["model inference", "gold assignment", "prompt tuning", "post-hit query expansion", "selection by anticipated model behavior"]
+}

@@ -1,0 +1,507 @@
+{
+  "version": "natural-corpus-inventory-check-20260924",
+  "checked_at_utc": "2026-09-24T09:39:25.223238+00:00",
+  "repository_head_at_check": "417c02ea841b3ab22d750e46805c58972e8a89e8",
+  "reference_inventory_path": "artifacts/corpus-inventory-20260923/inventory.json",
+  "reference_inventory_sha256": "9331a985824e496217f83dd37531cbac2e294ae6b6b562abd5e967a275e63b0f",
+  "scope": "Local Florida PDFs enumerated in reference inventory; excludes separate SEC materials",
+  "pdf_paths_checked": 45,
+  "pdf_distinct_sha256": 33,
+  "pdf_checks_pass": 45,
+  "manifest_checks_pass": 6,
+  "role_counts": {
+    "REGULATOR": {
+      "paths": 6,
+      "unique_hashes": 2
+    },
+    "REVIEWER": {
+      "paths": 18,
+      "unique_hashes": 14
+    },
+    "VENDOR": {
+      "paths": 18,
+      "unique_hashes": 14
+    },
+    "professional_team_report": {
+      "paths": 1,
+      "unique_hashes": 1
+    },
+    "standard": {
+      "paths": 1,
+      "unique_hashes": 1
+    },
+    "vendor_submission": {
+      "paths": 1,
+      "unique_hashes": 1
+    }
+  },
+  "pdf_checks": [
+    {
+      "document_id": "ara_2021_ara_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/ara_2021_ara_review.pdf",
+      "expected_sha256": "386790a984ee0b72a156cf0014040a7512551e257e277ff27333ce891fc513e7",
+      "actual_sha256": "386790a984ee0b72a156cf0014040a7512551e257e277ff27333ce891fc513e7",
+      "expected_bytes": 900201,
+      "actual_bytes": 900201,
+      "status": "PASS"
+    },
+    {
+      "document_id": "ara_2021_ara_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/ara_2021_ara_submission.pdf",
+      "expected_sha256": "4d8db3bd1232747ec2ec7a83b1672bf41fc46322416ffbe153a28afd45700a80",
+      "actual_sha256": "4d8db3bd1232747ec2ec7a83b1672bf41fc46322416ffbe153a28afd45700a80",
+      "expected_bytes": 15457025,
+      "actual_bytes": 15457025,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2021_corelogic_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2021_corelogic_review.pdf",
+      "expected_sha256": "32504afad696eef3da5eebf4f6ec7f2525dd16e7f28438591524a79f0cc146b8",
+      "actual_sha256": "32504afad696eef3da5eebf4f6ec7f2525dd16e7f28438591524a79f0cc146b8",
+      "expected_bytes": 866152,
+      "actual_bytes": 866152,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2021_corelogic_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2021_corelogic_submission.pdf",
+      "expected_sha256": "0a45b8b8ca4a22d62ea7cf12f8115ca0aa55a87a8ce5c64dc8cdf91f7a505471",
+      "actual_sha256": "0a45b8b8ca4a22d62ea7cf12f8115ca0aa55a87a8ce5c64dc8cdf91f7a505471",
+      "expected_bytes": 8360226,
+      "actual_bytes": 8360226,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2023_corelogic_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_review.pdf",
+      "expected_sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e",
+      "actual_sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e",
+      "expected_bytes": 978927,
+      "actual_bytes": 978927,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2023_corelogic_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/corelogic_cotality_2023_corelogic_submission.pdf",
+      "expected_sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656",
+      "actual_sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656",
+      "expected_bytes": 9583982,
+      "actual_bytes": 9583982,
+      "status": "PASS"
+    },
+    {
+      "document_id": "florida_public_2021_fphlm_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2021_fphlm_review.pdf",
+      "expected_sha256": "5a16e26d4e112541dc572b2eb2d63a494f01c701bbe98da6427fcb2baee7475a",
+      "actual_sha256": "5a16e26d4e112541dc572b2eb2d63a494f01c701bbe98da6427fcb2baee7475a",
+      "expected_bytes": 953999,
+      "actual_bytes": 953999,
+      "status": "PASS"
+    },
+    {
+      "document_id": "florida_public_2021_fphlm_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2021_fphlm_submission.pdf",
+      "expected_sha256": "285adee0007ed93fc05fdb93324ddcf4fb52db61b80918e3e4c36559b9ed5bdc",
+      "actual_sha256": "285adee0007ed93fc05fdb93324ddcf4fb52db61b80918e3e4c36559b9ed5bdc",
+      "expected_bytes": 27954518,
+      "actual_bytes": 27954518,
+      "status": "PASS"
+    },
+    {
+      "document_id": "florida_public_2023_fphlm_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2023_fphlm_review.pdf",
+      "expected_sha256": "6bb9fdcc0e363fc9259e8145d1d9f57770a8298e5151debd0b1c16ca21753575",
+      "actual_sha256": "6bb9fdcc0e363fc9259e8145d1d9f57770a8298e5151debd0b1c16ca21753575",
+      "expected_bytes": 1013083,
+      "actual_bytes": 1013083,
+      "status": "PASS"
+    },
+    {
+      "document_id": "florida_public_2023_fphlm_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/florida_public_2023_fphlm_submission.pdf",
+      "expected_sha256": "32a7aa4e661fe130b5681e8348fe7efcebcd2882e272d02675fc6e43cbec3647",
+      "actual_sha256": "32a7aa4e661fe130b5681e8348fe7efcebcd2882e272d02675fc6e43cbec3647",
+      "expected_bytes": 19531722,
+      "actual_bytes": 19531722,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2021_impact_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2021_impact_review.pdf",
+      "expected_sha256": "132ff2e89e8aec13f0cc94446c807808d74c7bbb7f790de6484fb2537662dc4e",
+      "actual_sha256": "132ff2e89e8aec13f0cc94446c807808d74c7bbb7f790de6484fb2537662dc4e",
+      "expected_bytes": 885145,
+      "actual_bytes": 885145,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2021_impact_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2021_impact_submission.pdf",
+      "expected_sha256": "4d189ba81b825b74c3e9e9c1fbedf08c237e5e031b42abe2ae75e668bcb7ce43",
+      "actual_sha256": "4d189ba81b825b74c3e9e9c1fbedf08c237e5e031b42abe2ae75e668bcb7ce43",
+      "expected_bytes": 11272412,
+      "actual_bytes": 11272412,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2023_impact_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_review.pdf",
+      "expected_sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff",
+      "actual_sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff",
+      "expected_bytes": 990788,
+      "actual_bytes": 990788,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2023_impact_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/impact_forecasting_2023_impact_submission.pdf",
+      "expected_sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa",
+      "actual_sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa",
+      "expected_bytes": 12100621,
+      "actual_bytes": 12100621,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_moodys_2021_rms_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2021_rms_review.pdf",
+      "expected_sha256": "de1dac1b542e356db3c4e64190bc6baa84a76135ae3bdc309f56d203df916155",
+      "actual_sha256": "de1dac1b542e356db3c4e64190bc6baa84a76135ae3bdc309f56d203df916155",
+      "expected_bytes": 911297,
+      "actual_bytes": 911297,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_moodys_2021_rms_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2021_rms_submission.pdf",
+      "expected_sha256": "b27b11f238b8df7851234163dff30a637a37ffc812f3b82d84388a3d6c8c8632",
+      "actual_sha256": "b27b11f238b8df7851234163dff30a637a37ffc812f3b82d84388a3d6c8c8632",
+      "expected_bytes": 15320229,
+      "actual_bytes": 15320229,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_moodys_2023_moodys_review",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2023_moodys_review.pdf",
+      "expected_sha256": "8459e35aa132eb2ebab7dc708cca247c0534b0a3b4515e0f8eeabfe06bdc0fc0",
+      "actual_sha256": "8459e35aa132eb2ebab7dc708cca247c0534b0a3b4515e0f8eeabfe06bdc0fc0",
+      "expected_bytes": 974355,
+      "actual_bytes": 974355,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_moodys_2023_moodys_submission",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/rms_moodys_2023_moodys_submission.pdf",
+      "expected_sha256": "b4f749dbe5de6c6b650377af9330de233c277f0b5c7579f5b40eaacb0ccc3431",
+      "actual_sha256": "b4f749dbe5de6c6b650377af9330de233c277f0b5c7579f5b40eaacb0ccc3431",
+      "expected_bytes": 19853622,
+      "actual_bytes": 19853622,
+      "status": "PASS"
+    },
+    {
+      "document_id": "shared_standards_2021_standards",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/shared_standards_2021_standards.pdf",
+      "expected_sha256": "bf70dd6f2e8fb0d8ff74c49c2bb541d94ab851de9ac2043ec32bd4ba35115264",
+      "actual_sha256": "bf70dd6f2e8fb0d8ff74c49c2bb541d94ab851de9ac2043ec32bd4ba35115264",
+      "expected_bytes": 2836439,
+      "actual_bytes": 2836439,
+      "status": "PASS"
+    },
+    {
+      "document_id": "shared_standards_2023_standards",
+      "path": "regmodeltrace/data/corpus/scale-1/raw/shared_standards_2023_standards.pdf",
+      "expected_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "actual_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "expected_bytes": 3019832,
+      "actual_bytes": 3019832,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2021_kcc_review",
+      "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2021_kcc_review.pdf",
+      "expected_sha256": "a5eb39ac15afcd3dc2695a5a0183b56dcf25997b46056fe2026f9cc63bc0f6df",
+      "actual_sha256": "a5eb39ac15afcd3dc2695a5a0183b56dcf25997b46056fe2026f9cc63bc0f6df",
+      "expected_bytes": 991804,
+      "actual_bytes": 991804,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2021_kcc_submission",
+      "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2021_kcc_submission.pdf",
+      "expected_sha256": "c6848ead6e297d704f75b8a3b3f7cf4f6302c0ee0a4c873e50fdfdb8a3f9ee5a",
+      "actual_sha256": "c6848ead6e297d704f75b8a3b3f7cf4f6302c0ee0a4c873e50fdfdb8a3f9ee5a",
+      "expected_bytes": 8331732,
+      "actual_bytes": 8331732,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2023_kcc_review",
+      "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_review.pdf",
+      "expected_sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db",
+      "actual_sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db",
+      "expected_bytes": 1023622,
+      "actual_bytes": 1023622,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2023_kcc_submission",
+      "path": "regmodeltrace/data/corpus/scale-1-sealed-test-e/raw/karen_clark_company_2023_kcc_submission.pdf",
+      "expected_sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be",
+      "actual_sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be",
+      "expected_bytes": 10613547,
+      "actual_bytes": 10613547,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2021_verisk_review",
+      "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2021_verisk_review.pdf",
+      "expected_sha256": "5dca3a60eca22b0f1206e3cedf2b7678485b0e842c8ac625efa4a6a05fa00e65",
+      "actual_sha256": "5dca3a60eca22b0f1206e3cedf2b7678485b0e842c8ac625efa4a6a05fa00e65",
+      "expected_bytes": 999827,
+      "actual_bytes": 999827,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2021_verisk_submission",
+      "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2021_verisk_submission.pdf",
+      "expected_sha256": "d8e33750e0f6f9420f850a3c278029e6a472b998b97cf9da7cdf24256e84820c",
+      "actual_sha256": "d8e33750e0f6f9420f850a3c278029e6a472b998b97cf9da7cdf24256e84820c",
+      "expected_bytes": 47084434,
+      "actual_bytes": 47084434,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2023_verisk_review",
+      "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_review.pdf",
+      "expected_sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e",
+      "actual_sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e",
+      "expected_bytes": 1073897,
+      "actual_bytes": 1073897,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2023_verisk_submission",
+      "path": "regmodeltrace/data/corpus/scale-1-validation-d/raw/verisk_2023_verisk_submission.pdf",
+      "expected_sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed",
+      "actual_sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed",
+      "expected_bytes": 66378041,
+      "actual_bytes": 66378041,
+      "status": "PASS"
+    },
+    {
+      "document_id": "fchlpm_2023_hurricane_standards",
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/fchlpm_2023_hurricane_standards.pdf",
+      "expected_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "actual_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "expected_bytes": 3019832,
+      "actual_bytes": 3019832,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2023_professional_team_20250425",
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_professional_team_20250425.pdf",
+      "expected_sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff",
+      "actual_sha256": "8ad180b3a149c5599562a07238acad2624f19adc91d0f52b84277334a3284dff",
+      "expected_bytes": 990788,
+      "actual_bytes": 990788,
+      "status": "PASS"
+    },
+    {
+      "document_id": "impact_forecasting_2023_submission_20250528",
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/raw/impact_forecasting_2023_submission_20250528.pdf",
+      "expected_sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa",
+      "actual_sha256": "4107343a64dd4ba1384662693d4867c2c622f78ad30e98053f3c28a317a6b3fa",
+      "expected_bytes": 12100621,
+      "actual_bytes": 12100621,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2023_professional_team_20250410",
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_professional_team_20250410.pdf",
+      "expected_sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e",
+      "actual_sha256": "855e0b128bcfc873b041386d35b2620febd9230ada8db2eed4391a29a2d9843e",
+      "expected_bytes": 978927,
+      "actual_bytes": 978927,
+      "status": "PASS"
+    },
+    {
+      "document_id": "corelogic_cotality_2023_submission_20250506",
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/corelogic_cotality_2023_submission_20250506.pdf",
+      "expected_sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656",
+      "actual_sha256": "d46761e6692a0c2236b483e840dd31a65c8e84f1b29d6b02023b51df88d10656",
+      "expected_bytes": 9583982,
+      "actual_bytes": 9583982,
+      "status": "PASS"
+    },
+    {
+      "document_id": "fchlpm_2023_hurricane_standards",
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/raw/fchlpm_2023_hurricane_standards.pdf",
+      "expected_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "actual_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "expected_bytes": 3019832,
+      "actual_bytes": 3019832,
+      "status": "PASS"
+    },
+    {
+      "document_id": "ara_hurloss_10_0_2019_professional_team_20210311",
+      "path": "regmodeltrace/data/raw/reviews/ara_2019_professional_team_20210311.pdf",
+      "expected_sha256": "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504",
+      "actual_sha256": "e36104aa0928c50601f6d8cfafa9a11e15f5fdf65fca1e3132609fb685d9e504",
+      "expected_bytes": 1568611,
+      "actual_bytes": 1568611,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_21_0_2019_professional_team_20210422",
+      "path": "regmodeltrace/data/raw/reviews/rms_21_0_2019_professional_team_20210422.pdf",
+      "expected_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "actual_sha256": "5a93150eb8bdd4079bb56a2a20578817e1603ea95dfd85fded6a9ec0533b52e0",
+      "expected_bytes": 1586183,
+      "actual_bytes": 1586183,
+      "status": "PASS"
+    },
+    {
+      "document_id": "fchlpm_2019_hurricane_standards",
+      "path": "regmodeltrace/data/raw/standards/fchlpm_2019_hurricane_standards.pdf",
+      "expected_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "actual_sha256": "6532900dd1394149fecaf3bacf13e5dc24b080b056e51da014a46ee964d0b0a4",
+      "expected_bytes": 2691176,
+      "actual_bytes": 2691176,
+      "status": "PASS"
+    },
+    {
+      "document_id": "ara_hurloss_10_0_2019_submission_20210310",
+      "path": "regmodeltrace/data/raw/submissions/ara_2019_submission_20210310.pdf",
+      "expected_sha256": "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673",
+      "actual_sha256": "7a7d1e4a182bc022b6bef0d663794d03607168ba7eb481eee77480243fe71673",
+      "expected_bytes": 12954834,
+      "actual_bytes": 12954834,
+      "status": "PASS"
+    },
+    {
+      "document_id": "rms_21_0_2019_submission_20210422",
+      "path": "regmodeltrace/data/raw/submissions/rms_21_0_2019_submission_20210422.pdf",
+      "expected_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "actual_sha256": "f4bf9d9881c7c5bb99cba9ef217db817b1d4f403cac316e665603d598806b610",
+      "expected_bytes": 11985253,
+      "actual_bytes": 11985253,
+      "status": "PASS"
+    },
+    {
+      "document_id": "shared_standards_2023_standards",
+      "path": "regmodeltrace/data/test-e/kcc-2023/raw/fchlpm_2023_hurricane_standards.pdf",
+      "expected_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "actual_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "expected_bytes": 3019832,
+      "actual_bytes": 3019832,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2023_kcc_review",
+      "path": "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_professional_team_20250206.pdf",
+      "expected_sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db",
+      "actual_sha256": "d69a8238e47972fbdbd3dd35a06d2bc1a6bfbfd2e27874c9c5f3506b40c770db",
+      "expected_bytes": 1023622,
+      "actual_bytes": 1023622,
+      "status": "PASS"
+    },
+    {
+      "document_id": "karen_clark_company_2023_kcc_submission",
+      "path": "regmodeltrace/data/test-e/kcc-2023/raw/kcc_2023_submission_20250516.pdf",
+      "expected_sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be",
+      "actual_sha256": "3122363452db30642ef7bffc37ec7d60a63651a9cb26dacc50613a970310a0be",
+      "expected_bytes": 10613547,
+      "actual_bytes": 10613547,
+      "status": "PASS"
+    },
+    {
+      "document_id": "shared_standards_2023_standards",
+      "path": "regmodeltrace/data/validation-d/verisk-2023/raw/fchlpm_2023_hurricane_standards.pdf",
+      "expected_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "actual_sha256": "c5ad358b07f3988e8d76ec8690c735d0a6443acdd53c0fac4e6f33f7155421af",
+      "expected_bytes": 3019832,
+      "actual_bytes": 3019832,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2023_verisk_review",
+      "path": "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_professional_team_20250403.pdf",
+      "expected_sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e",
+      "actual_sha256": "9e78fbc08bc84ae192d56585e23f6754fd311f913151b375b35e869b88e7484e",
+      "expected_bytes": 1073897,
+      "actual_bytes": 1073897,
+      "status": "PASS"
+    },
+    {
+      "document_id": "verisk_2023_verisk_submission",
+      "path": "regmodeltrace/data/validation-d/verisk-2023/raw/verisk_2023_submission_20250527.pdf",
+      "expected_sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed",
+      "actual_sha256": "602768464fa6eceac994915840f62c7bbd9314864480a5d4d9144243396076ed",
+      "expected_bytes": 66378041,
+      "actual_bytes": 66378041,
+      "status": "PASS"
+    }
+  ],
+  "manifest_checks": [
+    {
+      "path": "regmodeltrace/data/document_manifest.json",
+      "expected_sha256": "fc1b20c4e8f2ff012fdba5e408f8754da15eea2462a233e325f4356be7532d6f",
+      "actual_sha256": "fc1b20c4e8f2ff012fdba5e408f8754da15eea2462a233e325f4356be7532d6f",
+      "status": "PASS"
+    },
+    {
+      "path": "regmodeltrace/data/corpus/scale-1/parser_manifest.json",
+      "expected_sha256": "0d5350d81c9f58846f89c742fa404fbaee34a7dcab4fbb2fc2a89bffd2b23acf",
+      "actual_sha256": "0d5350d81c9f58846f89c742fa404fbaee34a7dcab4fbb2fc2a89bffd2b23acf",
+      "status": "PASS"
+    },
+    {
+      "path": "regmodeltrace/data/dataset-expansion/v2-3/parser_manifest.json",
+      "expected_sha256": "e34221dbf73c4ecc92cf890e52db35e81ae0b34f8482fc40c097967c1e31b559",
+      "actual_sha256": "e34221dbf73c4ecc92cf890e52db35e81ae0b34f8482fc40c097967c1e31b559",
+      "status": "PASS"
+    },
+    {
+      "path": "regmodeltrace/data/dataset-expansion/v2-4/parser_manifest.json",
+      "expected_sha256": "c042ce6638e5ee3de0f2c76cae2777aafb7307e65304adf2641fe569a23238ca",
+      "actual_sha256": "c042ce6638e5ee3de0f2c76cae2777aafb7307e65304adf2641fe569a23238ca",
+      "status": "PASS"
+    },
+    {
+      "path": "regmodeltrace/data/validation-d/verisk-2023/manifest.json",
+      "expected_sha256": "4172a90e5c1199d2aea76e8f96c527839a2d2f8cca6562f0a471051ab98fd86e",
+      "actual_sha256": "4172a90e5c1199d2aea76e8f96c527839a2d2f8cca6562f0a471051ab98fd86e",
+      "status": "PASS"
+    },
+    {
+      "path": "regmodeltrace/data/corpora/ara-2019-v1/parser_manifest.json",
+      "expected_sha256": "e925ae1c17301508499272f0561ba41d4fa69ecd2e30aa490bf99e4a0eb7813a",
+      "actual_sha256": "e925ae1c17301508499272f0561ba41d4fa69ecd2e30aa490bf99e4a0eb7813a",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "Hash and size verification proves local file identity, not parser/source-span quality.",
+    "No current remote byte-for-byte DCC comparison in this receipt.",
+    "No new independent human truth, case eligibility, or model inference was established."
+  ],
+  "normalized_role_counts": {
+    "REGULATOR": {
+      "paths": 7,
+      "unique_hashes": 3
+    },
+    "VENDOR": {
+      "paths": 19,
+      "unique_hashes": 15
+    },
+    "REVIEWER": {
+      "paths": 19,
+      "unique_hashes": 15
+    }
+  },
+  "role_normalization": {
+    "standard": "REGULATOR",
+    "vendor_submission": "VENDOR",
+    "professional_team_report": "REVIEWER"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "all_query_hit_count": 1708,
+  "developer_exposed_page_leads": 1,
+  "discovery_protocol_id": "FG3-SOURCE-DISCOVERY-20260924-v1",
+  "discovery_protocol_sha256": "3218d3578f1d9ff9d78a3260b32f4eb7fd0c2160c8cc51a425b90eeefc204aeb",
+  "documents_searched": [
+    "florida_public_2021_fphlm_review",
+    "florida_public_2021_fphlm_submission",
+    "florida_public_2023_fphlm_review",
+    "florida_public_2023_fphlm_submission",
+    "shared_standards_2021_standards",
+    "shared_standards_2023_standards"
+  ],
+  "human_truth_records": 0,
+  "model_inference_runs": 0,
+  "output_sha256": {
+    "all_query_hits.jsonl": "b83091c786cda6aaf12f461b30ebb4811919d0ef0bcba43e82ebed34ce19d1f9",
+    "source_leads.jsonl": "2400910589ed93400816311fb0f7d96db0140f7a20440d1768624d5b32c63d4f"
+  },
+  "physical_pages_by_document": {
+    "florida_public_2021_fphlm_review": 64,
+    "florida_public_2021_fphlm_submission": 626,
+    "florida_public_2023_fphlm_review": 85,
+    "florida_public_2023_fphlm_submission": 630,
+    "shared_standards_2021_standards": 328,
+    "shared_standards_2023_standards": 364
+  },
+  "query_counts": [
+    {
+      "cycle": 2021,
+      "document_id": "shared_standards_2021_standards",
+      "hit_pages": 91,
+      "panel": "A",
+      "query_id": "A_ILLUSTRATIVE",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "shared_standards_2021_standards",
+      "hit_pages": 157,
+      "panel": "A",
+      "query_id": "A_MANDATORY",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "shared_standards_2021_standards",
+      "hit_pages": 181,
+      "panel": "A",
+      "query_id": "A_QUANTIFIER",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "shared_standards_2021_standards",
+      "hit_pages": 23,
+      "panel": "A",
+      "query_id": "A_DEFINITION",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "shared_standards_2021_standards",
+      "hit_pages": 49,
+      "panel": "A",
+      "query_id": "A_CROSS_CLAUSE",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2023,
+      "document_id": "shared_standards_2023_standards",
+      "hit_pages": 101,
+      "panel": "A",
+      "query_id": "A_ILLUSTRATIVE",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2023,
+      "document_id": "shared_standards_2023_standards",
+      "hit_pages": 205,
+      "panel": "A",
+      "query_id": "A_MANDATORY",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2023,
+      "document_id": "shared_standards_2023_standards",
+      "hit_pages": 184,
+      "panel": "A",
+      "query_id": "A_QUANTIFIER",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2023,
+      "document_id": "shared_standards_2023_standards",
+      "hit_pages": 28,
+      "panel": "A",
+      "query_id": "A_DEFINITION",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2023,
+      "document_id": "shared_standards_2023_standards",
+      "hit_pages": 48,
+      "panel": "A",
+      "query_id": "A_CROSS_CLAUSE",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_review",
+      "hit_pages": 58,
+      "panel": "B",
+      "query_id": "B_REVIEW",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_review",
+      "hit_pages": 34,
+      "panel": "B",
+      "query_id": "B_CHALLENGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_review",
+      "hit_pages": 79,
+      "panel": "B",
+      "query_id": "B_REVIEW",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_review",
+      "hit_pages": 44,
+      "panel": "B",
+      "query_id": "B_CHALLENGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_submission",
+      "hit_pages": 20,
+      "panel": "C",
+      "query_id": "C_CAUSAL_PHRASE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_submission",
+      "hit_pages": 127,
+      "panel": "C",
+      "query_id": "C_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_submission",
+      "hit_pages": 14,
+      "panel": "C",
+      "query_id": "C_NEGATED_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_review",
+      "hit_pages": 3,
+      "panel": "C",
+      "query_id": "C_CAUSAL_PHRASE",
+      "selected_pages": 3
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_review",
+      "hit_pages": 42,
+      "panel": "C",
+      "query_id": "C_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2021,
+      "document_id": "florida_public_2021_fphlm_review",
+      "hit_pages": 8,
+      "panel": "C",
+      "query_id": "C_NEGATED_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_submission",
+      "hit_pages": 21,
+      "panel": "C",
+      "query_id": "C_CAUSAL_PHRASE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_submission",
+      "hit_pages": 115,
+      "panel": "C",
+      "query_id": "C_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_submission",
+      "hit_pages": 12,
+      "panel": "C",
+      "query_id": "C_NEGATED_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_review",
+      "hit_pages": 1,
+      "panel": "C",
+      "query_id": "C_CAUSAL_PHRASE",
+      "selected_pages": 1
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_review",
+      "hit_pages": 53,
+      "panel": "C",
+      "query_id": "C_CHANGE",
+      "selected_pages": 4
+    },
+    {
+      "cycle": 2023,
+      "document_id": "florida_public_2023_fphlm_review",
+      "hit_pages": 10,
+      "panel": "C",
+      "query_id": "C_NEGATED_CHANGE",
+      "selected_pages": 4
+    }
+  ],
+  "selected_by_panel": {
+    "A": 29,
+    "B": 15,
+    "C": 41
+  },
+  "selected_page_lead_count": 85,
+  "source_inventory_sha256": "9331a985824e496217f83dd37531cbac2e294ae6b6b562abd5e967a275e63b0f",
+  "status": "SOURCE_LEADS_ONLY_EXPOSURE_AND_PDF_VERIFICATION_PENDING"
+}
