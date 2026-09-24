@@ -78,7 +78,9 @@ def main() -> None:
             raise RuntimeError("Fewer visible GPUs than the requested parallelism")
         for index in range(args.tensor_parallel_size):
             props = torch.cuda.get_device_properties(index)
-            minimum_gib = 40 if args.tensor_parallel_size == 1 else 30
+            # RTX 5000 Ada reports 30,712 MiB, just under 30 GiB.
+            # Its two-GPU allocation is still a viable FP8 load target.
+            minimum_gib = 40 if args.tensor_parallel_size == 1 else 29
             if props.total_memory < minimum_gib * 1024**3:
                 raise RuntimeError(f"GPU {index} has insufficient memory for this attempt")
             if torch.cuda.get_device_capability(index) < (8, 9):

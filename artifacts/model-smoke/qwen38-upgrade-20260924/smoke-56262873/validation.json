@@ -1,0 +1,20 @@
+{
+  "parsed": {
+    "evidence_type": "REVIEWER_CHALLENGE"
+  },
+  "product_contract_valid": true,
+  "product_parsed": {
+    "claims": [
+      {
+        "evidence_refs": [
+          "E01"
+        ],
+        "text": "The Professional Team reviewed the methodology for landfall updates."
+      }
+    ],
+    "evidence_status": "SUPPORTED"
+  },
+  "quality_generalization": "NOT_ASSESSED",
+  "structurally_valid": true,
+  "synthetic_label_correct": false
+}

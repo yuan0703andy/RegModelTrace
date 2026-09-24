@@ -9,7 +9,7 @@ from .contracts import ContractError, model_output_schema, parse_model_output, v
 
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
-DEFAULT_CONFIG = PACKAGE_ROOT / "config/system_qwen38.json"
+DEFAULT_CONFIG = PACKAGE_ROOT / "config/system_v1.json"
 _DEFAULT_SYSTEM = None
 _DEFAULT_LOCK = threading.Lock()
 

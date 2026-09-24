@@ -1,0 +1,28 @@
+{
+  "config_sha256": "74227dd615bf1ea975aa676bdf355a0379858c12f394b5365cd9dfa5fc2c70bc",
+  "enable_thinking": false,
+  "ended_utc": "2026-09-24T05:31:15.093783+00:00",
+  "error": "RuntimeError: GPU 0 has insufficient memory for this attempt",
+  "gpu_inventory": "NVIDIA RTX 5000 Ada Generation, GPU-6b57e55f-c603-8c9b-7857-f5dd4d1caba4, 30712 MiB, 610.43.02\nNVIDIA RTX 5000 Ada Generation, GPU-f7f547c9-cc10-67e0-34e5-8c0cab2942e6, 30712 MiB, 610.43.02",
+  "hostname": "dcc-core-gpu-ferc-s-aa32-5",
+  "max_model_len": 8192,
+  "max_num_seqs": 1,
+  "max_output_tokens": 128,
+  "model": "Qwen/Qwen3.8-27B-FP8",
+  "model_path": "/hpc/group/borsuklab/yh421/regmodeltrace-runtime/hf-cache/hub/models--Qwen--Qwen3.8-27B-FP8/snapshots/017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "purpose": "SYNTHETIC_RUNTIME_SMOKE_ONLY",
+  "revision": "017b9c7af6b5689d5dd426a76e0bc077eb5ca20a",
+  "runtime": {
+    "huggingface-hub": "1.31.0",
+    "torch": "2.13.0",
+    "transformers": "5.17.0",
+    "vllm": "0.29.0"
+  },
+  "script_sha256": "c509a243c229e584b3857797ceef48d767192a36b54e51835235916594915b94",
+  "semantic_evaluation": "NOT_RUN",
+  "slurm_job_id": "56256759",
+  "started_utc": "2026-09-24T05:30:36.523736+00:00",
+  "status": "RUNTIME_SMOKE_FAIL",
+  "temperature": 0.0,
+  "tensor_parallel_size": 2
+}

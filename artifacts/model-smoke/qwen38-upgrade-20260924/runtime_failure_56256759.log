@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/hpc/group/borsuklab/yh421/qwen38-upgrade-20260923/qwen38_runtime_smoke.py", line 245, in <module>
+    main()
+  File "/hpc/group/borsuklab/yh421/qwen38-upgrade-20260923/qwen38_runtime_smoke.py", line 83, in main
+    raise RuntimeError(f"GPU {index} has insufficient memory for this attempt")
+RuntimeError: GPU 0 has insufficient memory for this attempt
+srun: error: dcc-core-gpu-ferc-s-aa32-5: task 0: Exited with exit code 1

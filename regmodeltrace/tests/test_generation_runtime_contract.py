@@ -44,13 +44,18 @@ class FakeLLM:
 
 
 class GenerationRuntimeContractTests(unittest.TestCase):
-    def test_active_default_selects_pinned_qwen38(self):
+    def test_default_is_restored_after_qwen38_synthetic_failure(self):
         import json
 
-        self.assertEqual(DEFAULT_CONFIG.name, "system_qwen38.json")
+        self.assertEqual(DEFAULT_CONFIG.name, "system_v1.json")
         config = json.loads(DEFAULT_CONFIG.read_text())
-        self.assertEqual(config["generation"]["model"], "Qwen/Qwen3.8-27B-FP8")
-        self.assertFalse(config["generation"]["enable_thinking"])
+        self.assertEqual(config["generation"]["model"], "Qwen/Qwen2.5-32B-Instruct-AWQ")
+
+        candidate = json.loads(
+            (DEFAULT_CONFIG.parent / "system_qwen38.json").read_text()
+        )
+        self.assertEqual(candidate["generation"]["model"], "Qwen/Qwen3.8-27B-FP8")
+        self.assertFalse(candidate["generation"]["enable_thinking"])
 
     def config(self, path):
         return {

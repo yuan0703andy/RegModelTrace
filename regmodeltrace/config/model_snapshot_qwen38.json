@@ -6,5 +6,5 @@
   "runtime": "vLLM 0.29.0",
   "thinking": false,
   "tensor_parallel_size": 2,
-  "status": "ACTIVE_CONFIG_RUNTIME_SMOKE_PENDING"
+  "status": "CANDIDATE_RUNTIME_COMPATIBLE_SYNTHETIC_SEMANTIC_FAIL"
 }

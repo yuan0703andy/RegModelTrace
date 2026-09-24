@@ -1,0 +1,31 @@
+{
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "messages": [
+    {
+      "content": "Classify the supplied synthetic source. Reviewed means scrutiny; it does not imply a challenge. Return only a JSON object with evidence_type. Do not add explanations.",
+      "role": "system"
+    },
+    {
+      "content": "Synthetic source: The Professional Team reviewed the methodology for landfall updates by gate and by category.",
+      "role": "user"
+    }
+  ],
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "evidence_type": {
+        "enum": [
+          "REVIEWER_SCRUTINY",
+          "REVIEWER_CHALLENGE"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "evidence_type"
+    ],
+    "type": "object"
+  }
+}

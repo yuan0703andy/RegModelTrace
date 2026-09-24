@@ -1,0 +1,62 @@
+{
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "messages": [
+    {
+      "content": "Answer only from the supplied synthetic evidence. Return JSON with claims and evidence_status. Every claim must cite E01. Review does not imply a challenge.",
+      "role": "system"
+    },
+    {
+      "content": "Question: What did the team do? Evidence E01: The Professional Team reviewed the methodology for landfall updates.",
+      "role": "user"
+    }
+  ],
+  "schema": {
+    "additionalProperties": false,
+    "properties": {
+      "claims": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_refs": {
+              "items": {
+                "enum": [
+                  "E01"
+                ],
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "text": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "text",
+            "evidence_refs"
+          ],
+          "type": "object"
+        },
+        "maxItems": 2,
+        "minItems": 1,
+        "type": "array"
+      },
+      "evidence_status": {
+        "enum": [
+          "SUPPORTED",
+          "PARTIALLY_SUPPORTED",
+          "UNRESOLVED_FROM_RETRIEVED_EVIDENCE"
+        ],
+        "type": "string"
+      }
+    },
+    "required": [
+      "claims",
+      "evidence_status"
+    ],
+    "type": "object"
+  }
+}
