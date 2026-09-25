@@ -17,7 +17,12 @@ FROZEN = [
     "experiments/fg3_natural_boundary/protocol/case_formation_protocol.json",
     "experiments/fg3_natural_boundary/protocol/known_exposure_ledger_v1.json",
     "experiments/fg3_natural_boundary/protocol/known_exposure_file_manifest_v1.json",
+    "experiments/fg3_natural_boundary/protocol/packet_construction_protocol.json",
+    "experiments/fg3_natural_boundary/protocol/negative_frame_protocol.json",
     "experiments/fg3_natural_boundary/candidates/discovery_manifest.json",
+    "experiments/fg3_natural_boundary/candidates/negative_frame_pages.jsonl",
+    "experiments/fg3_natural_boundary/candidates/source_leads.jsonl",
+    "experiments/fg3_natural_boundary/candidates/all_query_hits.jsonl",
     "experiments/fg3_natural_boundary/checkpoint2/lead_source_dossiers.jsonl",
 ]
 
@@ -33,12 +38,17 @@ def record(path: Path) -> dict:
 
 def main() -> None:
     paths = [ROOT / x for x in FROZEN]
+    exposure_manifest = json.loads((BASE / "protocol/known_exposure_file_manifest_v1.json").read_text())
+    paths += [ROOT / item["path"] for item in exposure_manifest["files"]]
+    leads = [json.loads(line) for line in (BASE / "checkpoint2/lead_source_dossiers.jsonl").read_text().splitlines()]
+    paths += [ROOT / source_path for source_path in sorted({lead["source_path"] for lead in leads})]
     paths += sorted(x for x in OUT.iterdir() if x.is_file() and x.name != "cp2_r1_manifest.json")
     paths += sorted(x for x in (ROOT / "scripts/fg3/cp2_r1").rglob("*.py") if "__pycache__" not in x.parts)
     paths += sorted((ROOT / "openspec/changes/fg3-cp2-r1").rglob("*.md"))
-    entries = [record(x) for x in paths]
+    entries = [record(x) for x in sorted(set(paths))]
     manifest = {
-        "status": "CP2_R1_ARTIFACT_CUSTODY_ONLY_NOT_CHECKPOINT_PASS",
+        "status": "CP2_R1_SOURCE_COMPLETE_ARCHIVE_NOT_CHECKPOINT_PASS",
+        "runtime_requirement": "Python with pytest plus Poppler pdftotext; archive includes source files but not executable runtime",
         "frozen_protocol_commit": "92eb571dc19c7a424a766f758f9bcbbd7a2c3632",
         "initial_source_only_key_plan_commit": "e6a04df8",
         "subsequent_source_only_change": "Panel B source-unit inclusion was adjudicated after the initial plan commit; A/C source keys were unchanged.",

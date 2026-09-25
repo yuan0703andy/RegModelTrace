@@ -1,0 +1,15 @@
+{
+  "fg3_checkpoint_2": "NOT_PASS",
+  "final_overflow_dispositions": 0,
+  "human_gold_count": 0,
+  "model_inference_count": 0,
+  "natural_unit_expansion": "PENDING",
+  "new_id_bearing_occurrences": 115,
+  "old_broad_section_preliminary_over_limit": 16,
+  "panel_c_plans": 27,
+  "plans_requiring_lower_tier_search": 14,
+  "plans_with_at_least_one_id_bearing_candidate": 13,
+  "rejected_toc_or_heading_occurrences": 11,
+  "same_object_adjudication": "NOT_STARTED",
+  "status": "PASS_FOR_EXACT_ID_BEARING_CANDIDATE_INTEGRITY_ONLY"
+}

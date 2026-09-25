@@ -17,4 +17,6 @@
 - [x] Run stride-1 parsed-JSON exact-overlap source scan against the verified frozen ledger; record unresolved substantial exposure and binary parse failure.
 - [x] Recheck 45 original fixed-anchor exits; reopen five for source-unit work; leave 40 pending PDF confirmation.
 - [x] Record local Poppler/raw-mode receipt and legacy hash mismatch; verify the current recorded artifacts.
+- [x] Freeze the Panel C tier-1 interpretation before reranking: exact typed-ID-bearing counterpart natural units, not whole typed sections; preserve the broad-section search as a nonconforming diagnostic.
+- [x] Regenerate all 27 Panel C tier-1 printed-ID paragraph anchors and retain rejected TOC/heading occurrences with exact PDF refs; verify source-plan and PDF-span binding.
 - [ ] Finish source review, lower tiers, counterpart boundaries, exposure equivalence, dependency clusters, and all final lead dispositions before declaring `FG3_CHECKPOINT_2 = PASS`.

@@ -38,6 +38,10 @@ def pdf_pages(path: Path) -> list[str]:
 
 def main() -> None:
     leads = {x["lead_id"]: x for x in rows(BASE / "checkpoint2/lead_source_dossiers.jsonl")}
+    source_paths = {}
+    for lead in leads.values():
+        source_paths.setdefault(lead["document_id"], lead["source_path"])
+        assert source_paths[lead["document_id"]] == lead["source_path"]
     units = rows(OUT / "canonical_source_units.jsonl")
     decisions = rows(OUT / "source_unit_dispositions.jsonl")
     plans = rows(OUT / "source_only_typed_key_plans.jsonl")
@@ -58,7 +62,7 @@ def main() -> None:
 
     def check_ref(document_id: str, pdf_sha: str, ref: dict) -> None:
         if document_id not in docs:
-            path = ROOT / "regmodeltrace/data/corpus/scale-1/raw" / f"{document_id}.pdf"
+            path = ROOT / source_paths[document_id]
             docs[document_id] = (digest(path), pdf_pages(path))
         current_sha, pages = docs[document_id]
         assert current_sha == pdf_sha
@@ -87,7 +91,7 @@ def main() -> None:
         doc = pair["counterpart_document_id"]
         sha = pair.get("counterpart_pdf_sha256") or pair.get("counterpart_source_sha256")
         if doc not in docs:
-            path = ROOT / "regmodeltrace/data/corpus/scale-1/raw" / f"{doc}.pdf"
+            path = ROOT / source_paths[doc]
             docs[doc] = (digest(path), pdf_pages(path))
         assert docs[doc][0] == sha
         for candidate in pair.get("paragraph_candidates", pair.get("literal_candidates", [])):
