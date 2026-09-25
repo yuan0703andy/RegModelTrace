@@ -1,0 +1,48 @@
+{
+  "receipt_version": "track-a-a0-2026-09-25",
+  "verified_at_utc": "2026-09-25T09:15:39+00:00",
+  "verification_command": "python scripts/public_rag/verify_benchmark_acquisition.py --verify-remote",
+  "original_acquisition_timestamp_status": "NOT_CAPTURED_IN_INITIAL_A0_DOWNLOAD; remote_retrieved_at_utc records this independent re-fetch",
+  "raw_archives_in_git_or_handoff_zip": false,
+  "records": [
+    {
+      "benchmark": "TimelyQABench",
+      "source_url": "https://codeload.github.com/kaist-dmlab/TimelyRAG/zip/381019d3add63f93187b06e7696d10bf451a58b5",
+      "repository_commit": "381019d3add63f93187b06e7696d10bf451a58b5",
+      "local_archive_path": "/Users/andyhou/codex-projects/CIRCAD-LLM/experiments/public_rag/datasets/official/TimelyQABench-381019d3add63f93187b06e7696d10bf451a58b5.zip",
+      "archive_bytes": 5771660,
+      "archive_sha256": "9cbebab7cbf6ecf3d67020efd159ac40f26423fa661bf3925aa19246b9cd5984",
+      "inner_data_sha256": {
+        "datasets.zip": "a006481ffdf723d4b15554da2c621ebdfefd59b78ad37c58a633b3b71de247ad"
+      },
+      "remote_retrieved_at_utc": "2026-09-25T09:15:37+00:00",
+      "verification_status": "PASS_REMOTE_AND_LOCAL"
+    },
+    {
+      "benchmark": "VersionQA",
+      "source_url": "https://codeload.github.com/danielhuwiler/versionrag/zip/2a2cbe8f285557f99dc7a79d6df7134e1e3eccff",
+      "repository_commit": "2a2cbe8f285557f99dc7a79d6df7134e1e3eccff",
+      "local_archive_path": "/Users/andyhou/codex-projects/CIRCAD-LLM/experiments/public_rag/datasets/official/VersionQA-2a2cbe8f285557f99dc7a79d6df7134e1e3eccff.zip",
+      "archive_bytes": 2168327,
+      "archive_sha256": "ae151120da29afd2e10a3d2117c12ff32ea015f9e3192f29d650ef74a46578cd",
+      "inner_data_sha256": {
+        "data/test/evaluation_set.csv": "997fb3b102060aa9a5387f9d1924f6694b277876d7b7f19b74ca3d52319477e6"
+      },
+      "remote_retrieved_at_utc": "2026-09-25T09:15:38+00:00",
+      "verification_status": "PASS_REMOTE_AND_LOCAL"
+    },
+    {
+      "benchmark": "LIT-RAGBench",
+      "source_url": "https://codeload.github.com/Koki-Itai/LIT-RAGBench/zip/5c3f30d924bc1615c08eb85f560f3aceb2fac7d4",
+      "repository_commit": "5c3f30d924bc1615c08eb85f560f3aceb2fac7d4",
+      "local_archive_path": "/Users/andyhou/codex-projects/CIRCAD-LLM/experiments/public_rag/datasets/official/LIT-RAGBench-5c3f30d924bc1615c08eb85f560f3aceb2fac7d4.zip",
+      "archive_bytes": 1974792,
+      "archive_sha256": "471cbae289bdb0bdf44f4b3d4bbd44a668eae2b18902db695c2e0dd7ed1abef0",
+      "inner_data_sha256": {
+        "datasets/en.jsonl": "af14cadb2312990d76121332d24a5f87f1d6ba7b8c6b0a42f1b9bd999594cead"
+      },
+      "remote_retrieved_at_utc": "2026-09-25T09:15:39+00:00",
+      "verification_status": "PASS_REMOTE_AND_LOCAL"
+    }
+  ]
+}

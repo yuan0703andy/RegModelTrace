@@ -6,12 +6,12 @@ The three public datasets are locally acquired and hash-pinned, but A1 model run
 
 ## A1 order and comparison contract
 
-1. Resolve each benchmark's open items in `public_benchmark_inventory.json`, especially split/cluster leakage, source licenses, and scoring.
+1. Resolve each benchmark's open items in `public_benchmark_inventory.json`, especially split/cluster leakage, source licenses, and scoring. TimelyQABench is the primary project-defined grouped development/confirmation benchmark. VersionQA's 100 official questions remain untouched confirmation; no VersionQA tuning. LIT-RAGBench is a fixed-generator diagnostic, preferably one-shot confirmation unless a separate split is prospectively frozen.
 2. Freeze one local open-weight generator configuration *before* benchmark output is inspected. The Track A research configuration is independent of the RegModelTrace service default and FG-3 model configurations. Retrieval-only TimelyQABench runs need no generator.
 3. Run within-benchmark B1 BM25, B2 one pinned dense model, B3 frozen hybrid fusion, and B4 the strongest metadata-aware hybrid that the observed fields permit. Use the same eligible corpus and retrieval budget within each controlled comparison. Preserve publication/availability time separately from effective/valid time; do not infer validity from the former.
-4. Qualify the official TimelyRAG implementation on TimelyQABench. Record `FAITHFUL_TIMELYRAG` separately from a `CONTROLLED_TIMELY_COMPONENT`. Reproduction requires official config, environment, and output checks; the controlled component changes only declared common factors.
+4. Qualify the official TimelyRAG implementation on TimelyQABench. `TIMELY_AUTO_ALPHA` is the fair/deployable path. `TIMELY_BEST_ALPHA` uses each query's gold positive IDs to maximize nDCG and is **oracle upper bound only**; it must never appear as an ordinary method. Map reported paper tables to the released execution path before describing any number as faithful. Record `FAITHFUL_TIMELYRAG` separately from a `CONTROLLED_TIMELY_COMPONENT`.
 5. Qualify the official VersionRAG implementation on VersionQA. Its Neo4j and external-LLM dependencies make a purely local faithful reproduction unresolved. If unavailable, record `REPRODUCTION_NOT_QUALIFIED`; do not score it as a failed method. A local controlled version-aware component is a distinct result.
-6. Use LIT-RAGBench for generator conditions with supplied chunks: positive-only, negative-only where defined, and positive-plus-negative. Preserve original chunk order and token budget. No retrieval Recall@k is reported for this benchmark.
+6. Split LIT-RAGBench into two contracts. `FAITHFUL_LIT_RAGBENCH` uses the official generator prompt, positive-plus-negative context, official `random.seed(42)` plus sequential `random.shuffle`, and the qualified official scoring contract. It must explicitly set `--num-tasks 114` because the official default is five, and save the actual IDs/order. `CONTROLLED_CONTEXT_DIAGNOSTIC` separately compares positive-only, negative-only, and combined contexts under a prospectively frozen **case-specific** ordering/seed and token budget. It is not an official LIT score. No retrieval Recall@k is reported for either.
 
 ## Gold-context and sufficient-context boundaries
 
@@ -19,7 +19,7 @@ TimelyQABench gold IDs support retrieval metrics, and the paper describes them a
 
 ## Holdout and statistics
 
-No official development split was found in the pinned artifacts. Any project-defined partition will be frozen with IDs and document-family/version grouping before model output, then labeled accordingly. Preserve the official VersionQA evaluation set as a confirmation set if a defensible independent development source can be established; otherwise restrict to descriptive reproduction. Use paired case-level differences and cluster-aware uncertainty where questions share a source family. Do not pool task-level raw accuracies or infer calibration from these data.
+No official development split was found in the pinned artifacts. For TimelyQABench, freeze a project-defined development/confirmation partition by evolving document family, not a random query partition; identify or reconstruct family identity before splitting. Preserve all 100 VersionQA questions as untouched confirmation, with development done on TimelyQABench or other independent material. Keep LIT-RAGBench as a one-shot fixed-generator diagnostic unless it becomes a tuning source, in which case first freeze a split. Use paired case-level differences and cluster-aware uncertainty where questions share a source family. Do not pool task-level raw accuracies or infer calibration from these data.
 
 ## Execution boundary
 

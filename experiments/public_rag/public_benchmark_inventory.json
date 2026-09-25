@@ -1,7 +1,8 @@
 {
   "inventory_version": "track-a-a0-2026-09-25",
-  "status": "QUALIFIED_FOR_PLANNING_WITH_OPEN_ITEMS",
+  "status": "PASS_FOR_PLANNING_NOT_CLOSED",
   "raw_archive_custody": "Local byte-identical official repository archives are kept under datasets/official/ and excluded from Git; no model or retrieval runs were performed.",
+  "acquisition_receipt": "benchmark_acquisition_receipt.json",
   "benchmarks": [
     {
       "id": "TimelyQABench",
@@ -30,8 +31,15 @@
       "official_split": "NO_EXPLICIT_TRAIN_DEV_TEST_SPLIT_FOUND_IN_ARCHIVE",
       "gold_evidence": "Paper describes gold document IDs as minimal evidence for the answer; use as official retrieval labels, but independently check a sample before treating them as human-verified sufficient context",
       "evaluation_code": ["TimelyQABench_datasets.py", "metrics.py", "pipeline.py"],
+      "alpha_paths": {
+        "TIMELY_AUTO_ALPHA": "Deployable candidate: retrieval.py:150-169 chooses alpha from query/candidate signals without gold IDs",
+        "TIMELY_BEST_ALPHA": "ORACLE_UPPER_BOUND_ONLY: retrieval.py:38-59 and 171-181 choose alpha by per-query gold-ID nDCG; never a deployable baseline",
+        "paper_table_mapping": "Paper section 5.2 says a heuristic alpha was used, but correspondence of released code paths to every published table remains unverified"
+      },
+      "released_temporal_field_status": "query_insert_time and doc_insert_time occur; query_event_time and document event_time are absent from all inspected released rows/documents. Loader attempts optional fields, extracts query event time from text, and falls back to insertion time for absent document event time.",
+      "benchmark_role": "PRIMARY_PROJECT_DEFINED_GROUPED_DEVELOPMENT_AND_CONFIRMATION",
       "license_status": "NO_REPOSITORY_LICENSE_DECLARED_AT_PINNED_REVISION",
-      "open_items": ["Freeze an eligible development/confirmation partition before results", "Check query/document family clustering and overlap before splitting", "Confirm redistribution permissions", "Validate official parser and gold-ID mapping without model execution"]
+      "open_items": ["Freeze an eligible development/confirmation partition by evolving document family before results; released rows contain ten-document groups but no explicit family_id", "Verify paper table to auto-alpha code-path correspondence before calling a result faithful", "Confirm redistribution permissions", "Validate official parser and gold-ID mapping without model execution"]
     },
     {
       "id": "VersionQA",
@@ -53,8 +61,10 @@
       "gold_evidence": "No document/chunk evidence IDs in the evaluation CSV",
       "evaluation_code": ["src/evaluation/evaluation.py", "src/evaluation/evaluation_human.py", "src/evaluation/evaluation_llm.py"],
       "reference_runtime": "Prototype requires external LLM API credentials and Neo4j configuration; local faithful reproduction is not yet qualified",
+      "benchmark_role": "UNTOUCHED_CONFIRMATION_100_QUESTIONS_IN_PRINCIPLE",
+      "retrieval_metric_status": "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED; official CSV has no source document or chunk IDs",
       "license_status": "NO_REPOSITORY_LICENSE_DECLARED_AT_PINNED_REVISION",
-      "open_items": ["Determine permitted held-out protocol without tuning on the official evaluation set", "Check source-to-answer evidence and document-version identities", "Confirm redistribution permissions", "Qualify a faithful VersionRAG reproduction separately from a controlled local component"]
+      "open_items": ["Keep all 100 official evaluation questions untouched as confirmation; develop methods elsewhere", "Annotate evidence independently before retrieval-level metrics or R1/R3 claims", "Check source-to-answer evidence and document-version identities", "Confirm redistribution permissions", "Qualify a faithful VersionRAG reproduction separately from a controlled local component"]
     },
     {
       "id": "LIT-RAGBench",
@@ -77,8 +87,10 @@
       "gold_evidence": "Supplied positive and negative chunk lists; positive list can be empty for abstention cases",
       "evaluation_code": ["src/run.py", "prompts/evaluation/generate_en.txt", "prompts/evaluation/judge_en.txt"],
       "judge_dependency": "Official example scoring uses an LLM judge and API key; a local or independently checked scorer is not yet qualified",
+      "faithful_context_contract": "Official src/run.py combines positive and negative chunks, calls random.shuffle after random.seed(42), and defaults to only five tasks; complete evaluation requires explicit --num-tasks 114 with actual IDs recorded",
+      "benchmark_role": "FIXED_GENERATOR_DIAGNOSTIC_PREFERABLY_ONE_SHOT_CONFIRMATION",
       "license_status": "README STATES CC BY-SA 4.0; NO SEPARATE LICENSE FILE OBSERVED",
-      "open_items": ["Freeze a project-defined development/confirmation split before outputs", "Qualify judge or human-scored subset before claiming answer accuracy", "Preserve Japanese/English version distinction"]
+      "open_items": ["If prompt or generator is tuned on this benchmark, freeze a project-defined development/confirmation split before outputs", "Qualify judge or human-scored subset before claiming answer accuracy", "Preserve Japanese/English version distinction", "Freeze case-specific deterministic ordering for separately labeled controlled context contrasts"]
     }
   ],
   "cross_benchmark_boundary": "Do not pool raw scores across temporal retrieval, version-aware QA, and supplied-context generation."

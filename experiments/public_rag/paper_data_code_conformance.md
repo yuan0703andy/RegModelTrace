@@ -1,0 +1,19 @@
+# TimelyRAG paper ↔ released data ↔ code conformance (A0 audit)
+
+Pinned paper: Nam et al. (2026), arXiv:2609.11572v1, especially sections 3, 4, and 5.2. Pinned code/data: `kaist-dmlab/TimelyRAG@381019d3add63f93187b06e7696d10bf451a58b5`. This is a source audit, not a reproduction or model result.
+
+| Temporal object | Paper contract | Released 12,000-row dataset | Public code path | A0 conclusion |
+|---|---|---|---|---|
+| Query insertion time ($Q_{IT}$) | Query issuance time | `query_insert_time` in 12,000/12,000 rows | `TimelyQABench_datasets.py:90` parses it | Explicit field present. |
+| Query event time ($Q_{ET}$) | Time referenced by question | No `query_event_time` field in any released row | Loader line 91 tries optional field; lines 92–93 extract it from query wording when absent | Derived by heuristic, not an explicit released annotation. Extraction success/ambiguity still needs audit. |
+| Document insertion time ($D_{IT}$) | Document database insertion/publication time | `doc_insert_time` in 120,000/120,000 nested documents | Loader line 103 parses it | Explicit field present; not itself the clause's valid/effective time. |
+| Document event time ($D_{ET}$) | Temporal expression or clause-valid time | No `event_time` field in any released nested document | Loader line 102 reads optional `event_time`; `time_scores.py:67` substitutes insertion time when absent | In released data, this scalar event-time input is missing and runtime falls back to insertion time. |
+| Effective interval / clause validity | Paper describes clause-valid periods, amendments, and temporal compatibility | May be expressed inside document text; no structured interval field observed | Pinned `.py` files contain no `effective_interval`, `validity_interval`, `valid_from`, or `valid_to` symbol; `compute_single_delta()` uses scalar query/document times | The released executable path is not yet shown to operationalize the full interval language of the paper. Do not call it an exact implementation of interval validity without further evidence. |
+
+The four released domain files each contain 3,000 rows. Each row has ten nested documents and a unique `index` within its domain; all 30,000 `global_doc_id` values per domain are distinct. This suggests `(domain, index)` as an evolving-family grouping key, but the dataset has no explicit `family_id`. Its use for a project-defined grouped split must be checked against the authors' generation process before freezing the split. `global_doc_id` values repeat across domains, so any merged index must namespace IDs by domain.
+
+The pinned `retrieval.py` has two distinct paths. Lines 150–169 choose `alpha_auto` from observable signals. Lines 38–59 and 171–181 choose `best_alpha` by evaluating per-query nDCG against `pos_ids`, i.e. gold labels. `pipeline.py` prints both `auto-α` and `best-α`. The latter is an oracle diagnostic only. The paper's section 5.2 says the main retrieval results use a heuristic for $\alpha(Q)$ and separately presents an oracle temporal-filtering upper bound, but A0 has not matched each paper table to a saved code output. That mapping is an A1 prerequisite for a faithful reproduction claim.
+
+The paper describes TimelyQABench as a controlled synthetic benchmark: Korean QA pairs generated with Llama-3.3-70B and evolving policy families generated for temporal contrast. It is not a corpus of authentic laws or regulatory filings. Its gold document IDs are official retrieval labels and are described by the authors as minimal answer evidence; independent sufficiency verification remains an optional audit before using them as a human-verified context oracle.
+
+Primary sources: [paper](https://arxiv.org/html/2609.11572v1), [pinned official repository](https://github.com/kaist-dmlab/TimelyRAG/tree/381019d3add63f93187b06e7696d10bf451a58b5).

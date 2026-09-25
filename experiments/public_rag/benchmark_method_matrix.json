@@ -1,17 +1,19 @@
 {
   "version": "track-a-a0-2026-09-25",
-  "legend": {"PLANNED_AFTER_QUALIFICATION": "Task-compatible but not run", "CONDITIONAL": "Requires evidence/scorer/runtime qualification", "NOT_APPLICABLE": "Different benchmark task", "REPRODUCTION_NOT_QUALIFIED": "Official method cannot yet be run faithfully in the intended local environment"},
+  "legend": {"PLANNED_AFTER_QUALIFICATION": "Task-compatible but not run", "CONDITIONAL": "Requires evidence/scorer/runtime qualification", "NOT_APPLICABLE": "Different benchmark task", "REPRODUCTION_NOT_QUALIFIED": "Official method cannot yet be run faithfully in the intended local environment", "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED": "QA accuracy can be assessed, but retrieval metrics and miss labels require new source annotation", "ORACLE_UPPER_BOUND_ONLY": "Uses per-question gold labels at decision time; not deployable"},
   "methods": [
     {"method": "B0 gold-context generator", "TimelyQABench": "CONDITIONAL", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "PLANNED_AFTER_QUALIFICATION"},
-    {"method": "B1 BM25", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
-    {"method": "B2 pinned dense", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
-    {"method": "B3 hybrid", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
-    {"method": "B4 metadata-aware hybrid", "TimelyQABench": "CONDITIONAL", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B1 BM25", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B2 pinned dense", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B3 hybrid", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B4 metadata-aware hybrid", "TimelyQABench": "CONDITIONAL", "VersionQA": "END_TO_END_QA_ONLY_UNLESS_EVIDENCE_ANNOTATED", "LIT-RAGBench": "NOT_APPLICABLE"},
     {"method": "B5 faithful TimelyRAG", "TimelyQABench": "CONDITIONAL", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "TimelyRAG best-alpha", "TimelyQABench": "ORACLE_UPPER_BOUND_ONLY", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "NOT_APPLICABLE"},
     {"method": "B5 controlled temporal component", "TimelyQABench": "CONDITIONAL", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "NOT_APPLICABLE"},
     {"method": "B6 faithful VersionRAG", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "REPRODUCTION_NOT_QUALIFIED", "LIT-RAGBench": "NOT_APPLICABLE"},
     {"method": "B6 controlled version component", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "NOT_APPLICABLE"},
-    {"method": "supplied-context generator", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "PLANNED_AFTER_QUALIFICATION"}
+    {"method": "faithful supplied-context generator", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "CONDITIONAL"},
+    {"method": "controlled positive/negative context diagnostic", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "CONDITIONAL"}
   ],
   "warning": "These are task-compatibility statuses, not performance results or authorization to run models."
 }

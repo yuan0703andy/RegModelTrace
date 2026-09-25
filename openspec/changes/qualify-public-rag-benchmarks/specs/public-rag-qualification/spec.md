@@ -37,3 +37,21 @@ Published-method reproduction SHALL pin code, data, environment, and deviations.
 
 - **WHEN** faithful execution cannot be completed
 - **THEN** no negative method-performance conclusion is drawn from the incomplete run.
+
+### Requirement: Oracle path isolation
+
+Any method path that selects a per-question setting using the same question's gold retrieval labels SHALL be classified as an oracle diagnostic and SHALL NOT appear in the deployable baseline comparison.
+
+#### Scenario: TimelyRAG best-alpha
+
+- **WHEN** `best_alpha` is selected by maximizing nDCG against `pos_ids`
+- **THEN** its score is recorded only as an oracle upper bound, separate from auto-alpha.
+
+### Requirement: Faithful versus controlled context
+
+Official benchmark execution SHALL preserve the official context-construction contract. Controlled evidence interventions SHALL have a separate run label and a prospectively frozen, case-specific ordering rule.
+
+#### Scenario: LIT-RAGBench positive-negative contrast
+
+- **WHEN** positive-only and negative-only contexts are compared
+- **THEN** the results are labeled controlled diagnostics rather than faithful official benchmark scores.
