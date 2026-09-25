@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-25",
+  "execution_location": "Duke DCC CPU compute node via dcc-agent",
+  "status": "PASS_NON_CLAIM_BEARING_IMPORT_AND_AUTO_ALPHA_SMOKE",
+  "archive_sha256": "9cbebab7cbf6ecf3d67020efd159ac40f26423fa661bf3925aa19246b9cd5984",
+  "patch_sha256": "7cca4e70fcfd85c15e61617b4a342ddd95c17d97389edcd5234b8d17c9dc0a42",
+  "smoke_script_sha256": "4983ff4065ab4b8c6a91dd27a9d5fd6da37d5531d3d9b7fb748cba3c911a7726",
+  "retrieval_py_unchanged_sha256": "2bcee767056192bdb33b78dae7c29e748b70b9fb096e2e782f5d48aca5ae3f19",
+  "checks": {
+    "patch_application": "PASS",
+    "cli_help": "PASS",
+    "early_exp_dir": "PASS",
+    "early_gpu": "PASS",
+    "released_dataset_filename": "PASS",
+    "synthetic_auto_alpha": "PASS_0.5"
+  },
+  "dependency_mode": "IMPORT_SHIMS_FOR_rank_bm25_AND_FlagEmbedding",
+  "full_official_runtime": "NOT_RUN",
+  "paper_numeric_parity": "NOT_ASSESSED",
+  "model_runs": 0,
+  "benchmark_rows_evaluated": 0
+}

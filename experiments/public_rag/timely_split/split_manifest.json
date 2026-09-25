@@ -1,0 +1,170 @@
+{
+  "status": "FROZEN_BEFORE_MODEL_OUTPUT",
+  "source_archive_sha256": "9cbebab7cbf6ecf3d67020efd159ac40f26423fa661bf3925aa19246b9cd5984",
+  "inner_dataset_sha256": "a006481ffdf723d4b15554da2c621ebdfefd59b78ad37c58a633b3b71de247ad",
+  "algorithm": "Union rows sharing an exact UTF-8 document-text SHA-256 across all domains; force components larger than 10 rows into development; group remaining components by dominant domain/category; order by salted SHA-256 and assign whole components until approximately 20% of each stratum is confirmation.",
+  "salt": "RegModelTrace-TimelyQABench-A0.4b-2026-09-25-v1",
+  "target_confirmation_fraction": 0.2,
+  "maximum_confirmation_component_rows": 10,
+  "row_count": 12000,
+  "component_count": 11470,
+  "largest_component_rows": 486,
+  "forced_development_component_count": 1,
+  "forced_development_row_count": 486,
+  "exact_text_hashes_shared_across_rows": 397,
+  "exact_document_text_cross_split_count": 0,
+  "duplicate_global_doc_ids_within_domain": 0,
+  "split_counts": {
+    "DEVELOPMENT": 9699,
+    "CONFIRMATION": 2301
+  },
+  "actual_domain_category_counts": {
+    "company_policies|Emergency or temporary policies": {
+      "CONFIRMATION": 96,
+      "DEVELOPMENT": 382
+    },
+    "company_policies|Exemptions": {
+      "DEVELOPMENT": 413,
+      "CONFIRMATION": 103
+    },
+    "company_policies|Historical, retrospective fact": {
+      "DEVELOPMENT": 375,
+      "CONFIRMATION": 94
+    },
+    "company_policies|Name/code/content changes of policies": {
+      "DEVELOPMENT": 256,
+      "CONFIRMATION": 64
+    },
+    "company_policies|Policies with multiple versions": {
+      "DEVELOPMENT": 402,
+      "CONFIRMATION": 100
+    },
+    "company_policies|Queries requiring implicit time context": {
+      "CONFIRMATION": 111,
+      "DEVELOPMENT": 442
+    },
+    "company_policies|content changes of policies": {
+      "DEVELOPMENT": 111,
+      "CONFIRMATION": 28
+    },
+    "company_policies|contents changes of policies": {
+      "DEVELOPMENT": 1
+    },
+    "company_policies|내용 변경": {
+      "CONFIRMATION": 4,
+      "DEVELOPMENT": 17
+    },
+    "company_policies|쿼리에서 암시적 시간 맥락이 필요한 경우": {
+      "DEVELOPMENT": 1
+    },
+    "law|Emergency or temporary policies": {
+      "CONFIRMATION": 107,
+      "DEVELOPMENT": 426
+    },
+    "law|Exemptions": {
+      "DEVELOPMENT": 390,
+      "CONFIRMATION": 97
+    },
+    "law|Historical": {
+      "DEVELOPMENT": 145,
+      "CONFIRMATION": 36
+    },
+    "law|Historical, retrospective fact": {
+      "DEVELOPMENT": 243,
+      "CONFIRMATION": 61
+    },
+    "law|Name/code/content changes of policies": {
+      "DEVELOPMENT": 385,
+      "CONFIRMATION": 96
+    },
+    "law|Policies with multiple versions": {
+      "DEVELOPMENT": 403,
+      "CONFIRMATION": 101
+    },
+    "law|Queries requiring implicit time context": {
+      "DEVELOPMENT": 408,
+      "CONFIRMATION": 102
+    },
+    "terms_of_service|Emergency or temporary policies": {
+      "DEVELOPMENT": 435,
+      "CONFIRMATION": 91
+    },
+    "terms_of_service|Exemptions": {
+      "DEVELOPMENT": 453,
+      "CONFIRMATION": 90
+    },
+    "terms_of_service|Historical, retrospective fact": {
+      "DEVELOPMENT": 399,
+      "CONFIRMATION": 84
+    },
+    "terms_of_service|Name/code/content changes of policies": {
+      "DEVELOPMENT": 423,
+      "CONFIRMATION": 83
+    },
+    "terms_of_service|Policies with multiple versions": {
+      "CONFIRMATION": 88,
+      "DEVELOPMENT": 430
+    },
+    "terms_of_service|Queries requiring implicit time context": {
+      "CONFIRMATION": 67,
+      "DEVELOPMENT": 354
+    },
+    "terms_of_service|content changes of policies": {
+      "DEVELOPMENT": 1
+    },
+    "terms_of_service|歴史的, 回顧的事實": {
+      "DEVELOPMENT": 1
+    },
+    "terms_of_service|서비스 이용 제한에 대한 정책의 여러 버전": {
+      "DEVELOPMENT": 1
+    },
+    "university|Content changes of policies": {
+      "DEVELOPMENT": 2
+    },
+    "university|Emergency or temporary policies": {
+      "DEVELOPMENT": 403,
+      "CONFIRMATION": 101
+    },
+    "university|Exemptions": {
+      "CONFIRMATION": 98,
+      "DEVELOPMENT": 390
+    },
+    "university|Historical, retrospective fact": {
+      "CONFIRMATION": 93,
+      "DEVELOPMENT": 373
+    },
+    "university|Name/code/content changes of policies": {
+      "DEVELOPMENT": 391,
+      "CONFIRMATION": 97
+    },
+    "university|Policies with multiple versions": {
+      "DEVELOPMENT": 401,
+      "CONFIRMATION": 101
+    },
+    "university|Queries requiring implicit time context": {
+      "DEVELOPMENT": 431,
+      "CONFIRMATION": 107
+    },
+    "university|content changes of policies": {
+      "DEVELOPMENT": 6,
+      "CONFIRMATION": 1
+    },
+    "university|내용 변경": {
+      "DEVELOPMENT": 1
+    },
+    "university|내용 변경 của policies": {
+      "DEVELOPMENT": 1
+    },
+    "university|비상 또는 임시 정책": {
+      "DEVELOPMENT": 1
+    },
+    "university|쿼리에서 암시적 시간 Context가 필요한 경우": {
+      "DEVELOPMENT": 1
+    },
+    "university|쿼리에서 암시적인 시간_context가 필요한 경우": {
+      "DEVELOPMENT": 1
+    }
+  },
+  "split_assignments_sha256": "5787ba3a5adc0e1d423a7805283f468d18e3f54166c1580c22d6633ab4ce4c07",
+  "limitation": "Exact-text overlap is isolated, but near-duplicate/template overlap has not yet been measured. This is a project-defined split, not an official benchmark split."
+}

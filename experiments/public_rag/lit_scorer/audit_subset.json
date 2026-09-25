@@ -1,0 +1,85 @@
+{
+  "status": "FROZEN_BEFORE_GENERATOR_OR_JUDGE_OUTPUT",
+  "source_archive_sha256": "471cbae289bdb0bdf44f4b3d4bbd44a668eae2b18902db695c2e0dd7ed1abef0",
+  "english_dataset_sha256": "af14cadb2312990d76121332d24a5f87f1d6ba7b8c6b0a42f1b9bd999594cead",
+  "language": "en",
+  "row_identity": "zero_based_line_index_in_official_en_jsonl",
+  "salt": "RegModelTrace-LIT-A0.4c-human-audit-v1",
+  "selection_rule": "Six previously unselected cases per I, R, L, T, A stratum, ordered by SHA-256(salt|stratum|row_index); multi-label rows selected once in fixed IRLTA order.",
+  "strata": {
+    "I": [
+      16,
+      19,
+      49,
+      37,
+      50,
+      14
+    ],
+    "R": [
+      13,
+      41,
+      45,
+      42,
+      34,
+      47
+    ],
+    "L": [
+      27,
+      25,
+      32,
+      29,
+      38,
+      12
+    ],
+    "T": [
+      31,
+      53,
+      51,
+      46,
+      28,
+      22
+    ],
+    "A": [
+      97,
+      104,
+      69,
+      96,
+      63,
+      54
+    ]
+  },
+  "row_indices": [
+    12,
+    13,
+    14,
+    16,
+    19,
+    22,
+    25,
+    27,
+    28,
+    29,
+    31,
+    32,
+    34,
+    37,
+    38,
+    41,
+    42,
+    45,
+    46,
+    47,
+    49,
+    50,
+    51,
+    53,
+    54,
+    63,
+    69,
+    96,
+    97,
+    104
+  ],
+  "audit_rule": "Two humans score answer correctness independently and mark ambiguous cases; compare fixed local judge with adjudicated human labels, preserving disagreements rather than dropping cases.",
+  "qualification_status": "PENDING_GENERATOR_OUTPUT_AND_HUMAN_AUDIT"
+}

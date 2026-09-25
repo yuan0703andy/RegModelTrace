@@ -1,0 +1,58 @@
+--- a/config.py
++++ b/config.py
+@@ -31,7 +31,7 @@
+     "./datasets/timelyrag_company_policies_dataset_v2.jsonl",
+     "./datasets/timelyrag_law_dataset_v2.jsonl",
+     "./datasets/timelyrag_terms_of_service_dataset_v2.jsonl",
+-    "./datasets/timelyrag_yonsei_dataset_v2.jsonl",
++    "./datasets/timelyrag_university_dataset_v2.jsonl",
+ ]
+ 
+ # Logging helper
+--- a/pipeline.py
++++ b/pipeline.py
+@@ -1,4 +1,17 @@
+ import os
++import argparse
++import sys
++
++# Parse runtime-only overrides before config and retrieval are imported.
++_early_parser = argparse.ArgumentParser(add_help=False)
++_early_parser.add_argument('--exp-dir')
++_early_parser.add_argument('--gpu')
++_early_args, _ = _early_parser.parse_known_args()
++if _early_args.exp_dir:
++    os.environ['TR_EXPERIMENT_DIR'] = _early_args.exp_dir
++if _early_args.gpu:
++    os.environ['CUDA_VISIBLE_DEVICES'] = _early_args.gpu
++
+ import numpy as np
+ from tqdm import tqdm
+ 
+@@ -81,7 +94,7 @@
+             topk_idx = np.argsort(scores)[::-1][:K]
+             topk_ids = [all_gids[i] for i in topk_idx]
+             if pos_ids:
+-                from .metrics import evaluate_ranking_ids, add_metrics
++                from metrics import evaluate_ranking_ids, add_metrics
+                 add_metrics(m_bm25, evaluate_ranking_ids(topk_ids, pos_ids, K))
+         summary_bm25 = summarize_metrics(m_bm25)
+         print_summary(K, "BM25 (baseline)", summary_bm25)
+@@ -95,7 +108,7 @@
+             topk_idx = np.argsort(sim)[::-1][:K]
+             topk_ids = [all_gids[i] for i in topk_idx]
+             if pos_ids:
+-                from .metrics import evaluate_ranking_ids, add_metrics
++                from metrics import evaluate_ranking_ids, add_metrics
+                 add_metrics(m_bge, evaluate_ranking_ids(topk_ids, pos_ids, K))
+         summary_bge = summarize_metrics(m_bge)
+         print_summary(K, "BGE-M3 Dense (baseline)", summary_bge)
+@@ -195,7 +208,7 @@
+     print("Macro averages across datasets:")
+     for method_label, metric_lists in macro_accumulator.items():
+         macro = {m: float(np.mean(vals)) if len(vals) else 0.0 for m, vals in metric_lists.items()}
+-        from .metrics import print_summary as _ps
++        from metrics import print_summary as _ps
+         _ps(K, f"Macro Avg - {method_label}", macro)
+ 
+     print(f"\n✅ Log saved at {LOG_PATH}")
