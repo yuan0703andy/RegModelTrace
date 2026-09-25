@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "path": "experiments/fg3_natural_boundary/protocol/case_formation_protocol.json",
+      "sha256": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8"
+    },
+    {
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/source_only_typed_key_plans.jsonl",
+      "sha256": "168d094420bd8c0aa90bee996711322fcbe2708ad5c69c65752da183b3cc7f36"
+    },
+    {
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/panel_c_typed_counterpart_candidates.jsonl",
+      "sha256": "ef60145f00663a05fa0ba52e71b31d5541be9774decaf260a2bb4406aa52df66"
+    },
+    {
+      "path": "openspec/changes/fg3-cp2-r1/panel-c-tier1-clarification.md",
+      "sha256": "dcaad721e623c6fb269bdb3faa137d84bda0b68494930e8d2d12d4427d624c36"
+    }
+  ],
+  "interpretation": "EXPLICIT_TYPED_ID_BEARING_COUNTERPART_NATURAL_UNIT",
+  "model_output_seen": false,
+  "natural_gold_seen": false,
+  "old_panel_c_candidate_count": 27,
+  "old_preliminary_over_limit_count": 16,
+  "status": "FROZEN_BEFORE_PANEL_C_TIER1_REGENERATION"
+}
