@@ -1,0 +1,22 @@
+{
+  "draft_source_units_with_anchor_and_exact_spans": 37,
+  "frozen_leads": 85,
+  "human_truth_records": 0,
+  "literal_pairing_audits": 36,
+  "literal_pairing_status": {
+    "FIRST_NONEMPTY_TIER_LITERAL_MATCHES_AWAIT_SOURCE_UNIT_REVIEW": 30,
+    "PAIRING_AMBIGUOUS_NO_SOURCE_KEY": 3,
+    "PAIRING_OVERFLOW": 3
+  },
+  "model_runs": 0,
+  "pairing_audits_with_exact_overlap_candidates": 7,
+  "pdf_anchor_text_verified": 85,
+  "primary_eligible_cases": 0,
+  "source_screening": {
+    "EXCLUDED_AT_FIXED_ANCHOR": 45,
+    "NOT_ADJUDICABLE_FOR_PANEL_B": 3,
+    "SOURCE_UNIT_AND_PAIRING_REVIEW_REQUIRED": 37
+  },
+  "status": "AUDIT_INTEGRITY_VERIFIED_NOT_CHECKPOINT_PASS",
+  "unit_exact_overlap_candidate_count": 1
+}

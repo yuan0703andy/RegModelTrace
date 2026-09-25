@@ -16,3 +16,5 @@
 - [ ] Produce panel-level boundary map, paired checkpoint table, exclusion ledger, limitations, and closure receipt.
 
 The source-discovery checkpoint and v1.3 protocol amendment are complete as preparation artifacts, with case formation, exposure scope, and packet rules now frozen. Exposure and original-PDF checks remain the next gate. No model run or truth adjudication is implied by this amendment.
+
+Checkpoint 2 source work is recorded in `experiments/fg3_natural_boundary/checkpoint2/`. PDF identity, selected anchors, and draft span integrity have been verified; final exposure equivalence, complete counterpart-unit review, and dependency clustering remain open. The Checkpoint 2 boxes above remain unchecked, and no primary natural case or model run is authorized by the provisional audit.

@@ -1,0 +1,147 @@
+{
+  "audit_outputs": [
+    {
+      "bytes": 709,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/audit_integrity_verification.json",
+      "sha256": "afbab7b8daa202133741cb39a83d73804c649d2aa5281f7ad5379d5be15c3a81"
+    },
+    {
+      "bytes": 4626,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/checkpoint2_report.md",
+      "sha256": "b1ddac4cf00f1c4a749b2eb778e3dba99588406269ca760c7b9072c01f7122d3"
+    },
+    {
+      "bytes": 6062,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/counterpart_exact_exposure_matches.jsonl",
+      "sha256": "a8f11e452ff43f9ff41acc05ebfd44d2260f37fa8bd1edf160b309ac12be62b9"
+    },
+    {
+      "bytes": 205026,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/exposure_similarity_candidates.jsonl",
+      "sha256": "1821e344e92036f3421f7aa051b3f7a6ceae4befb3c59b428f05bdeb4694041f"
+    },
+    {
+      "bytes": 3519,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/issue_log.md",
+      "sha256": "70b0c53992fe448ae8bc17e1c7876a5953dc9e513a05d0cf0d5baaf6612d0206"
+    },
+    {
+      "bytes": 71264,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/lead_screening.jsonl",
+      "sha256": "24de8871244e48fb7b0d60575bab471040267fbf74b81ba2d8ff3961d661c490"
+    },
+    {
+      "bytes": 326754,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/lead_source_dossiers.jsonl",
+      "sha256": "637cff7fe6e71037018b94c6e4ce1c23f080c4d354b19ee35ed6a6fa77431bed"
+    },
+    {
+      "bytes": 20516,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/pair_search_inputs.jsonl",
+      "sha256": "1e1837702cd3e78da4191e19ee921e218ae12264f510ede751ade53468c9d5d3"
+    },
+    {
+      "bytes": 321175,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/pairing_literal_audit.jsonl",
+      "sha256": "25be2e59aafa13af1c6dea34a5ebbfab9f4051f5c0a2d3b097a72644a1207ac9"
+    },
+    {
+      "bytes": 36135,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/pdf_text_verification.jsonl",
+      "sha256": "40480abbb671168cfa76cc01f925922f8e178809e497d881817d739a8f972ccd"
+    },
+    {
+      "bytes": 55992,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/source_unit_drafts.jsonl",
+      "sha256": "1fd37a586f58c65b6a88bb73ef528c141f54ea951633332fc7488e37b0f778ff"
+    },
+    {
+      "bytes": 10822,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/unit_exact_exposure_matches.jsonl",
+      "sha256": "8ba15433b05377de89826295e0f12ea290e285ab39318bb18dc0bb49f48f65a8"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "bytes": 115763,
+      "path": "experiments/fg3_natural_boundary/candidates/source_leads.jsonl",
+      "sha256": "2400910589ed93400816311fb0f7d96db0140f7a20440d1768624d5b32c63d4f"
+    },
+    {
+      "bytes": 6457,
+      "path": "experiments/fg3_natural_boundary/candidates/discovery_manifest.json",
+      "sha256": "41cccec61cd41f294c973bc21160bfd96e4f219317338f25ac56508208ce9b99"
+    },
+    {
+      "bytes": 8760,
+      "path": "experiments/fg3_natural_boundary/protocol/case_formation_protocol.json",
+      "sha256": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8"
+    },
+    {
+      "bytes": 68071,
+      "path": "experiments/fg3_natural_boundary/protocol/known_exposure_file_manifest_v1.json",
+      "sha256": "f7981c11ebeb8919c217773242109758205469cfd74c1fcfa5c4c6ab24c43152"
+    },
+    {
+      "bytes": 3037,
+      "path": "experiments/fg3_natural_boundary/protocol/known_exposure_ledger_v1.json",
+      "sha256": "238864bad644d2ecd1ad54cd7295660eddc9e1f4dc12d815abb286a05fd1bb07"
+    }
+  ],
+  "human_gold_records": 0,
+  "model_runs": 0,
+  "scientific_eligibility_claimed": false,
+  "scripts": [
+    {
+      "bytes": 3306,
+      "path": "scripts/fg3/audit_exact_exposure.py",
+      "sha256": "d000432be2db93c86c2c58004c2deb682401c92e89142d24bcdd4a3d7fb9bc4d"
+    },
+    {
+      "bytes": 5477,
+      "path": "scripts/fg3/audit_pairing_tiers.py",
+      "sha256": "e81e36ded116938d80ee8712f5cee66ecbaffd12136da1950ab03b334c11fc78"
+    },
+    {
+      "bytes": 1567,
+      "path": "scripts/fg3/build_checkpoint2_manifest.py",
+      "sha256": "7227e78b47ae04d176476bfa068f3bb32d4e2419076a8aad5050ea47680411f8"
+    },
+    {
+      "bytes": 9377,
+      "path": "scripts/fg3/build_checkpoint2_source_units.py",
+      "sha256": "a2152ffc8170b826845a8ca1388701e63c13317adcafe88b088e55f144275efa"
+    },
+    {
+      "bytes": 7602,
+      "path": "scripts/fg3/discover_source_leads.py",
+      "sha256": "4a2e00f63d23fdb8a879e3e9c2e1ae6f8842c2a1cb2016757df01463000a5ece"
+    },
+    {
+      "bytes": 3704,
+      "path": "scripts/fg3/exposure_similarity_review.py",
+      "sha256": "068bb890395553d9b7cb1020f8861b1146521c44179e547158ae9ffd473f9395"
+    },
+    {
+      "bytes": 5563,
+      "path": "scripts/fg3/inspect_leads.py",
+      "sha256": "59a2519277bb7e2548d1dbe78ddc04a1643a0947aef974f053134d191b6b0bda"
+    },
+    {
+      "bytes": 3541,
+      "path": "scripts/fg3/record_pair_search_inputs.py",
+      "sha256": "8c3456d432b9bb4da7af720f070dd9716db089cc1470087d3f9d23c19005dfb8"
+    },
+    {
+      "bytes": 8810,
+      "path": "scripts/fg3/screen_fixed_anchors.py",
+      "sha256": "f6080e895a877ee9055ca8d5581b5a0a32a7bf8bc2bed05708d7256c46c607dc"
+    },
+    {
+      "bytes": 6245,
+      "path": "scripts/fg3/verify_checkpoint2_audit.py",
+      "sha256": "d382285fdd24d5d61c6a258c6649c5c655908f3b00432c24c8c1cf4a425072fc"
+    }
+  ],
+  "status": "IN_PROGRESS_NOT_CHECKPOINT_PASS"
+}
