@@ -1,0 +1,24 @@
+{
+  "amendment_id": "FG3-CP2-R1-20260925",
+  "contract_files_sha256": {
+    "openspec/changes/fg3-cp2-r1/acceptance.md": "f7a686e85793183adf6385cd9cc91521c0cad3e85053d9fc9c0c2754116fd6fc",
+    "openspec/changes/fg3-cp2-r1/design.md": "664197bcef1ad1b12db0860cf9ec5bc78bf2fdc6875207ef2cc1214de8d9c7f0",
+    "openspec/changes/fg3-cp2-r1/proposal.md": "ebd25694729bfb757965b02775f616bc63453d55c6a305d12436448f78a133c6",
+    "openspec/changes/fg3-cp2-r1/specs/fg3-source-conformance/spec.md": "6d0a8f23eddd3bba0b4b21ef3add043f77aaa75756b4adb4d4f0f2f058a30254",
+    "openspec/changes/fg3-cp2-r1/tasks.md": "1575301a30861ac5c492b251a23ff9172277d309aeeee26c72b212f64cf10035"
+  },
+  "discovery_hits": 1708,
+  "frozen_inputs_sha256": {
+    "experiments/fg3_natural_boundary/candidates/all_query_hits.jsonl": "b83091c786cda6aaf12f461b30ebb4811919d0ef0bcba43e82ebed34ce19d1f9",
+    "experiments/fg3_natural_boundary/candidates/source_leads.jsonl": "2400910589ed93400816311fb0f7d96db0140f7a20440d1768624d5b32c63d4f",
+    "experiments/fg3_natural_boundary/protocol/case_formation_protocol.json": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8",
+    "experiments/fg3_natural_boundary/protocol/known_exposure_file_manifest_v1.json": "f7981c11ebeb8919c217773242109758205469cfd74c1fcfa5c4c6ab24c43152",
+    "experiments/fg3_natural_boundary/protocol/known_exposure_ledger_v1.json": "238864bad644d2ecd1ad54cd7295660eddc9e1f4dc12d815abb286a05fd1bb07"
+  },
+  "human_gold_records": 0,
+  "natural_model_runs": 0,
+  "permanently_secondary_chronology_deviations": 18,
+  "review_attachment_sha256": "b2fd9c4b14d0972d622544088ecfae3e4b8068404b76a7df53aa36d8744cb44b",
+  "selected_leads": 85,
+  "status": "FROZEN_BEFORE_REPAIRED_SOURCE_AND_PAIRING_GENERATION"
+}

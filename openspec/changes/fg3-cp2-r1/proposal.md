@@ -1,0 +1,7 @@
+# FG-3 CP2-R1: source-unit and pairing conformance repair
+
+The first Checkpoint 2 audit relocated all 85 frozen anchors but its 37 draft source units and 36 pairing searches are not protocol-compliant case-formation evidence. In particular, several parent identifiers lack source refs, Form/Standard identities collapse, Panel A searches literal paragraphs across an entire document instead of a bounded vendor section, lower tiers are unmaterialized, and the exact-overlap scanner misses some token offsets and JSON string values.
+
+This change repairs implementation against the already-frozen FG-3 case-formation rules **before human gold or natural-model output exists**. It does not change the 1,708 hits, 85 leads, selected first anchors, case-formation protocol, packet rule, model, or scorer. Eighteen plans whose search-key chronology was violated remain permanently outside the primary confirmatory set. If an old rule cannot yield a unique mechanical implementation, the case exits as secondary/exploratory rather than gaining a post-hoc pairing rule.
+
+The falsification test is whether independently resolved source spans and typed keys reproduce exact original-PDF sections, retain every first-tier substantive counterpart, and correctly distinguish Form from Standard under Unicode dash variants. The repaired audit must expose every unresolved boundary or exposure status and must not manufacture eligible cases.

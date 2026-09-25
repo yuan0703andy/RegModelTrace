@@ -1,0 +1,7 @@
+# Acceptance
+
+The 1,708 hits, 85 leads, selected first anchors, six PDF hashes, and v1.3 protocol hashes are unchanged. Every nonterminal source unit has exact source refs and auditable start/end/parent boundaries. Every pairing key has a type and source ref; no Form/Standard cross-match occurs; permitted Unicode dash variants produce identical typed IDs. Panel A section bounds and Panel C all-match results conform to the frozen tier order. All three formerly premature ambiguity states and three old overflow states are recomputed or explicitly left unresolved. No chronology-deviated plan becomes primary eligible.
+
+The exact-exposure scanner examines every 12-token window, decodes JSON strings, verifies all frozen ledger hashes, and never interprets an unmatched string as exposure clearance. Known-exposed pages are terminal exclusions from pending primary work. The 45 provisional exclusions and remaining Panel B unit are rechecked without replacing their anchors. The conformance verifier fails closed on wrong source span, missing parent heading, wrong key type, incomplete tier, or unverified section end.
+
+Checkpoint 2 may pass only when the original completion gate also passes: all leads have final source/exposure disposition, all formed first-tier pairs and dependencies are complete, and unknown exposure is not primary eligible. A repaired implementation alone may be recorded as `CP2_R1_IMPLEMENTATION_PASS` while `FG3_CHECKPOINT_2` remains incomplete. No human gold or natural Qwen inference is authorized by this change.
