@@ -1,6 +1,9 @@
 {
   "source_attachment_sha256": "47a84e681eb74025f83b172f6d77dd8ff735bdeb55438cef2cdedda0faa95618",
   "second_amendment_attachment_sha256": "984d08b60b12118a1b51516396d29ce08e8b3de253c007ef1ca0e669eb7891fc",
-  "protocol_sha256": "14e53c0fb56d55d040b764c86148c16fbc4992e22b9dae9e17fa8ba7c077b099",
-  "status": "PROSPECTIVE_PROTOCOL_ONLY_NO_NATURAL_CASES_OR_MODEL_RUN"
+  "protocol_sha256": "a488565653407c0c3cc9a6d546950edf15f4c78e924078cbbe425278301da1c7",
+  "status": "V1_2_CASE_FORMATION_AMENDED_NO_NATURAL_CASES_OR_MODEL_RUN",
+  "prior_v1_1_protocol_sha256": "14e53c0fb56d55d040b764c86148c16fbc4992e22b9dae9e17fa8ba7c077b099",
+  "case_formation_review_attachment_sha256": "fa3e2c1a3653dbd2cb9ea12098a72ce5afff417e96336b0a5099a8ae159e07b1",
+  "case_formation_protocol_sha256": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8"
 }

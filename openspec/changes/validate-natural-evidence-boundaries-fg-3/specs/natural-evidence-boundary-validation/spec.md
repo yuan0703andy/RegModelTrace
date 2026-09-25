@@ -14,6 +14,17 @@ FG-3 SHALL admit a natural case to primary semantic evaluation only when indepen
 - **WHEN** an adjudicator requires source material outside the model-facing packet to reach the proposed judgment
 - **THEN** the case is marked `HUMAN_CONTEXT_INSUFFICIENT` and excluded from the primary semantic analysis
 
+### Requirement: Predeclared natural-case pairing
+FG-3 SHALL freeze a source-unit and cross-document pairing rule before interpreting selected page leads. The rule SHALL preserve all candidates at the first applicable pairing tier and group repeated or substantially equivalent source claims into dependency clusters.
+
+#### Scenario: Reviewer and vendor passages share only a broad topic
+- **WHEN** a reviewer action and vendor revision both mention a hurricane model but lack a confirmed shared substantive object
+- **THEN** the record is marked `UNRESOLVED` or `NOT_SAME_OBJECT` for pairing and cannot establish review-caused model modification
+
+#### Scenario: Two standards cycles repeat one requirement
+- **WHEN** 2021 and 2023 cases derive from an exact or substantially equivalent clause
+- **THEN** they share a case dependency cluster and are not counted as independent replications
+
 ### Requirement: Auditable model correctness
 FG-3 SHALL report verdict agreement, evidence localization, and joint auditable correctness separately. A correct verdict with a citation that does not support it SHALL fail the joint metric.
 

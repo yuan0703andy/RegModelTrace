@@ -3,7 +3,7 @@ I would freeze the next phase as a narrow continuation of FG-2, using the invent
 # RegModelTrace FG-3
 ## Natural Evidence-Boundary Validation
 
-**Version:** 1.1 (five contract amendments)
+**Version:** 1.2 (case formation amendment after frozen source discovery)
 **Date:** 2026-09-24
 **Status:** FROZEN PROSPECTIVE PROTOCOL — NATURAL CASES NOT YET ADJUDICATED
 
@@ -382,6 +382,18 @@ No class balance or panel quota may be artificially manufactured.
 ## 7.1 Predeclared stopping rule
 
 Before source screening, freeze a separate discovery procedure for each panel. Each procedure records the exact documents and sections searched, deterministic query set, inclusion and deduplication rules, candidate cap if any, and stopping condition. Discovery terminates under that rule regardless of whether the resulting candidates look interesting or likely to challenge either model. If eligible candidates exceed the cap, select by a deterministic hash rank within dependency clusters; never select on expected difficulty or similarity to synthetic errors. Each screened lead records `discovery_protocol_id`, `discovery_query_id`, `discovery_rank`, `dedup_cluster`, and `selection_reason`. Keyword hits are leads, not cases or gold labels.
+
+## 7.2 Predeclared case formation and pairing protocol
+
+The frozen page-lead selection remains unchanged. Before interpreting the 85 selected leads, freeze the separate [case formation contract](case_formation_protocol.json). It fixes how a page lead becomes a bounded source unit, how counterpart passages are searched, when a pair is ambiguous or unavailable, and how dependent observations are grouped. A lead anchors at most one case: take the earliest first match among its selected query IDs, using query ID to break a tie. If that anchor is boilerplate or unusable, record the exclusion; do not move to a more interesting occurrence on the page. Preserve every candidate pair returned by the first applicable pairing tier and every exclusion reason.
+
+For **Panel A**, identify the complete requirement clause containing the anchor, its hierarchy, and immediately attached qualifications. Search only the same-cycle vendor submission. Use the exact hierarchical standard/disclosure identifier first, the exact subsection heading second, and literal quoted or title-cased technical terms appearing in the clause third. Record all source candidates returned by the first nonempty tier before judging support. A broad section, overflow, or no bounded match is documented as such; do not choose the passage that makes the answer easiest. An unresolved bounded packet cannot establish absence from the full corpus.
+
+For **Panel B**, the natural unit is the complete numbered reviewer comment and its attached disposition, or the containing unnumbered paragraph with an immediately attached disposition line. The parent heading travels with the unit. A compound block that cannot be separated by the document's own numbering is marked not adjudicable for the binary target. Do not vary the context window according to the likely label.
+
+For **Panel C**, a selected reviewer or vendor lead is paired only with the same-cycle counterpart document. Try exact requirement/standard ID, then explicit comment/response ID, then an exact named substantive object, then bounded literal terminology recorded from the anchor **before** counterpart search. Stop at the first nonempty tier and preserve every candidate at that tier. Every pair records `review_object`, `vendor_object`, `pairing_basis`, `same_object_status`, modification type, and chronology. `same_object_status` is `CONFIRMED`, `NOT_SAME_OBJECT`, or `UNRESOLVED`. Only `CONFIRMED` same-object pairs can support `EXPLICIT_REVIEW_CAUSED_MODIFICATION`; a revised disclosure or written response alone is not a model-method change. Shared broad topic or temporal order does not form a causal pair.
+
+The page-level `dedup_cluster` is a discovery artifact. Formed cases get a separate `dependency_cluster`. Exact or substantially equivalent clauses across 2021/2023, repeated reviewer comments or vendor responses, shared source units, and whole/facet variants are linked into one cluster before any independence claim or case count. When substantial equivalence remains uncertain, group conservatively and record the uncertainty. Two cycle-specific observations in one cluster are not independent replications.
 
 ---
 

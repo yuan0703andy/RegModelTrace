@@ -1,0 +1,74 @@
+{
+  "case_formation_protocol_id": "FG3-CASE-FORMATION-20260924-v1",
+  "status": "FROZEN_BEFORE_CASE_CONTEXT_SCREENING",
+  "input": {
+    "discovery_protocol_id": "FG3-SOURCE-DISCOVERY-20260924-v1",
+    "source_leads_path": "experiments/fg3_natural_boundary/candidates/source_leads.jsonl",
+    "expected_source_lead_count": 85,
+    "allowed_cycles": [2021, 2023],
+    "allowed_roles": ["REGULATOR", "VENDOR", "REVIEWER"]
+  },
+  "general_rules": [
+    "Preserve all 85 frozen page leads and all exclusion reasons. Do not replace a failed lead with a different page or change the discovery queries, cap, or ranking.",
+    "Screen known exposure first; verify complete source context; then repeat exposure review at the exact clause and paired-passage level. Unknown exposure cannot become primary eligible.",
+    "Each selected page lead anchors at most one case: use the earliest first-match position among its selected query IDs on the normalized page; break ties by query ID. Never skip that anchor to choose a more interesting occurrence.",
+    "If the anchor is in a table of contents, header, footer, copied requirement without a substantive source claim, or an indivisible compound passage, record the exclusion and do not substitute a second occurrence.",
+    "A formed case can contain several source spans when the source's natural unit or frozen pairing rule requires them. Store every candidate match and the reason for inclusion or exclusion; do not choose the most favorable passage.",
+    "A missing match in the bounded pairing search means no pair formed by this protocol, not absence from the full corpus."
+  ],
+  "source_unit": {
+    "regulator": "Smallest complete normative clause containing the fixed anchor, with its standard/subsection heading and adjacent qualification or exception. Follow an explicit sentence continuation across the physical page boundary.",
+    "reviewer": "Numbered reviewer comment or disposition block containing the anchor, including subordinate response and attached Verified/Not Verified disposition through the next same-level comment. If unnumbered, use the containing paragraph and immediately attached disposition line plus parent heading.",
+    "vendor": "Containing disclosure/response paragraph or numbered subsection with its parent standard heading; include explicit sentence continuation across a page boundary.",
+    "overflow": "If the natural unit exceeds two physical pages or 3000 whitespace-delimited words, mark CONTEXT_OVERFLOW; do not truncate or hand-select sentences.",
+    "boundary_record": ["anchor_query_id", "anchor_text", "physical_page", "section_or_comment_id", "start_and_end_source_refs", "context_rule", "overflow_status"]
+  },
+  "panel_A": {
+    "anchor_role": "REGULATOR",
+    "pair_document": "same-cycle Florida Public vendor submission",
+    "pairing_tiers_in_order": [
+      "Exact hierarchical standard/disclosure identifier printed in the regulator unit; search the matching vendor section and retain every substantive paragraph in that bounded section. Subject relevance is judged only after the full match set is saved.",
+      "If no usable identifier exists, exact normalized regulator subsection heading in the vendor document; retain all substantive paragraphs under that heading.",
+      "If neither applies, exact quoted technical phrase or title-cased multiword technical name occurring in the regulator unit; retain all vendor paragraphs containing that exact phrase. No invented synonym or semantic search."
+    ],
+    "tier_stop": "Before counterpart search, record every literal identifier, heading, quoted phrase, and title-cased multiword technical name from the verified anchor unit. Use the first nonempty tier, preserve all matches at that tier, and record whether lower tiers were not searched. A broad section without an identifiable subject is PAIRING_AMBIGUOUS, not a license to pick a favorable paragraph.",
+    "match_limit": "If the first nonempty tier yields over 20 distinct vendor paragraphs or over 3000 words, record PAIRING_OVERFLOW and exclude from the primary set; do not sample matches.",
+    "no_match": "NO_VENDOR_PAIR_UNDER_FROZEN_RULE; it may remain a bounded unresolved candidate, never a corpus-absence claim",
+    "whole_facet_rule": "A multi-proposition requirement is split into facets only after the complete parent clause is fixed. All variants share the same source case and dependency cluster."
+  },
+  "panel_B": {
+    "anchor_role": "REVIEWER",
+    "pairing": "No vendor passage is added unless the target question explicitly requires vendor context. Use the complete natural reviewer comment/disposition block defined under source_unit.",
+    "compound_block": "If the block contains multiple independent actions that cannot be separated by existing numbered subitems, mark NOT_ADJUDICABLE_FOR_PANEL_B; do not create an arbitrary sentence window."
+  },
+  "panel_C": {
+    "anchor_roles": ["REVIEWER", "VENDOR"],
+    "pair_document": "same-cycle counterpart reviewer report or vendor submission",
+    "pairing_tiers_in_order": [
+      "Exact hierarchical standard or requirement identifier appearing in both units.",
+      "Exact comment, disclosure, or response identifier appearing in both units.",
+      "Exact explicit methodology, component, or object name appearing in both units, identified by a quoted phrase or title-cased multiword name in the anchor.",
+      "Bounded exact terminology: before counterpart search, freeze every remaining two-to-five-word technical phrase explicitly used in the anchor block and record its exact text. Search only those literal phrases. Generic phrases such as hurricane model, model update, and review methodology never qualify. If the complete phrase list cannot be identified without interpreting the counterpart, skip this tier and mark PAIRING_AMBIGUOUS."
+    ],
+    "tier_stop": "Search all paragraphs in the counterpart document under each tier, stop at the first nonempty tier, and retain every match at that tier. Record all candidate pairs; do not select one by apparent causal strength.",
+    "match_limit": "If the first nonempty tier yields over 20 distinct counterpart paragraphs or over 3000 words, record PAIRING_OVERFLOW and exclude from the primary set; do not sample matches.",
+    "same_object_status": ["CONFIRMED", "NOT_SAME_OBJECT", "UNRESOLVED"],
+    "same_object_rule": "A reviewer action and vendor modification are paired as causal evidence only if the same substantive object is confirmed from source text. Shared broad topic or chronology is insufficient.",
+    "required_pair_record": ["review_source_refs", "vendor_source_refs", "review_object", "vendor_object", "pairing_tier", "pairing_basis_exact_text", "same_object_status", "chronology", "modification_type", "unavailable_dependency"],
+    "modification_types": ["MODEL_METHOD", "MODEL_IMPLEMENTATION", "DOCUMENTATION_ONLY", "DISCLOSURE_RESPONSE_ONLY", "UNKNOWN"],
+    "causal_boundary": "Only CONFIRMED same-object pairs can support EXPLICIT_REVIEW_CAUSED_MODIFICATION. Documentation or response revision is not a model-method modification. NO_PAIR or UNRESOLVED remains unresolved from the bounded packet, not absent from the corpus."
+  },
+  "dependency_clustering": {
+    "construction": "Union linked cycle-specific cases into one dependency cluster before counting independent natural cases.",
+    "link_rules": [
+      "Same exact normalized regulator clause or reviewer comment.",
+      "Same hierarchical standard/subsection identifier and substantive object across the 2021 and 2023 cycles, even when wording is revised.",
+      "Shared vendor passage, reviewer comment, response, or explicit cross-reference.",
+      "Whole and facet variants, alternative source spans, or repeated prompts derived from one underlying source claim."
+    ],
+    "uncertain_equivalence": "If source-only reviewers cannot rule out substantial equivalence, group conservatively and record UNCERTAIN_DEPENDENCY; do not count as independent replication.",
+    "identifier": "Stable hash of the sorted member source-unit IDs, with explicit recorded linking basis; page-level dedup_cluster is not reused as a case dependency cluster."
+  },
+  "case_record_fields": ["case_id", "parent_lead_ids", "panel", "cycle", "anchor_source_ref", "paired_source_refs", "pairing_tier", "pairing_status", "same_object_status", "dependency_cluster", "exposure_status", "pdf_context_status", "adjudicability_status", "exclusion_reason"],
+  "completion_gate": "All 85 leads receive exposure and source-context disposition, every formed pair records all matching candidate spans and dependency links, and no unknown-exposure case is marked primary eligible. Human truth and model inference remain separate later checkpoints."
+}

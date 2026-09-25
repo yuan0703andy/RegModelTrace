@@ -7,6 +7,14 @@
 - Candidate status distinguishes keyword lead, source-verified case, adjudicable case, and human-truth-frozen case.
 - No natural model inference, new gold, or historical-score changes occur.
 
+## Checkpoint 2: eligible natural case construction
+
+- The original 85 page leads, 1,708 query/page hits, query caps, ranks, and hashes remain unchanged.
+- Case formation and Panel A/C counterpart-pairing rules are frozen before substantive screening; all first-tier counterpart candidates are retained, including inconvenient or ambiguous matches.
+- Every selected lead receives a documented exposure and source-context disposition. Unknown exposure stays outside the primary set.
+- Formed cases record source identities, exact pairing basis, bounded search outcome, Panel C object match, chronology and modification type where relevant, and dependency clusters across cycles and variants.
+- The output distinguishes `NO_PAIR_UNDER_FROZEN_RULE`, `PAIRING_AMBIGUOUS`, and `PAIRING_OVERFLOW` from full-corpus absence. No human truth or model result is required at this checkpoint.
+
 ## FG-3 closure
 
 - Exact-context human sufficiency and resolved independent truth exist for every primary case before natural inference.
