@@ -42,3 +42,14 @@ def test_appendix_form_section_replaces_see_appendix_pointer():
     assert len(found) == 1
     assert found[0]["heading"]["physical_page"] == 2
     assert found[0]["end_boundary"]["physical_page"] == 3
+
+
+def test_wrapped_table_of_contents_entry_is_not_a_section():
+    pages = [
+        "Table of Contents\n  G-2 Qualifications of Modeling Organization Personnel and Consultants Engaged in\n  Development and Implementation of the Hurricane Model ........ 110\n",
+        "G-2 Qualifications of Modeling Organization Personnel and Consultants Engaged in Development\nBody text.\n",
+        "G-3 Insured Exposure Locations\n",
+    ]
+    found = section_candidates(pages, "STANDARD:G-2")
+    assert len(found) == 1
+    assert found[0]["heading"]["physical_page"] == 2

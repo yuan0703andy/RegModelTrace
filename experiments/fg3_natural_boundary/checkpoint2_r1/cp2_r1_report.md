@@ -1,0 +1,25 @@
+# FG-3 Checkpoint 2 conformance repair — source-only progress
+
+**Status:** `CP2_R1_INTEGRITY_PASS_FOR_RECORDED_ARTIFACTS`; `FG3_CHECKPOINT_2 = NOT_PASS_REPAIR_AND_SOURCE_REVIEW_INCOMPLETE`.
+
+This repair preserves the 1,708 discovery hits, 85 frozen page leads, first anchors, six source-PDF hashes, and FG-3 v1.3 protocols. It does not create human gold, run Qwen, clear exposure, or form a confirmatory natural case. The old Checkpoint 2 pairing hit sets remain in place as nonconforming historical output. New source-only key plans were committed before repaired counterpart search. A real Form A-5 scanner diagnostic had been run prematurely before that commit; its lead `FG3L_38d49e13a06daf85` is permanently secondary, in addition to the original 18 chronology-deviated plans. The freeze receipt was not retroactively changed.
+
+## Repaired source and search records
+
+The historical `39 → 37` discrepancy is `39` draft units before the CP2-05A screen minus two Panel B compound exclusions, leaving `37` source-unit drafts. The repaired disposition ledger contains 33 exact-span canonical source units, two source-unit hierarchy unresolved, one fixed-anchor figure-caption exclusion, and one known-exposure terminal exclusion. For `FG3L_2b40fc1569aee3c3`, numbered M-3 Audit 2 is one storm-track-selection/generator review object spanning physical pages 20–21; the previously excluded CI-4 Audit 6 switches between storm-track and vulnerability-matrix code-count objects. This is a source-unit distinction, not a scrutiny/challenge truth label.
+
+All 33 canonical units have fixed-anchor containment, exact PDF-text source spans, a printed parent heading source ref, and a recorded end witness. These are reconstructed source units; the current integrity check does not certify every visual section boundary or every substantive interpretation. The 33 source-only pairing plans contain typed `FORM:` or `STANDARD:` identifiers with exact source refs, plus explicitly recorded lower-tier candidates or non-materializable states. The source-only plans were committed before the repaired counterpart searches. Nineteen plans are permanently secondary due to chronology; no plan is primary eligible while exposure and counterpart review remain open.
+
+The repaired first-tier diagnostics cover five Panel A and 27 Panel C plans. Panel A now searches typed matching vendor sections, not whole-document bare IDs. The Form A-5 section resolves to the Form appendix rather than the same-numbered Standard or table of contents. Preliminary section-member counts are 973, 0, 35, 85, and 120 for the five Panel A leads; these are **unreviewed paragraph candidates**, not counts of relevant evidence. Panel C retains every typed first-tier section/member/reference candidate and leaves same-object, actual reviewer-action, and substantive-paragraph decisions open. The old/new pairing diff explicitly marks candidate counts as incomparable recall denominators. Three zero-first-tier sets still require source-only lower-tier/name review; they are not final `NO_PAIR` or `PAIRING_AMBIGUOUS` outcomes. No overflow or no-pair state from the old search is promoted to a final protocol outcome.
+
+The 45 provisional fixed-anchor exclusions were rechecked against the target-family boundary without selecting a later occurrence. Five vendor-facing procedural or conditional clauses are reopened for canonical source-unit review; the other 40 retain their recorded exclusion pending PDF-level confirmation. The known-exposed 2023 reviewer page-7 lead is terminal and outside pending primary pairing work.
+
+## Exposure and environment
+
+The exact scanner now uses NFKC tokenization, every 12-token window at stride 1, parsed JSON/JSONL string values, and hash verification of all 347 frozen ledger files. Two source units have exact-overlap candidates in an earlier Verisk reviewer-assertion artifact; both remain exposure-unresolved. A frozen `.pyc` file is binary and cannot be decoded as text; the parse failure is recorded for every scanned unit rather than silently counted as clearance. No exact-overlap miss is interpreted as lack of substantial prior exposure.
+
+Fresh `pdftotext -raw -enc UTF-8` extraction found the anchor for all 85 leads. The current local Poppler is 26.09.0. Zero of 85 legacy raw-page hashes reproduced under the explicitly recorded v2 byte algorithm, so the legacy hash field is not claimed reproducible here. The v2 receipt preserves command, encoding, normalization, runtime, and page hashes.
+
+## Remaining gate work
+
+Before Checkpoint 2 can pass, the repaired section and counterpart units require source review; lower tiers and any genuine overflow/no-pair dispositions must be completed without new semantic rules; the five reopened exclusions need canonical units; all exact and substantial exposure/dependency decisions need resolution; and the 40 retained exclusions need PDF-level confirmation. The integrity verifier checks recorded hashes, source spans, typed-key refs, pair candidate refs, counts, and no-primary/no-model boundaries. Its success does **not** imply the original Checkpoint 2 completion gate passed.

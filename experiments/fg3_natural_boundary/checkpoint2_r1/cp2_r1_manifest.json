@@ -1,0 +1,243 @@
+{
+  "entries": [
+    {
+      "bytes": 43656,
+      "path": "experiments/fg3_natural_boundary/protocol/spec.md",
+      "sha256": "46c7166a0c38849c9348341e6d73bff7713e0f31e7e0d398580d31dd35f2753a"
+    },
+    {
+      "bytes": 2159,
+      "path": "experiments/fg3_natural_boundary/protocol/v1_3_amendment_receipt.json",
+      "sha256": "dec7b928399875b84bb01077462b893e1bb000c2269a535ef1a170105c5a1437"
+    },
+    {
+      "bytes": 4149,
+      "path": "experiments/fg3_natural_boundary/protocol/discovery_protocol.json",
+      "sha256": "3218d3578f1d9ff9d78a3260b32f4eb7fd0c2160c8cc51a425b90eeefc204aeb"
+    },
+    {
+      "bytes": 8760,
+      "path": "experiments/fg3_natural_boundary/protocol/case_formation_protocol.json",
+      "sha256": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8"
+    },
+    {
+      "bytes": 3037,
+      "path": "experiments/fg3_natural_boundary/protocol/known_exposure_ledger_v1.json",
+      "sha256": "238864bad644d2ecd1ad54cd7295660eddc9e1f4dc12d815abb286a05fd1bb07"
+    },
+    {
+      "bytes": 68071,
+      "path": "experiments/fg3_natural_boundary/protocol/known_exposure_file_manifest_v1.json",
+      "sha256": "f7981c11ebeb8919c217773242109758205469cfd74c1fcfa5c4c6ab24c43152"
+    },
+    {
+      "bytes": 6457,
+      "path": "experiments/fg3_natural_boundary/candidates/discovery_manifest.json",
+      "sha256": "41cccec61cd41f294c973bc21160bfd96e4f219317338f25ac56508208ce9b99"
+    },
+    {
+      "bytes": 326754,
+      "path": "experiments/fg3_natural_boundary/checkpoint2/lead_source_dossiers.jsonl",
+      "sha256": "637cff7fe6e71037018b94c6e4ce1c23f080c4d354b19ee35ed6a6fa77431bed"
+    },
+    {
+      "bytes": 74294,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/canonical_source_units.jsonl",
+      "sha256": "998c19ce0a165c22b38594b19aa6b15a537d622ca0cb0be8bb4c5159ef7047bf"
+    },
+    {
+      "bytes": 1188,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/cp2_r1_integrity_verification.json",
+      "sha256": "e8b803b0bbba9f5fe9929c3d83f2085867976efe1f18126198c8d86398e4923c"
+    },
+    {
+      "bytes": 5143,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/cp2_r1_report.md",
+      "sha256": "514188004e02676efae75b374abf753fad3b31889a365c1f8e1eaecd653f3fa1"
+    },
+    {
+      "bytes": 915,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/environment_receipt.json",
+      "sha256": "36935db6bb7b8d5b359645641b04d5b8b7cba9253348067c810973c86a38af7f"
+    },
+    {
+      "bytes": 37067,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/fixed_anchor_exclusion_recheck.jsonl",
+      "sha256": "2b5e597e651c302ac0eaeb7a4ff31447e77bd74479d0028cad75d888080edffd"
+    },
+    {
+      "bytes": 18245,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/old_new_pairing_diff.jsonl",
+      "sha256": "02cae0523cbc92fe4eb349c1b0cb166c8638c42a4e807651785e4ef11360b681"
+    },
+    {
+      "bytes": 650049,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/panel_a_typed_section_candidates.jsonl",
+      "sha256": "be1a62017221d7c9f581b19a26cc37f061575354877c4c79830ae9f7aacd4565"
+    },
+    {
+      "bytes": 1467315,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/panel_c_typed_counterpart_candidates.jsonl",
+      "sha256": "ef60145f00663a05fa0ba52e71b31d5541be9774decaf260a2bb4406aa52df66"
+    },
+    {
+      "bytes": 53052,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/raw_mode_verification_v2.jsonl",
+      "sha256": "d287225adf830bbd4098a5e5e75213087a24de7ba74a0a27da51d5d1b4e045ca"
+    },
+    {
+      "bytes": 565,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/repair_deviations.json",
+      "sha256": "b58b0ae314cf7681893a35cf683ee2f18184fc3fca29350fabf966632f058ee0"
+    },
+    {
+      "bytes": 71355,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/repaired_source_unit_candidates.jsonl",
+      "sha256": "7107c1c5f8b10d01652ddf6d151cbae7c7a7ba851dacbc26bb1fccd8ef51f08a"
+    },
+    {
+      "bytes": 25876,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/source_exact_exposure_candidates.jsonl",
+      "sha256": "458cee69822e3005594230462821d7d3321d96feee6d4de19ae65f0ddb9fb860"
+    },
+    {
+      "bytes": 37887,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/source_only_typed_key_plans.jsonl",
+      "sha256": "168d094420bd8c0aa90bee996711322fcbe2708ad5c69c65752da183b3cc7f36"
+    },
+    {
+      "bytes": 97200,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/source_unit_boundary_audit.jsonl",
+      "sha256": "9e848122592c3c3db67c523c8afec713ec7f76e43603abb53faafbb1c6edc2f8"
+    },
+    {
+      "bytes": 12083,
+      "path": "experiments/fg3_natural_boundary/checkpoint2_r1/source_unit_dispositions.jsonl",
+      "sha256": "f498ab34918f7dfd0a80faa94f57b040ebdfe88a5bbd071ebeb684cdedebaee7"
+    },
+    {
+      "bytes": 5847,
+      "path": "scripts/fg3/cp2_r1/audit_source_units.py",
+      "sha256": "67571ba7ed5e5bdcd3dccc19f195d343dbf79333519395c591addfc4906cfa5e"
+    },
+    {
+      "bytes": 2111,
+      "path": "scripts/fg3/cp2_r1/build_manifest.py",
+      "sha256": "4218035e2de3056bbd1850390669b05d38570d6cdc17aa3f7868037ba0440304"
+    },
+    {
+      "bytes": 3098,
+      "path": "scripts/fg3/cp2_r1/exposure.py",
+      "sha256": "bece1235c508e2518ca8f799382ed36e048fa79d9cd2191c7a83b1af2bf9056a"
+    },
+    {
+      "bytes": 6323,
+      "path": "scripts/fg3/cp2_r1/finalize_source_units.py",
+      "sha256": "3e8e8dfaca0478d216c6c1156835f261beb0b326fb9931cebf2d55789c1608d7"
+    },
+    {
+      "bytes": 5331,
+      "path": "scripts/fg3/cp2_r1/freeze_source_keys.py",
+      "sha256": "0b123a448cf9433216a6af5e20ced1414153ab722b5895e28956e93de0540692"
+    },
+    {
+      "bytes": 4349,
+      "path": "scripts/fg3/cp2_r1/pair_panel_a_sections.py",
+      "sha256": "f911f6d6ba36a13edaf7576a67aa4932e96246e22f42957211d31ce99afa50bd"
+    },
+    {
+      "bytes": 5528,
+      "path": "scripts/fg3/cp2_r1/pair_panel_c_candidates.py",
+      "sha256": "4d8c3fbae256a05fce57bf56493c0ae14c4fa73cbfb24632162f45466585cd28"
+    },
+    {
+      "bytes": 10286,
+      "path": "scripts/fg3/cp2_r1/rebuild_source_units.py",
+      "sha256": "c2bb36c28e388126ce8018fbed4fd72c977dbe0990089dc0f26dfad10e5366c8"
+    },
+    {
+      "bytes": 3542,
+      "path": "scripts/fg3/cp2_r1/recheck_fixed_exclusions.py",
+      "sha256": "064173b47508009d0f8b1bcaa033ecf516d8a0837f8f40a2addcb6dec54f8aa3"
+    },
+    {
+      "bytes": 2076,
+      "path": "scripts/fg3/cp2_r1/record_pairing_diff.py",
+      "sha256": "0a7b1a0a73844d5ce97456da3835f0ede9c201bca31012ac9f5e1e89d52d38bd"
+    },
+    {
+      "bytes": 1755,
+      "path": "scripts/fg3/cp2_r1/scan_source_exposure.py",
+      "sha256": "f44e759e44db9074a95286122b030b07be507456e944ad6316b8f6f4a7ef8e44"
+    },
+    {
+      "bytes": 4621,
+      "path": "scripts/fg3/cp2_r1/sections.py",
+      "sha256": "f67dc201c74bfbec5c4c0163f91189fe6e4c0de8568ab6bc85fc1e9f8472ff20"
+    },
+    {
+      "bytes": 1737,
+      "path": "scripts/fg3/cp2_r1/tests/test_exposure.py",
+      "sha256": "4b3ff25983c62c841385c75ff945a7d7a153ac2a5db1ea90edc965f108041cbe"
+    },
+    {
+      "bytes": 1238,
+      "path": "scripts/fg3/cp2_r1/tests/test_freeze_source_keys.py",
+      "sha256": "03782185c4c1001725753b4d8b1507b1f50a08d762363a5189b3f2a79f6bb2e4"
+    },
+    {
+      "bytes": 2110,
+      "path": "scripts/fg3/cp2_r1/tests/test_sections.py",
+      "sha256": "cc1cb9ebfe6fc751252968d044faa350a68438adfa4d6e5a1400df8d9339c8e4"
+    },
+    {
+      "bytes": 1322,
+      "path": "scripts/fg3/cp2_r1/tests/test_typed_keys.py",
+      "sha256": "58dd2b31df67981d7dc785e798e4b1ce292c28623a9b11cd7a4a7d938079192b"
+    },
+    {
+      "bytes": 3628,
+      "path": "scripts/fg3/cp2_r1/typed_keys.py",
+      "sha256": "8f3151b5542273dbfaac67c7c62355e268d771e8ed9cbfddc277ea1e16247d25"
+    },
+    {
+      "bytes": 6080,
+      "path": "scripts/fg3/cp2_r1/verify_checkpoint2_r1.py",
+      "sha256": "8758fb7a14b28b8b881340140991308518235e229efd20c16f9630c3818ee802"
+    },
+    {
+      "bytes": 3906,
+      "path": "scripts/fg3/cp2_r1/verify_raw_mode.py",
+      "sha256": "470a37d88d616ceabf22d3d9a3512859fb9f39aa98a94aca8e58addae1dbb0b8"
+    },
+    {
+      "bytes": 1546,
+      "path": "openspec/changes/fg3-cp2-r1/acceptance.md",
+      "sha256": "f7a686e85793183adf6385cd9cc91521c0cad3e85053d9fc9c0c2754116fd6fc"
+    },
+    {
+      "bytes": 3438,
+      "path": "openspec/changes/fg3-cp2-r1/design.md",
+      "sha256": "664197bcef1ad1b12db0860cf9ec5bc78bf2fdc6875207ef2cc1214de8d9c7f0"
+    },
+    {
+      "bytes": 1427,
+      "path": "openspec/changes/fg3-cp2-r1/proposal.md",
+      "sha256": "ebd25694729bfb757965b02775f616bc63453d55c6a305d12436448f78a133c6"
+    },
+    {
+      "bytes": 2742,
+      "path": "openspec/changes/fg3-cp2-r1/specs/fg3-source-conformance/spec.md",
+      "sha256": "6d0a8f23eddd3bba0b4b21ef3add043f77aaa75756b4adb4d4f0f2f058a30254"
+    },
+    {
+      "bytes": 2154,
+      "path": "openspec/changes/fg3-cp2-r1/tasks.md",
+      "sha256": "fcca0f41634ce0447625824003741155c52d5f4f82e28a250f08abc19f3ebbe9"
+    }
+  ],
+  "frozen_protocol_commit": "92eb571dc19c7a424a766f758f9bcbbd7a2c3632",
+  "initial_source_only_key_plan_commit": "e6a04df8",
+  "status": "CP2_R1_ARTIFACT_CUSTODY_ONLY_NOT_CHECKPOINT_PASS",
+  "subsequent_source_only_change": "Panel B source-unit inclusion was adjudicated after the initial plan commit; A/C source keys were unchanged."
+}

@@ -18,7 +18,6 @@ OUT = BASE / "checkpoint2_r1"
 DECISIONS = {
     "FG3L_790bc4c0e7c53a42": ("SOURCE_UNIT_UNRESOLVED", "The general form/table instruction lacks a source-verified parent heading in the current extraction."),
     "FG3L_890ac5146ded6275": ("SOURCE_UNIT_UNRESOLVED", "The column-heading instruction lacks a source-verified parent heading in the current extraction."),
-    "FG3L_2b40fc1569aee3c3": ("PANEL_B_COMPOUND_UNRESOLVED", "The cross-page storm-track block has several discussed/reviewed propositions; one block-level action/object is not yet securely distinguished from a compound unit."),
     "FG3L_464684973341bd4c": ("TERMINAL_EXCLUDED_FIXED_ANCHOR_CAPTION", "The selected phrase is a Figure 20 caption, not a substantive vendor change statement."),
     "FG3L_199e296b691cc21d": ("TERMINAL_EXCLUDED_KNOWN_EXPOSURE", "The 2023 reviewer physical page 7 was already recorded as developer-inspected in the frozen exposure ledger."),
 }
@@ -89,6 +88,14 @@ def main() -> None:
             unit["lead_id"],
             ("CANONICAL_SOURCE_UNIT", "Source text, fixed anchor, complete local subsection/paragraph boundary, and printed parent heading were checked against the PDF extraction."),
         )
+        if unit["lead_id"] == "FG3L_2b40fc1569aee3c3":
+            rationale = (
+                "Numbered M-3 Audit 2 runs across physical pages 20-21 and discusses one "
+                "storm-track-selection/generator object; its discussed/reviewed sentences "
+                "are attached details. Unlike excluded CI-4 Audit 6, it does not switch to "
+                "a separate vulnerability-matrix code-count object. This is a source-unit "
+                "decision, not a scrutiny/challenge gold label."
+            )
         if status == "CANONICAL_SOURCE_UNIT" and not parent:
             raise ValueError(f"canonical unit lacks parent heading: {unit['lead_id']}")
         pages_used = unit["physical_page_end"] - unit["physical_page_start"] + 1

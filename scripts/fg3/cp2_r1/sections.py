@@ -34,6 +34,8 @@ class Heading:
 def headings(pages: list[str]) -> list[Heading]:
     result = []
     for page_number, page in enumerate(pages, 1):
+        if re.search(r"(?im)^\s*Table of Contents\s*$", page[:500]):
+            continue
         for kind, pattern in (
             ("FORM", APPENDIX_FORM_HEADING),
             ("FORM", FORM_HEADING),

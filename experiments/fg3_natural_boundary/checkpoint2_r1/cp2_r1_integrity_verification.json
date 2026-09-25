@@ -1,0 +1,28 @@
+{
+  "canonical_source_units": 33,
+  "cp2_r1_integrity": "PASS_FOR_RECORDED_ARTIFACTS_ONLY",
+  "fg3_checkpoint_2": "NOT_PASS_REPAIR_AND_SOURCE_REVIEW_INCOMPLETE",
+  "frozen_leads": 85,
+  "human_gold_count": 0,
+  "known_exposure_manifest_files_verified": 347,
+  "limits": [
+    "Counterpart headings, section boundaries, substantive paragraphs, and same-object pairs are candidates only.",
+    "Lower-tier search is incomplete for no-first-tier cases.",
+    "Exact nonmatch does not clear substantial exposure; one frozen binary ledger file cannot be text-decoded.",
+    "Five prior fixed-anchor exits require canonical source-unit review; other retained exits await PDF-level confirmation."
+  ],
+  "model_inference_count": 0,
+  "panel_a_typed_candidate_sets": 5,
+  "panel_c_typed_candidate_sets": 27,
+  "primary_eligible_count": 0,
+  "reopened_fixed_anchor_exclusions": 5,
+  "source_exact_overlap_candidate_units": 2,
+  "source_exposure_parse_failure_units": 33,
+  "source_only_key_plans": 33,
+  "source_unit_dispositions": {
+    "CANONICAL_SOURCE_UNIT": 33,
+    "SOURCE_UNIT_UNRESOLVED": 2,
+    "TERMINAL_EXCLUDED_FIXED_ANCHOR_CAPTION": 1,
+    "TERMINAL_EXCLUDED_KNOWN_EXPOSURE": 1
+  }
+}
