@@ -1,0 +1,15 @@
+{
+  "minimum_permanently_secondary_plan_count": 19,
+  "model_output_seen": false,
+  "natural_gold_seen": false,
+  "newly_deviated_leads": [
+    {
+      "lead_id": "FG3L_38d49e13a06daf85",
+      "permanent_primary_eligibility": false,
+      "reason": "Real same-cycle vendor PDFs were queried for FORM:A-5 section candidates during scanner validation before the repaired typed key object had been persisted.",
+      "secondary_use_allowed": true
+    }
+  ],
+  "original_chronology_deviated_plan_count": 18,
+  "status": "RECORDED_BEFORE_ANY_REPAIRED_PAIRING_OUTPUT"
+}

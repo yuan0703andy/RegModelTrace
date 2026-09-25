@@ -1,0 +1,27 @@
+{
+  "encoding": "UTF-8",
+  "layout_command_template": [
+    "pdftotext",
+    "-layout",
+    "-enc",
+    "UTF-8",
+    "PDF",
+    "-"
+  ],
+  "legacy_algorithm_status": "UNCONFIRMED_IF_HASHES_DIFFER",
+  "legacy_raw_hash_reproduced_count": 0,
+  "legacy_raw_hash_total": 85,
+  "normalization": "Python re.sub(r'\\s+', ' ', page).strip().casefold()",
+  "pdftotext_version": "pdftotext version 26.09.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+  "platform": "macOS-15.4.1-arm64-arm-64bit",
+  "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:54:21) [Clang 16.0.6 ]",
+  "raw_command_template": [
+    "pdftotext",
+    "-raw",
+    "-enc",
+    "UTF-8",
+    "PDF",
+    "-"
+  ],
+  "raw_mode_sha256_v2_algorithm": "SHA-256 of UTF-8 encoding of each Python-decoded form-feed-delimited pdftotext -raw page, before normalization"
+}
