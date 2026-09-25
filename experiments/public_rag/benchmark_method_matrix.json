@@ -1,0 +1,17 @@
+{
+  "version": "track-a-a0-2026-09-25",
+  "legend": {"PLANNED_AFTER_QUALIFICATION": "Task-compatible but not run", "CONDITIONAL": "Requires evidence/scorer/runtime qualification", "NOT_APPLICABLE": "Different benchmark task", "REPRODUCTION_NOT_QUALIFIED": "Official method cannot yet be run faithfully in the intended local environment"},
+  "methods": [
+    {"method": "B0 gold-context generator", "TimelyQABench": "CONDITIONAL", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "PLANNED_AFTER_QUALIFICATION"},
+    {"method": "B1 BM25", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B2 pinned dense", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B3 hybrid", "TimelyQABench": "PLANNED_AFTER_QUALIFICATION", "VersionQA": "PLANNED_AFTER_QUALIFICATION", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B4 metadata-aware hybrid", "TimelyQABench": "CONDITIONAL", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B5 faithful TimelyRAG", "TimelyQABench": "CONDITIONAL", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B5 controlled temporal component", "TimelyQABench": "CONDITIONAL", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B6 faithful VersionRAG", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "REPRODUCTION_NOT_QUALIFIED", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "B6 controlled version component", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "CONDITIONAL", "LIT-RAGBench": "NOT_APPLICABLE"},
+    {"method": "supplied-context generator", "TimelyQABench": "NOT_APPLICABLE", "VersionQA": "NOT_APPLICABLE", "LIT-RAGBench": "PLANNED_AFTER_QUALIFICATION"}
+  ],
+  "warning": "These are task-compatibility statuses, not performance results or authorization to run models."
+}
