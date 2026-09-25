@@ -1,0 +1,79 @@
+{
+  "ledger_id": "KNOWN_EXPOSURE_LEDGER_V1",
+  "status": "SCOPE_FROZEN_BEFORE_LEAD_SCREENING",
+  "purpose": "Operational known-exposure search boundary, not proof of never exposed or natural-case truth.",
+  "source_patterns": [
+    "artifacts/gold/**/*",
+    "artifacts/fg-1/**/*",
+    "artifacts/fg-2/**/*",
+    "handoffs/CIRCAD-FG1-Complete-Handoff-20260922/**/*",
+    "experiments/qwen38_boundary/**/*",
+    "artifacts/model-smoke/qwen38-boundary-20260924/**/*",
+    "regmodeltrace/data/evaluation/frozen/alignment-impact*/**/*",
+    "regmodeltrace/data/evaluation/frozen/alignment-corelogic*/**/*",
+    "regmodeltrace/data/evaluation/frozen/alignment-verisk*/**/*",
+    "artifacts/ft-1/**/*",
+    "artifacts/ja-1/**/*",
+    "artifacts/ja-1h/**/*",
+    "artifacts/rag/**/*",
+    "regmodeltrace/data/rag/**/*",
+    "regmodeltrace/data/generation/**/*",
+    "regmodeltrace/data/planning/**/*",
+    "docs/fg1*",
+    "docs/fg2*",
+    "docs/qwen38_boundary*",
+    "docs/ja1*",
+    "notes/**/*",
+    "artifacts/test-e/final_held_out_report.json",
+    "artifacts/test-e/final_held_out_report.md",
+    "artifacts/test-e/project_closure_receipt.json",
+    "artifacts/test-e/post_run_verification.json"
+  ],
+  "manifest_path": "experiments/fg3_natural_boundary/protocol/known_exposure_file_manifest_v1.json",
+  "manifest_sha256": "f7981c11ebeb8919c217773242109758205469cfd74c1fcfa5c4c6ab24c43152",
+  "manifest_file_count": 347,
+  "known_manual_touchpoints": [
+    {
+      "document_id": "florida_public_2021_fphlm_review",
+      "physical_pages": [
+        3,
+        5
+      ]
+    },
+    {
+      "document_id": "florida_public_2023_fphlm_review",
+      "physical_pages": [
+        7,
+        27
+      ]
+    }
+  ],
+  "historical_assets_in_scope": [
+    "Gold Case 001",
+    "FG-1",
+    "FG-2",
+    "Qwen3.8 synthetic boundary fixture",
+    "Impact/CoreLogic/Verisk evaluation metadata and outcomes",
+    "saved demo questions and model-facing requests",
+    "adjudication files",
+    "development notes containing case outcomes",
+    "KCC public closure metadata only"
+  ],
+  "protected_exclusions": [
+    "KCC Test E sealed raw PDFs",
+    "KCC Test E sealed source text",
+    "KCC Test E sealed scorer truth",
+    "binary source PDFs and model weights",
+    "files over 20 MB",
+    "undocumented prior chat or private human exposure"
+  ],
+  "protected_exclusion_reason": "Do not unseal KCC Test E or infer no exposure from unavailable historical records.",
+  "matching_process": "Checkpoint 2 checks exact and substantially equivalent clauses, paired passages, prior questions, adjudications, demos, model outputs, and synthetic derivations against this frozen ledger. Record matched file IDs and rationale. No search is performed by this freeze.",
+  "primary_eligibility_status": "NO_KNOWN_EXPOSURE_UNDER_FROZEN_LEDGER",
+  "other_statuses": [
+    "KNOWN_EXPOSED",
+    "SUBSTANTIALLY_EQUIVALENT_TO_KNOWN_EXPOSURE",
+    "MATCH_UNRESOLVED"
+  ],
+  "limitation": "Undocumented historical exposure outside this frozen ledger cannot be excluded."
+}

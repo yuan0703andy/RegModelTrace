@@ -11,16 +11,18 @@
 
 - The original 85 page leads, 1,708 query/page hits, query caps, ranks, and hashes remain unchanged.
 - Case formation and Panel A/C counterpart-pairing rules are frozen before substantive screening; all first-tier counterpart candidates are retained, including inconvenient or ambiguous matches.
-- Every selected lead receives a documented exposure and source-context disposition. Unknown exposure stays outside the primary set.
+- Every selected lead receives a documented exposure and source-context disposition. Only `NO_KNOWN_EXPOSURE_UNDER_FROZEN_LEDGER` may enter the primary set; unresolved matches remain excluded, and undocumented exposure cannot be excluded.
+- Gold-blind packets are hash-frozen before human labels and retain every first-tier paired unit; no favorable-span selection or post-hoc repair is allowed.
+- The 21 deterministically selected no-hit pages remain a separate frame diagnostic, reflecting a three-page shortfall from the 24-page target.
 - Formed cases record source identities, exact pairing basis, bounded search outcome, Panel C object match, chronology and modification type where relevant, and dependency clusters across cycles and variants.
 - The output distinguishes `NO_PAIR_UNDER_FROZEN_RULE`, `PAIRING_AMBIGUOUS`, and `PAIRING_OVERFLOW` from full-corpus absence. No human truth or model result is required at this checkpoint.
 
 ## FG-3 closure
 
-- Exact-context human sufficiency and resolved independent truth exist for every primary case before natural inference.
+- Exact-packet `HUMAN_CONTEXT_SUFFICIENT` and resolved independent truth exist for every primary case before natural inference.
 - Both checkpoints see identical frozen evidence and equivalent semantic contracts; request bytes, runtime identity, and repeats are recorded.
 - Raw model outputs are persisted before the scorer opens truth; invalid responses remain failures.
 - Label accuracy, evidence localization, and joint auditable correctness are reported separately. Panel C additionally checks same-object attribution.
 - Mechanism claims use blinded dual-coder error labels; disagreements and undefined agreement statistics remain visible.
 - One lineage, two standards cycles, dependence, exclusions, and insufficient-case outcomes are reported without extrapolating to Florida-wide accuracy.
-- FG-4 retrieval ideas are not executed under FG-3.
+- FG-4 retrieval ideas are not executed under FG-3. FG-4 admissibility depends on a source-verified set and its own prospective protocol, not FG-3 semantic accuracy.

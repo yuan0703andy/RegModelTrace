@@ -1,0 +1,23 @@
+{
+  "negative_frame_protocol_id": "FG3-NEGATIVE-FRAME-20260924-v1",
+  "status": "FROZEN_BEFORE_NATURAL_PAGE_CONTENT_REVIEW",
+  "source_documents": [
+    "florida_public_2021_fphlm_review",
+    "florida_public_2021_fphlm_submission",
+    "florida_public_2023_fphlm_review",
+    "florida_public_2023_fphlm_submission",
+    "shared_standards_2021_standards",
+    "shared_standards_2023_standards"
+  ],
+  "no_hit_definition": "Physical page 1..page_count with no hit under any frozen discovery query applicable to that document, using all_query_hits.jsonl rather than only selected leads.",
+  "ranking": "SHA-256 of FG3-NEGATIVE-FRAME-20260924-v1|document_id|physical_page, ascending hexadecimal; break ties by physical page",
+  "selection": "First four no-hit pages per document, or all when fewer than four.",
+  "human_label": [
+    "YES",
+    "NO",
+    "AMBIGUOUS"
+  ],
+  "human_question": "Does this no-hit page contain a Panel A, B, or C target phenomenon missed by the cue queries?",
+  "use": "Frame diagnostic only; no primary model evaluation, no quota filling, no discovery reopening, no estimate of corpus-wide recall.",
+  "selection_input_sha256": "b83091c786cda6aaf12f461b30ebb4811919d0ef0bcba43e82ebed34ce19d1f9"
+}

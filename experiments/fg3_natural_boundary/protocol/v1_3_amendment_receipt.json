@@ -1,0 +1,39 @@
+{
+  "version": "FG3_PROTOCOL_V1_3_AMENDMENT",
+  "status": "FROZEN_BEFORE_85_LEAD_SUBSTANTIVE_SCREENING",
+  "prior_v1_2_commit": "e16f109b4cb129469fcef7fefc6f120cbaa42e8f",
+  "prior_v1_2_protocol_sha256": "a488565653407c0c3cc9a6d546950edf15f4c78e924078cbbe425278301da1c7",
+  "owner_review_attachment_sha256": "b8aceed59811f119a335c06fa7d17affd410c8e4d6e6fcf1eb8cd3d1829404c2",
+  "files_sha256": {
+    "spec.md": "46c7166a0c38849c9348341e6d73bff7713e0f31e7e0d398580d31dd35f2753a",
+    "packet_construction_protocol.json": "405c31fc7d771a91b9384c826672342d214f000172c8fbba67a45d7b1910b2f6",
+    "known_exposure_ledger_v1.json": "238864bad644d2ecd1ad54cd7295660eddc9e1f4dc12d815abb286a05fd1bb07",
+    "known_exposure_file_manifest_v1.json": "f7981c11ebeb8919c217773242109758205469cfd74c1fcfa5c4c6ab24c43152",
+    "negative_frame_protocol.json": "e98aa7d07544a0b821afb86e2b27dd8364c62caa905cae47b60d5cf551399d88",
+    "negative_frame_pages.jsonl": "fd2d2a13bd6118492a56ba3e90b2b7bffcd3d8c7e69789721b8f640cb1b2dd0d",
+    "case_formation_protocol.json": "3f5fc115385566a0351ea56d862d6610e78db9357f0777795e644cbb8fbc2ce8",
+    "discovery_protocol.json": "3218d3578f1d9ff9d78a3260b32f4eb7fd0c2160c8cc51a425b90eeefc204aeb",
+    "source_leads.jsonl": "2400910589ed93400816311fb0f7d96db0140f7a20440d1768624d5b32c63d4f",
+    "all_query_hits.jsonl": "b83091c786cda6aaf12f461b30ebb4811919d0ef0bcba43e82ebed34ce19d1f9"
+  },
+  "historical_discovery_hashes_unchanged": true,
+  "historical_case_formation_hash_unchanged": true,
+  "frozen_query_page_hits": 1708,
+  "frozen_page_leads": 85,
+  "known_exposure_manifest_files": 347,
+  "negative_frame_target_pages": 24,
+  "negative_frame_selected_pages": 21,
+  "negative_frame_shortfall_reason": "Only 2 no-hit physical pages in the 2021 reviewer PDF and 3 in the 2023 reviewer PDF; other four PDFs contribute 4 each.",
+  "natural_case_screening": "NOT_STARTED",
+  "human_truth_records": 0,
+  "model_inference_runs": 0,
+  "kcc_sealed_content_opened": false,
+  "prohibited_changes": [
+    "discovery queries",
+    "selected page leads",
+    "v1.2 case-formation rule",
+    "FG-2 scores",
+    "model weights",
+    "gold labels"
+  ]
+}

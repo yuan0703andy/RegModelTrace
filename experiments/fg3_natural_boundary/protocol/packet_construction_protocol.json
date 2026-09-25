@@ -1,0 +1,32 @@
+{
+  "packet_construction_protocol_id": "FG3-PACKET-CONSTRUCTION-20260924-v1",
+  "status": "FROZEN_BEFORE_NATURAL_CASE_SCREENING",
+  "inputs_allowed": [
+    "target_question_fixed_for_panel_and_case_variant",
+    "verified_complete_source_units",
+    "document_roles_and_hashes",
+    "source_refs_and_physical_pages",
+    "case_formation_protocol_output",
+    "first_nonempty_pairing_tier_and_all_its_matches"
+  ],
+  "inputs_forbidden": [
+    "gold_label",
+    "human_adjudication",
+    "model_output",
+    "anticipated_model_correctness",
+    "manually_selected_best_support_or_best_contradiction"
+  ],
+  "panel_content": {
+    "A": "Complete regulator requirement unit with heading and adjacent qualification, followed by every substantive vendor unit returned by the frozen first nonempty pairing tier in document/page/source order.",
+    "B": "Complete reviewer comment and attached disposition unit with its parent heading; no vendor unit unless the frozen target question explicitly requires that source role.",
+    "C": "Complete reviewer action/comment unit with attached disposition, followed by every vendor counterpart unit returned by the first nonempty frozen pairing tier, in document/page/source order. A vendor-anchored lead uses the same reviewer-then-vendor presentation order."
+  },
+  "context_and_provenance": "Include exact original-PDF-verified text, document ID and role, content SHA-256, physical PDF page, source span, parent heading, and explicit continuation or qualification. No paraphrase or unrecorded normalization enters evidence text.",
+  "deduplication": "A source unit with the same document hash and exact source span appears once; preserve the union of lead and pairing references in metadata.",
+  "ordering": "Regulator, reviewer, vendor role order when present; within a role use document ID, physical page, then source-span start. Panel-specific presentation order above governs the actual packet.",
+  "overflow": "If any required source unit or the complete packet exceeds the already frozen case-formation bound of two physical pages per unit, 3000 words per unit, 20 counterpart paragraphs, or 3000 counterpart words, mark PACKET_OVERFLOW. No selective truncation, reranking, or replacement is allowed.",
+  "no_pair": "Include the anchor source unit and the documented NO_PAIR_UNDER_FROZEN_RULE search status; do not create a positive or negative gold label from the search miss. Human and source-scope sufficiency gates decide eligibility.",
+  "canonical_identity": "Serialize UTF-8 JSON with sorted keys, no insignificant whitespace, and source units containing exact text and source refs; SHA-256 of these bytes is model_evidence_packet_hash. Freeze bytes before either human adjudicator sees the packet.",
+  "human_model_equality": "Both independent humans receive the same semantic packet bytes later supplied to both model configurations. Model-specific chat templates can wrap but cannot change evidence content, order, question, roles, or source references.",
+  "source_scope_resolution": "When humans cannot decide from the packet, a separate resolver may inspect the complete allowed source record while blind to model outputs. The resolver classifies PACKET_INSUFFICIENT versus SOURCE_INDETERMINATE without revising the frozen packet."
+}

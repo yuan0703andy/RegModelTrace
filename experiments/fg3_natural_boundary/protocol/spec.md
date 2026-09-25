@@ -3,7 +3,7 @@ I would freeze the next phase as a narrow continuation of FG-2, using the invent
 # RegModelTrace FG-3
 ## Natural Evidence-Boundary Validation
 
-**Version:** 1.2 (case formation amendment after frozen source discovery)
+**Version:** 1.3 (measurement and eligibility amendment before source screening)
 **Date:** 2026-09-24
 **Status:** FROZEN PROSPECTIVE PROTOCOL — NATURAL CASES NOT YET ADJUDICATED
 
@@ -284,44 +284,20 @@ FG-3 does not authorize opening it.
 
 # 5. Exposure audit
 
-Before candidate adjudication, every candidate natural case must receive an exposure status.
+FG-3 uses `KNOWN_EXPOSURE_LEDGER_V1`, frozen before substantive screening. Its exact searchable files and known development/demonstration touchpoints are recorded in [`known_exposure_ledger_v1.json`](known_exposure_ledger_v1.json) and its file manifest. The scope covers Gold Case 001, FG-1 and FG-2, the Qwen3.8 synthetic fixture, historical Impact/CoreLogic/Verisk evaluation metadata and outcomes, saved demo questions and model-facing requests, adjudication assets, and notes containing case outcomes. KCC Test E is a protected closed partition: its sealed content is not opened for FG-3. The ledger records that exclusion. Mechanical parser/index processing alone is recorded separately from observed outcomes or developer use.
 
-Allowed values are:
-
-```text
-CLEAR_FOR_PROSPECTIVE_EVALUATION
-SOURCE_SEEN_BUT_OUTCOME_NOT_USED
-DEVELOPER_EXPOSED
-GOLD_OR_ADJUDICATION_EXPOSED
-SUBSTANTIALLY_EQUIVALENT_TO_EXPOSED_CASE
-EXPOSURE_UNKNOWN
-```
-
-Only:
+Every selected lead and every formed case receives one of:
 
 ```text
-CLEAR_FOR_PROSPECTIVE_EVALUATION
+NO_KNOWN_EXPOSURE_UNDER_FROZEN_LEDGER
+KNOWN_EXPOSED
+SUBSTANTIALLY_EQUIVALENT_TO_KNOWN_EXPOSURE
+MATCH_UNRESOLVED
 ```
 
-may enter the primary prospective evaluation.
+Only `NO_KNOWN_EXPOSURE_UNDER_FROZEN_LEDGER` may enter the primary prospective set. This means the frozen ledger search found no known exposure after exact and substantially equivalent clause, counterpart passage, question, prior adjudication, demo, model-output, and synthetic-derivation checks. It does **not** prove the material was never seen. Undocumented historical exposure outside the ledger cannot be excluded. `MATCH_UNRESOLVED` remains outside the primary set until resolved. A known developer-inspected page remains `KNOWN_EXPOSED` even if no model result was viewed.
 
-`SOURCE_SEEN_BUT_OUTCOME_NOT_USED` may be retained as a secondary sensitivity set if exposure truly consisted only of mechanical processing or uninspected inference.
-
-The remaining categories are excluded from confirmatory evaluation.
-
-`EXPOSURE_UNKNOWN` remains excluded until resolved.
-
-Exposure checks must cover:
-
-- exact regulatory clause;
-- substantially equivalent clause;
-- vendor passage;
-- reviewer passage;
-- prior question wording;
-- prior adjudication;
-- prior demo use;
-- prior model-output inspection;
-- synthetic case derived from the same source fact.
+The first-checkpoint `EXPOSURE_UNKNOWN` and `DEVELOPER_EXPOSED` fields remain unchanged as historical discovery state. Checkpoint 2 writes a separate ledger-v1 assessment with matched file IDs, span or question, exact/equivalence rationale, assessor, and resolution. The assessment is repeated after cross-document pairing, because a regulator lead can be unexposed while its paired vendor or reviewer passage is exposed. Absence of a text match in a shortlist is never evidence of corpus absence.
 
 ---
 
@@ -391,9 +367,17 @@ For **Panel A**, identify the complete requirement clause containing the anchor,
 
 For **Panel B**, the natural unit is the complete numbered reviewer comment and its attached disposition, or the containing unnumbered paragraph with an immediately attached disposition line. The parent heading travels with the unit. A compound block that cannot be separated by the document's own numbering is marked not adjudicable for the binary target. Do not vary the context window according to the likely label.
 
-For **Panel C**, a selected reviewer or vendor lead is paired only with the same-cycle counterpart document. Try exact requirement/standard ID, then explicit comment/response ID, then an exact named substantive object, then bounded literal terminology recorded from the anchor **before** counterpart search. Stop at the first nonempty tier and preserve every candidate at that tier. Every pair records `review_object`, `vendor_object`, `pairing_basis`, `same_object_status`, modification type, and chronology. `same_object_status` is `CONFIRMED`, `NOT_SAME_OBJECT`, or `UNRESOLVED`. Only `CONFIRMED` same-object pairs can support `EXPLICIT_REVIEW_CAUSED_MODIFICATION`; a revised disclosure or written response alone is not a model-method change. Shared broad topic or temporal order does not form a causal pair.
+For **Panel C**, a selected reviewer or vendor lead is paired only with the same-cycle counterpart document. Try exact requirement/standard ID, then explicit comment/response ID, then an exact named substantive object, then bounded literal terminology recorded from the anchor **before** counterpart search. Stop at the first nonempty tier and preserve every candidate at that tier. Every pair records `review_object`, `vendor_object`, `pairing_basis`, `same_object_status`, modification type, and chronology. `same_object_status` is `CONFIRMED`, `NOT_SAME_OBJECT`, or `UNRESOLVED`. Only `CONFIRMED` same-object pairs can support `EXPLICIT_REVIEW_LINK_STATED`; a revised disclosure or written response alone is not a model-method change. Shared broad topic or temporal order does not form a causal pair.
 
 The page-level `dedup_cluster` is a discovery artifact. Formed cases get a separate `dependency_cluster`. Exact or substantially equivalent clauses across 2021/2023, repeated reviewer comments or vendor responses, shared source units, and whole/facet variants are linked into one cluster before any independence claim or case count. When substantial equivalence remains uncertain, group conservatively and record the uncertainty. Two cycle-specific observations in one cluster are not independent replications.
+
+---
+
+## 7.3 Cue-defined sampling frame and negative-frame audit
+
+The 1,708 query/page hits cover only pages captured by the frozen cue-based searches. They are not a census of all natural regulatory phenomena. The 85 selected page leads are a capped hash-ranked sample within that cue-defined frame; they are not a prevalence sample of Florida regulatory reasoning.
+
+Before reading substantive natural outcomes, freeze a target 24-page negative-frame audit: four hash-ranked pages per each of the six source PDFs from pages with **no hit under any query applicable to that document**. If fewer than four no-hit pages exist, use all and report the shortfall. The [selection rule](negative_frame_protocol.json) yields 21 pages because the 2021 reviewer report has only two no-hit pages and the 2023 reviewer report only three; the [selected page IDs](../candidates/negative_frame_pages.jsonl) were frozen without viewing their content. Human reviewers inspect only whether a Panel A/B/C target phenomenon exists despite the missing cue, recording `YES`, `NO`, or `AMBIGUOUS`. These pages never enter primary model evaluation, do not replace failed leads, and do not reopen discovery. Report the denominator and observed misses as a limited frame diagnostic, not an estimate of corpus-wide recall.
 
 ---
 
@@ -583,54 +567,31 @@ These cases remain documented and may motivate a later ontology revision.
 
 ---
 
-# 10. Panel C — Review-to-modification causal link
+# 10. Panel C — Stated review-to-modification link
 
 ## 10.1 Question
 
-Does the documentary evidence explicitly establish that reviewer action caused a vendor model-method or implementation modification?
-
-The target is deliberately narrow.
+Do the permitted documents **explicitly state** that a reviewer action or request prompted a vendor change to the same substantive model method, parameterization, implementation, or output? The task detects a source-attributed statement. It does not independently establish real-world causation.
 
 ---
 
 ## 10.2 Labels
 
-### EXPLICIT_REVIEW_CAUSED_MODIFICATION
+### EXPLICIT_REVIEW_LINK_STATED
 
-Use only when the available documentary evidence explicitly links:
-
-```text
-reviewer request / instruction / objection
-```
-
-to:
-
-```text
-vendor modification
-```
-
-and both concern the same substantive object.
-
-The evidence must establish more than chronology.
+Use only when vendor, reviewer, or both explicitly state a link from reviewer request, instruction, objection, or intervention to a substantive vendor model modification concerning the **same object**. Record the exact linking language and `link_statement_source_role = VENDOR | REVIEWER | BOTH`. Chronology alone is insufficient. A statement that only a disclosure or written response was revised does not satisfy this model-modification target.
 
 ---
 
-### NOT_ESTABLISHED
+### REVIEW_LINK_NOT_ESTABLISHED
 
-Use when:
-
-- review and modification both occurred but no causal link is stated;
-- the modification predated the review;
-- a revision occurred after review but the reason is unstated;
-- reviewer scrutiny occurred without a requested change;
-- a document was revised, but only the disclosure or written response changed;
-- reviewer and vendor passages concern different substantive objects.
+Use when the bounded source packet contains review and later change without an explicit link, a predating change, scrutiny without requested modification, documentation-only revision, or passages about different objects. This label means the link is not established **from the frozen packet**; it does not assert full-corpus absence.
 
 ---
 
 ### NOT_ADJUDICABLE_FOR_PANEL_C
 
-Use when chronology, object identity, or the meaning of "modification" cannot be established from the permitted source record.
+Use when source chronology, object identity, modification type, or the meaning of the linking statement cannot be determined from the permitted source record. No minimum positive count is required. A high rate of not-adjudicable cases is a valid result, including when earlier versions or initial submission material are unavailable.
 
 ---
 
@@ -677,31 +638,40 @@ Chronology supports interpretation but does not by itself establish causality.
 
 # 11. Candidate screening workflow
 
-For each discovered candidate:
+For each discovered lead:
 
 ```text
 DISCOVERED
     ↓
+KNOWN-EXPOSURE PRECHECK
+    ↓
 SOURCE_CONTEXT_VERIFIED
     ↓
-EXPOSURE_CHECKED
+CASE_FORMED / EXCLUDED under frozen pairing rule
     ↓
-ADJUDICABLE / NOT_ADJUDICABLE
+CASE-LEVEL EXPOSURE CHECKED
     ↓
-MODEL-FACING EVIDENCE PACKET FROZEN
+MODEL-FACING EVIDENCE PACKET CONSTRUCTED AND HASHED
     ↓
 INDEPENDENT HUMAN JUDGMENT ON EXACTLY THAT PACKET
     ↓
-HUMAN_CONTEXT_SUFFICIENT / HUMAN_CONTEXT_INSUFFICIENT / HUMAN_CONTEXT_DISAGREEMENT
+HUMAN_CONTEXT_SUFFICIENT / PACKET_INSUFFICIENT /
+SOURCE_INDETERMINATE / HUMAN_DISAGREEMENT
     ↓
-TRUTH_FROZEN (sufficient cases only)
+TRUTH_FROZEN (eligible sufficient cases only)
     ↓
 MODEL_INFERENCE
 ```
 
-No model inference may occur before `TRUTH_FROZEN`.
+No model inference may occur before `TRUTH_FROZEN`. A lead or case failing an earlier gate remains in the audit ledger. Exposure screening can exclude a lead before costly case formation; final exposure status is still rechecked after pairing.
 
-A case that fails any earlier gate remains in the audit ledger but does not enter the evaluation set.
+## 11.1 Evidence packet construction
+
+The independent packet assembler uses the target question, verified source-unit boundaries, permitted source roles, and frozen case-pairing output. It cannot use a gold label, adjudicator answer, model prediction, or anticipated model correctness. The [packet construction contract](packet_construction_protocol.json) fixes ordered content, all-match retention, length/overflow handling, canonical serialization, and SHA-256 identity **before** human adjudication. It does not select the most supportive or contradictory span. Panel A includes the complete regulator unit and all first-tier vendor counterpart units; Panel B includes the complete reviewer comment/disposition unit; Panel C includes the complete reviewer unit and all first-tier vendor counterpart units. If the bounded packet is too large, it exits as overflow without selective truncation.
+
+The same frozen packet bytes, source text, role labels, source references, and surrounding context are supplied to both human adjudicators and to both model configurations. Scorer-only truth is stored separately. A packet can be judged insufficient without modifying it after a human sees the case.
+
+The frozen v1.2 case-formation JSON retains its historical checksum. For Panel C, its legacy positive label `EXPLICIT_REVIEW_CAUSED_MODIFICATION` is superseded **only for v1.3 adjudication and inference** by `EXPLICIT_REVIEW_LINK_STATED`; its legacy negative wording is superseded by `REVIEW_LINK_NOT_ESTABLISHED`. The v1.2 pairing tiers, anchors, match limits, and dependency rules remain unchanged.
 
 ---
 
@@ -762,7 +732,11 @@ rather than forcing consensus.
 
 The frozen truth file must be hashed before any model request is run.
 
-Both independent adjudicators must decide whether the **exact model-facing evidence packet** suffices to derive their label. The human adjudication packet and model packet must have the same source text, surrounding context, and permitted source roles; source-verification staff may inspect the original PDF before packet freeze but may not silently give adjudicators extra evidence. Only `HUMAN_CONTEXT_SUFFICIENT` with resolved agreement enters the primary semantic-capability analysis. `HUMAN_CONTEXT_INSUFFICIENT` and `HUMAN_CONTEXT_DISAGREEMENT` remain in the audit ledger. Record each adjudicator's sufficiency decision and the frozen packet hash in scorer-only truth. Do not compare a human judgment made from a whole PDF with a model judgment made from excerpts.
+Both independent adjudicators first judge the **exact model-facing packet** without access to full PDFs, model output, or each other's labels. Each records a tentative verdict and whether the packet alone supports it. If both can derive an agreed, source-supported verdict, mark `HUMAN_CONTEXT_SUFFICIENT`; only these cases can enter the primary semantic analysis.
+
+If the packet does not support a verdict, an independent source-scope resolver, blind to model outputs and the proposed gold label, inspects the full **allowed** source record. If the answer is available there but absent from the frozen packet, mark `PACKET_INSUFFICIENT` (evidence construction failure). If the allowed source record itself cannot establish the judgment, mark `SOURCE_INDETERMINATE` (documentary limitation). If humans disagree about the boundary or sufficiency after the permitted resolution process, mark `HUMAN_DISAGREEMENT`; do not force a binary label. Preserve the resolver's source references, scope, and rationale. Never repair a packet after seeing human or model correctness within this frozen evaluation.
+
+Record both independent judgments, raw agreement, resolution, packet SHA-256, and final context category. A correct human verdict based on extra PDF context cannot be used as gold for a model given only excerpts. The frozen truth file must be hashed before any model request is run.
 
 ---
 
@@ -774,142 +748,45 @@ These are natural-replication hypotheses, not population-wide accuracy claims.
 
 ---
 
-## H1 — Requirement representation interaction
+## H1 — Directional natural replication of representation transitions
 
-The effect of whole-versus-facet representation depends on the semantic family.
-
-Formally, for natural multi-proposition cases:
-
-$$
-\Delta_g
-=
-J_{\text{facet},g}
--
-J_{\text{whole},g},
-$$
-
-where $g$ indexes semantic family.
-
-The hypothesis is not:
-
-$$
-J_{\text{facet}}>J_{\text{whole}}
-$$
-
-universally.
-
-The hypothesis is:
-
-$$
-\Delta_g
-$$
-
-varies by semantic condition.
-
-Particular attention goes to whether natural cases reproduce the FG-2 pattern:
+FG-3 does not estimate a family-specific numerical effect from a handful of dependent cases. It asks whether natural cases repeat the three preidentified FG-2 whole-to-facet transitions:
 
 ```text
-cross-clause scope:
-facet may help
-
-illustrative modality:
-facet may hurt
-
-undefined equivalence:
-facet may fail to help
+cross-clause scope: whole wrong → facet correct
+illustrative modality: whole correct → facet wrong
+undefined equivalence: whole wrong → facet does not rescue
 ```
+
+Evaluate each semantic family at the **dependency-cluster** level. `REPEATED_DIRECTIONAL_REPLICATION` requires at least two distinct clusters showing the same preidentified direction and no opposite-direction cluster. `SINGLE_CLUSTER_SIGNAL` means exactly one supporting cluster and no opposite direction. `MIXED_DIRECTION` means both supporting and opposite-direction clusters occur. `NO_REPLICATION` means there was an adjudicable opportunity but no supporting direction. `INSUFFICIENT_OPPORTUNITY` means no suitable adjudicable opportunity. These are descriptive transition states, not significance tests or population effects. Preserve all case-level outcomes, including successes and unchanged errors.
 
 ---
 
 ## H2 — Reviewer-action boundary instability
 
-Natural reviewer language near the boundary between examination and challenge produces systematic model errors.
-
-Primary directional errors are:
-
-```text
-SCRUTINY_ONLY → CHALLENGE_ESTABLISHED
-```
-
-and:
-
-```text
-CHALLENGE_ESTABLISHED → SCRUTINY_ONLY
-```
-
-Both must be reported separately.
-
-A single "challenge accuracy" number is insufficient.
+On **human-agreed** natural Panel B cases, test whether either configuration confuses `SCRUTINY_ONLY` with `CHALLENGE_ESTABLISHED`. Report both error directions. Separately report independent human A-versus-B disagreement before resolution and each model-versus-frozen-gold disagreement. Human-disagreed cases do not enter H2's primary model-error denominator. Concentrated errors near human disagreement indicate construct ambiguity and must not be described solely as model-side semantic failure.
 
 ---
 
-## H3 — Explicit causal-link sensitivity
+## H3 — Sensitivity to a stated review link
 
-The models should distinguish:
-
-$$
-\text{review + later change}
-$$
-
-from:
-
-$$
-\text{explicitly documented review-caused change}.
-$$
-
-Two failure directions are primary:
-
-### False causal attribution
-
-```text
-gold = NOT_ESTABLISHED
-model = EXPLICIT_REVIEW_CAUSED_MODIFICATION
-```
-
-### Missed explicit causality
-
-```text
-gold = EXPLICIT_REVIEW_CAUSED_MODIFICATION
-model = NOT_ESTABLISHED
-```
-
-The synthetic Qwen3.8 result suggests both directions matter.
-
-FG-3 tests whether either occurs in natural sources.
+Distinguish a documentary statement explicitly linking reviewer intervention to a same-object model-method, parameterization, implementation, or output modification from review plus a later change without that stated link. The positive label `EXPLICIT_REVIEW_LINK_STATED` detects **what the vendor or reviewer document says**; it does not independently prove causation. The negative label is `REVIEW_LINK_NOT_ESTABLISHED` from the frozen packet, not a fixed-corpus absence finding. Report both false positive and missed stated-link directions, plus `link_statement_source_role` and modification type. Do not require a positive quota.
 
 ---
 
-## H4 — Checkpoint dependence
+## H4 — Two-configuration comparison
 
-The same frozen natural cases are evaluated using:
-
-```text
-active Qwen2.5 default
-```
-
-and:
+Only the exact pinned Qwen2.5 and Qwen3.8 RegModelTrace configurations are compared. Outcome vocabulary is:
 
 ```text
-Qwen3.8 candidate
-```
-
-under the same semantic task contract.
-
-The question is:
-
-> Are observed boundary failures shared across checkpoints or checkpoint-specific?
-
-Possible outcomes include:
-
-```text
-SHARED_FAILURE
-QWEN25_SPECIFIC
-QWEN38_SPECIFIC
+SHARED_ACROSS_THE_TWO_TESTED_CONFIGURATIONS
+QWEN25_CONFIGURATION_ONLY
+QWEN38_CONFIGURATION_ONLY
 NO_NATURAL_REPLICATION
 MIXED
 ```
 
-No active-default change follows automatically from H4.
+The comparison jointly varies checkpoint generation, quantization/runtime configuration, and reasoning mode. It does not identify which component caused a difference and does not establish a Qwen-family or general-LLM effect. No active-default switch follows automatically.
 
 ---
 
@@ -925,7 +802,7 @@ Before any natural truth is unsealed or natural inference begins, run a fixed, p
 
 All natural cases must be frozen before inference.
 
-Inference uses the human-selected evidence packet.
+Inference uses the gold-blind, mechanically assembled, hash-frozen evidence packet defined in Section 11.1. Human adjudication cannot revise it after seeing a judgment.
 
 No RAG retrieval is run in FG-3.
 
@@ -1057,10 +934,12 @@ Do not manufacture those strata.
 Report:
 
 ```text
-NOT_ESTABLISHED recall
-EXPLICIT_REVIEW_CAUSED_MODIFICATION recall
-false causal attribution count
-missed explicit causality count
+REVIEW_LINK_NOT_ESTABLISHED recall
+EXPLICIT_REVIEW_LINK_STATED recall
+false stated-link attribution count
+missed explicit-link statement count
+NOT_ADJUDICABLE_FOR_PANEL_C count
+link_statement_source_role distribution
 ```
 
 Results must also be stratified by:
@@ -1103,7 +982,7 @@ Therefore FG-3 does **not** estimate general Florida-domain error rates.
 
 Cases within the same documents and standards cycle are dependent.
 
-FG-3 primary conclusions are:
+The discovery frame is cue-defined; neither the 1,708 hits nor the 85 leads estimate prevalence of the target phenomena. Report the frozen 24-page no-hit audit and its `YES / NO / AMBIGUOUS` findings separately. FG-3 primary conclusions are:
 
 - natural replication of a synthetic boundary;
 - failure-direction counts;
@@ -1131,7 +1010,7 @@ explicit objection language
 clear mandatory requirement
 explicit definition
 direct vendor response
-mere review + unrelated update correctly left NOT_ESTABLISHED
+mere review + unrelated update correctly left REVIEW_LINK_NOT_ESTABLISHED
 ```
 
 The desired output is a **boundary map**, such as:
@@ -1250,7 +1129,11 @@ Each candidate must contain at least:
   "chronology": {},
 
   "exposure_status": "",
+  "exposure_ledger_version": "KNOWN_EXPOSURE_LEDGER_V1",
+  "exposure_match_ids": [],
   "adjudicability_status": "",
+  "packet_context_status": "",
+  "link_statement_source_role": null,
 
   "discovery_notes": ""
 }
@@ -1268,7 +1151,7 @@ The scorer-only truth record should include:
 {
   "case_id": "",
   "model_evidence_packet_hash": "",
-  "human_context_sufficiency": "PASS | FAIL | DISAGREEMENT",
+  "packet_context_status": "HUMAN_CONTEXT_SUFFICIENT | PACKET_INSUFFICIENT | SOURCE_INDETERMINATE | HUMAN_DISAGREEMENT",
   "human_context_sufficiency_a": "",
   "human_context_sufficiency_b": "",
 
@@ -1277,6 +1160,7 @@ The scorer-only truth record should include:
 
   "semantic_family": "",
   "modification_type": null,
+  "link_statement_source_role": null,
 
   "adjudicator_a": "",
   "adjudicator_b": "",
@@ -1393,80 +1277,13 @@ A failed hypothesis is a valid FG-3 result.
 
 ---
 
-# 26. Decision after FG-3
+# 26. Decision after FG-3: orthogonal semantic and retrieval axes
 
-FG-3 determines what should happen next.
+FG-3 measures semantic judgment $S$ when a frozen, source-verified packet is supplied. A future FG-4 may measure retrieval and evidence construction $R$ against the same source-grounded cases. Good or poor $S$ does not establish good or poor $R$; both bottlenecks can coexist.
 
-## Branch A — semantic failure persists with gold evidence
+FG-4 is scientifically admissible once a frozen, source-verified natural evaluation set exists **and** a separate prospective FG-4 protocol establishes that the available cases are sufficient for its intended retrieval analysis. FG-3 semantic performance informs priority and interpretation, not FG-4 eligibility. No accuracy threshold for FG-3 is an FG-4 gate. FG-4 sample-size and retrieval metrics must be frozen in its own protocol before execution. Do not run FG-4 within FG-3.
 
-If natural cases reproduce meaningful semantic failures even when correct evidence is supplied:
-
-$$
-\boxed{
-\text{next work}
-=
-\text{semantic representation / judgment intervention}
-}
-$$
-
-Only then should we test targeted improvements such as parent-context preservation or proposition-aware evidence alignment.
-
----
-
-## Branch B — gold-evidence judgment is strong
-
-If both models are largely correct when supplied with verified evidence:
-
-$$
-\boxed{
-\text{next bottleneck}
-=
-\text{retrieval / evidence construction}
-}
-$$
-
-Then run the same frozen natural cases through:
-
-```text
-current RAG
-BM25
-dense
-hybrid
-```
-
-and later temporal/version-aware retrieval if the cases require it.
-
-This is the correct point to introduce TimelyRAG or VersionRAG.
-
----
-
-## Branch C — natural documents do not reproduce the synthetic boundaries
-
-If the synthetic failures do not reproduce naturally:
-
-do not build a new method to solve them.
-
-The result is:
-
-> the constructed diagnostics exposed possible boundaries, but they were not demonstrated as important in the bounded natural source pool.
-
-The study then moves to whatever natural failure actually appears.
-
----
-
-## Branch D — insufficient fresh cases
-
-If exposure or source ambiguity leaves too few natural cases:
-
-close FG-3 with:
-
-```text
-INSUFFICIENT_ELIGIBLE_NATURAL_EVIDENCE
-```
-
-Do not compensate by relabelling previously exposed material.
-
-A later study may prospectively acquire a new organization or standards cycle under a separately frozen protocol.
+If natural semantic boundaries do not replicate, report that result without inventing an intervention. If fresh, adjudicable cases are insufficient, close FG-3 as `INSUFFICIENT_ELIGIBLE_NATURAL_EVIDENCE`; do not relabel exposed cases. Either result remains separate from FG-4 eligibility.
 
 ---
 
@@ -1474,7 +1291,9 @@ A later study may prospectively acquire a new organization or standards cycle un
 
 FG-3 may support a claim of the form:
 
-> Controlled semantic boundary behaviors were or were not reproduced in a bounded set of independently adjudicated natural regulatory passages from the Florida Public Hurricane Loss Model 2021 and 2023 standards cycles.
+> Controlled semantic boundary behaviors were or were not reproduced in a bounded set of independently adjudicated natural regulatory passages from the cue-defined, bounded Florida Public Hurricane Loss Model 2021 and 2023 standards-cycle frame.
+
+FG-3 may not support a claim about the prevalence of the target phenomena outside the cue-defined frame. The small no-hit-page audit is diagnostic, not a corpus-wide recall estimate. Undocumented prior exposure outside `KNOWN_EXPOSURE_LEDGER_V1` cannot be excluded.
 
 FG-3 may not support:
 
@@ -1498,33 +1317,16 @@ Those require later experiments.
 
 # 28. Immediate execution order
 
-The next actions are therefore:
-
 ```text
-1. Freeze this FG-3 protocol.
-2. Audit exposure for the Florida Public 2021/2023 source pool.
-3. Run deterministic candidate discovery for Panels A/B/C.
-4. Verify every candidate against original PDF context.
-5. Mark ambiguous and ineligible cases.
-6. Independently adjudicate the remaining natural cases.
-7. Freeze and hash truth.
-8. Construct identical evidence packets for Qwen2.5 and Qwen3.8.
-9. Execute one frozen run per checkpoint.
-10. Persist raw outputs.
-11. Score only after persistence.
-12. Produce the natural success/failure boundary map.
-13. Close FG-3.
-14. Decide whether the next scientific problem is semantic judgment or retrieval.
+1. Freeze the v1.3 amendment, known-exposure ledger scope, packet rule, and 24-page negative-frame selection rule; preserve v1.2 receipts.
+2. Checkpoint 2: assess all 85 frozen leads under the ledger and verify original-PDF context without changing discovery.
+3. Form cases using the v1.2 pairing tiers, retaining all first-tier matches and dependency clusters.
+4. Assemble and hash gold-blind packets before human adjudication.
+5. Independently adjudicate the exact packets; resolve packet insufficiency versus source indeterminacy separately and preserve human disagreement.
+6. Freeze scorer-only truth; qualify repeatability on exposed synthetic controls.
+7. Run the two pinned configurations on identical packet content; persist raw outputs before scoring.
+8. Report natural transition directions, human/model disagreement, source-grounded correctness, frame audit, exposure limits, and closure receipt.
+9. Consider FG-4 only under its own prospective protocol.
 ```
 
-The first FG-3 checkpoint is therefore:
-
-$$
-\boxed{
-\textbf{Exposure audit + natural candidate registry}
-}
-$$
-
-—not another model run.
-
-This version deliberately keeps the scope narrow: the existing Florida corpus first, natural replication of FG-2/Qwen3.8 boundaries second, retrieval only after we know whether judgment with correct evidence is actually the bottleneck.
+No discovery rerun, natural-case screening, human gold, or model inference is part of the v1.3 amendment itself.
